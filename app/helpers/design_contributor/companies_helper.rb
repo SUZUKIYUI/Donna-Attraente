@@ -1,0 +1,2 @@
+module DesignContributor::CompaniesHelper
+end

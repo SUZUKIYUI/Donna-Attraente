@@ -1,0 +1,2 @@
+module DesignContributor::CommentsHelper
+end

@@ -1,0 +1,2 @@
+module DesignContributor::PostsHelper
+end

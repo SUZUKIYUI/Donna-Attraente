@@ -1,0 +1,2 @@
+module DesignContributor::WantsHelper
+end
