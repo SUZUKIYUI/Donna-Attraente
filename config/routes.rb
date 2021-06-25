@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
 
-  devise_for :design_contributors
+  devise_for :companies, controllers: {
+    sessions: "companies/sessions",
+    passwords: "companies/passwords",
+    registrations: "companies/registrations"
+  }
+
+
+  devise_for :design_contributors, controllers: {
+    sessions: "design_contributors/sessions",
+    passwords: "design_contributors/passwords",
+    registrations: "design_contributors/registrations"
+  }
+
+
+
 
   namespace :company do
     get 'design_contributors/show'
