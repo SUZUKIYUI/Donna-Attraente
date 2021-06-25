@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :design_contributors
+
   namespace :company do
     get 'design_contributors/show'
   end
