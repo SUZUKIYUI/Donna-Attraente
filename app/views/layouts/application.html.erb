@@ -10,6 +10,72 @@
   </head>
 
   <body>
+    <header>
+      <!--ヘッダーの中身-->
+      <div class="logo">
+        <div>Donna Attraente</div><br />
+        <span>ドナ　アトラエンテ</span>
+      </div>
+      <ul class="header_lists">
+        <% if design_contributor_signed_in? %>
+        <!---------------デザイン投稿者がログインしている場合--------------->
+          <li class="header_list_item">Top<br />-トップページ-</li>
+          <li class="header_list_item">Works<br />-作品一覧-</li>
+          <li class="header_list_item">Post<br />-投稿する-</li>
+          <li class="header_list_item">User page<br />-ユーザーページ-</li>
+          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
+
+          <!---------------ここに手紙のアイコン入れる！！！！！！！！！！！！！！！！-->
+          <li class="header_list_item">手紙</li>
+
+          <!---------ここ完成--------->
+          <li class="header_list_item">
+            <%= link_to destroy_design_contributor_session_path, method: :delete do %>
+              <div>
+                Log out<br /><span>-ログアウト-</span>
+              </div>
+            <% end %>
+          </li>
+          <!-------------------------->
+
+
+
+
+        <% elsif company_signed_in? %>
+        <!--------------------企業がログインしている場合------------------->
+          <li class="header_list_item">Top<br />-トップページ-</li>
+          <li class="header_list_item">Works<br />-作品一覧-</li>
+          <li class="header_list_item">User page<br />-ユーザーページ-</li>
+          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
+
+
+
+
+          <!--ここに手紙のアイコン入れる！-->
+          <li class="header_list_item">手紙</li>
+
+
+
+
+          <li class="header_list_item">Log out<br />-ログアウト-</li>
+        <% else %>
+        <!---------------------ログインしていない場合---------------------->
+          <li class="header_list_item">
+            <%= link_to root_path do %>
+              <div>
+                Top<br /><span>-トップページ-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
+          <li class="header_list_item">Log in<br />-ログイン-</li>
+          <li class="header_list_item">Sign up<br />-新規登録-</li>
+        <% end %>
+      </ul>
+    </header>
     <%= yield %>
+    <footer>
+      <!--フッターの中身-->
+    </footer>
   </body>
 </html>
