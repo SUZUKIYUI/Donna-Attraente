@@ -42,7 +42,7 @@ class DesignContributors::RegistrationsController < Devise::RegistrationsControl
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :pen_name, :image_name, :self_introduction])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :pen_name, :profile_image, :self_introduction])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
