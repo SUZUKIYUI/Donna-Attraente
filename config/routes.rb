@@ -1,57 +1,45 @@
 Rails.application.routes.draw do
 
+  #----- TOPページ・ABOUTページ-----
   root to: "homes#top"
   get "homes/about" => "homes#about"
-
-  devise_for :companies, controllers: {
-    sessions: "companies/sessions",
-    passwords: "companies/passwords",
-    registrations: "companies/registrations"
-  }
+  # --------------------------------
 
 
+  # -------------デザイン投稿者側----------------
   devise_for :design_contributors, controllers: {
     sessions: "design_contributors/sessions",
     passwords: "design_contributors/passwords",
     registrations: "design_contributors/registrations"
   }
 
+  namespace :design_contributor do
+    resources :design_contributors, only: [:show, :edit, :update]
+    resources :conpanies, only: [:index, :show]
+    resources :posts do
+      resources :wants, only: [:create, :destroy]
+      resources :comments, only: [:create, :destroy]
+      resources :offers, only: [:edit, :update]
+    end
+  end
+  # -------------------------------------------
 
 
+  # --------------企業側---------------
+  devise_for :companies, controllers: {
+    sessions: "companies/sessions",
+    passwords: "companies/passwords",
+    registrations: "companies/registrations"
+  }
 
   namespace :company do
-    get 'design_contributors/show'
+    resources :conpanies, only: [:index, :show, :edit, :update]
+    resources :posts, only: [:index, :show]
+    resources :design_contributors, only: [:show]
+    resources :offers, only: [:new, :create]
   end
-  namespace :company do
-    get 'companies/index'
-    get 'companies/show'
-    get 'companies/edit'
-  end
-  namespace :company do
-    get 'offers/new'
-  end
-  namespace :company do
-    get 'posts/index'
-    get 'posts/show'
-  end
-  get 'homes/top'
-  get 'homes/about'
-  namespace :design_contributor do
-    get 'companies/index'
-    get 'companies/show'
-  end
-  namespace :design_contributor do
-    get 'design_contributors/show'
-    get 'design_contributors/edit'
-  end
-  namespace :design_contributor do
-    get 'offers/edit'
-  end
-  namespace :design_contributor do
-    get 'posts/index'
-    get 'posts/new'
-    get 'posts/show'
-    get 'posts/edit'
-  end
+  # -------------------------------
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
