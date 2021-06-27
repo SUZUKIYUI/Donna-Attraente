@@ -18,6 +18,8 @@ class DesignContributor::PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @design_contributor = DesignContributor.find(@post.design_contributor_id)
   end
 
   def edit
