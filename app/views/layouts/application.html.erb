@@ -11,10 +11,12 @@
 
   <body>
     <header>
-      <div class="logo">
+      <div class="header_logo">
         <%= link_to root_path do %>
-          <div>Donna Attraente</div><br />
-          <span>ドナ　アトラエンテ</span>
+          <div>
+            Donna Attraente<br />
+            <span>ドナ　アトラエンテ</span>
+          </div>
         <% end %>
       </div>
       <ul class="header_lists">
@@ -166,7 +168,14 @@
     <%= yield %>
 
     <footer>
-      <!--フッターの中身-->
+      <div class="footer_logo">
+        <%= link_to root_path do %>
+          <div>
+            Donna Attraente<br />
+            <span>オリジナルワンピースをデザイン</span>
+          </div>
+        <% end %>
+      </div>
     </footer>
   </body>
 </html>
