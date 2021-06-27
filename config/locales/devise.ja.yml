@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      # ------------------
+      design_contributor:
+        pen_name: ペンネーム
+        email: メールアドレス
+        password: パスワード
+        profile_image: プロフィール画像
+        self_introduction: 自己紹介

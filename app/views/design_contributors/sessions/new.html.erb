@@ -1,5 +1,8 @@
 <h2>デザイン投稿者ログイン画面</h2>
 
+<!-----------------未入力の場合のエラー文表示------------------------>
+<!------------------------------------------------------------------->
+
 <%= form_with model: @design_contributor, url: design_contributor_session_path, local: true do |f| %>
   <div class="field">
     <%= f.label :email, "メールアドレス" %><br />
