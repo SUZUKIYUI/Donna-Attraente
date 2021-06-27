@@ -1,6 +1,7 @@
 class DesignContributor::PostsController < ApplicationController
 
   def index
+    @posts = Post.all
   end
 
   def new
@@ -19,7 +20,6 @@ class DesignContributor::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @design_contributor = DesignContributor.find(@post.design_contributor_id)
   end
 
   def edit
