@@ -1,2 +1,15 @@
-<h1>DesignContributor::Posts#new</h1>
-<p>Find me in app/views/design_contributor/posts/new.html.erb</p>
+<h1>デザイン投稿者_投稿画面</h1>
+
+<%= form_with model: @post, url: design_contributor_posts_path do |f| %>
+  <%= f.label :post_image, "デザイン画像" %>
+  <%= f.attachment_field :post_image %>
+  <%= f.label :author_comment, "作者コメント" %>
+  <%= f.text_area :author_comment, placeholder: "作品に対するコメントを入力してください" %>
+  <%= f.submit "投稿する" %>
+<% end %>
+
+
+
+
+
+
