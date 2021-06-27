@@ -11,69 +11,160 @@
 
   <body>
     <header>
-      <!--ヘッダーの中身-->
       <div class="logo">
-        <div>Donna Attraente</div><br />
-        <span>ドナ　アトラエンテ</span>
+        <%= link_to root_path do %>
+          <div>Donna Attraente</div><br />
+          <span>ドナ　アトラエンテ</span>
+        <% end %>
       </div>
       <ul class="header_lists">
         <% if design_contributor_signed_in? %>
-        <!---------------デザイン投稿者がログインしている場合--------------->
-          <li class="header_list_item">Top<br />-トップページ-</li>
-          <li class="header_list_item">Works<br />-作品一覧-</li>
-          <li class="header_list_item">Post<br />-投稿する-</li>
-          <li class="header_list_item">User page<br />-ユーザーページ-</li>
-          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
-
-          <!---------------ここに手紙のアイコン入れる！！！！！！！！！！！！！！！！-->
-          <li class="header_list_item">手紙</li>
-
-          <!---------ここ完成--------->
-          <li class="header_list_item">
-            <%= link_to destroy_design_contributor_session_path, method: :delete do %>
-              <div>
-                Log out<br /><span>-ログアウト-</span>
-              </div>
-            <% end %>
-          </li>
-          <!-------------------------->
-
-
-
-
-        <% elsif company_signed_in? %>
-        <!--------------------企業がログインしている場合------------------->
-          <li class="header_list_item">Top<br />-トップページ-</li>
-          <li class="header_list_item">Works<br />-作品一覧-</li>
-          <li class="header_list_item">User page<br />-ユーザーページ-</li>
-          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
-
-
-
-
-          <!--ここに手紙のアイコン入れる！-->
-          <li class="header_list_item">手紙</li>
-
-
-
-
-          <li class="header_list_item">Log out<br />-ログアウト-</li>
-        <% else %>
-        <!---------------------ログインしていない場合---------------------->
+        <!--デザイン投稿者がログインしている場合のヘッダーリスト-->
           <li class="header_list_item">
             <%= link_to root_path do %>
               <div>
-                Top<br /><span>-トップページ-</span>
+                Top<br />
+                <span>-トップページ-</span>
               </div>
             <% end %>
           </li>
-          <li class="header_list_item">About<br />-Donna Attraenteとは-</li>
-          <li class="header_list_item">Log in<br />-ログイン-</li>
-          <li class="header_list_item">Sign up<br />-新規登録-</li>
+          <li class="header_list_item">
+            <%= link_to design_contributor_posts_path do %>
+              <div>
+                Works<br />
+                <span>-作品一覧-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to new_design_contributor_post_path do %>
+              <div>
+                Post<br />
+                <span>-投稿する-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to design_contributor_design_contributor_path(current_design_contributor.id) do %>
+              <div>
+                User page<br />
+                <span>-ユーザーページ-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to homes_about_path do %>
+              <div>
+                About<br />
+                <span>-Donna Attraenteとは-</span>
+              </div>
+            <% end %>
+          </li>
+
+
+          <!---------------ここに手紙のアイコン入れる・通知機能を作る！！！！！！！！！！！！！！！！-->
+          <li class="header_list_item">
+            手紙
+          </li>
+
+
+          <li class="header_list_item">
+            <%= link_to destroy_design_contributor_session_path, method: :delete do %>
+              <div>
+                Log out<br />
+                <span>-ログアウト-</span>
+              </div>
+            <% end %>
+          </li>
+        <% elsif company_signed_in? %>
+        <!--企業がログインしている場合のヘッダーリスト-->
+          <li class="header_list_item">
+            <%= link_to root_path do %>
+              <div>
+                Top<br />
+                <span>-トップページ-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to company_posts_path do %>
+              <div>
+                Works<br />
+                <span>-作品一覧-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to company_company_path(current_company.id) do %>
+              <div>
+                User page<br />
+                <span>-ユーザーページ-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to homes_about_path do %>
+              <div>
+                About<br />
+                <span>-Donna Attraenteとは-</span>
+              </div>
+            <% end %>
+          </li>
+
+
+          <!---------------ここに手紙のアイコン入れる・通知機能を作る！！！！！！！！！！！！！！！！-->
+          <li class="header_list_item">手紙</li>
+
+
+
+          <li class="header_list_item">
+            <%= link_to destroy_company_session_path, method: :delete do %>
+              <div>
+                Log out<br />
+                <span>-ログアウト-</span>
+              </div>
+            <% end %>
+          </li>
+        <% else %>
+        <!--ログインしていない場合のヘッダーリスト-->
+          <li class="header_list_item">
+            <%= link_to root_path do %>
+              <div>
+                Top<br />
+                <span>-トップページ-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to homes_about_path do %>
+              <div>
+                About<br />
+                <span>-Donna Attraenteとは-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to new_design_contributor_session_path do %>
+              <div>
+                Log in<br />
+                <span>-ログイン-</span>
+              </div>
+            <% end %>
+          </li>
+          <li class="header_list_item">
+            <%= link_to new_design_contributor_registration_path do %>
+              <div>
+                Sign up<br />
+                <span>-新規登録-</span>
+              </div>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </header>
+
     <%= yield %>
+
     <footer>
       <!--フッターの中身-->
     </footer>
