@@ -13,7 +13,7 @@
 <% end %>
 <!--------------------------------------------------->
 
-<%= form_with model: @post, url: design_contributor_posts_path do |f| %>
+<%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
   <%= f.label :post_image, "デザイン画像" %>
   <%= f.attachment_field :post_image %>
   <%= f.label :author_comment, "作者コメント" %>
