@@ -1,5 +1,18 @@
 <h1>デザイン投稿者_投稿画面</h1>
 
+<!------------未入力の場合のエラー文表示------------->
+<% if @post.errors.any? %>
+  <p><%= @post.errors.count %>件のエラー</p>
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<!--------------------------------------------------->
+
 <%= form_with model: @post, url: design_contributor_posts_path do |f| %>
   <%= f.label :post_image, "デザイン画像" %>
   <%= f.attachment_field :post_image %>
