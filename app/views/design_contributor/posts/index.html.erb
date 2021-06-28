@@ -1,6 +1,10 @@
 <h1>作品一覧画面</h1>
 <% @posts.each do |post| %>
-  <%= attachment_image_tag post, :post_image, :fill, 320, 450 %>
-  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 20, 20 %>
-  <%= post.design_contributor.pen_name %>
+  <%= link_to design_contributor_post_path(post.id) do %>
+    <%= attachment_image_tag post, :post_image, :fill, 320, 450 %>
+  <% end %>
+  <%= link_to design_contributor_design_contributor_path(post.design_contributor.id) do %>
+    <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 20, 20, fallback: "no_image.jpg" %>
+    <%= post.design_contributor.pen_name %>
+  <% end %>
 <% end %>
