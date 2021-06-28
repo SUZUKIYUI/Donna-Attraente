@@ -1,4 +1,9 @@
-<h2>デザイン投稿者新規登録画面</h2>
+<h2>新規登録</h2>
+<p>下のフォームから会員登録をお願いします。</p>
+
+<p>新規会員登録</p>
+
+<%= link_to "企業の方はこちらへ", new_company_registration_path %>
 
 <%= form_with model: @design_contributor, url: design_contributor_registration_path, id: "new_design_contributor", class: "new_design_contributor", local: true do |f| %>
   <%= render "design_contributors/shared/error_messages", resource: resource %>
@@ -23,7 +28,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
   <div class="actions">
-    <%= f.submit "新規登録" %>
+    <%= f.submit "登録" %>
   </div>
 <% end %>
 

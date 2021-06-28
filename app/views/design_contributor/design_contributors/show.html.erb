@@ -1,9 +1,7 @@
-<h1>デザイン投稿者_詳細画面</h1>
-
 <% if @design_contributor == current_design_contributor %>
-  <p>マイページ</p>
+  <h1>マイページ</h1>
 <% else %>
-  <p>ユーザーページ</p>
+  <h1>ユーザーページ</h1>
 <% end %>
 
 <%= attachment_image_tag @design_controbutor, :profile_image, :fill, 150, 150, fallback: "no_image.jpg" %>

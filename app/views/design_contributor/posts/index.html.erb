@@ -1,4 +1,11 @@
-<h1>作品一覧画面</h1>
+<h1>デザイン一覧</h1>
+<p>
+  こちらのページでは皆様の投稿した<br />
+  ワンピースのデザインがご覧いただけます。
+</p>
+
+<p>投稿作品</p>
+<span>新着順</span>
 <% @posts.each do |post| %>
   <%= link_to design_contributor_post_path(post.id) do %>
     <%= attachment_image_tag post, :post_image, :fill, 320, 450 %>
