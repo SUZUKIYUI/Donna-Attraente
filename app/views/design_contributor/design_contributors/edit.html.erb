@@ -1,2 +1,12 @@
-<h1>DesignContributor::DesignContributors#edit</h1>
-<p>Find me in app/views/design_contributor/design_contributors/edit.html.erb</p>
+<h1>プロフィール編集</h1>
+<%= form_with model: @design_contributor, url: design_contributor_design_contributor_path(@design_contributor.id), local: true do |f| %>
+  <%= f.label :profile_image %>
+  <%= f.attachment_field :profile_image %>
+  <%= f.label :pen_name %>
+  <%= f.text_field :pen_name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :self_introduction %>
+  <%= f.text_area :self_introduction %>
+  <%= f.submit "編集する" %>
+<% end %>

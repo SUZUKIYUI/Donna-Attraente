@@ -5,6 +5,7 @@ class DesignContributor::DesignContributorsController < ApplicationController
   end
 
   def edit
+    @design_contributor = DesignContributor.find(params[:id])
   end
 
   def update
