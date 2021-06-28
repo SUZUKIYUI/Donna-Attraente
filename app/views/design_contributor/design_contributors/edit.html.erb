@@ -1,4 +1,18 @@
 <h1>プロフィール編集</h1>
+
+<!-------------------------未入力の時のエラー文表示------------------------->
+<% if @design_contributor.errors.any? %>
+  <p><%= @design_contributor.errors.count %>件のエラー</p>
+  <ul>
+    <% @design_contributor.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<!-------------------------------------------------------------------------->
+
 <%= form_with model: @design_contributor, url: design_contributor_design_contributor_path(@design_contributor.id), local: true do |f| %>
   <%= f.label :profile_image %>
   <%= f.attachment_field :profile_image %>

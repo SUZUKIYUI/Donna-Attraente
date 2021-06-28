@@ -4,7 +4,7 @@
   <h1>ユーザーページ</h1>
 <% end %>
 
-<%= attachment_image_tag @design_controbutor, :profile_image, :fill, 150, 150, fallback: "no_image.jpg" %>
+<%= attachment_image_tag @design_contributor, :profile_image, :fill, 150, 150, fallback: "no_image.jpg" %>
 <%= @design_contributor.pen_name %>
 <p>自己紹介</p>
 <%= @design_contributor.self_introduction %>
