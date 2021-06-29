@@ -9,8 +9,11 @@
 <% @post.comments.each do |comment| %>
   <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
   <%= comment.design_contributor.pen_name %>
-  <%= comment %>
+  <%= comment.comment %>
   <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+  <% if comment.design_contributor_id == current_design_contributor.id %>
+    <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
+  <% end %>
 <% end %>
 
 
