@@ -28,7 +28,12 @@ class DesignContributor::PostsController < ApplicationController
   end
 
   def update
-    
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to design_contributor_post_path(@post.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
