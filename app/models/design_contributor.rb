@@ -9,6 +9,7 @@ class DesignContributor < ApplicationRecord
   validates :self_introduction, presence: false
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   attachment :profile_image
 

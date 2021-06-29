@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_27_111006) do
+ActiveRecord::Schema.define(version: 2021_06_29_094105) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "design_contributor_id", null: false
+    t.integer "post_id", null: false
+    t.text "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
