@@ -4,7 +4,17 @@
 <%= @post.design_contributor.pen_name %>
 <p>作者コメント</p>
 <%= @post.author_comment %>
-<!---------------------------------------------------------------------------------->
+<% if @post.design_contributor_id == current_design_contributor.id %>
+  <%= link_to "コメント編集", edit_design_contributor_post_path(@post.id) %>
+<% end %>
+<%= @post.created_at.strftime('%Y/%m/%d %H:%M') %><span>公開</span>
+
+<!--ここにいいね機能実装-->
+
+<% if @post.design_contributor_id == current_design_contributor.id %>
+  <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete %>
+<% end %>
+<!-----------------------------------------コメント一覧----------------------------------------->
 <p>コメント一覧</p>
 <% @post.comments.each do |comment| %>
   <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
@@ -15,9 +25,13 @@
     <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
   <% end %>
 <% end %>
+<!-----------------------------------------作品への反応---------------------------------------->
+<p>このデザインへの反応</p>
+<span>なにこれ欲しい★</span>
 
+<span>コメント</span>
 
-
+<span>オファー</span>
 
 <!--------------------------------------------コメント投稿フォーム------------------------------------------------>
 <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(@post.id), local: true do |f| %>
