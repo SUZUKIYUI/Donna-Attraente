@@ -1,0 +1,28 @@
+[33m6867e75[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD^
+[33me01b526[m HEAD@{1}: commit: [Add]コメント/
+[33m6867e75[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{2}: commit: [Add]作品詳細/@comment定義・コメント一覧・コメントフォーム作成
+[33mfa3a5d0[m HEAD@{3}: commit: [Add]コメントモデル作成・アソシエーション設定
+[33m8832f06[m HEAD@{4}: commit: [Add]ユーザーページの記述ミス修正/プロフィール編集画面にエラー文記述
+[33m4c5c739[m HEAD@{5}: commit: [Add]デザイン投稿者/updateアクション記述
+[33m6220e79[m HEAD@{6}: commit: [Add]デザイン投稿者/editアクション・プロフィール編集画面記述
+[33m19bca96[m HEAD@{7}: commit: [Add]デザイン投稿者側view/細部の文字表示記述
+[33mbe34737[m HEAD@{8}: commit: [Add]デザイン投稿者/showアクション・投稿者詳細画面記述
+[33m525cffa[m HEAD@{9}: commit: [Add]作品一覧画面/リンク設定
+[33m9e265ef[m HEAD@{10}: commit: [Add]デザイン投稿者バリデーション設定
+[33m067d050[m HEAD@{11}: commit: [Add]Post/作品一覧画面記述・[Fix]Postのshowアクション・view/@design_contributor定義削除
+[33mf96d38c[m HEAD@{12}: commit: [Add]gem/rails-i18nでエラー日本語化設定・Post/投稿画面のform_withに【local: true】追加設定
+[33m4b549a4[m HEAD@{13}: commit: [Add]Post/showアクション・作品詳細画面記述※途中
+[33mf43c4d9[m HEAD@{14}: commit: [Add]Post/パリデーション設定・createアクション・投稿画面にエラー文記述
+[33m156d0f3[m HEAD@{15}: commit: [Add]Post/モデル作成・newアクション定義・デザイン投稿画面作成
+[33md491c60[m HEAD@{16}: commit: [Add]共通view/フッター記述
+[33m795184f[m HEAD@{17}: commit: [Add]共通view/ヘッダー記述（ログイン前・デザイン投稿者ログイン後・企業ログイン後）※通知ボタン以外
+[33m3e7d205[m HEAD@{18}: commit: [Add]共通view/ヘッダー記述（ログイン前・デザイン投稿者ログイン後・企業ログイン後）※途中
+[33mff9c91f[m HEAD@{19}: commit: [Fix]devise/プロフィール画像のカラム名変更・デザイン投稿者新規登録画面・ログイン画面記述修正
+[33m78a91cf[m HEAD@{20}: commit: [Fix]ルーティング/namespaceの記述修正
+[33m40457fd[m HEAD@{21}: commit: [Add]TOPページ・ABOUTページのルーティング設定
+[33m8e0b325[m HEAD@{22}: commit: [Add]両者deviseのストロングパラメータにカラムを追加設定
+[33mfdc06fd[m HEAD@{23}: commit: [Add]企業のdevise設定・devise関連ルーティングの変更・コントローラとview作成
+[33mfe890ee[m HEAD@{24}: pull origin main: Merge made by the 'recursive' strategy.
+[33mbc96a11[m HEAD@{25}: commit: [Add]gem[devise/refile/refile-mini_magick]・デザイン投稿者のdevise設定
+[33m90a7a53[m HEAD@{26}: Branch: renamed refs/heads/master to refs/heads/main
+[33m90a7a53[m HEAD@{28}: commit (initial): [Start]rails new新規作成・コントローラの新規作成・viewの新規作成
