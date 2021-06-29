@@ -1,5 +1,16 @@
 <h1>作者コメント編集</h1>
 <%= attachment_image_tag @post, :post_image, :fill, 620, 700 %>
+
+<!--------------未入力の時のエラー文--------------->
+<% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |message| %>
+    <li>
+      <%= message %>
+    </li>
+  <% end %>
+<% end %>
+<!------------------------------------------------->
+
 <%= form_with model: @post, url: design_contributor_post_path(@post.id), local: true do |f| %>
   <%= f.label :author_comment %>
   <%= f.text_area :author_comment %>
