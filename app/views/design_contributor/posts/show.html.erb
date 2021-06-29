@@ -34,6 +34,17 @@
 <span>オファー</span>
 
 <!--------------------------------------------コメント投稿フォーム------------------------------------------------>
+<!----------------未入力の時のエラー文表示---------------->
+<% if @comment.errors.any? %>
+  <ul>
+    <% @comment.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<!-------------------------------------------------------->
 <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(@post.id), local: true do |f| %>
   <%= f.label :comment, "コメントする" %>
   <%= f.text_area :comment %>
