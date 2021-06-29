@@ -4,3 +4,26 @@
 <%= @post.design_contributor.pen_name %>
 <p>作者コメント</p>
 <%= @post.author_comment %>
+<!---------------------------------------------------------------------------------->
+<p>コメント一覧</p>
+<% @post.comments.each do |comment| %>
+  <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
+  <%= comment.design_contributor.pen_name %>
+  <%= comment %>
+  <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+<% end %>
+
+
+
+
+<!--------------------------------------------コメント投稿フォーム------------------------------------------------>
+<%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(@post.id), local: true do |f| %>
+  <%= f.label :comment, "コメントする" %>
+  <%= f.text_area :comment %>
+  <%= f.submit "投稿" %>
+<% end %>
+<!---------------------------------------------------------------------------------------------------------------->
+
+<p>ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
+
+<%= link_to "デザイン一覧に戻る", design_contributor_posts_path %>
