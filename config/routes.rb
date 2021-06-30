@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :design_contributors, only: [:show, :edit, :update]
     resources :conpanies, only: [:index, :show]
     resources :posts do
-      resources :wants, only: [:create, :destroy]
+      resource :wants, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
       resources :offers, only: [:edit, :update]
     end
