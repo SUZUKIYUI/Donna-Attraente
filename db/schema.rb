@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_29_094105) do
+ActiveRecord::Schema.define(version: 2021_06_30_121014) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "design_contributor_id", null: false
@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(version: 2021_06_29_094105) do
     t.integer "design_contributor_id", null: false
     t.string "post_image_id", default: "", null: false
     t.text "author_comment", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "wants", force: :cascade do |t|
+    t.integer "design_contributor_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

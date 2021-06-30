@@ -3,14 +3,15 @@ class DesignContributor < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  # -----------------------------------------------
+  has_many :posts, dependent: :destroy
+  has_many :wants, dependent: :destroy
+  has_many :comments, dependent: :destroy
+# ---------------------------------------
   validates :pen_name, presence: true
   validates :profile_image, presence: false
   validates :self_introduction, presence: false
-
-  has_many :posts, dependent: :destroy
-  has_many :comments, dependent: :destroy
-
+# ---------------------------------------------
   attachment :profile_image
 
 end
