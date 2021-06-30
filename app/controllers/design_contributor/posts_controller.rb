@@ -37,6 +37,11 @@ class DesignContributor::PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    if @post.design_contributor_id == current_design_contributor.id
+      @post.destroy
+      redirect_to design_contributor_posts_path
+    end
   end
 
   # この下に何も記述しないこと！
