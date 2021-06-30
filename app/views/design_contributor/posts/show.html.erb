@@ -9,11 +9,20 @@
 <% end %>
 <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %><span>公開</span>
 
-<!--ここにいいね機能実装-->
-
+<!-----------------------------------なにこれ欲しいボタン--------------------------------------->
+<% if current_design_contributor.wanted_by?(@post.id) %>
+  <%= link_to "なにこれ欲しい★", design_contributor_post_wants_path(@post.id), method: :delete %>
+<% else %>
+  <%= link_to "なにこれ欲しい☆", design_contributor_post_wants_path(@post.id), method: :post %>
+<% end %>
+<span>☆</span><%= @post.wants.count %>
+<!--------------------------------------作品削除ボタン---------------------------------------->
 <% if @post.design_contributor_id == current_design_contributor.id %>
   <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete %>
 <% end %>
+<!--------------------------------------------------------------------------------------->
+
+
 <!-----------------------------------------コメント一覧----------------------------------------->
 <p>コメント一覧</p>
 <% @post.comments.each do |comment| %>
