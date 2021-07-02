@@ -7,4 +7,11 @@ ja:
       post:
         post_image: 投稿画像
         author_comment: 作者コメント
-     # ----------------------------
+  # --------------------------------
+  enums:
+    offer:
+      unit:
+        negotiation: "交渉中"
+        established: "オファー成立"
+        failure: "オファー不成立"
+  # -------------------------------
