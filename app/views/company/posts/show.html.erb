@@ -1,3 +1,36 @@
-<h1>デザイン詳細画面</h1>
+<h1>作品詳細画面（企業用）</h1>
 
-<%= link_to "オファーする", %>
+<%= attachment_image_tag @post, :post_image, :fill, 300, 400 %>
+
+<%= link_to company_design_contributor_path(@post.design_contributor_id) do %>
+  <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 100, 100 %>
+  <%= @post.design_contributor.pen_name %>
+<% end %>
+<p>作者コメント</p>
+<%= @post.author_comment %>
+<%= @post.created_at.strftime('%Y/%m/%d %H:%M') %><span>公開</span>
+<!---------------------------------------------------------------->
+<p>なにこれ欲しい<span>☆</span></p>
+<span>★</span><%= @post.wants.count %>
+<!-------------------------------コメント一覧--------------------------------->
+<p>コメント一覧</p>
+<% @post.comments.each do |comment| %>
+  <%= link_to company_design_contributor_path(comment.design_contributor_id) do %>
+    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
+    <%= comment.design_contributor.pen_name %>
+  <% end %>
+  <%= comment.comment %>
+  <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+<% end %>
+<!-----------------------------------------作品への反応---------------------------------------->
+<p>このデザインへの反応</p>
+<span>コメント</span>
+<%= @post.comments.count %>件
+<span>オファー</span>
+
+<!------------------------------オファーボタン------------------------------->
+<%= link_to "オファーする", new_company_post_offer_path(@post) %>
+<p>ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
+<!--------------------------------------------------------------------------->
+
+<%= link_to "デザイン一覧に戻る", company_posts_path %>
