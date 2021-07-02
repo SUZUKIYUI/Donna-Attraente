@@ -34,9 +34,10 @@ Rails.application.routes.draw do
 
   namespace :company do
     resources :companies, only: [:index, :show, :edit, :update]
-    resources :posts, only: [:index, :show]
     resources :design_contributors, only: [:show]
-    resources :offers, only: [:new, :create]
+    resources :posts, only: [:index, :show] do
+      resources :offers, only: [:new, :create]
+    end
   end
   # -------------------------------
 
