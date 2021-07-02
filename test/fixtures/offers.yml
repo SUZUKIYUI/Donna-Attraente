@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_comment: MyText
+  offer_status: 1
+  company_id: 1
+  post_id: 1
+
+two:
+  offer_comment: MyText
+  offer_status: 1
+  company_id: 1
+  post_id: 1
