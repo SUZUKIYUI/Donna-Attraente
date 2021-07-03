@@ -1,2 +1,9 @@
-<h1>Company::Companies#index</h1>
-<p>Find me in app/views/company/companies/index.html.erb</p>
+<h1>企業一覧画面（企業用）</h1>
+
+<p>企業一覧</p>
+<% @companies.each do |company| %>
+  <%= link_to company_company_path(company.id) do %>
+    <%= attachment_image_tag company, :profile_image, :fill, 350, 300, fallback: "no_image.jpg" %>
+    <%= company.company_name %>
+  <% end %>
+<% end %>
