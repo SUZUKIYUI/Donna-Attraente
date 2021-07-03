@@ -5,6 +5,7 @@ class Company::CompaniesController < ApplicationController
   end
 
   def show
+    @company = Company.find(params[:id])
   end
 
   def edit

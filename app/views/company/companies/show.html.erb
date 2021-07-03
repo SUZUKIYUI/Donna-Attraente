@@ -1,2 +1,25 @@
-<h1>Company::Companies#show</h1>
-<p>Find me in app/views/company/companies/show.html.erb</p>
+<h1>企業詳細画面（企業用）</h1>
+
+<%= attachment_image_tag @company, :profile_image, :fill, 300, 300, fallback: "no_image.jpg" %>
+<%= @company.company_name_kana %>
+<%= @company.company_name %>
+<p>住所</p>
+<span>〒</span>
+<%= @company.postal_code.insert(3,"-") %>
+<%= @company.address %>
+<p>TEL</p>
+<%= @company.phone_number %>
+<p>企業紹介</p>
+<%= @company.company_introduction %>
+<%= link_to "プロフィールを編集する", edit_company_company_path(@company.id) %>
+<!---------------------------------------------->
+<p>交渉中</p>
+<% if @company.offered_by? %>
+    <% @company.offers.each do |offer| %>
+      <%= link_to company_post_path(offer.post.id) do %>
+        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+      <% end %>
+    <% end %>
+<% else %>
+  <p>オファーなし</p>
+<% end %>
