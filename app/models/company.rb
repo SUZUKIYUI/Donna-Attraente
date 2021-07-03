@@ -20,24 +20,19 @@ class Company < ApplicationRecord
     Offer.exists?
   end
 
-  # 企業がオファー済み
-  def
-
-  end
-
   # 交渉中のオファー
-  def offers_negotiation(company_id)
-
+  def offered_negotiation_by?(company_id)
+    offers.where(company_id: company_id, offer_status: 0).exists?
   end
 
   # 交渉成立オファー
-  def offers_established
-
+  def offered_established_by?(company_id)
+    offers.where(company_id: company_id, offer_status: 1).exists?
   end
 
   # 交渉不成立オファー
-  def offers_failure
-
+  def offered_failure_by?(company_id)
+    offers.where(company_id: company_id, offer_status: 2).exists?
   end
 
 end
