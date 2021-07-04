@@ -1,5 +1,17 @@
 <h1>プロフィール編集（企業用）</h1>
 
+<!--------------------未入力の時のエラー文---------------------->
+<% if @company.errors.any? %>
+  <%= @company.errors.count %><span>件のエラー</span>
+  <ul>
+    <% @company.errors.full_messages.each do |message| %>
+      <li>
+        <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<!-------------------------------------------------------------->
 <%= form_with model: @company, url: company_company_path(@company.id), local: true do |f| %>
   <%= f.label :profile_image, "プロフィール画像" %>
   <%= f.attachment_field :profile_image %>
