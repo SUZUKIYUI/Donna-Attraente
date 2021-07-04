@@ -1,5 +1,6 @@
 class Offer < ApplicationRecord
-  # -------------------------------------
+  # ---------------------------
+  belongs_to :company
   belongs_to :post
   # --------------------------------------
   validates :offer_comment, presence: true

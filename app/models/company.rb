@@ -4,6 +4,8 @@ class Company < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # ----------------------------------------------
+  has_many :offers, dependent: :destroy
+  # ----------------------------------------------
   validates :company_name, presence: true
   validates :company_name_kana, presence: true
   validates :postal_code, presence: true
