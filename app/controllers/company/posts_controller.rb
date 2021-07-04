@@ -6,6 +6,7 @@ class Company::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    # ----------------------------
     # オファーモデルが存在するか
     if Offer.exists?
       # 交渉中のオファーが存在すれば@offerへ定義
