@@ -1,2 +1,10 @@
-<h1>Company::Offers#new</h1>
-<p>Find me in app/views/company/offers/new.html.erb</p>
+<h1>オファーを送る</h1>
+
+<%= attachment_image_tag @post, :post_image, :fill, 600, 700 %>
+<p>このデザインに対して商品化のオファーを送ります</p>
+
+<%= form_with model: @offer, url: company_post_offers_path(@post.id), local: true do |f| %>
+  <%= f.label :offer_comment, "オファーコメント" %>
+  <%= f.text_area :offer_comment %>
+  <%= f.submit "オファーする" %>
+<% end %>
