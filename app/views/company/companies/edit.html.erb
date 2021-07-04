@@ -1,2 +1,21 @@
-<h1>Company::Companies#edit</h1>
-<p>Find me in app/views/company/companies/edit.html.erb</p>
+<h1>プロフィール編集（企業用）</h1>
+
+<%= form_with model: @company, url: company_company_path(@company.id), local: true do |f| %>
+  <%= f.label :profile_image, "プロフィール画像" %>
+  <%= f.attachment_field :profile_image %>
+  <%= f.label :company_name, "企業名" %>
+  <%= f.text_field :company_name %>
+  <%= f.label :company_name_kana, "企業名（フリガナ）" %>
+  <%= f.text_field :company_name_kana %>
+  <%= f.label :postal_code, "郵便番号" %>
+  <%= f.text_field :postal_code %>
+  <%= f.label :address, "住所" %>
+  <%= f.text_field :address %>
+  <%= f.label :phone_number, "TEL" %>
+  <%= f.text_field :phone_number %>
+  <%= f.label :email, "メールアドレス" %>
+  <%= f.text_field :email %>
+  <%= f.label :company_introduction, "企業紹介" %>
+  <%= f.text_area :company_introduction %>
+  <%= f.submit "編集する" %>
+<% end %>
