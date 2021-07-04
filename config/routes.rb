@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   namespace :design_contributor do
     resources :design_contributors, only: [:show, :edit, :update]
-    resources :conpanies, only: [:index, :show]
+    resources :companies, only: [:index, :show]
     resources :posts do
       resource :wants, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
