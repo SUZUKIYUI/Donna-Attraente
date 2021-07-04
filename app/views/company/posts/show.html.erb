@@ -26,7 +26,7 @@
 <!---------------オファーモデルは存在するか--------------->
 <% if @post.offered_by? %>
   <!-------------交渉中のオファーがあれば表示------------->
-  <% if @post.offered_negotiation_by?(@post.id)%>
+  <% if @post.offered_negotiation_by?(@post.id) %>
     <p>このデザインへの反応</p>
     <span>コメント</span>
     <%= @post.comments.count %>件

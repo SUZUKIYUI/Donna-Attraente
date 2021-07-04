@@ -7,6 +7,12 @@ ja:
       post:
         post_image: 投稿画像
         author_comment: 作者コメント
+      # ----------------------------
+      offer: オファー
+    attributes:
+      offer:
+        offer_comment: オファーコメント
+        offer_status: オファー状態
   # --------------------------------
   enums:
     offer:
