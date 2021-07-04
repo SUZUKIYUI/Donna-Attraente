@@ -11,7 +11,9 @@
 <%= @company.phone_number %>
 <p>企業紹介</p>
 <%= @company.company_introduction %>
-<%= link_to "プロフィールを編集する", edit_company_company_path(@company.id) %>
+<% if @company.id == current_company.id %>
+  <%= link_to "プロフィールを編集する", edit_company_company_path(@company.id) %>
+<% end %>
 <!---------------------------------------------->
 <p>オファー履歴一覧</p>
 <!--オファーモデルは存在するか-->
