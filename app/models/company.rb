@@ -15,11 +15,10 @@ class Company < ApplicationRecord
   attachment :profile_image
   # -----------------------
 
-  # オファーモデルあり
+  # オファーモデルが存在するか
   def offered_by?
     Offer.exists?
   end
-
   # --------------交渉中のオファーが存在するか-------------------
   def offered_negotiation_by?(company_id)
     offers.where(company_id: company_id, offer_status: 0).exists?
