@@ -1,2 +1,18 @@
-<h1>DesignContributor::Offers#edit</h1>
-<p>Find me in app/views/design_contributor/offers/edit.html.erb</p>
+<h1>オファー編集画面</h1>
+
+<%= attachment_image_tag @post, :post_image, :fill, 300, 400 %>
+<p>このデザインに商品化のオファーが来ています</p>
+
+<%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image.jpg" %>
+<%= @offer.company.company_name %>
+<%= @offer.offer_comment %>
+<!------------------------>
+<p>返信する</p>
+<p>オファーを</p>
+<%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(@post.id, @offer.id), local: true do |f| %>
+  <%= f.radio_button :offer_status, :established %>
+  <%= f.label :offer_status_established, "お受けする" %>
+  <%= f.radio_button :offer_status, :failure %>
+  <%= f.label :offer_status_failure, "お断りする" %>
+  <%= f.submit "送信する" %>
+<% end %>
