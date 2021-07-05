@@ -1,2 +1,18 @@
 <h1>企業詳細画面</h1>
-<p>Find me in app/views/design_contributor/companies/show.html.erb</p>
+
+<%= attachment_image_tag @company, :profile_image, :fill, 400, 500, fallback: "no_image.jpg" %>
+<%= @company.company_name %>
+<%= @company.company_name_kana %>
+<p>企業紹介文</p>
+<%= @company.company_introduction %>
+<!--------------------------------->
+
+<!----------------------------------------------------------------------->
+<p>住所</p>
+<span>郵便番号</span>
+<%= @company.postal_code.insert(3, "-") %>
+<%= @company.address %>
+<p>TEL</p>
+<%= @company.phone_number %>
+<p>E-mail</p>
+<%= @company.email %>
