@@ -54,7 +54,7 @@
     <p>オファー成立済みです</p>
   <!-------------------------交渉不成立オファーが存在するか------------------------->
   <% elsif @post.offered_failure_by?(@post.id) %>
-    <span>オファー不成立</span><%= @offers.count %><span>件</span>
+    <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: 2).count %><span>件</span>
     <p>現在オファーはありません</p>
   <% end %>
 <!-----------------------------オファーモデルが存在しない--------------------------->

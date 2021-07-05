@@ -9,7 +9,7 @@
 <!------------------------>
 <p>返信する</p>
 <p>オファーを</p>
-<%= form_with (model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true) do |f| %>
+<%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
   <%= f.radio_button :offer_status, :established %>
   <%= f.label :offer_status_established, "お受けする" %>
   <%= f.radio_button :offer_status, :failure %>
