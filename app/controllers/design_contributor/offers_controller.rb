@@ -6,6 +6,20 @@ class DesignContributor::OffersController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:post_id])
+    @offer = Offer.find(params[:id])
+    if @offer.update(offer_params)
+      redirect_to design_contributor_post_path(@post.id)
+    else
+      render :edit
+    end
+  end
+
+  # この下に何も記述しないこと！
+  private
+
+  def offer_params
+    params.require(:offer).permit(:offer_status)
   end
 
 end
