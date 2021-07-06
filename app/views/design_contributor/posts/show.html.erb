@@ -56,7 +56,7 @@
     <p>オファー成立済みです</p>
   <!-------------------------交渉不成立オファーが存在するか------------------------->
   <% elsif @post.offered_failure_by?(@post.id) %>
-    <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: "failure").count %><span>件</span>
+    <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
     <p>現在オファーはありません</p>
   <% end %>
 <!-----------------------------オファーモデルが存在しない--------------------------->
@@ -75,7 +75,7 @@
   </ul>
 <% end %>
 <!-------------------------------------------------------->
-<%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(@post.id), local: true do |f| %>
+<%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
   <%= f.label :comment, "コメントする" %>
   <%= f.text_area :comment %>
   <%= f.submit "投稿" %>
