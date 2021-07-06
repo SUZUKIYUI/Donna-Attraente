@@ -14,7 +14,7 @@
   </ul>
 <% end %>
 <!----------------------------------------------------------->
-<%= form_with model: @offer, url: company_post_offers_path(@post.id), local: true do |f| %>
+<%= form_with model: [@post, @offer], url: company_post_offers_path(post_id: @post.id), local: true do |f| %>
   <%= f.label :offer_comment, "オファーコメント" %>
   <%= f.text_area :offer_comment %>
   <%= f.submit "オファーする" %>
