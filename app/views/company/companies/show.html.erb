@@ -18,35 +18,40 @@
 <p>オファー履歴一覧</p>
 <!--オファーモデルは存在するか-->
 <% if @company.offered_by? %>
-    <!---------------------交渉中のオファーあれば全て表示--------------------->
-    <% if @company.offered_negotiation_by?(@company.id) %>
-      <p>交渉中</p>
-      <%= @company.offered_negotiation_count(@company.id) %><span>件</span>
-      <% @company.offers.each do |offer| %>
-        <%= link_to company_post_path(offer.post.id) do %>
-          <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
-        <% end %>
-      <% end %>
-    <!---------------------交渉成立オファーあれば全て表示-------------------->
-    <% elsif @company.offered_established_by?(@company.id) %>
-      <p>交渉成立</p>
-      <%= @company.offered_established_count(@company.id) %><span>件</span>
-      <% @company.offers.each do |offer| %>
-        <%= link_to company_post_path(offer.post.id) do %>
-          <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
-        <% end %>
-      <% end %>
-    <!--------------------交渉不成立オファーあれば全て表示------------------->
-    <% elsif @company.offered_failure_by?(@company.id) %>
-      <p>交渉不成立</p>
-      <%= @company.offered_failure_count(@company.id) %><span>件</span>
-      <% @company.offers.each do |offer| %>
-        <%= link_to company_post_path(offer.post.id) do %>
-          <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
-        <% end %>
+  <!---------------------交渉中のオファーあれば全て表示--------------------->
+  <% if @company.offered_negotiation_by?(@company.id) %>
+    <p>交渉中</p>
+    <%= @company.offered_negotiation_count(@company.id) %><span>件</span>
+    <% @company.offers.where(offer_status: :negotiation).each do |offer| %>
+      <%= link_to company_post_path(offer.post.id) do %>
+        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
       <% end %>
     <% end %>
-<!----オファーモデルが存在しない---->
-<% else %>
-  <p>オファーしたものはありません</p>
+  <% end %>
+<% end %>
+<% if @company.offered_by? %>
+  <!---------------------交渉成立オファーあれば全て表示-------------------->
+  <% if @company.offered_established_by?(@company.id) %>
+    <p>交渉成立</p>
+    <%= @company.offered_established_count(@company.id) %><span>件</span>
+    <% @company.offers.where(offer_status: :established).each do |offer| %>
+      <%= link_to company_post_path(offer.post.id) do %>
+        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<% if @company.offered_by? %>
+  <!--------------------交渉不成立オファーあれば全て表示------------------->
+  <% if @company.offered_failure_by?(@company.id) %>
+    <p>交渉不成立</p>
+    <%= @company.offered_failure_count(@company.id) %><span>件</span>
+    <% @company.offers.where(offer_status: :failure).each do |offer| %>
+      <%= link_to company_post_path(offer.post.id) do %>
+        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<% if Offer.find_by(company_id: @company.id).nil? %>
 <% end %>
