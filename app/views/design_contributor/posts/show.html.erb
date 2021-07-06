@@ -49,7 +49,9 @@
     <% if @post.design_contributor_id == current_design_contributor.id %>
       <%= link_to "確認する", edit_design_contributor_post_offer_path(@post, @offer) %>
     <% else %>
-      <p>現在交渉中</p>
+      <span>現在</span>
+      <%= @offer.company.compeny_name %>
+      <span>様と交渉中</span>
     <% end %>
   <!--------------------------交渉成立オファーが存在するか-------------------------->
   <% elsif @post.offered_established_by?(@post.id) %>
@@ -57,6 +59,9 @@
   <!-------------------------交渉不成立オファーが存在するか------------------------->
   <% elsif @post.offered_failure_by?(@post.id) %>
     <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
+    <p>現在オファーはありません</p>
+  <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
+  <% else %>
     <p>現在オファーはありません</p>
   <% end %>
 <!-----------------------------オファーモデルが存在しない--------------------------->

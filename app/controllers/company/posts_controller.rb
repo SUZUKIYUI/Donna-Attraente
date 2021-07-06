@@ -16,8 +16,8 @@ class Company::PostsController < ApplicationController
       elsif Offer.where(post_id: @post.id, offer_status: :established).exists?
         @offer = Offer.find_by(post_id: @post.id, offer_status: :established)
       # 交渉不成立オファーが存在すれば@offersへ定義
-      elsif Offer.where(post_id: @post.id, offer_status: :failure).exists?
-        @offers = Offer.where(post_id: @post.id, offer_status: :failure)
+      # elsif Offer.where(post_id: @post.id, offer_status: :failure).exists?
+      #   @offers = Offer.where(post_id: @post.id, offer_status: :failure)
       end
     end
   end

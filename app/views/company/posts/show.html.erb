@@ -23,14 +23,14 @@
   <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
 <% end %>
 <!-----------------------------------作品への反応--------------------------------------->
+<p>このデザインへの反応</p>
+<span>コメント</span>
+<%= @post.comments.count %>件
+<span>オファー</span>
 <!--オファーモデルは存在するか-->
 <% if @post.offered_by? %>
   <!---------------------交渉中のオファーがあれば表示---------------------->
   <% if @post.offered_negotiation_by?(@post.id) %>
-    <p>このデザインへの反応</p>
-    <span>コメント</span>
-    <%= @post.comments.count %>件
-    <span>オファー</span>
     <span>交渉中</span><br />
     <%= @offer.company.company_name %><span>様と交渉中</span>
     <p>
@@ -39,10 +39,6 @@
     </p>
   <!---------------------交渉成立オファーあれば表示----------------------->
   <% elsif @post.offered_established_by?(@post.id) %>
-    <p>このデザインへの反応</p>
-    <span>コメント</span>
-    <%= @post.comments.count %>件
-    <span>オファー</span>
     <span>交渉成立済み</span><br />
     <%= @offer.company.company_name %><span>様と交渉成立済み</span>
     <p>
@@ -51,22 +47,20 @@
     </p>
   <!---------------------交渉不成立オファーあれば表示--------------------->
   <% elsif @post.offered_failure_by?(@post.id) %>
-    <p>このデザインへの反応</p>
-    <span>コメント</span>
-    <%= @post.comments.count %>件
-    <span>オファー</span>
-    <span>交渉不成立</span><%= @offers.count %><span>件</span>
+    <span>交渉不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
     <span>現在オファー受付中です</span><br />
+    <%= link_to new_company_post_offer_path(@post.id) do %>
+      <p>商品化の<br />オファーを送る</p>
+    <% end %>
+  <!-----オファーモデルは存在するがこのデザインにオファーが来ていない----->
+  <% else %>
+    <span>現在オファー受付中です</span>
     <%= link_to new_company_post_offer_path(@post.id) do %>
       <p>商品化の<br />オファーを送る</p>
     <% end %>
   <% end %>
 <!-----------------------オファーモデルが存在しない---------------------->
 <% else %>
-  <p>このデザインへの反応</p>
-  <span>コメント</span>
-  <%= @post.comments.count %>件
-  <span>オファー</span>
   <span>現在オファー受付中です</span>
   <%= link_to new_company_post_offer_path(@post.id) do %>
     <p>商品化の<br />オファーを送る</p>

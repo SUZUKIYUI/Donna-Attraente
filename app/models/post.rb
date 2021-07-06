@@ -25,7 +25,7 @@ class Post < ApplicationRecord
   end
   # ------------交渉不成立オファーが存在するか-------------
   def offered_failure_by?(post_id)
-    offers.where(post_id: post_id, offer_status: :failure)
+    offers.where(post_id: post_id, offer_status: :failure).exists?
   end
 
 end
