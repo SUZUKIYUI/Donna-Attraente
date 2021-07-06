@@ -17,15 +17,15 @@ class Post < ApplicationRecord
   end
   # --------------交渉中のオファーが存在するか--------------
   def offered_negotiation_by?(post_id)
-    offers.where(post_id: post_id, offer_status: 0).exists?
+    offers.where(post_id: post_id, offer_status: "negotiation").exists?
   end
   # -------------交渉成立オファーが存在するか--------------
   def offered_established_by?(post_id)
-    offers.where(post_id: post_id, offer_status: 1).exists?
+    offers.where(post_id: post_id, offer_status: "established").exists?
   end
   # ------------交渉不成立オファーが存在するか-------------
   def offered_failure_by?(post_id)
-    offers.where(post_id: post_id, offer_status: 2)
+    offers.where(post_id: post_id, offer_status: "failure")
   end
 
 end
