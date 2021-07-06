@@ -32,19 +32,30 @@
   <!---------------------交渉中のオファーがあれば表示---------------------->
   <% if @post.offered_negotiation_by?(@post.id) %>
     <span>交渉中</span><br />
-    <%= @offer.company.company_name %><span>様と交渉中</span>
-    <p>
-      現在交渉中の為、こちらのデザインへはオファーができません<br />
-      ※交渉不成立となった場合、再度こちらのページからオファーが可能です
-    </p>
+    <% if @offer.company == current_company %>
+      <p>
+        現在交渉しております。<br />
+        デザイン投稿者様の返信をお待ちください。
+      </p>
+    <% else %>
+      <%= @offer.company.company_name %><span>様と交渉中</span>
+      <p>
+        現在交渉中の為、こちらのデザインへはオファーができません。<br />
+        ※交渉不成立となった場合、再度こちらのページからオファーが可能です。
+      </p>
+    <% end %>
   <!---------------------交渉成立オファーあれば表示----------------------->
   <% elsif @post.offered_established_by?(@post.id) %>
     <span>交渉成立済み</span><br />
-    <%= @offer.company.company_name %><span>様と交渉成立済み</span>
-    <p>
-      交渉成立済みの為、今後こちらのデザインへはオファーができません<br />
-      新たなデザインをお探しください
-    </p>
+    <% if @offer.company == current_company %>
+      <p><%= @post.design_contributor.pen_name %>様が商品化を承諾されました</p>
+    <% else %>
+      <%= @offer.company.company_name %><span>様と交渉成立済み</span>
+      <p>
+        交渉成立済みの為、今後こちらのデザインへはオファーができません<br />
+        新たなデザインをお探しください
+      </p>
+    <% end %>
   <!---------------------交渉不成立オファーあれば表示--------------------->
   <% elsif @post.offered_failure_by?(@post.id) %>
     <span>交渉不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
