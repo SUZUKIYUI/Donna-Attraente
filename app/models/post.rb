@@ -29,12 +29,12 @@ class Post < ApplicationRecord
     offers.where(post_id: post_id, offer_status: :failure).exists?
   end
 
-  # -----------------------いいねの通知を作成-------------------------
-  def create_notification_like!(current_design_contributor)
+  # -------------------------------なにこれ欲しいの通知を作成-----------------------------------
+  def create_notification_want!(current_design_contributor)
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       visited_design_contributor_id: design_contributor_id,
-      action: "like"
+      action: "want"
     )
     if notification.visitor_design_controbutor_id == notification.visited_design_contributor_id
       notification.checked = true
