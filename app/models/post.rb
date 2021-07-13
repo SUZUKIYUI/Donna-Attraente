@@ -41,6 +41,27 @@ class Post < ApplicationRecord
     end
     notification.save if notification.valid?
   end
+  # ---------------------------------------------------------コメントの通知を作成----------------------------------------------------------------
+  def create_notification_comment!(current_design_contributor, comment_id)
+    temp_ids = Comment.select(:design_contributor_id).where(post_id: id).where.not(design_contributor_id: current_design_contributor.id).distinct
+    temp_ids.each do |temp_id|
+      save_notification_comment!(current_design_contributor, comment_id, temp_id["design_contributor_id"])
+    end
+    save_notification_comment!(current_design_contributor, comment_id, design_contributor_id) if temp_ids.blank?
+  end
+  
+  def save_notification_comment!(current_design_contributor, comment_id, visited_design_contributor_id)
+    notification = current_design_contributor.active_notifications.new(
+      post_id: id,
+      comment_id: comment_id,
+      visited_design_contributor_id: visited_design_contributor_id,
+      action: "comment"
+    )
+    if notification.visitor_design_contributor_id == notification.visited_design_contributor_id
+      notification.checked = true
+    end
+    notification.save if notification.valid?
+  end
 
 
 end
