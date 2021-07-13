@@ -49,7 +49,7 @@ class Post < ApplicationRecord
     end
     save_notification_comment!(current_design_contributor, comment_id, design_contributor_id) if temp_ids.blank?
   end
-  
+
   def save_notification_comment!(current_design_contributor, comment_id, visited_design_contributor_id)
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
@@ -62,6 +62,41 @@ class Post < ApplicationRecord
     end
     notification.save if notification.valid?
   end
+  # -------------------------------------------企業からのオファーの通知を作成--------------------------------------------------
+  def save_notification_offer_company!(current_company, offer_id, visited_design_contributor_id)
+    notification = current_company.active_notifications.new(
+      post_id: id,
+      offer_id: offer_id,
+      visited_design_contributor_id: visited_design_contributor_id,
+      action: "offer"
+    )
+    notification.save if notification.valid?
+  end
+
+
+
+
+
+
+  # --------------------------------------デザイン投稿者からのオファーの通知を作成--------------------------------------------
+  def save_notification_offer_design_contributor!(current_design_contributor, offer_id, visited_company_id)
+    notification = current_design_contributor.active_notifications.new(
+      post_id: id,
+      offer_id: offer_id,
+      visited_company_id: visited_company_id,
+      action: "offer"
+    )
+    notification.save if notification.valid?
+  end
+
+
+
+
+
+
+
+
+
 
 
 end
