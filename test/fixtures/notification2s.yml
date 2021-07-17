@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 1
+  contributor_id: 1
+  post_id: 1
+  offer_id: 1
+  checked: false
+
+two:
+  company_id: 1
+  contributor_id: 1
+  post_id: 1
+  offer_id: 1
+  checked: false
