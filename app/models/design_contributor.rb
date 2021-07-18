@@ -7,6 +7,7 @@ class DesignContributor < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :wants, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :notification2s, dependent: :destroy
   # -------------------------------------
   validates :pen_name, presence: true
   validates :profile_image, presence: false

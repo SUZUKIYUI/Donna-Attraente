@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :wants, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :offers, dependent: :destroy
+  has_many :notification2s, dependent: :destroy
   # -------------------------------------
   validates :post_image, presence: true
   validates :author_comment, presence: true
