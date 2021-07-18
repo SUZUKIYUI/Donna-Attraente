@@ -6,6 +6,7 @@ class Company < ApplicationRecord
   # ----------------------------------------------
   has_many :offers, dependent: :destroy
   has_many :notification2s, dependent: :destroy
+  has_many :passive_notifications, class_name: "Notification", as: :visited_user, dependent: :destroy
   # ----------------------------------------------
   validates :company_name, presence: true
   validates :company_name_kana, presence: true
