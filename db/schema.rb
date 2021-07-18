@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_17_012522) do
+ActiveRecord::Schema.define(version: 2021_07_17_014350) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "design_contributor_id", null: false
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 2021_07_17_012522) do
     t.string "profile_image_id"
     t.index ["email"], name: "index_design_contributors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_design_contributors_on_reset_password_token", unique: true
+  end
+
+  create_table "notification2s", force: :cascade do |t|
+    t.integer "company_id", null: false
+    t.integer "contributor_id", null: false
+    t.integer "post_id", null: false
+    t.integer "offer_id", null: false
+    t.boolean "checked", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "notifications", force: :cascade do |t|
