@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_18_025353) do
+ActiveRecord::Schema.define(version: 2021_07_18_030350) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "design_contributor_id", null: false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2021_07_18_025353) do
 
   create_table "notification2s", force: :cascade do |t|
     t.integer "company_id", null: false
-    t.integer "contributor_id", null: false
+    t.integer "design_contributor_id", null: false
     t.integer "post_id", null: false
     t.integer "offer_id", null: false
     t.boolean "checked", default: false, null: false
