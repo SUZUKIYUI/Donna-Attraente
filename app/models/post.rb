@@ -74,4 +74,22 @@ class Post < ApplicationRecord
     notification.save if notification.valid?
   end
 
+  # ----------------------------------------------------オファーの通知メソッド---------------------------------------------------------------
+  def create_notification_offer!(current_design_contributor, offer_id)
+    company = Company.find(@offer.company_id)
+    # 自分からの「オファーの返信」の通知を作成する
+    save_notification_offer!(current_design_contributor, offer_id, company.id)
+  end
+
+  def save_notification_offer!(current_design_contributor, offer_id, visited_user_id)
+    notification = current_design_contributor.active_notifications.new(
+      post_id: id,
+      offer_id: offer_id,
+      visited_user_id: visired_user_id,
+      action: "offer"
+    )
+    # 全てのデータが正しく入っていれば保存するs
+    notification.save if notification.valid?
+  end
+
 end
