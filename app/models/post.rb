@@ -75,13 +75,8 @@ class Post < ApplicationRecord
   end
 
   # --------------------------------------------------オファー（返信）の通知メソッド---------------------------------------------------------
-  def create_notification_offer!(current_design_contributor, offer_id)
-    company = Company.find(@offer.company_id)
+  def create_notification_offer!(current_design_contributor, offer_id, visited_user_id)
     # デザイン投稿者からの「オファーの返信」の通知を作成する
-    save_notification_offer!(current_design_contributor, offer_id, company.id)
-  end
-
-  def save_notification_offer!(current_design_contributor, offer_id, visited_user_id)
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       offer_id: offer_id,
