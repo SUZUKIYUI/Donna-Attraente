@@ -37,7 +37,7 @@ class Post < ApplicationRecord
     design_contributor = DesignContributor.find(design_contributor_id)
 
     if temp.blank?
-      # 自分からの「いいね（なにこれ欲しい）」の通知を作成する
+      # デザイン投稿者からの「いいね（なにこれ欲しい）」の通知を作成する
       notification = current_design_contributor.active_notifications.new(
         post_id: id,
         visited_user_id: design_contributor.id,
@@ -55,7 +55,7 @@ class Post < ApplicationRecord
   # -----------------------------------------------------コメントの通知メソッド--------------------------------------------------------------
   def create_notification_comment!(current_design_contributor, comment_id)
     design_contributor = DesignContributor.find(design_contributor_id)
-    # 自分からの「コメント」の通知を作成する
+    # デザイン投稿者からの「コメント」の通知を作成する
     save_notification_comment!(current_design_contributor, comment_id, design_contributor.id)
   end
 
@@ -74,10 +74,10 @@ class Post < ApplicationRecord
     notification.save if notification.valid?
   end
 
-  # ----------------------------------------------------オファーの通知メソッド---------------------------------------------------------------
+  # --------------------------------------------------オファー（返信）の通知メソッド---------------------------------------------------------
   def create_notification_offer!(current_design_contributor, offer_id)
     company = Company.find(@offer.company_id)
-    # 自分からの「オファーの返信」の通知を作成する
+    # デザイン投稿者からの「オファーの返信」の通知を作成する
     save_notification_offer!(current_design_contributor, offer_id, company.id)
   end
 
@@ -85,10 +85,22 @@ class Post < ApplicationRecord
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       offer_id: offer_id,
-      visited_user_id: visired_user_id,
+      visited_user_id: visited_user_id,
       action: "offer"
     )
-    # 全てのデータが正しく入っていれば保存するs
+    # 全てのデータが正しく入っていれば保存する
+    notification.save if notification.valid?
+  end
+
+  # ----------------------------------------------------オファーの通知メソッド--------------------------------------------------------------
+  def create_notification2_offer!(current_company, offer_id, design_contributor_id)
+    # 企業からの「オファー」の通知を作成する
+    notification = current_company.notification2s.new(
+      post_id: id,
+      offer_id: offer_id,
+      design_contributor_id: design_contributor_id
+    )
+    # 全てのデータが正しく入っていれば保存する
     notification.save if notification.valid?
   end
 
