@@ -6,7 +6,7 @@ class DesignContributor::CommentsController < ApplicationController
     @comment.design_contributor_id = current_design_contributor.id
     @comment.post_id = @post.id
     if @comment.save
-      @post.create_notification_comment!(current_design_contributor, @comment.id)
+      @post.create_notification_comment!(current_design_contributor, @comment.id, @post.design_contributor.id)
       redirect_to design_contributor_post_path(@post.id)
     else
       render template: "design_contributor/posts/show"
