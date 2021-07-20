@@ -11,6 +11,7 @@ class Company::OffersController < ApplicationController
     @offer.company_id = current_company.id
     @offer.post_id = @post.id
     if @offer.save
+      @post.create_notification2_offer!(current_company, @offer.id, @post.design_contributor.id)
       redirect_to company_post_path(@post.id)
     else
       render :new
