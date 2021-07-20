@@ -53,13 +53,8 @@ class Post < ApplicationRecord
   end
 
   # -----------------------------------------------------コメントの通知メソッド--------------------------------------------------------------
-  def create_notification_comment!(current_design_contributor, comment_id)
-    design_contributor = DesignContributor.find(design_contributor_id)
+  def create_notification_comment!(current_design_contributor, comment_id, visited_user_id)
     # デザイン投稿者からの「コメント」の通知を作成する
-    save_notification_comment!(current_design_contributor, comment_id, design_contributor.id)
-  end
-
-  def save_notification_comment!(current_design_contributor, comment_id, visited_user_id)
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       comment_id: comment_id,
