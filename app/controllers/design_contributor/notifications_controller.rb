@@ -8,6 +8,7 @@ class DesignContributor::NotificationsController < ApplicationController
     end
   end
 
+  # デザイン投稿者からデザイン投稿者にきたいいね・コメントの通知全部削除
   def destroy
     @notifications = current_design_contributor.passive_notifications.destroy_all
     redirect_to design_contributor_notifications_path
