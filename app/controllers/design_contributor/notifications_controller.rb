@@ -1,5 +1,6 @@
 class DesignContributor::NotificationsController < ApplicationController
 
+  # デザイン投稿者からデザイン投稿者にきたいいね・コメントの通知一覧
   def index
     @notifications = current_design_contributor.passive_notifications
     @notifications.where(checked: false).each do |notification|
