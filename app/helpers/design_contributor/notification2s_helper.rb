@@ -1,0 +1,2 @@
+module DesignContributor::Notification2sHelper
+end
