@@ -9,8 +9,7 @@ module DesignContributor::NotificationsHelper
             when "want" then
                 tag.a(@design_contributor.pen_name, href: design_contributor_design_contributor_path(@design_contributor)) + "が" + tag.a("あなたのデザイン", href: design_contributor_post_path(notification.post_id)) + "になにこれ欲しいを押しました"
             when "comment" then
-                @comment = Comment.find_by(@design_contributor_comment)
-                @comment_comment = @comment.comment
+                @comment = Comment.find_by(id: @design_contributor_comment)&.comment
                 teg.a(@design_contributor.pen_name, href: design_contributor_design_contributor_path(@design_contributor)) + "が" + tag.a("あなたのデザイン", href: design_contributor_post_path(notification.post_id)) + "にコメントしました"
         end
     end
