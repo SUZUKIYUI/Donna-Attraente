@@ -1,0 +1,6 @@
+<%= notification_form(notification) %>
+<%= "(#{time_ago_in_words(notification_created_at)}前)" %><br />
+
+<% if !@comment.nil? %>
+  <p><%= @comment %></p>
+<% end %>
