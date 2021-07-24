@@ -13,4 +13,8 @@ module DesignContributor::NotificationsHelper
                 teg.a(@design_contributor.pen_name, href: design_contributor_design_contributor_path(@design_contributor)) + "が" + tag.a("あなたのデザイン", href: design_contributor_post_path(notification.post_id)) + "にコメントしました"
         end
     end
+    
+    def unchecked_notifications
+        @notifications = current_design_contributor.passive_notifications.where(checked: false)
+    end
 end
