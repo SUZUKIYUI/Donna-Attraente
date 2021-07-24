@@ -52,16 +52,17 @@ class Post < ApplicationRecord
   end
 
   # -----------------------------------------------------コメントの通知メソッド--------------------------------------------------------------
-  def create_notification_comment!(current_design_contributor, comment_id, visited_user_id)
+  def create_notification_comment!(current_design_contributor, comment_id, design_contributor_id)
     # デザイン投稿者からの「コメント」の通知を作成する
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       comment_id: comment_id,
-      visited_user_id: visited_user_id,
+      visitedable_id: design_contributor_id,
+      visitedable_type: "DesignContributor",
       action: "comment"
     )
     #もしデザイン投稿者が自分の投稿に自分でコメントしたら通知しない
-    if (notificatiion.design_contributor_id == notification.visited_user_id) && (notification.visited_user_type == "DesignContributor")
+    if notificatiion.visitor_id == notification.visitedable_id
       notification.checked = true
     end
     # 全てのデータが正しく入っていれば保存する
