@@ -31,18 +31,19 @@ class Post < ApplicationRecord
   end
 
   # ----------------------------------------------いいね （なにこれ欲しい）の通知メソッド----------------------------------------------------
-  def create_notification_want!(current_design_contributor, visited_user_id)
-    temp = Notification.where(["design_contributor_id = ? and visited_user_id = ? and visited_user_type = ? and post_id = ? and action = ?",
+  def create_notification_want!(current_design_contributor)
+    temp = Notification.where(["visitor_id = ? and visitedable_id = ? and visitedable_type = ? and post_id = ? and action = ?",
                               current_design_contributor.id, design_contributor_id, "DesignContributor", id, "like"])
     if temp.blank?
       # デザイン投稿者からの「いいね（なにこれ欲しい）」の通知を作成する
       notification = current_design_contributor.active_notifications.new(
         post_id: id,
-        visited_user_id: visited_user_id,
+        visitedable_id: design_contributor_id,
+        visitedable_type: "DesignContributor",
         action: "want"
       )
       #もしデザイン投稿者が自分の投稿に自分でいいねしたら通知しない
-      if (notification.design_contributor_id == notification.visited_user_id) && (notification.visited_user_type == "DesignContributor")
+      if notification.visitor_id == notification.visitedable_id
         notification.checked = true
       end
       # 全てのデータが正しく入っていれば保存する
