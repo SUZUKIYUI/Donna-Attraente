@@ -65,8 +65,11 @@
 
 
           <!---------------ここに手紙のアイコン入れる・通知機能を作る！！！！！！！！！！！！！！！！-->
+          <% if unchecked_notifications.any? %>
+            <i class="fa fa-circle" style="color: gold;"></i>
+          <% end %>
           <li class="header_list_item">
-            手紙
+            <%= link_to "通知", design_contributor_notifications_path %>
           </li>
 
 

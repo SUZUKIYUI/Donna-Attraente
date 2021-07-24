@@ -5,7 +5,7 @@ class Company < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # ----------------------------------------------
   has_many :offers, dependent: :destroy
-  has_many :passive_notifications, class_name: "Notification", as: :visited_user, dependent: :destroy
+  has_many :notifications,as: :visited_user, dependent: :destroy
   has_many :notification2s, dependent: :destroy
   # ----------------------------------------------
   validates :company_name, presence: true
