@@ -5,8 +5,9 @@ class Company < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # ----------------------------------------------
   has_many :offers, dependent: :destroy
-  # オファーの通知（送信専用）
+  # オファーの通知（回答受信専用）
   has_many :passive_notifications, class_name: "Notification", foreign_key: "visitedable_id", as: :visitedable, dependent: :destroy
+  # オファーの通知（申請送信専用）
   has_many :notification2s, dependent: :destroy
   # ----------------------------------------------
   validates :company_name, presence: true
