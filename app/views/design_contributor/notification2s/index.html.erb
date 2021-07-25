@@ -1,0 +1,7 @@
+<p>オファー通知</p>
+
+<% if @notification2s.exists? %>
+  <% render @notification2s %>
+<% else %>
+  <p>通知はありません</p>
+<% end %>
