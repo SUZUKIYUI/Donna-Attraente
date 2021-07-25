@@ -70,13 +70,13 @@ class Post < ApplicationRecord
   end
 
   # --------------------------------------------------オファー（返信）の通知メソッド---------------------------------------------------------
-  def create_notification_offer!(current_design_contributor, offer_id, design_contributor_id)
+  def create_notification_offer!(current_design_contributor, offer_id, company_id)
     # デザイン投稿者からの「オファーの返信」の通知を作成する
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       offer_id: offer_id,
-      visitedable_id: design_contributor_id,
-      visitedable_type: "DesignContributor",
+      visitedable_id: company_id,
+      visitedable_type: "Company",
       action: "offer"
     )
     # 全てのデータが正しく入っていれば保存する
