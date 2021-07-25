@@ -70,28 +70,29 @@ class Post < ApplicationRecord
   end
 
   # --------------------------------------------------オファー（返信）の通知メソッド---------------------------------------------------------
-  def create_notification_offer!(current_design_contributor, offer_id, visited_user_id)
+  def create_notification_offer!(current_design_contributor, offer_id, design_contributor_id)
     # デザイン投稿者からの「オファーの返信」の通知を作成する
     notification = current_design_contributor.active_notifications.new(
       post_id: id,
       offer_id: offer_id,
-      visited_user_id: visited_user_id,
+      visitedable_id: design_contributor_id,
+      visitedable_type: "DesignContributor",
       action: "offer"
     )
     # 全てのデータが正しく入っていれば保存する
     notification.save if notification.valid?
   end
 
-  # ----------------------------------------------------オファーの通知メソッド--------------------------------------------------------------
-  def create_notification2_offer!(current_company, offer_id, design_contributor_id)
-    # 企業からの「オファー」の通知を作成する
-    notification = current_company.notification2s.new(
-      post_id: id,
-      offer_id: offer_id,
-      design_contributor_id: design_contributor_id
-    )
-    # 全てのデータが正しく入っていれば保存する
-    notification.save if notification.valid?
-  end
+  # # ----------------------------------------------------オファーの通知メソッド--------------------------------------------------------------
+  # def create_notification2_offer!(current_company, offer_id, design_contributor_id)
+  #   # 企業からの「オファー」の通知を作成する
+  #   notification = current_company.notification2s.new(
+  #     post_id: id,
+  #     offer_id: offer_id,
+  #     design_contributor_id: design_contributor_id
+  #   )
+  #   # 全てのデータが正しく入っていれば保存する
+  #   notification.save if notification.valid?
+  # end
 
 end
