@@ -1,6 +1,6 @@
 module DesignContributor::Notification2sHelper
 
-  # 企業からきたオファー のみの通知を表示
+  # 企業からきたオファーのみの通知を表示
   def notification2_form(notification2)
     @visitor = notification2.company
 
