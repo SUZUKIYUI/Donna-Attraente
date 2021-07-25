@@ -1,7 +1,5 @@
 <p>なにこれ欲しい・コメント通知</p>
 
-<%= link_to "全削除", design_contributor_notification_path(@notifications), method: :delete %>
-
 <% if @notifications.exists? %>
   <%= render @notifications %>
 <% else %>
