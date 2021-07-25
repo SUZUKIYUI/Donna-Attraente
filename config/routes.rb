@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   namespace :design_contributor do
     resources :design_contributors, only: [:show, :edit, :update]
     resources :companies, only: [:index, :show]
-    resources :notifications, only: [:index, :destroy]
-    resources :notification2s, only: [:index, :destroy]
+    resources :notifications, only: :index
+    resources :notification2s, only: :index
     resources :posts do
       resource :wants, only: [:create, :destroy]
       resources :comments, only: [:create, :destroy]
@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   namespace :company do
     resources :companies, only: [:index, :show, :edit, :update]
     resources :design_contributors, only: [:show]
-    resources :notifications, only: [:index, :destroy]
+    resources :notifications, only: :index
     resources :posts, only: [:index, :show] do
       resources :offers, only: [:new, :create]
     end
