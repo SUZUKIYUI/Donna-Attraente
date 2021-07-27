@@ -119,13 +119,14 @@
               </div>
             <% end %>
           </li>
-
-
-          <!---------------ここに手紙のアイコン入れる・通知機能を作る！！！！！！！！！！！！！！！！-->
-          <li class="header_list_item">手紙</li>
-
-
-
+          <!---------オファー（返信）の通知--------->
+          <% if unchecked_offer_notifications.any? %>
+            <i class="fa fa-circle" style="color: gold;"></i>
+          <% end %>
+          <li class="header_list_item">
+            <%= link_to "オファー通知", company_notifications_path %>
+          </li>
+          <!------------------------------------------------>
           <li class="header_list_item">
             <%= link_to destroy_company_session_path, method: :delete do %>
               <div>

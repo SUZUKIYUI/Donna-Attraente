@@ -7,4 +7,8 @@ module Company::NotificationsHelper
     end
   end
 
+  def unchecked_offer_notifications
+    @offer_notifications = current_company.passive_notifications.where(checked: false)
+  end
+
 end
