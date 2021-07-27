@@ -16,7 +16,7 @@ module DesignContributor::NotificationsHelper
         end
     end
 
-    # def unchecked_notifications
-    #     @notifications = current_design_contributor.passive_notifications.where(checked: false)
-    # end
+    def unchecked_notifications
+        @notifications = current_design_contributor.passive_notifications.where(checked: false)
+    end
 end

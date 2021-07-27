@@ -21,7 +21,7 @@
       </div>
       <ul class="header_lists">
         <% if design_contributor_signed_in? %>
-        <!--デザイン投稿者がログインしている場合のヘッダーリスト-->
+        <!---------------------デザイン投稿者がログインしている場合のヘッダーリスト---------------------->
           <li class="header_list_item">
             <%= link_to root_path do %>
               <div>
@@ -62,17 +62,21 @@
               </div>
             <% end %>
           </li>
-
-
-          <!---------------ここに手紙のアイコン入れる・通知機能を作る！！！！！！！！！！！！！！！！-->
+          <!--なにこれ欲しい・コメントの通知-->
           <% if unchecked_notifications.any? %>
             <i class="fa fa-circle" style="color: gold;"></i>
           <% end %>
           <li class="header_list_item">
             <%= link_to "通知", design_contributor_notifications_path %>
           </li>
-
-
+          <!-----------オファーの通知---------->
+          <% if unchecked_notification2s.any? %>
+            <i class="fa fa-circle" style="color: gold;"></i>
+          <% end %>
+          <li class="header_list_item">
+            <%= link_to "オファー通知",  design_contributor_notification2s_path %>
+          </li>
+          <!--------------------------------------------------------------------->
           <li class="header_list_item">
             <%= link_to destroy_design_contributor_session_path, method: :delete do %>
               <div>
@@ -82,7 +86,7 @@
             <% end %>
           </li>
         <% elsif company_signed_in? %>
-        <!--企業がログインしている場合のヘッダーリスト-->
+        <!----------------------企業がログインしている場合のヘッダーリスト----------------------->
           <li class="header_list_item">
             <%= link_to root_path do %>
               <div>
@@ -131,7 +135,7 @@
             <% end %>
           </li>
         <% else %>
-        <!--ログインしていない場合のヘッダーリスト-->
+        <!------------ログインしていない場合のヘッダーリスト------------>
           <li class="header_list_item">
             <%= link_to root_path do %>
               <div>
