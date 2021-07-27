@@ -62,7 +62,7 @@ class Post < ApplicationRecord
       action: "comment"
     )
     #もしデザイン投稿者が自分の投稿に自分でコメントしたら通知しない
-    if notificatiion.visitor_id == notification.visitedable_id
+    if notification.visitor_id == notification.visitedable_id
       notification.checked = true
     end
     # 全てのデータが正しく入っていれば保存する
