@@ -14,8 +14,57 @@
  *= require_self
  */
 /*--------------------------------------------------------------------------------------------------*/
+/*共通*/
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/*----------------------*/
+
+/*ヘッダー*/
+.header_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header_logo{
+  font-family: cursive;
+  text-align: center;
+  font-size: 40px;
+}
+
+.header_logo_ruby{
+  font-size: 13px;
+  display: block;
+  font-family: "ヒラギノ明朝 ProN W6";
+}
+
+.header_lists{
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  font-family: serif;
+}
+
+.header_list{
+  margin-left: 5%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.header_list_ruby{
+  font-size: 5px;
+  display: block;
 }
