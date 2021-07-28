@@ -69,6 +69,12 @@ ul {
   display: block;
 }
 
+/*--------------メイン-------------*/
+.main_content{
+  width: 90%;
+  margin: 0 auto;
+}
+
 /*-------------フッター------------*/
 .footer_logo{
   font-family: serif;
@@ -79,4 +85,31 @@ ul {
 .footer_logo_ruby{
   display: block;
   font-size: 8px;
+}
+
+/*-----------ログイン画面----------*/
+.login_form_content{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.login_form{
+  width: 50%;
+  margin: 0 0 0 auto;
+  background-color: red;
+}
+.input_form{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.login_btn{
+  text-align: center;
+  background-color: green;
+}
+
+.company_link{
+  text-align: right;
 }

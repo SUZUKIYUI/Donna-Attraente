@@ -1,21 +1,24 @@
 <h2>デザイン投稿者ログイン画面</h2>
 
-<%= form_with model: @design_contributor, url: design_contributor_session_path, local: true do |f| %>
-  <div class="field">
-    <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="login_form_content">
+  <div class="login_form">
+    <%= form_with model: @design_contributor, url: design_contributor_session_path, local: true do |f| %>
+      <div class="field input_form">
+        <%= f.label :email, "メールアドレス" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="field input_form">
+        <%= f.label :password, "パスワード" %>
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+      <div class="actions login_btn">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password, "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "ログイン" %>
-  </div>
-<% end %>
-
-<%= link_to "企業の方はこちらへ", new_company_session_path %>
-
+<div class="company_link">
+<%= link_to "アパレル関係者の方はこちらへ", new_company_session_path %>
+</div>
 
