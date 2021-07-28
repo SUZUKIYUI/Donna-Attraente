@@ -188,13 +188,15 @@
     <%= yield %>
 
     <footer>
-      <div class="footer_logo">
-        <%= link_to root_path do %>
-          <div>
-            Donna Attraente<br />
-            <span>オリジナルワンピースをデザイン</span>
-          </div>
-        <% end %>
+      <div class="footer_content">
+        <div class="footer_logo">
+          <%= link_to root_path do %>
+            <div>
+              Donna Attraente
+              <span class="footer_logo_ruby">オリジナルワンピースをデザイン</span>
+            </div>
+          <% end %>
+        </div>
       </div>
     </footer>
   </body>

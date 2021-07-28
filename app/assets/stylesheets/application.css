@@ -14,7 +14,7 @@
  *= require_self
  */
 /*--------------------------------------------------------------------------------------------------*/
-/*共通*/
+/*---------------共通---------------*/
 *{
   margin: 0;
   padding: 0;
@@ -28,9 +28,9 @@ a{
 ul {
   list-style: none;
 }
-/*----------------------*/
+/*---------------------------------*/
 
-/*ヘッダー*/
+/*-------------ヘッダー------------*/
 .header_content{
   display: flex;
   justify-content: space-between;
@@ -67,4 +67,16 @@ ul {
 .header_list_ruby{
   font-size: 5px;
   display: block;
+}
+
+/*-------------フッター------------*/
+.footer_logo{
+  font-family: serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.footer_logo_ruby{
+  display: block;
+  font-size: 8px;
 }
