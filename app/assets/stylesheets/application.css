@@ -28,6 +28,11 @@ a{
 ul {
   list-style: none;
 }
+input[type="submit"], input[type="email"], input[type="password"]{
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
 /*---------------------------------*/
 
 /*-------------ヘッダー------------*/
@@ -45,30 +50,23 @@ header{
 }
 
 .header_logo{
-  font-family: cursive;
+  font-family: serif;
   text-align: center;
   font-size: 40px;
-  line-height: 30px;
-}
-
-.header_logo_ruby{
-  font-size: 13px;
-  display: block;
-  font-family: "ヒラギノ明朝 ProN W6";
 }
 
 .header_lists{
   display: flex;
   justify-content: flex-end;
   width: 70%;
-  line-height: 15px;
+  line-height: 18px;
   font-family: serif;
 }
 
 .header_list{
-  margin-left: 5%;
+  margin-left: 3%;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .header_link{
@@ -76,7 +74,7 @@ header{
 }
 
 .header_list_ruby{
-  font-size: 5px;
+  font-size: 11px;
   display: block;
 }
 
@@ -88,7 +86,8 @@ header{
 .content_width{
   width: 90%;
   margin: 0 auto;
-  background-color: #FAF0E6;
+  height: 100%;
+  background-color: rgb(197, 180, 169);
 }
 
 /*-------------フッター------------*/
@@ -115,8 +114,9 @@ footer{
 
 /*-----------ログイン画面----------*/
 .login_form_content{
-  width: 70%;
-  margin: 0 auto;
+  padding-right: 20%;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .login_form{
@@ -129,8 +129,8 @@ footer{
   justify-content: space-between;
   margin-bottom: 15px;
   color: rgb(59, 34, 33);
-  font-family: serif;
   font-size: 20px;
+  font-family: serif;
   font-weight: bold;
 }
 
@@ -138,9 +138,18 @@ footer{
   width: 300px;
 }
 
-.login_btn{
+.login_btn_form{
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.login_btn{
+  background-color: rgb(241, 215, 213);
+  padding: 8px 50px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(61, 36, 34);
 }
 
 .main_logo{
