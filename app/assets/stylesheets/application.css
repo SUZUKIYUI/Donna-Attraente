@@ -33,7 +33,6 @@ ul {
 /*-------------ヘッダー------------*/
 header{
   background-color: rgb(25, 12, 3);
-  height: 100px;
 }
 
 .header_content{
@@ -72,6 +71,10 @@ header{
   font-size: 15px;
 }
 
+.header_link{
+  color: rgb(223, 183, 180);
+}
+
 .header_list_ruby{
   font-size: 5px;
   display: block;
@@ -85,6 +88,7 @@ header{
 .content_width{
   width: 90%;
   margin: 0 auto;
+  background-color: #FAF0E6;
 }
 
 /*-------------フッター------------*/
@@ -100,17 +104,16 @@ footer{
   padding-top: 30px;
 }
 
+.footer_link{
+  color: rgb(223, 183, 180);
+}
+
 .footer_logo_ruby{
   display: block;
   font-size: 8px;
 }
 
 /*-----------ログイン画面----------*/
-.login_view{
-  background-color: rgb(197, 180, 169);
-  /*height: 80%;*/
-}
-
 .login_form_content{
   width: 70%;
   margin: 0 auto;

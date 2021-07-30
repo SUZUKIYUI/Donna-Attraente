@@ -28,8 +28,10 @@
 <!-----------------------------------------コメント一覧----------------------------------------->
 <p>コメント一覧</p>
 <% @post.comments.each do |comment| %>
-  <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
-  <%= comment.design_contributor.pen_name %>
+  <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
+    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
+    <%= comment.design_contributor.pen_name %>
+  <% end %>
   <%= comment.comment %>
   <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
   <% if comment.design_contributor_id == current_design_contributor.id %>
