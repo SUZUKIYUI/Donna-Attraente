@@ -94,14 +94,13 @@ header{
 
 /*--------------------------------------メイン---------------------------------*/
 .main_content{
-  background-color: rgb(50, 26, 10);
+  background-color: rgb(65, 33, 11);
 }
 
 .content_width{
   width: 90%;
   margin: 0 auto;
-  height: 100%;
-  background-color: rgb(197, 180, 169);
+  /*各ページのCSSでそれぞれの背景画像を入れること*/
 }
 
 /*タブレット*/
@@ -149,31 +148,47 @@ footer{
 }
 
 /*-------------------------------------ログイン画面--------------------------------*/
-.login_form_content{
-  padding-top: 15%;
-  padding-bottom: 15%;
-  background-color: red;
+.login_content{
+  padding-top: 7%;
+  padding-bottom: 10%;
+  background-color: rgb(197, 180, 169);
+}
+
+.login_lead{
+  text-align: right;
+}
+
+.login_lead_item{
+  color: rgb(59, 34, 33);
+  font-size: 50px;
+  font-family: serif;
+  font-weight: bold;
+  border-bottom: solid 1px rgb(59, 34, 33);
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 5%;
+  margin-right: 10%;
 }
 
 .login_form{
-  width: 620px;
+  width: 550px;
   margin: 0 0 0 auto;
   margin-right: 20%;
   margin-bottom: 50px;
-  background-color: green;
 }
 .input_form{
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
   color: rgb(59, 34, 33);
-  font-size: 20px;
+  font-size: 24px;
   font-family: serif;
   font-weight: bold;
 }
 
 .email_form, .password_form{
   width: 300px;
+  padding-left: 10px;
 }
 
 .login_btn_form{
@@ -190,25 +205,25 @@ footer{
   color: rgb(61, 36, 34);
 }
 
-.main_logo{
-  width: 20%;
-  margin-left: 5%;
+.login_heading{
+  width: 400px;
+  margin-left: 7%;
   padding-bottom: 3px;
-  border-bottom: solid 5px rgb(50, 26, 10);
+  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
 }
 
-.main_logo_item{
+.login_heading_item{
   padding-right: 10px;
-  font-family: Georgia;
-  font-size: 75px;
-  font-weight: normal;
-  color: rgb(249, 242, 237);
-  background: linear-gradient(transparent 60%, rgb(50, 26, 10) 90%);
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 95px;
+  font-weight: bold;
+  color: rgba(249, 242, 237, 0.9);
+  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
 }
 
 .another_user_link{
   text-align: right;
-  margin-right: 25px;
+  margin-right: 10%;
 }
 
 .another_link_font{
