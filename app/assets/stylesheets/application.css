@@ -35,6 +35,10 @@ input[type="submit"], input[type="email"], input[type="password"]{
 }
 /*---------------------------------*/
 
+/*• スマートフォン：599px [max-width : 599px]*/
+/*• タブレット：1024px [max-width : 1024px]*/
+/*• PC：設定なし（実質1025px以上）*/
+
 /*-------------ヘッダー------------*/
 header{
   background-color: rgb(25, 12, 3);
@@ -114,15 +118,17 @@ footer{
 
 /*-----------ログイン画面----------*/
 .login_form_content{
-  padding-right: 20%;
   padding-top: 15%;
   padding-bottom: 15%;
+  background-color: red;
 }
 
 .login_form{
-  width: 50%;
-  padding-top: 50px;
+  width: 620px;
   margin: 0 0 0 auto;
+  margin-right: 20%;
+  margin-bottom: 50px;
+  background-color: green;
 }
 .input_form{
   display: flex;
@@ -170,7 +176,7 @@ footer{
 
 .another_user_link{
   text-align: right;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .another_link_font{
