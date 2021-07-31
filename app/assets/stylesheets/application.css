@@ -39,7 +39,7 @@ input[type="submit"], input[type="email"], input[type="password"]{
 /*• タブレット：1024px [max-width : 1024px]*/
 /*• PC：設定なし（実質1025px以上）*/
 
-/*-------------ヘッダー------------*/
+/*-------------------------------------ヘッダー--------------------------------*/
 header{
   background-color: rgb(25, 12, 3);
 }
@@ -56,7 +56,7 @@ header{
 .header_logo{
   font-family: serif;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .header_lists{
@@ -68,9 +68,9 @@ header{
 }
 
 .header_list{
-  margin-left: 3%;
+  margin-left: 4%;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .header_link{
@@ -78,11 +78,21 @@ header{
 }
 
 .header_list_ruby{
-  font-size: 11px;
+  font-size: 10px;
   display: block;
 }
 
-/*--------------メイン-------------*/
+/*タブレット*/
+@media(max-width: 1024px){
+
+}
+
+/*スマホ*/
+@media(max-width: 599px){
+
+}
+
+/*--------------------------------------メイン---------------------------------*/
 .main_content{
   background-color: rgb(50, 26, 10);
 }
@@ -94,7 +104,17 @@ header{
   background-color: rgb(197, 180, 169);
 }
 
-/*-------------フッター------------*/
+/*タブレット*/
+@media(max-width: 1024px){
+
+}
+
+/*スマホ*/
+@media(max-width: 599px){
+
+}
+
+/*-------------------------------------フッター（完成）--------------------------------*/
 footer{
   background-color: rgb(25, 12, 3);
   height: 100px;
@@ -113,10 +133,22 @@ footer{
 
 .footer_logo_ruby{
   display: block;
-  font-size: 8px;
+  font-size: 10px;
 }
 
-/*-----------ログイン画面----------*/
+/*スマホ*/
+@media(max-width: 599px){
+  footer{
+    background-color: rgb(25, 12, 3);
+    height: 60px;
+  }
+  .footer_logo{
+    font-size: 10px;
+    padding-top: 15px;
+  }
+}
+
+/*-------------------------------------ログイン画面--------------------------------*/
 .login_form_content{
   padding-top: 15%;
   padding-bottom: 15%;
@@ -183,4 +215,14 @@ footer{
   color: rgb(138, 10, 0);
   font-family: serif;
   font-weight: bold;
+}
+
+/*タブレット*/
+@media(max-width: 1024px){
+
+}
+
+/*スマホ*/
+@media(max-width: 599px){
+
 }

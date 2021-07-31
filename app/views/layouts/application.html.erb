@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>DonnaAttraente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -27,7 +29,7 @@
               <%= link_to root_path do %>
                 <div class="header_link">
                   Top
-                  <span class="header_list_ruby">- トップページ -</span>
+                  <span class="header_list_ruby">トップページ</span>
                 </div>
               <% end %>
             </li>
@@ -35,7 +37,7 @@
               <%= link_to design_contributor_posts_path do %>
                 <div class="header_link">
                   Works
-                  <span class="header_list_ruby">- 作品一覧 -</span>
+                  <span class="header_list_ruby">作品一覧</span>
                 </div>
               <% end %>
             </li>
@@ -43,7 +45,7 @@
               <%= link_to new_design_contributor_post_path do %>
                 <div class="header_link">
                   Post
-                  <span class="header_list_ruby">- 投稿する -</span>
+                  <span class="header_list_ruby">投稿する</span>
                 </div>
               <% end %>
             </li>
@@ -51,7 +53,7 @@
               <%= link_to design_contributor_design_contributor_path(current_design_contributor.id) do %>
                 <div class="header_link">
                   My page
-                  <span class="header_list_ruby">- マイページ -</span>
+                  <span class="header_list_ruby">マイページ</span>
                 </div>
               <% end %>
             </li>
@@ -59,7 +61,7 @@
               <%= link_to homes_about_path do %>
                 <div class="header_link">
                   About
-                  <span class="header_list_ruby">- Donna Attraenteとは -</span>
+                  <span class="header_list_ruby">Donna Attraenteとは</span>
                 </div>
               <% end %>
             </li>
@@ -71,7 +73,7 @@
               <%= link_to design_contributor_notifications_path do %>
                 <div class="header_link">
                   <i class="fas fa-bell"></i>
-                  <span class="header_list_ruby">- 通知 -</span>
+                  <span class="header_list_ruby">通知</span>
                 </div>
               <% end %>
             </li>
@@ -83,7 +85,7 @@
               <%= link_to design_contributor_notification2s_path do %>
                 <div class="header_link">
                   <i class="far fa-envelope"></i>
-                  <span class="header_list_ruby">- オファー -</span>
+                  <span class="header_list_ruby">オファー</span>
                 </div>
               <% end %>
             </li>
@@ -92,7 +94,7 @@
               <%= link_to destroy_design_contributor_session_path, method: :delete do %>
                 <div class="header_link">
                   Log out
-                  <span class="header_list_ruby">- ログアウト -</span>
+                  <span class="header_list_ruby">ログアウト</span>
                 </div>
               <% end %>
             </li>
@@ -102,7 +104,7 @@
               <%= link_to root_path do %>
                 <div class="header_link">
                   Top
-                  <span class="header_list_ruby">- トップページ -</span>
+                  <span class="header_list_ruby">トップページ</span>
                 </div>
               <% end %>
             </li>
@@ -110,7 +112,7 @@
               <%= link_to company_posts_path do %>
                 <div class="header_link">
                   Works
-                  <span class="header_list_ruby">- 作品一覧 -</span>
+                  <span class="header_list_ruby">作品一覧</span>
                 </div>
               <% end %>
             </li>
@@ -118,7 +120,7 @@
               <%= link_to company_company_path(current_company.id) do %>
                 <div class="header_link">
                   My page
-                  <span class="header_list_ruby">- マイページ -</span>
+                  <span class="header_list_ruby">マイページ</span>
                 </div>
               <% end %>
             </li>
@@ -126,7 +128,7 @@
               <%= link_to homes_about_path do %>
                 <div class="header_link">
                   About
-                  <span class="header_list_ruby">- Donna Attraenteとは -</span>
+                  <span class="header_list_ruby">Donna Attraenteとは</span>
                 </div>
               <% end %>
             </li>
@@ -138,7 +140,7 @@
               <%= link_to company_notifications_path do %>
                 <div class="header_link">
                   <i class="fas fa-envelope"></i>
-                  <span class="header_list_ruby">- オファー返信 -</span>
+                  <span class="header_list_ruby">オファー返信</span>
                 </div>
               <% end %>
             </li>
@@ -147,7 +149,7 @@
               <%= link_to destroy_company_session_path, method: :delete do %>
                 <div class="header_link">
                   Log out
-                  <span class="header_list_ruby">- ログアウト -</span>
+                  <span class="header_list_ruby">ログアウト</span>
                 </div>
               <% end %>
             </li>
@@ -157,7 +159,7 @@
               <%= link_to root_path do %>
                 <div class="header_link">
                   Top
-                  <span class="header_list_ruby">- トップページ -</span>
+                  <span class="header_list_ruby">トップページ</span>
                 </div>
               <% end %>
             </li>
@@ -165,7 +167,7 @@
               <%= link_to homes_about_path do %>
                 <div class="header_link">
                   About
-                  <span class="header_list_ruby">- Donna Attraenteとは -</span>
+                  <span class="header_list_ruby">Donna Attraenteとは</span>
                 </div>
               <% end %>
             </li>
@@ -173,7 +175,7 @@
               <%= link_to new_design_contributor_session_path do %>
                 <div class="header_link">
                   Log in
-                  <span class="header_list_ruby">- ログイン -</span>
+                  <span class="header_list_ruby">ログイン</span>
                 </div>
               <% end %>
             </li>
@@ -181,7 +183,7 @@
               <%= link_to new_design_contributor_registration_path do %>
                 <div class="header_link">
                   Sign up
-                  <span class="header_list_ruby">- 新規登録 -</span>
+                  <span class="header_list_ruby">新規登録</span>
                 </div>
               <% end %>
             </li>
