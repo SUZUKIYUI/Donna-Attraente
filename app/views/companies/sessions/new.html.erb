@@ -25,15 +25,17 @@
       <div class="login_background2"></div>
     </div>
   </div>
-  <!-------------デザイン投稿者用ログイン画面リンク------------->
-  <div class="another_user_link">
-    <%= link_to new_design_contributor_session_path do %>
-      <i class="fas fa-arrow-circle-right another_link_font"></i>
-      <span class="another_link_font">個人の方はこちらへ</span>
-    <% end %>
-  </div>
-  <!-----------------見出し------------------>
-  <div class="login_heading">
-    <h1 class="login_heading_item">Log in</h1>
+  <div class="under_login_form">
+    <!-----------------見出し------------------>
+    <div class="login_heading">
+      <h1 class="login_heading_item">Log in</h1>
+    </div>
+    <!-------------デザイン投稿者用ログイン画面リンク------------->
+    <div class="another_user_link">
+      <%= link_to new_design_contributor_session_path do %>
+        <i class="fas fa-arrow-circle-right another_link_font"></i>
+        <span class="another_link_font">個人の方はこちらへ</span>
+      <% end %>
+    </div>
   </div>
 </div>

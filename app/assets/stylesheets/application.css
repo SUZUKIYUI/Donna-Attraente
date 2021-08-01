@@ -33,6 +33,16 @@ input[type="submit"], input[type="email"], input[type="password"]{
   outline: none;
   border-radius: 4px;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(65, 33, 11);
+}
 /*---------------------------------*/
 
 /*• スマートフォン：599px [max-width : 599px]*/
@@ -41,6 +51,7 @@ input[type="submit"], input[type="email"], input[type="password"]{
 
 /*-------------------------------------ヘッダー--------------------------------*/
 header{
+  height: 10%;
   background-color: rgb(25, 12, 3);
 }
 
@@ -49,7 +60,7 @@ header{
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 100px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -94,12 +105,13 @@ header{
 
 /*--------------------------------------メイン---------------------------------*/
 .main_content{
-  background-color: rgb(65, 33, 11);
+  height: 80%;
 }
 
 .content_width{
   width: 90%;
   margin: 0 auto;
+  height: 100%;
   /*各ページのCSSでそれぞれの背景画像を入れること*/
 }
 
@@ -116,14 +128,20 @@ header{
 /*-------------------------------------フッター（完成）--------------------------------*/
 footer{
   background-color: rgb(25, 12, 3);
-  height: 100px;
+  height: 10%;
+}
+
+.footer_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .footer_logo{
   font-family: serif;
   text-align: center;
   font-size: 15px;
-  padding-top: 30px;
 }
 
 .footer_link{
@@ -228,21 +246,9 @@ footer{
   background-size: cover;
 }
 
-.another_user_link{
-  text-align: right;
-  margin-right: 10%;
-  margin-top: 3%;
-}
-
-.another_link_font{
-  color: rgb(138, 10, 0);
-  font-size: 20px;
-  font-family: serif;
-  font-weight: bold;
-}
-
-.another_user_link:hover{
-  opacity: 0.6;
+.under_login_form{
+  display: flex;
+  justify-content: space-between;
 }
 
 .login_heading{
@@ -261,6 +267,23 @@ footer{
   background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
 }
 
+.another_user_link{
+  text-align: right;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.another_link_font{
+  color: rgb(138, 10, 0);
+  font-size: 20px;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.another_user_link:hover{
+  opacity: 0.6;
+}
+
 /*タブレット*/
 @media(max-width: 1024px){
 
@@ -270,3 +293,6 @@ footer{
 @media(max-width: 599px){
 
 }
+
+/*-------------------------------------新規登録画面--------------------------------*/
+
