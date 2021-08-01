@@ -28,7 +28,7 @@ a{
 ul {
   list-style: none;
 }
-input[type="submit"], input[type="email"], input[type="password"]{
+textarea, input[type="submit"], input[type="email"], input[type="password"], input[type="text"]{
   border: none;
   outline: none;
   border-radius: 4px;
@@ -295,4 +295,6 @@ footer{
 }
 
 /*-------------------------------------新規登録画面--------------------------------*/
-
+.signup_content{
+  background-color: rgb(197, 180, 169);
+}

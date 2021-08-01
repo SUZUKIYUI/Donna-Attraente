@@ -1,35 +1,36 @@
-<h2>新規登録</h2>
-<p>下のフォームから会員登録をお願いします。</p>
+<!--デザイン投稿者新規登録画面-->
 
-<p>新規会員登録</p>
-
-<%= link_to "企業の方はこちらへ", new_company_registration_path %>
-
-<%= form_with model: @design_contributor, url: design_contributor_registration_path, id: "new_design_contributor", class: "new_design_contributor", local: true do |f| %>
-  <%= render "design_contributors/shared/error_messages", resource: resource %>
-  <div class="field">
-    <%= f.label :profile_image, "プロフィール画像" %>
-    <%= f.attachment_field :profile_image %>
-  </div>
-  <div class="field">
-    <%= f.label :pen_name, "ペンネーム" %><br />
-    <%= f.text_field :pen_name %>
-  </div>
-  <div class="field">
-    <%= f.label :self_introduction, "自己紹介" %><br />
-    <%= f.text_area :self_introduction %>
-  </div>
-  <div class="field">
-    <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <div class="field">
-    <%= f.label :password, "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "登録" %>
-  </div>
-<% end %>
+<div class="content_width signup_content">
+  <h2>新規登録</h2>
+  <p>下のフォームから会員登録をお願いします。</p>
+  <p>新規会員登録</p>
+  <%= link_to "企業の方はこちらへ", new_company_registration_path %>
+  <%= form_with model: @design_contributor, url: design_contributor_registration_path, id: "new_design_contributor", class: "new_design_contributor", local: true do |f| %>
+    <%= render "design_contributors/shared/error_messages", resource: resource %>
+    <div class="field">
+      <%= f.label :profile_image, "プロフィール画像" %>
+      <%= f.attachment_field :profile_image %>
+    </div>
+    <div class="field">
+      <%= f.label :pen_name, "ペンネーム" %><br />
+      <%= f.text_field :pen_name %>
+    </div>
+    <div class="field">
+      <%= f.label :self_introduction, "自己紹介" %><br />
+      <%= f.text_area :self_introduction %>
+    </div>
+    <div class="field">
+      <%= f.label :email, "メールアドレス" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+    <div class="field">
+      <%= f.label :password, "パスワード" %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "登録" %>
+    </div>
+  <% end %>
+</div>
 
 
