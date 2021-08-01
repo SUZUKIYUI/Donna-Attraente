@@ -149,13 +149,21 @@ footer{
 
 /*-------------------------------------ログイン画面--------------------------------*/
 .login_content{
-  padding-top: 7%;
-  padding-bottom: 10%;
   background-color: rgb(197, 180, 169);
+  padding-bottom: 5%;
+}
+
+.login_background1{
+  background-image: url("login_background1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .login_lead{
   text-align: right;
+  padding-top: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
 }
 
 .login_lead_item{
@@ -166,15 +174,18 @@ footer{
   border-bottom: solid 1px rgb(59, 34, 33);
   line-height: 1;
   display: inline-block;
-  margin-bottom: 5%;
+}
+
+.login_form_content{
+  display: flex;
   margin-right: 10%;
 }
 
 .login_form{
-  width: 550px;
+  width: 500px;
+  height: 200px;
   margin: 0 0 0 auto;
-  margin-right: 20%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .input_form{
   display: flex;
@@ -205,20 +216,11 @@ footer{
   color: rgb(61, 36, 34);
 }
 
-.login_heading{
-  width: 400px;
-  margin-left: 7%;
-  padding-bottom: 3px;
-  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
-}
-
-.login_heading_item{
-  padding-right: 10px;
-  font-family: "ヒラギノ明朝 ProN W6";
-  font-size: 95px;
-  font-weight: bold;
-  color: rgba(249, 242, 237, 0.9);
-  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
+.login_background2{
+  width: 200px;
+  height: 200px;
+  background-image: url("login_background2.png");
+  background-size: cover;
 }
 
 .another_user_link{
@@ -230,6 +232,22 @@ footer{
   color: rgb(138, 10, 0);
   font-family: serif;
   font-weight: bold;
+}
+
+.login_heading{
+  width: 400px;
+  margin-left: 10%;
+  padding-bottom: 2px;
+  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+}
+
+.login_heading_item{
+  padding-right: 10px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 95px;
+  font-weight: bold;
+  color: rgba(249, 242, 237, 0.9);
+  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
 }
 
 /*タブレット*/
