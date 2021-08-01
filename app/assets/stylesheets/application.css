@@ -152,19 +152,6 @@ footer{
   display: block;
   font-size: 10px;
 }
-
-/*スマホ*/
-@media(max-width: 599px){
-  footer{
-    background-color: rgb(25, 12, 3);
-    height: 60px;
-  }
-  .footer_logo{
-    font-size: 10px;
-    padding-top: 15px;
-  }
-}
-
 /*-------------------------------------ログイン画面--------------------------------*/
 .login_content{
   background-color: rgb(197, 180, 169);
