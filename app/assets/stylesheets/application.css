@@ -216,6 +216,11 @@ footer{
   color: rgb(61, 36, 34);
 }
 
+.login_btn:hover{
+  background-color: rgb(223, 183, 180);
+  cursor: pointer;
+}
+
 .login_background2{
   width: 200px;
   height: 200px;
@@ -226,12 +231,18 @@ footer{
 .another_user_link{
   text-align: right;
   margin-right: 10%;
+  margin-top: 3%;
 }
 
 .another_link_font{
   color: rgb(138, 10, 0);
+  font-size: 20px;
   font-family: serif;
   font-weight: bold;
+}
+
+.another_user_link:hover{
+  opacity: 0.6;
 }
 
 .login_heading{
