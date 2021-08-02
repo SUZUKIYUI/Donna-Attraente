@@ -22,9 +22,9 @@
             </div>
           <% end %>
         </div>
-        <ul class="header_lists">
-          <% if design_contributor_signed_in? %>
-          <!---------------------デザイン投稿者がログインしている場合のヘッダーリスト---------------------->
+        <% if design_contributor_signed_in? %>
+        <!---------------------デザイン投稿者がログインしている場合のヘッダーリスト---------------------->
+          <ul class="login_header_lists">
             <li class="header_list">
               <%= link_to root_path do %>
                 <div class="header_link">
@@ -98,8 +98,10 @@
                 </div>
               <% end %>
             </li>
-          <% elsif company_signed_in? %>
-          <!----------------------企業がログインしている場合のヘッダーリスト----------------------->
+          </ul>
+        <% elsif company_signed_in? %>
+        <!----------------------企業がログインしている場合のヘッダーリスト----------------------->
+          <ul class="login_header_lists">
             <li class="header_list">
               <%= link_to root_path do %>
                 <div class="header_link">
@@ -153,8 +155,10 @@
                 </div>
               <% end %>
             </li>
-          <% else %>
-          <!------------ログインしていない場合のヘッダーリスト------------>
+          </ul>
+        <% else %>
+        <!------------ログインしていない場合のヘッダーリスト------------>
+          <ul class="logout_header_lists">
             <li class="header_list">
               <%= link_to root_path do %>
                 <div class="header_link">
@@ -187,8 +191,8 @@
                 </div>
               <% end %>
             </li>
-          <% end %>
-        </ul>
+          </ul>
+        <% end %>
       </div>
     </header>
 

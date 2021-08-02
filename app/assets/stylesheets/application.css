@@ -34,15 +34,6 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
   border-radius: 4px;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  margin: 0;
-  background-color: rgb(65, 33, 11);
-}
 /*---------------------------------*/
 
 /*• スマートフォン：599px [max-width : 599px]*/
@@ -51,7 +42,7 @@ body {
 
 /*-------------------------------------ヘッダー--------------------------------*/
 header{
-  height: 10%;
+  height: 100px;
   background-color: rgb(25, 12, 3);
 }
 
@@ -70,16 +61,23 @@ header{
   font-size: 30px;
 }
 
-.header_lists{
+.login_header_lists{
   display: flex;
-  justify-content: flex-end;
-  width: 70%;
+  justify-content: space-between;
+  width: 630px;
+  line-height: 18px;
+  font-family: serif;
+}
+
+.logout_header_lists{
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
   line-height: 18px;
   font-family: serif;
 }
 
 .header_list{
-  margin-left: 4%;
   text-align: center;
   font-size: 15px;
 }
@@ -105,7 +103,7 @@ header{
 
 /*--------------------------------------メイン---------------------------------*/
 .main_content{
-  height: 80%;
+  background-color: rgb(65, 33, 11);
 }
 
 .content_width{
@@ -127,8 +125,8 @@ header{
 
 /*-------------------------------------フッター（完成）--------------------------------*/
 footer{
+  height: 100px;
   background-color: rgb(25, 12, 3);
-  height: 10%;
 }
 
 .footer_content{
@@ -202,23 +200,25 @@ footer{
   font-weight: bold;
 }
 
-.email_form, .password_form{
+.profile_image_form, .pen_name_form, .self_introduction_form, .email_form, .password_form{
   width: 300px;
   padding-left: 10px;
 }
 
-.login_btn_form{
+.signup_btn_form, .login_btn_form{
   text-align: center;
   margin-top: 50px;
 }
 
-.login_btn{
+.signup_btn, .login_btn{
   background-color: rgb(241, 215, 213);
-  padding: 8px 50px;
+  padding: 8px 30px;
   font-size: 18px;
   font-family: serif;
   font-weight: bold;
   color: rgb(61, 36, 34);
+  letter-spacing: 2em;
+  text-indent: 2em;
 }
 
 .login_btn:hover{
@@ -284,4 +284,9 @@ footer{
 /*-------------------------------------新規登録画面--------------------------------*/
 .signup_content{
   background-color: rgb(197, 180, 169);
+}
+
+.signup_form{
+  margin: 0 auto;
+  width: 600px;
 }
