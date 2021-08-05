@@ -200,25 +200,24 @@ footer{
   font-weight: bold;
 }
 
-.profile_image_form, .pen_name_form, .self_introduction_form, .email_form, .password_form{
+.email_form, .password_form{
   width: 300px;
   padding-left: 10px;
 }
 
-.signup_btn_form, .login_btn_form{
+.login_btn_form{
   text-align: center;
   margin-top: 50px;
 }
 
-.signup_btn, .login_btn{
+.login_btn{
   background-color: rgb(241, 215, 213);
   padding: 8px 30px;
   font-size: 18px;
   font-family: serif;
   font-weight: bold;
   color: rgb(61, 36, 34);
-  letter-spacing: 2em;
-  text-indent: 2em;
+  letter-spacing: 5px;
 }
 
 .login_btn:hover{
@@ -286,7 +285,77 @@ footer{
   background-color: rgb(197, 180, 169);
 }
 
+.signup_background1{
+  background-image: url("signup_background1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16% 10% 0% 10%;
+}
+
+.signup_lead_content{
+  display: flex;
+}
+
+.signup_lead{
+  margin-left: auto;
+  margin-bottom: 10%;
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signup_lead_item{
+  font-size: 40px;
+}
+
+.signup_background2{
+  width: 100px;
+  height: 100px;
+  background-image: url("signup_background2");
+  background-size: cover;
+}
+
+.signup_heading{
+  width: 400px;
+  padding-bottom: 2px;
+  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.signup_heading_item{
+  padding-right: 10px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 95px;
+  font-weight: bold;
+  color: rgba(249, 242, 237, 0.9);
+  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
+  margin-top: auto;
+}
+
 .signup_form{
   margin: 0 auto;
   width: 600px;
+}
+
+.signup_btn{
+  background-color: rgb(241, 215, 213);
+  padding: 8px 30px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(61, 36, 34);
+  letter-spacing: 20px;
+  text-indent: 20px;
+}
+
+.signup_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profile_image_form, .pen_name_form, .self_introduction_form{
+  width: 300px;
+  padding-left: 10px;
 }
