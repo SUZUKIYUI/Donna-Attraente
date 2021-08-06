@@ -1,10 +1,10 @@
 <!--デザイン投稿者新規登録画面-->
 
 <div class="content_width signup_content">
-  <div class="signup_background1">
+  <div class="signup_top signup_background1">
     <div class="signup_lead_content">
-      <div class="signup_lead">
-        <h2 class="signup_lead_item">新規登録</h2>
+      <div class="signup_lead1">
+        <h2 class="signup_lead1_bold">新規登録</h2>
         <p>下のフォームから会員登録をお願いします。</p>
       </div>
       <div class="signup_background2"></div>
@@ -14,35 +14,46 @@
       <h1 class="signup_heading_item">Sign up</h1>
     </div>
   </div>
-  <p>新規会員登録</p>
-  <%= link_to "企業の方はこちらへ", new_company_registration_path %>
-  <div class="signup_form">
-    <%= form_with model: @design_contributor, url: design_contributor_registration_path, id: "new_design_contributor", class: "new_design_contributor", local: true do |f| %>
-      <%= render "design_contributors/shared/error_messages", resource: resource %>
-      <div class="field input_form">
-        <%= f.label :profile_image, "プロフィール画像" %>
-        <%= f.attachment_field :profile_image, class: "profile_image_form" %>
+
+  <div class="signup_bottom">
+    <div class="signup_flex">
+      <h3 class="signup_lead2">新規会員登録</h3>
+      <div class="another_user_link">
+        <%= link_to new_company_registration_path do %>
+          <i class="fas fa-arrow-circle-right another_link_font"></i>
+          <span class="another_link_font">企業の方はこちらへ</span>
+        <% end %>
       </div>
-      <div class="field input_form">
-        <%= f.label :pen_name, "ペンネーム" %><br />
-        <%= f.text_field :pen_name, class: "pen_name_form" %>
-      </div>
-      <div class="field input_form">
-        <%= f.label :self_introduction, "自己紹介" %><br />
-        <%= f.text_area :self_introduction, class: "self_introduction_form" %>
-      </div>
-      <div class="field input_form">
-        <%= f.label :email, "メールアドレス" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
-      </div>
-      <div class="field input_form">
-        <%= f.label :password, "パスワード" %><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "password_form" %>
-      </div>
-      <div class="actions  signup_btn_form">
-        <%= f.submit "登録", class: "signup_btn" %>
-      </div>
-    <% end %>
+    </div>
+    <div class="signup_form">
+      <%= form_with model: @design_contributor, url: design_contributor_registration_path, id: "new_design_contributor", class: "new_design_contributor", local: true do |f| %>
+        <%= render "design_contributors/shared/error_messages", resource: resource %>
+        <div class="field input_form">
+          <label class="input_profile_image1">プロフィール画像を選択してください
+            <%= f.attachment_field :profile_image, class: "signup_input input_profile_image2" %>
+          </label>
+        </div>
+        <div class="field input_form">
+          <%= f.label :pen_name, "ペンネーム" %>
+          <%= f.text_field :pen_name, class: "signup_input" %>
+        </div>
+        <div class="field input_form">
+          <%= f.label :self_introduction, "自己紹介" %>
+          <%= f.text_area :self_introduction, class: "signup_input" %>
+        </div>
+        <div class="field input_form">
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "signup_input" %>
+        </div>
+        <div class="field input_form">
+          <%= f.label :password, "パスワード" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "signup_input" %>
+        </div>
+        <div class="actions  signup_btn_form">
+          <%= f.submit "登録", class: "signup_btn" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 

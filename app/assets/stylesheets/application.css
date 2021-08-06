@@ -203,6 +203,7 @@ footer{
 .email_form, .password_form{
   width: 300px;
   padding-left: 10px;
+  background-color: rgb(249, 242, 237);
 }
 
 .login_btn_form{
@@ -285,18 +286,20 @@ footer{
   background-color: rgb(197, 180, 169);
 }
 
+.signup_top{
+  padding: 16% 10% 0% 10%;
+}
 .signup_background1{
   background-image: url("signup_background1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 16% 10% 0% 10%;
 }
 
 .signup_lead_content{
   display: flex;
 }
 
-.signup_lead{
+.signup_lead1{
   margin-left: auto;
   margin-bottom: 10%;
   color: rgb(59, 34, 33);
@@ -305,7 +308,7 @@ footer{
   font-size: 20px;
 }
 
-.signup_lead_item{
+.signup_lead1_bold{
   font-size: 40px;
 }
 
@@ -334,9 +337,60 @@ footer{
   margin-top: auto;
 }
 
+.signup_bottom{
+  padding: 5% 10%;
+}
+
+.signup_flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup_lead2{
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-size: 30px;
+  border: double 10px rgb(59, 34, 33);
+  width: 250px;
+  text-align: center;
+}
+
 .signup_form{
   margin: 0 auto;
   width: 600px;
+  margin-top: 5%;
+}
+
+.signup_input{
+  width: 300px;
+  padding-left: 10px;
+  background-color: rgb(249, 242, 237);
+}
+
+.input_profile_image1{
+  width: 600px;
+  font-size: 15px;
+  color: rgb(249, 242, 237);
+  background-color: rgb(65, 33, 11);
+  text-align: center;
+  margin: 20px 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input_profile_image1:hover{
+  background-color: rgba(65, 33, 11, 0.7);
+}
+
+.input_profile_image2{
+  display: none;
+}
+
+.signup_btn_form{
+  text-align: center;
+  margin-top: 50px;
 }
 
 .signup_btn{
@@ -350,12 +404,3 @@ footer{
   text-indent: 20px;
 }
 
-.signup_btn_form{
-  text-align: center;
-  margin-top: 50px;
-}
-
-.profile_image_form, .pen_name_form, .self_introduction_form{
-  width: 300px;
-  padding-left: 10px;
-}
