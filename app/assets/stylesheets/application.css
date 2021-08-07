@@ -190,7 +190,7 @@ footer{
   margin: 0 0 0 auto;
   margin-bottom: 30px;
 }
-.input_form{
+.login_input_form{
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -312,6 +312,12 @@ footer{
   font-size: 40px;
 }
 
+.signup_lead1_bold span{
+  font-size: 20px;
+  margin-left: 20px;
+  color: rgb(148, 26, 16);
+}
+
 .signup_background2{
   width: 100px;
   height: 100px;
@@ -355,16 +361,46 @@ footer{
   text-align: center;
 }
 
+.company_signup_lead2{
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-size: 30px;
+  border: double 10px rgb(59, 34, 33);
+  width: 400px;
+  text-align: center;
+}
+
 .signup_form{
   margin: 0 auto;
-  width: 600px;
+  width: 800px;
   margin-top: 5%;
+  background-color: green;
+}
+
+.signup_input_form{
+  display: flex;
+  /*justify-content: space-between;*/
+  margin-bottom: 20px;
+  color: rgb(59, 34, 33);
+  font-size: 24px;
+  font-family: serif;
+  font-weight: bold;
+  background-color: red;
+}
+
+.signup_label{
+  width: 300px;
+  background-color: yellow;
 }
 
 .signup_input{
   width: 300px;
   padding-left: 10px;
   background-color: rgb(249, 242, 237);
+}
+
+.address_input{
+  width: 450px;
 }
 
 .input_profile_image1{

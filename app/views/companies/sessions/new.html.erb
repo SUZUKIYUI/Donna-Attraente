@@ -9,11 +9,11 @@
     <div class="login_form_content">
       <div class="login_form">
         <%= form_with model: @company, url: company_session_path, local: true do |f| %>
-          <div class="field input_form">
+          <div class="field login_input_form">
             <%= f.label :email, "メールアドレス" %>
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
           </div>
-          <div class="field input_form">
+          <div class="field login_input_form">
             <%= f.label :password, "パスワード" %>
             <%= f.password_field :password, autocomplete: "current-password", class: "password_form" %>
           </div>

@@ -1,48 +1,74 @@
-<h2>新規会員登録</h2><span>- アパレル関係者様用 -</span>
-<p>下のフォームから会員登録をお願いします。</p>
+<!--企業新規登録画面-->
 
-<%= link_to "個人の方はこちらへ", new_design_contributor_registration_path %>
+<div class="content_width signup_content">
+  <div class="signup_top signup_background1">
+    <div class="signup_lead_content">
+      <div class="signup_lead1">
+        <h2 class="signup_lead1_bold">新規登録<span>アパレル関係者様用</span></h2>
+        <p>下のフォームから会員登録をお願いします。</p>
+      </div>
+      <div class="signup_background2"></div>
+    </div>
+    <!-----------------見出し------------------>
+    <div class="signup_heading">
+      <h1 class="signup_heading_item">Sign up</h1>
+    </div>
+  </div>
 
-<%= form_with model: @company, url: company_registration_path, id: "new_company", class: "new_company", local: true do |f| %>
-
-  <div class="field">
-    <%= f.label :profile_image, "企業画像" %>
-    <%= f.attachment_field :profile_image %>
+  <div class="signup_bottom">
+    <div class="signup_flex">
+      <h3 class="company_signup_lead2">アパレル関係者会員登録</h3>
+      <div class="another_user_link">
+        <%= link_to new_design_contributor_registration_path do %>
+          <i class="fas fa-arrow-circle-right another_link_font"></i>
+          <span class="another_link_font">個人の方はこちらへ</span>
+        <% end %>
+      </div>
+    </div>
+    <div class="signup_form">
+      <%= form_with model: @company, url: company_registration_path, id: "new_company", class: "new_company", local: true do |f| %>
+        <%= render "companies/shared/error_messages", resource: resource %>
+        <div class="field signup_input_form">
+          <label class="input_profile_image1">プロフィール画像を選択してください
+            <%= f.attachment_field :profile_image, class: "signup_input input_profile_image2" %>
+          </label>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :company_name, "企業名", class: "signup_label" %>
+          <%= f.text_field :company_name, class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :company_name_kana, "企業名（フリガナ）", class: "signup_label" %>
+          <%= f.text_field :company_name_kana, class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :postal_code, "郵便番号（ハイフンなし）", class: "signup_label" %>
+          <%= f.text_field :postal_code, class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :address, "住所", class: "signup_label" %>
+          <%= f.text_field :address, class: "signup_input address_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :phone_number, "TEL", class: "signup_label" %>
+          <%= f.text_field :phone_number, class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :company_introduction, "企業紹介", class: "signup_label" %>
+          <%= f.text_area :company_introduction, class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :email, "メールアドレス", class: "signup_label" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "signup_input" %>
+        </div>
+        <div class="field signup_input_form">
+          <%= f.label :password, "パスワード", class: "signup_label" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "signup_input" %>
+        </div>
+        <div class="actions  signup_btn_form">
+          <%= f.submit "登録", class: "signup_btn" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :company_name, "企業名" %>
-    <%= f.text_field :company_name %>
-  </div>
-  <div class="field">
-    <%= f.label :company_name_kana, "企業名（フリガナ）" %>
-    <%= f.text_field :company_name_kana %>
-  </div>
-  <div class="field">
-    <%= f.label :postal_code, "郵便番号" %>
-    <%= f.text_field :postal_code %>
-  </div>
-  <div class="field">
-    <%= f.label :address, "住所" %>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_number, "TEL" %>
-    <%= f.text_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :company_introduction, "企業紹介" %>
-    <%= f.text_area :company_introduction %>
-  </div>
-  <div class="field">
-    <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <div class="field">
-    <%= f.label :password, "パスワード" %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "登録" %>
-  </div>
-<% end %>
-
+</div>
