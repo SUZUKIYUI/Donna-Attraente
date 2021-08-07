@@ -282,10 +282,6 @@ footer{
 }
 
 /*-------------------------------------新規登録画面--------------------------------*/
-.signup_content{
-  background-color: red;
-}
-
 .signup_top{
   padding: 16% 10% 0% 10%;
 }
@@ -344,6 +340,7 @@ footer{
 .signup_bottom{
   background-image: url("background1");
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 5% 10%;
 }
 

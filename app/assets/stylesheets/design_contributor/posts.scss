@@ -1,3 +1,48 @@
 // Place all the styles related to the design_contributor/posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.posts_content{
+  width: 100%;
+  background-color: yellow;
+}
+
+.posts_top{
+  padding: 10%;
+}
+
+.posts_background1{
+  background-image: url("posts_background1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: red;
+}
+
+.posts_lead{
+  margin-left: 50%;
+  margin-bottom: 10%;
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+
+.posts_lead_bold{
+  font-size: 35px;
+}
+
+.posts_heading{
+  width: 400px;
+  padding-bottom: 2px;
+  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+  margin-top: auto;
+}
+
+.posts_heading_item{
+  padding-right: 10px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 95px;
+  font-weight: bold;
+  color: rgba(249, 242, 237, 0.9);
+  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
+  margin-top: auto;
+}
