@@ -393,14 +393,14 @@ footer{
 
 .signup_input{
   width: 250px;
-  padding-left: 10px;
+  padding:5px 10px;
   font-size: 15px;
   font-family: serif;
   font-weight: bold;
   background-color: rgb(249, 242, 237);
 }
 
-.email_input, .password_input, .company_introduction_input{
+.email_input, .password_input, .introduction_input{
   width: 350px;
 }
 
