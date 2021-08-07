@@ -372,31 +372,40 @@ footer{
 
 .signup_form{
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
   margin-top: 5%;
-  background-color: green;
+  /*background-color: green;*/
 }
 
 .signup_input_form{
   display: flex;
-  /*justify-content: space-between;*/
   margin-bottom: 20px;
   color: rgb(59, 34, 33);
-  font-size: 24px;
+  font-size: 20px;
   font-family: serif;
   font-weight: bold;
-  background-color: red;
 }
 
 .signup_label{
-  width: 300px;
-  background-color: yellow;
+  width: 250px;
+  /*background-color: red;*/
 }
 
 .signup_input{
-  width: 300px;
+  width: 250px;
   padding-left: 10px;
+  font-size: 15px;
+  font-family: serif;
+  font-weight: bold;
   background-color: rgb(249, 242, 237);
+}
+
+.email_input, .password_input, .company_introduction_input{
+  width: 350px;
+}
+
+.postal_code_input{
+  width: 200px;
 }
 
 .address_input{
@@ -404,12 +413,12 @@ footer{
 }
 
 .input_profile_image1{
-  width: 600px;
+  width: 300px;
   font-size: 15px;
   color: rgb(249, 242, 237);
   background-color: rgb(65, 33, 11);
   text-align: center;
-  margin: 20px 150px;
+  margin: 20px 200px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
