@@ -283,7 +283,7 @@ footer{
 
 /*-------------------------------------新規登録画面--------------------------------*/
 .signup_content{
-  background-color: rgb(197, 180, 169);
+  background-color: red;
 }
 
 .signup_top{
@@ -305,11 +305,10 @@ footer{
   color: rgb(59, 34, 33);
   font-family: serif;
   font-weight: bold;
-  font-size: 20px;
 }
 
 .signup_lead1_bold{
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .signup_lead1_bold span{
@@ -330,7 +329,6 @@ footer{
   padding-bottom: 2px;
   border-bottom: solid 5px rgba(50, 26, 10, 0.6);
   margin-top: auto;
-  margin-bottom: 10px;
 }
 
 .signup_heading_item{
@@ -344,6 +342,8 @@ footer{
 }
 
 .signup_bottom{
+  background-image: url("background1");
+  background-size: cover;
   padding: 5% 10%;
 }
 
