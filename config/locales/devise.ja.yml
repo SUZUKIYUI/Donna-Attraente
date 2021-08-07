@@ -16,12 +16,13 @@ ja:
         address: 住所
         phone_number: 電話番号
         email: メールアドレス
+        password: パスワード
         profile_image: プロフィール画像
         company_introduction: 企業紹介
 # --------------------------------------------------
     models:
       design_contributor: デザイン投稿者情報
-      company: 企業
+      company: 企業情報
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
