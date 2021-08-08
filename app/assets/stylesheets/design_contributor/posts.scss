@@ -8,22 +8,22 @@
 }
 
 .posts_top{
-  padding: 10%;
-}
-
-.posts_background1{
-  background-image: url("posts_background1.png");
+  padding: 10% 15% 0% 10%;
+  background-image: url("../posts_background1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: red;
 }
 
 .posts_lead{
-  margin-left: 50%;
-  margin-bottom: 10%;
+  margin-left: auto;
+  padding: 50px 0px 120px 140px;
   color: rgb(59, 34, 33);
   font-family: serif;
   font-weight: bold;
+  width: 550px;
+  background-image: url("../posts_background2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .posts_lead_bold{
