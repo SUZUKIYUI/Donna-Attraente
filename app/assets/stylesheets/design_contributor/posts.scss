@@ -14,7 +14,8 @@
 }
 
 .posts_lead1{
-  margin-left: auto;
+  margin: 0 auto;
+  margin-right: 20px;
   padding: 50px 0px 120px 140px;
   color: rgb(59, 34, 33);
   font-family: serif;
@@ -53,6 +54,11 @@
   background-repeat: no-repeat;
 }
 
+.posts_lead2{
+  display: flex;
+  align-items: flex-end;
+}
+
 .posts_lead2_bold{
   color: rgb(59, 34, 33);
   font-family: serif;
@@ -60,14 +66,13 @@
   border: double 10px rgb(59, 34, 33);
   width: 250px;
   text-align: center;
-  display: inline-block;
 }
 
 .posts_lead2 span{
-  margin-left: 20px;
+  margin-left: 50px;
   color: rgb(59, 34, 33);
   font-family: serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -75,7 +80,7 @@
   display: flex;
   justify-content: space-around;
   margin-top: 5%;
-  // background-color: yellow;
+  background-color: yellow;
 }
 
 .post_box{
