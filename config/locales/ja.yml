@@ -1,15 +1,10 @@
 ja:
   activerecord:
-    models:
-      # ----------------------------
-      post: 投稿
     attributes:
       post:
         post_image: 投稿画像
         author_comment: 作者コメント
       # ----------------------------
-      offer: オファー
-    attributes:
       offer:
         offer_comment: オファーコメント
         offer_status: オファー状態
@@ -20,4 +15,4 @@ ja:
         negotiation: "交渉中"
         established: "オファー成立"
         failure: "オファー不成立"
-  # -------------------------------
+  # --------------------------------

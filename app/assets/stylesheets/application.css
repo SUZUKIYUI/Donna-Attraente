@@ -338,7 +338,7 @@ footer{
 }
 
 .signup_bottom{
-  background-image: url("background1");
+  background-image: url("base_back1");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 5% 10%;
@@ -449,22 +449,25 @@ footer{
   cursor: pointer;
 }
 
-.devise_error{
+.error_box{
   color: #CC0000;
   font-family: serif;
   font-weight: bold;
   padding: 20px;
   border: double 10px #CC0000;
   background-color: #FFFF99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.devise_error_heading{
+.error_heading{
   font-size: 18px;
   border-bottom: solid 1px #CC0000;
   margin-bottom: 15px;
 }
 
-.devise_error_list{
+.error_list{
   font-size: 20px;
   margin-top: 5px;
 }

@@ -13,25 +13,31 @@
   </div>
 
   <div class="posts_bottom new_bottom_back">
-    <!------------未入力の場合のエラー文表示------------->
-    <% if @post.errors.any? %>
-      <p><%= @post.errors.count %>件のエラー</p>
-      <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li>
-            <%= message %>
-          </li>
+    <div class="new_post_form">
+      <%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
+      <!------------未入力の場合のエラー文表示------------->
+        <% if @post.errors.any? %>
+          <div class="error_box">
+            <p class="error_heading"><%= @post.errors.count %>件のエラーが発生したため 投稿できませんでした。</p>
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <li class="error_list">
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
-    <% end %>
-    <!--------------------------------------------------->
-    <%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
-      <%= f.label :post_image, "デザイン画像" %>
-      <%= f.attachment_field :post_image %>
-      <%= f.label :author_comment, "作者コメント" %>
-      <%= f.text_area :author_comment, placeholder: "作品のこだわった所、好きな所、なんでも書いて下さい" %>
-      <%= f.submit "投稿する" %>
-    <% end %>
+        <!--------------------------------------------------->
+        <%= f.label :post_image, "デザイン画像" %>
+        <%= f.attachment_field :post_image %>
+        <div class="post_input_form">
+          <%= f.label :author_comment, "作者コメント", class: "post_label" %>
+          <%= f.text_area :author_comment, placeholder: "作品のこだわった所、好きな所、なんでも書いて下さい" %>
+        </div>
+        <%= f.submit "投稿する" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
