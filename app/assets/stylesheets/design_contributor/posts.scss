@@ -2,39 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posts_content{
-  width: 100%;
-}
 
-.posts_top{
-  padding: 10% 15% 0% 10%;
-  background-image: url("../posts_background1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.posts_lead1{
-  margin: 0 auto;
-  margin-right: 20px;
-  padding: 50px 0px 120px 140px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-  width: 550px;
-  background-image: url("../posts_background2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.posts_lead_bold{
-  font-size: 35px;
-}
-
+//---------------posts画面共通------------------
 .posts_heading{
   width: 400px;
   padding-bottom: 2px;
   border-bottom: solid 5px rgba(50, 26, 10, 0.6);
   margin-top: auto;
+}
+
+.posts_top{
+  padding: 10% 10% 0% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.posts_lead{
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+
+.posts_lead_bold{
+  font-size: 35px;
+  letter-spacing: 5px;
 }
 
 .posts_heading_item{
@@ -49,17 +40,40 @@
 
 .posts_bottom{
   padding: 5% 10%;
-  background-image: url("../posts_background3.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
+//-----------------------------
 
-.posts_lead2{
+
+
+
+// posts一覧画面
+.index_top_back1{
+  background-image: url("../posts_background1.png");
+}
+.index_top_back2{
+  background-image: url("../posts_background2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 550px;
+  padding-left: 150px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: 10%;
+}
+.index_lead1{
+  width: 320px;
+}
+.index_bottom_back{
+  background-image: url("../base_back2.png");
+}
+.index_lead2{
   display: flex;
   align-items: flex-end;
 }
-
-.posts_lead2_bold{
+.index_lead2_bold{
   color: rgb(59, 34, 33);
   font-family: serif;
   font-size: 30px;
@@ -67,51 +81,57 @@
   width: 250px;
   text-align: center;
 }
-
-.posts_lead2 span{
+.index_lead2 span{
   margin-left: 50px;
   color: rgb(59, 34, 33);
   font-family: serif;
   font-size: 20px;
   font-weight: bold;
 }
-
-.posts_box{
+.index_posts_box{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-top: 5%;
-  background-color: yellow;
 }
-
-.post_box{
-  padding: 10px 15px;
+.index_post_link{
+  padding: 10px;
+  margin-bottom: 5px;
   background-color: rgb(225, 214, 206);
   border-radius: 5px;
 }
-
-.user_show_link{
-  display: inline-block;
-  // margin-top: 5px;
-  height: 50px;
+.index_post_link:hover{
+  background-color: rgb(70, 40, 20);
+  opacity: 0.8;
 }
-
-.user_show_link1{
+.index_post_image{
+  margin-bottom: 0px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_user_link{
+  display: inline-block;
+  height: 53px;
+}
+.index_user_link:hover{
+  opacity: 0.7;
+}
+.index_user_link1{
   display: flex;
   align-items: center;
   height: 100%;
 }
-
-.user_show_link2{
+.index_user_link2{
   height: 100%;
 }
-
-.profile_image{
+.index_profile_image{
   border-radius: 50%;
   padding: 2px;
   border: solid 2px rgb(70, 40, 20);
 }
-
-.user_show_link3{
+.index_user_link3{
   color: rgb(59, 34, 33);
   font-family: serif;
   font-size: 18px;
@@ -119,4 +139,30 @@
   padding: 0 10px;
   display: inline-block;
 }
+// ---------------------
 
+
+
+// posts新規登録画面
+.new_top_back1{
+  background-image: url("../posts_new_back1.png");
+}
+.new_lead1{
+  width: 450px;
+  margin-left: auto;
+  margin-right: 10%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.new_bottom_back{
+  background-image: url("../base_back3");
+}
+// --------------------------------------
+
+
+
+// posts詳細画面
+
+
+
+// posts編集画面

@@ -2,120 +2,121 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posts_content{
-  width: 100%;
-}
+// .posts_content{
+//   width: 100%;
+// }
 
-.posts_top{
-  padding: 10% 15% 0% 10%;
-  background-image: url("../posts_background1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+// .posts_top{
+//   padding: 10% 15% 0% 10%;
+//   background-image: url("../posts_background1.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 
-.posts_lead1{
-  margin: 0 auto;
-  margin-right: 20px;
-  padding: 50px 0px 120px 140px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-  width: 550px;
-  background-image: url("../posts_background2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+// .posts_lead1{
+//   margin: 0 auto;
+//   margin-right: 20px;
+//   padding: 50px 0px 120px 140px;
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-weight: bold;
+//   width: 550px;
+//   background-image: url("../posts_background2.png");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
 
-.posts_lead_bold{
-  font-size: 35px;
-}
+// .posts_lead_bold{
+//   font-size: 35px;
+// }
 
-.posts_heading{
-  width: 400px;
-  padding-bottom: 2px;
-  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
-  margin-top: auto;
-}
+// .posts_heading{
+//   width: 400px;
+//   padding-bottom: 2px;
+//   border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+//   margin-top: auto;
+// }
 
-.posts_heading_item{
-  padding-right: 10px;
-  font-family: "ヒラギノ明朝 ProN W6";
-  font-size: 95px;
-  font-weight: bold;
-  color: rgba(249, 242, 237, 0.9);
-  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
-  margin-top: auto;
-}
+// .posts_heading_item{
+//   padding-right: 10px;
+//   font-family: "ヒラギノ明朝 ProN W6";
+//   font-size: 95px;
+//   font-weight: bold;
+//   color: rgba(249, 242, 237, 0.9);
+//   background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
+//   margin-top: auto;
+// }
 
-.posts_bottom{
-  padding: 5% 10%;
-  background-image: url("../posts_background3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+// .posts_bottom{
+//   padding: 5% 10%;
+//   background-image: url("../posts_background3.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 
-.posts_lead2{
-  display: flex;
-  align-items: flex-end;
-}
+// .posts_lead2{
+//   display: flex;
+//   align-items: flex-end;
+// }
 
-.posts_lead2_bold{
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 30px;
-  border: double 10px rgb(59, 34, 33);
-  width: 250px;
-  text-align: center;
-}
+// .posts_lead2_bold{
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 30px;
+//   border: double 10px rgb(59, 34, 33);
+//   width: 250px;
+//   text-align: center;
+// }
 
-.posts_lead2 span{
-  margin-left: 50px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 20px;
-  font-weight: bold;
-}
+// .posts_lead2 span{
+//   margin-left: 50px;
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
 
-.posts_box{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5%;
-  background-color: yellow;
-}
+// .posts_box{
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   margin-top: 5%;
+//   // background-color: yellow;
+// }
 
-.post_box{
-  padding: 10px 15px;
-  background-color: rgb(225, 214, 206);
-  border-radius: 5px;
-}
+// .post_box{
+//   padding: 10px 15px;
+//   background-color: rgb(225, 214, 206);
+//   border-radius: 5px;
+// }
 
-.user_show_link{
-  display: inline-block;
-  // margin-top: 5px;
-  height: 50px;
-}
+// .user_show_link{
+//   display: inline-block;
+//   // margin-top: 5px;
+//   height: 50px;
+// }
 
-.user_show_link1{
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
+// .user_show_link1{
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+// }
 
-.user_show_link2{
-  height: 100%;
-}
+// .user_show_link2{
+//   height: 100%;
+// }
 
-.profile_image{
-  border-radius: 50%;
-  padding: 2px;
-  border: solid 2px rgb(70, 40, 20);
-}
+// .profile_image{
+//   border-radius: 50%;
+//   padding: 2px;
+//   border: solid 2px rgb(70, 40, 20);
+// }
 
-.user_show_link3{
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 0 10px;
-  display: inline-block;
-}
+// .user_show_link3{
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 18px;
+//   font-weight: bold;
+//   padding: 0 10px;
+//   display: inline-block;
+// }

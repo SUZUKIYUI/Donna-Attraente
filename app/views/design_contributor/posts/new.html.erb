@@ -1,29 +1,45 @@
-<h1>投稿画面</h1>
-<p>
-  デザインしたワンピースの画像と<br />
-  作品に関するコメントを投稿できます。
-</p>
+<!--デザイン投稿者新規作品投稿画面-->
 
-<!------------未入力の場合のエラー文表示------------->
-<% if @post.errors.any? %>
-  <p><%= @post.errors.count %>件のエラー</p>
-  <ul>
-    <% @post.errors.full_messages.each do |message| %>
-      <li>
-        <%= message %>
-      </li>
+<div class="content_width">
+  <div class="posts_top new_top_back1">
+    <div class="posts_lead new_lead1">
+      <h2 class="posts_lead_bold">作品投稿</h2>
+      <p>デザインしたワンピースの画像とコメントを投稿してください</p>
+    </div>
+    <!-----------------見出し------------------>
+    <div class="posts_heading">
+      <h1 class="posts_heading_item">Post</h1>
+    </div>
+  </div>
+
+  <div class="posts_bottom new_bottom_back">
+    <!------------未入力の場合のエラー文表示------------->
+    <% if @post.errors.any? %>
+      <p><%= @post.errors.count %>件のエラー</p>
+      <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
-<!--------------------------------------------------->
+    <!--------------------------------------------------->
+    <%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
+      <%= f.label :post_image, "デザイン画像" %>
+      <%= f.attachment_field :post_image %>
+      <%= f.label :author_comment, "作者コメント" %>
+      <%= f.text_area :author_comment, placeholder: "作品のこだわった所、好きな所、なんでも書いて下さい" %>
+      <%= f.submit "投稿する" %>
+    <% end %>
+  </div>
+</div>
 
-<%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
-  <%= f.label :post_image, "デザイン画像" %>
-  <%= f.attachment_field :post_image %>
-  <%= f.label :author_comment, "作者コメント" %>
-  <%= f.text_area :author_comment, placeholder: "作品に対するコメントを入力してください" %>
-  <%= f.submit "投稿する" %>
-<% end %>
+
+
+
+
+
 
 
 
