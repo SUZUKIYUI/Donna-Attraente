@@ -36,6 +36,31 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
 
 /*---------------------------------*/
 
+/*---------------エラー---------------*/
+.error_box{
+  color: #CC0000;
+  font-family: serif;
+  font-weight: bold;
+  padding: 20px;
+  border: double 10px #CC0000;
+  background-color: #FFFF99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error_heading{
+  font-size: 18px;
+  border-bottom: solid 1px #CC0000;
+  margin-bottom: 15px;
+}
+
+.error_list{
+  font-size: 20px;
+  margin-top: 5px;
+}
+/*-----------------------------------*/
+
 /*• スマートフォン：599px [max-width : 599px]*/
 /*• タブレット：1024px [max-width : 1024px]*/
 /*• PC：設定なし（実質1025px以上）*/
@@ -449,25 +474,3 @@ footer{
   cursor: pointer;
 }
 
-.error_box{
-  color: #CC0000;
-  font-family: serif;
-  font-weight: bold;
-  padding: 20px;
-  border: double 10px #CC0000;
-  background-color: #FFFF99;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.error_heading{
-  font-size: 18px;
-  border-bottom: solid 1px #CC0000;
-  margin-bottom: 15px;
-}
-
-.error_list{
-  font-size: 20px;
-  margin-top: 5px;
-}

@@ -163,6 +163,34 @@
   margin-top: 5%;
   background-color: red;
 }
+.post_input_form{
+  display: flex;
+  margin-bottom: 20px;
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+.post_image_form{
+  justify-content: center;
+}
+.input_post_image1{
+  width: 250px;
+  font-size: 15px;
+  color: rgb(249, 242, 237);
+  background-color: rgb(65, 33, 11);
+  text-align: center;
+  // margin: 20px 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input_post_image1:hover{
+  background-color: rgba(65, 33, 11, 0.7);
+}
+.input_post_image2{
+  display: none;
+}
 // --------------------------------------
 
 

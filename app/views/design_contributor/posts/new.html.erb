@@ -29,11 +29,14 @@
           </div>
         <% end %>
         <!--------------------------------------------------->
-        <%= f.label :post_image, "デザイン画像" %>
-        <%= f.attachment_field :post_image %>
+        <div class="post_input_form post_image_form">
+          <label class="input_post_image1">投稿画像を選択してください
+            <%= f.attachment_field :post_image, class: "post_input input_post_image2" %>
+          </label>
+        </div>
         <div class="post_input_form">
           <%= f.label :author_comment, "作者コメント", class: "post_label" %>
-          <%= f.text_area :author_comment, placeholder: "作品のこだわった所、好きな所、なんでも書いて下さい" %>
+          <%= f.text_area :author_comment, placeholder: "作品のこだわった所、好きな所、なんでも書いて下さい", class: "post_input" %>
         </div>
         <%= f.submit "投稿する" %>
       <% end %>
