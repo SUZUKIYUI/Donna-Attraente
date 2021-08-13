@@ -4,13 +4,6 @@
 
 
 //---------------posts画面共通------------------
-.posts_heading{
-  width: 400px;
-  padding-bottom: 2px;
-  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
-  margin-top: auto;
-}
-
 .posts_top{
   padding: 10% 10% 0% 10%;
   background-size: cover;
@@ -26,16 +19,6 @@
 .posts_lead_bold{
   font-size: 35px;
   letter-spacing: 5px;
-}
-
-.posts_heading_item{
-  padding-right: 10px;
-  font-family: "ヒラギノ明朝 ProN W6";
-  font-size: 95px;
-  font-weight: bold;
-  color: rgba(249, 242, 237, 0.9);
-  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
-  margin-top: auto;
 }
 
 .posts_bottom{

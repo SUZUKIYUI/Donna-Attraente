@@ -3,13 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //---------------posts画面共通------------------
-.posts_heading{
-  width: 400px;
-  padding-bottom: 2px;
-  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
-  margin-top: auto;
-}
-
 .posts_top{
   padding: 10% 10% 0% 10%;
   background-size: cover;
@@ -25,16 +18,6 @@
 .posts_lead_bold{
   font-size: 35px;
   letter-spacing: 5px;
-}
-
-.posts_heading_item{
-  padding-right: 10px;
-  font-family: "ヒラギノ明朝 ProN W6";
-  font-size: 95px;
-  font-weight: bold;
-  color: rgba(249, 242, 237, 0.9);
-  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 90%);
-  margin-top: auto;
 }
 
 .posts_bottom{
@@ -140,58 +123,6 @@
   display: inline-block;
 }
 // ---------------------
-
-
-
-// // posts新規登録画面
-// .new_top_back1{
-//   background-image: url("../posts_new_back1.png");
-// }
-// .new_lead1{
-//   width: 450px;
-//   margin-left: auto;
-//   margin-right: 10%;
-//   margin-top: 100px;
-//   margin-bottom: 100px;
-// }
-// .new_bottom_back{
-//   background-image: url("../base_back3");
-// }
-// .new_post_form{
-//   margin: 0 auto;
-//   width: 700px;
-//   margin-top: 5%;
-//   // background-color: red;
-// }
-// .post_input_form{
-//   display: flex;
-//   margin-bottom: 20px;
-//   color: rgb(59, 34, 33);
-//   font-family: serif;
-//   font-weight: bold;
-// }
-// .post_image_form{
-//   justify-content: center;
-// }
-// .input_post_image1{
-//   width: 250px;
-//   font-size: 15px;
-//   color: rgb(249, 242, 237);
-//   background-color: rgb(65, 33, 11);
-//   text-align: center;
-//   // margin: 20px 200px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-// .input_post_image1:hover{
-//   background-color: rgba(65, 33, 11, 0.7);
-// }
-// .input_post_image2{
-//   display: none;
-// }
-// --------------------------------------
 
 
 
