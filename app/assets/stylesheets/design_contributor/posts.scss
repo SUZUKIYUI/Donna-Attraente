@@ -162,11 +162,12 @@
   margin: 0 auto;
   width: 700px;
   margin-top: 5%;
-  background-color: red;
 }
 .post_input_form{
   display: flex;
-  margin-bottom: 20px;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   color: rgb(59, 34, 33);
   font-family: serif;
   font-weight: bold;
@@ -191,6 +192,37 @@
 }
 .input_post_image2{
   display: none;
+}
+.post_label{
+  width: 200px;
+  font-size: 20px;
+}
+.post_input{
+  height: 100px;
+  width: 300px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: serif;
+  font-weight: bold;
+  background-color: rgb(249, 242, 237);
+}
+.post_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+.post_btn{
+  background-color: rgb(70, 40, 20);
+  padding: 12px 32px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(197, 180, 169);
+  letter-spacing: 8px;
+  text-indent: 8px;
+}
+.post_btn:hover{
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
 }
 // --------------------------------------
 
