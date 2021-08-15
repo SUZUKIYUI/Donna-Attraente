@@ -412,6 +412,10 @@ footer{
   width: 350px;
 }
 
+.introduction_input{
+  height: 100px;
+}
+
 .postal_code_input{
   width: 200px;
 }
