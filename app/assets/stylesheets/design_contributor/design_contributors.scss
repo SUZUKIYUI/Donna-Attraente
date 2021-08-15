@@ -4,7 +4,43 @@
 
 
 
+//---------------posts画面共通------------------
+.user_top{
+  padding: 10% 10% 0% 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.show_lead{
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+
+.show_lead_bold{
+  font-size: 35px;
+  letter-spacing: 5px;
+}
+
+.user_bottom{
+  padding: 5% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//-----------------------------
+
 // デザイン投稿者詳細画面
+.show_top_back{
+  background-image: url("../user_show_back1.png");
+  padding-bottom: 10px;
+}
+.show_lead{
+  width: 320px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  // background-color: red;
+}
 
 
 

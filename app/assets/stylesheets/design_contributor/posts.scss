@@ -6,7 +6,8 @@
 //---------------posts画面共通------------------
 .posts_top{
   padding: 10% 10% 0% 10%;
-  background-size: cover;
+  background-size: 100%;
+  height: 800px;
   background-repeat: no-repeat;
 }
 
@@ -35,178 +36,178 @@
 .index_top_back1{
   background-image: url("../posts_background1.png");
 }
-.index_top_back2{
-  background-image: url("../posts_background2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 300px;
-  width: 550px;
-  padding-left: 150px;
-  padding-top: 50px;
-  margin-left: auto;
-  margin-right: 10%;
-}
-.index_lead1{
-  width: 320px;
-}
-.index_bottom_back{
-  background-image: url("../base_back2.png");
-}
-.index_lead2{
-  display: flex;
-  align-items: flex-end;
-}
-.index_lead2_bold{
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 30px;
-  border: double 10px rgb(59, 34, 33);
-  width: 250px;
-  text-align: center;
-}
-.index_lead2 span{
-  margin-left: 50px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-.index_posts_box{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 5%;
-}
-.index_post_link{
-  padding: 10px;
-  margin-bottom: 5px;
-  background-color: rgb(225, 214, 206);
-  border-radius: 5px;
-}
-.index_post_link:hover{
-  background-color: rgb(70, 40, 20);
-  opacity: 0.8;
-}
-.index_post_image{
-  margin-bottom: 0px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.index_user_link{
-  display: inline-block;
-  height: 53px;
-  margin-top: 5px;
-}
-.index_user_link:hover{
-  opacity: 0.7;
-}
-.index_user_link1{
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-.index_user_link2{
-  height: 100%;
-}
-.index_profile_image{
-  border-radius: 50%;
-  padding: 2px;
-  border: solid 2px rgb(70, 40, 20);
-}
-.index_user_link3{
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 0 10px;
-  display: inline-block;
-}
-// ---------------------
+// .index_top_back2{
+//   background-image: url("../posts_background2.png");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   height: 300px;
+//   width: 550px;
+//   padding-left: 150px;
+//   padding-top: 50px;
+//   margin-left: auto;
+//   margin-right: 10%;
+// }
+// .index_lead1{
+//   width: 320px;
+// }
+// .index_bottom_back{
+//   background-image: url("../base_back2.png");
+// }
+// .index_lead2{
+//   display: flex;
+//   align-items: flex-end;
+// }
+// .index_lead2_bold{
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 30px;
+//   border: double 10px rgb(59, 34, 33);
+//   width: 250px;
+//   text-align: center;
+// }
+// .index_lead2 span{
+//   margin-left: 50px;
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 20px;
+//   font-weight: bold;
+// }
+// .index_posts_box{
+//   display: flex;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+//   margin-top: 5%;
+// }
+// .index_post_link{
+//   padding: 10px;
+//   margin-bottom: 5px;
+//   background-color: rgb(225, 214, 206);
+//   border-radius: 5px;
+// }
+// .index_post_link:hover{
+//   background-color: rgb(70, 40, 20);
+//   opacity: 0.8;
+// }
+// .index_post_image{
+//   margin-bottom: 0px;
+//   background-color: green;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .index_user_link{
+//   display: inline-block;
+//   height: 53px;
+//   margin-top: 5px;
+// }
+// .index_user_link:hover{
+//   opacity: 0.7;
+// }
+// .index_user_link1{
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+// }
+// .index_user_link2{
+//   height: 100%;
+// }
+// .index_profile_image{
+//   border-radius: 50%;
+//   padding: 2px;
+//   border: solid 2px rgb(70, 40, 20);
+// }
+// .index_user_link3{
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-size: 18px;
+//   font-weight: bold;
+//   padding: 0 10px;
+//   display: inline-block;
+// }
+// // ---------------------
 
 
 
-// posts新規登録画面
-.new_top_back1{
-  background-image: url("../posts_new_back1.png");
-}
-.new_lead1{
-  width: 450px;
-  margin-left: auto;
-  margin-right: 10%;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.new_bottom_back{
-  background-image: url("../base_back3");
-}
-.new_post_form{
-  margin: 0 auto;
-  width: 700px;
-  margin-top: 5%;
-}
-.post_input_form{
-  display: flex;
-  width: 500px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-}
-.post_image_form{
-  justify-content: center;
-  margin-top: 20px;
-}
-.input_post_image1{
-  width: 250px;
-  font-size: 15px;
-  color: rgb(249, 242, 237);
-  background-color: rgb(65, 33, 11);
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.input_post_image1:hover{
-  background-color: rgba(65, 33, 11, 0.7);
-}
-.input_post_image2{
-  display: none;
-}
-.post_label{
-  width: 200px;
-  font-size: 20px;
-}
-.post_input{
-  height: 100px;
-  width: 300px;
-  padding: 5px 10px;
-  font-size: 15px;
-  font-family: serif;
-  font-weight: bold;
-  background-color: rgb(249, 242, 237);
-}
-.post_btn_form{
-  text-align: center;
-  margin-top: 50px;
-}
-.post_btn{
-  background-color: rgb(70, 40, 20);
-  padding: 12px 32px;
-  font-size: 18px;
-  font-family: serif;
-  font-weight: bold;
-  color: rgb(197, 180, 169);
-  letter-spacing: 8px;
-  text-indent: 8px;
-}
-.post_btn:hover{
-  background-color: rgba(70, 40, 20, 0.7);
-  cursor: pointer;
-}
+// // posts新規登録画面
+// .new_top_back1{
+//   background-image: url("../posts_new_back1.png");
+// }
+// .new_lead1{
+//   width: 450px;
+//   margin-left: auto;
+//   margin-right: 10%;
+//   margin-top: 100px;
+//   margin-bottom: 100px;
+// }
+// .new_bottom_back{
+//   background-image: url("../base_back3");
+// }
+// .new_post_form{
+//   margin: 0 auto;
+//   width: 700px;
+//   margin-top: 5%;
+// }
+// .post_input_form{
+//   display: flex;
+//   width: 500px;
+//   margin: 0 auto;
+//   margin-bottom: 30px;
+//   color: rgb(59, 34, 33);
+//   font-family: serif;
+//   font-weight: bold;
+// }
+// .post_image_form{
+//   justify-content: center;
+//   margin-top: 20px;
+// }
+// .input_post_image1{
+//   width: 250px;
+//   font-size: 15px;
+//   color: rgb(249, 242, 237);
+//   background-color: rgb(65, 33, 11);
+//   text-align: center;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   border-radius: 5px;
+//   cursor: pointer;
+// }
+// .input_post_image1:hover{
+//   background-color: rgba(65, 33, 11, 0.7);
+// }
+// .input_post_image2{
+//   display: none;
+// }
+// .post_label{
+//   width: 200px;
+//   font-size: 20px;
+// }
+// .post_input{
+//   height: 100px;
+//   width: 300px;
+//   padding: 5px 10px;
+//   font-size: 15px;
+//   font-family: serif;
+//   font-weight: bold;
+//   background-color: rgb(249, 242, 237);
+// }
+// .post_btn_form{
+//   text-align: center;
+//   margin-top: 50px;
+// }
+// .post_btn{
+//   background-color: rgb(70, 40, 20);
+//   padding: 12px 32px;
+//   font-size: 18px;
+//   font-family: serif;
+//   font-weight: bold;
+//   color: rgb(197, 180, 169);
+//   letter-spacing: 8px;
+//   text-indent: 8px;
+// }
+// .post_btn:hover{
+//   background-color: rgba(70, 40, 20, 0.7);
+//   cursor: pointer;
+// }
 // --------------------------------------
 
 
