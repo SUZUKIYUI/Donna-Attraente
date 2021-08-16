@@ -6,7 +6,7 @@
 //---------------posts画面共通------------------
 .posts_top{
   padding: 10% 10% 0% 10%;
-  background-size: 100%;
+  background-size: contain;
   height: 800px;
   background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@
 
 // posts一覧画面
 .index_top_back1{
-  background-image: url("../posts_background1.png");
+  background-image: url("../posts_index_back1.png");
 }
 // .index_top_back2{
 //   background-image: url("../posts_background2.png");
