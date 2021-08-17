@@ -1,39 +1,37 @@
 <!--デザイン投稿者投稿作品一覧画面-->
 
 <div class="content_width">
-  <div class="posts_top index_top_back1">
-    <div class="index_top_back2">
-      <div class="posts_lead index_lead1">
-        <h2 class="posts_lead_bold">作品一覧</h2>
-        <p>こちらのページでは皆様の投稿した<br />ワンピースのデザインがご覧いただけます</p>
-      </div>
+  <div class="top_content posts_index_top">
+    <div class="heading2 posts_index_heading2">
+      <h2>作品一覧</h2>
+      <p>こちらのページでは皆様の投稿した<br />ワンピースのデザインがご覧いただけます</p>
     </div>
     <!-----------------見出し------------------>
-    <div class="heading_top">
-      <h1 class="heading_top_item">Works</h1>
+    <div class="heading1">
+      <h1 class="heading1_item">Works</h1>
     </div>
   </div>
 
-  <div class="posts_bottom index_bottom_back">
-    <div class="index_lead2">
-      <h3 class="index_lead2_bold">投稿作品</h3>
+  <div class="bottom_content posts_index_bottom">
+    <div class="posts_index_heading3">
+      <h3>投稿作品</h3>
       <span>新着順</span>
     </div>
-    <div class="index_posts_box">
+    <div class="posts_index_list">
       <% @posts.each do |post| %>
-        <div class="index_post_box">
+        <div class="post_index_box">
           <%= link_to design_contributor_post_path(post.id) do %>
-            <div class="index_post_link">
-              <%= attachment_image_tag post, :post_image, :fill, 260, 350, class: "index_post_image" %>
+            <div class="post_show_link">
+              <%= attachment_image_tag post, :post_image, :fill, 260, 350, class: "post_index_image" %>
             </div>
           <% end %>
-          <div class="index_user_link">
+          <div class="user_show_link">
             <%= link_to design_contributor_design_contributor_path(post.design_contributor_id) do %>
-              <div class="index_user_link1">
-                <div class="index_user_link2">
-                  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.jpg", class: "index_profile_image" %>
+              <div class="iuser_show_link1">
+                <div class="user_show_link2">
+                  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.jpg", class: "user_profile_image" %>
                 </div>
-                <div class="index_user_link3">
+                <div class="user_show_link3">
                   <%= post.design_contributor.pen_name %>
                 </div>
               </div>
