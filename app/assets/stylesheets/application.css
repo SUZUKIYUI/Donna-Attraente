@@ -358,46 +358,50 @@ footer{
 }
 
 /*-------------------------------------新規登録画面--------------------------------*/
-.signup_top{
-  padding: 16% 10% 0% 10%;
-}
-.signup_background1{
-  background-image: url("signup_background1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.signup_top1{
+  background-image: url("signup_back1.png");
 }
 
-.signup_lead_content{
+.signup_heading2_content{
   display: flex;
+  position: absolute;
+  top: 34%;
+  right: 18%;
 }
 
-.signup_lead1{
-  margin-left: auto;
-  margin-bottom: 10%;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-}
-
-.signup_lead1_bold{
-  font-size: 35px;
-}
-
-.signup_lead1_bold span{
-  font-size: 20px;
+.signup_heading2 span{
+  font-size: 22px;
   margin-left: 20px;
   color: rgb(148, 26, 16);
 }
 
-.signup_background2{
+.signup_top2{
   width: 100px;
   height: 100px;
-  background-image: url("signup_background2");
+  background-image: url("signup_back2.png");
   background-size: cover;
 }
 
+.signup_heading1{
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+  position: absolute;
+  bottom: 2px;
+}
+
+.signup_heading1 h1{
+  display: inline-block;
+  padding-right: 30px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 90px;
+  font-weight: bold;
+  color: rgba(249, 242, 237, 0.9);
+  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 80%);
+}
+
 .signup_bottom{
-  background-image: url("base_back1");
+  background-image: url("base_back1.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 5% 10%;
@@ -408,22 +412,13 @@ footer{
   justify-content: space-between;
 }
 
-.signup_lead2{
+.signup_heading3{
   color: rgb(59, 34, 33);
   font-family: serif;
   font-size: 30px;
   border: double 10px rgb(59, 34, 33);
-  width: 250px;
   text-align: center;
-}
-
-.company_signup_lead2{
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-size: 30px;
-  border: double 10px rgb(59, 34, 33);
-  width: 400px;
-  text-align: center;
+  padding: 10px 20px;
 }
 
 .signup_form{
