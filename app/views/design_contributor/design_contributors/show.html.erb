@@ -1,37 +1,55 @@
 <!--デザイン投稿者詳細画面-->
 
 <div class="content_width">
-  <div class="user_top show_top_back">
-    <div class="user_lead show_lead">
+  <div class="top_content design_contributor_show_top">
+    <div class="heading2 design_contributor_show_heading2">
       <% if @design_contributor == current_design_contributor %>
-        <h2 class="show_lead_bold">マイページ</h2>
+        <h2>マイページ</h2>
       <% else %>
-        <h2 class="show_lead_bold">ユーザーページ</h2>
+        <h2>ユーザーページ</h2>
       <% end %>
     </div>
     <!-----------------見出し------------------>
-    <div class="heading_top">
+    <div class="heading1">
       <% if @design_contributor == current_design_contributor %>
-        <h1 class="heading_top_item show_heading_top_item">My page</h1>
+        <h1>My page</h1>
       <% else %>
-        <h1 class="heading_top_item">User page</h1>
+        <h1>User page</h1>
       <% end %>
     </div>
+    <div class="design_contributor_show_decoration"></div>
   </div>
 
-  <div class="user_bottom show_bottom_back">
-    <%= attachment_image_tag @design_contributor, :profile_image, :fill, 150, 150, fallback: "no_image.jpg" %>
-    <%= @design_contributor.pen_name %>
-    <p>自己紹介</p>
-    <%= @design_contributor.self_introduction %>
-    <%= link_to "プロフィールを編集する", edit_design_contributor_design_contributor_path(@design_contributor.id) %>
-
-    <!------------------------------------------------------------------------------------------------------------->
-    <p>デザイン一覧</p>
-    <% @design_contributor.posts.each do |post| %>
-      <%= link_to design_contributor_post_path(post.id) do %>
-        <%= attachment_image_tag post, :post_image, :fill, 200, 300 %>
+  <div class="bottom_content design_contributor_show_bottom">
+    <div class="design_contributor_show_introduction">
+      <div class="design_contributor_show_introduction1">
+        <div class="design_contributor_image_frame">
+          <%= attachment_image_tag @design_contributor, :profile_image, :fill, 220, 220, fallback: "no_image.jpg", class: "design_contributor_image" %>
+        </div>
+        <div class="design_contributor_show_name">
+          <%= @design_contributor.pen_name %>
+        </div>
+      </div>
+      <div class="design_contributor_show_introduction2">
+        <p>自己紹介</p>
+        <div class="design_contributor_show_self_introduction">
+          <%= @design_contributor.self_introduction %>
+        </div>
+      </div>
+    </div>
+    <div class="design_contributor_edit_link1">
+      <%= link_to "プロフィールを編集する", edit_design_contributor_design_contributor_path(@design_contributor.id), class: "design_contributor_edit_link2" %>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <h3 class="design_contributor_show_heading3">デザイン一覧</h3>
+    <div class="design_contributor_all_items">
+      <% @design_contributor.posts.each do |post| %>
+        <%= link_to design_contributor_post_path(post.id) do %>
+          <div class="design_contributor_item1">
+            <%= attachment_image_tag post, :post_image, :fill, 300, 420, class: "design_contributor_item2" %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
