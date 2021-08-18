@@ -169,12 +169,12 @@ header{
   padding-bottom: 2px;
   border-bottom: solid 5px rgba(50, 26, 10, 0.6);
   position: absolute;
-  bottom: 2px;
+  bottom: 10px;
 }
 
 .heading1 h1{
   display: inline-block;
-  padding-right: 10%;
+  padding-right: 40px;
   font-family: "ヒラギノ明朝 ProN W6";
   font-size: 90px;
   font-weight: bold;
