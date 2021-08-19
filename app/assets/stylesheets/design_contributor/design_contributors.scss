@@ -139,7 +139,26 @@
 .design_contributor_item2{
   border-radius: 10px;
 }
+// ------------------------------------------------
 
 
 
 // デザイン投稿者編集画面
+.design_contributor_edit_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+}
+.design_contributor_edit_heading1{
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+.design_contributor_edit_form{
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 5%;
+  background-color: red;
+}
