@@ -162,3 +162,42 @@
   margin-top: 5%;
   background-color: red;
 }
+.design_contributor_edit_input_form{
+  display: flex;
+  margin-bottom: 20px;
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+.design_contributor_edit_label{
+  width: 250px;
+  font-size: 20px;
+  background-color: green;
+}
+.design_contributor_edit_input{
+  width: 250px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: serif;
+  font-weight: bold;
+  background-color: rgb(249, 242, 237);
+}
+.design_contributor_edit_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+.design_contributor_edit_btn{
+  background-color: rgb(241, 215, 213);
+  padding: 8px 30px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(61, 36, 34);
+  letter-spacing: 5px;
+  text-indent: 5px;
+}
+
+.design_contributor_edit_btn:hover{
+  background-color: rgb(223, 183, 180);
+  cursor: pointer;
+}
