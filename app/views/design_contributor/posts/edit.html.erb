@@ -1,18 +1,36 @@
-<h1>作者コメント編集</h1>
-<%= attachment_image_tag @post, :post_image, :fill, 620, 700 %>
+<!--デザイン投稿者投稿作品編集画面（コメントのみ）-->
 
-<!--------------未入力の時のエラー文--------------->
-<% if @post.errors.any? %>
-  <% @post.errors.full_messages.each do |message| %>
-    <li>
-      <%= message %>
-    </li>
-  <% end %>
-<% end %>
-<!------------------------------------------------->
-
-<%= form_with model: @post, url: design_contributor_post_path(@post.id), local: true do |f| %>
-  <%= f.label :author_comment %>
-  <%= f.text_area :author_comment %>
-  <%= f.submit "編集する" %>
-<% end %>
+<div class="content_width post_edit_back">
+  <h1 class="post_edit_heading1">コメント編集</h1>
+  <div class="post_edit_content">
+    <div>
+      <%= attachment_image_tag @post, :post_image, :fill, 400, 570 %>
+    </div>
+    <div class="post_edit_comment">
+      <!--------------未入力の時のエラー文--------------->
+      <% if @post.errors.any? %>
+        <div class="error_box">
+          <ul>
+            <% @post.errors.full_messages.each do |message| %>
+              <li class="error_list">
+                <%= message %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <!------------------------------------------------->
+      <%= form_with model: @post, url: design_contributor_post_path(@post.id), local: true do |f| %>
+        <div class="post_edit_label">
+          <%= f.label :author_comment %>
+        </div>
+        <div class="post_edit_form1">
+          <%= f.text_area :author_comment, class: "post_edit_form2" %>
+        </div>
+        <div class="post_edit_btn_form">
+          <%= f.submit "編集する", class: "post_edit_btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

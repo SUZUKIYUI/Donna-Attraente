@@ -163,11 +163,11 @@
   font-weight: bold;
   background-color: rgb(249, 242, 237);
 }
-.post_btn_form{
+.post_new_btn_form{
   text-align: center;
   margin-top: 100px;
 }
-.post_btn{
+.post_new_btn{
   background-color: rgb(70, 40, 20);
   padding: 12px 32px;
   font-size: 18px;
@@ -177,7 +177,7 @@
   letter-spacing: 8px;
   text-indent: 8px;
 }
-.post_btn:hover{
+.post_new_btn:hover{
   background-color: rgba(70, 40, 20, 0.7);
   cursor: pointer;
 }
@@ -187,6 +187,76 @@
 
 // posts詳細画面
 
+// --------------------------------------
+
 
 
 // posts編集画面
+.post_edit_back{
+  background-image: url("../base_back3.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 10%;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+}
+.post_edit_heading1{
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.post_edit_content{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5%;
+  // background-color: red;
+}
+.post_edit_comment{
+  margin-left: 10%;
+  width: 300px;
+  // background-color: green;
+}
+.post_edit_label{
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  margin-top: 20%;
+  margin-bottom: 5px;
+}
+.post_edit_form1{
+  width: 100%;
+}
+.post_edit_form2{
+  width: 100%;
+  height: 120px;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-weight: bold;
+  color: rgb(59, 34, 33);
+  background-color: rgb(249, 242, 237);
+}
+.post_edit_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+.post_edit_btn{
+  background-color: rgb(70, 40, 20);
+  padding: 12px 32px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(197, 180, 169);
+  letter-spacing: 8px;
+  text-indent: 8px;
+}
+.post_edit_btn:hover{
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
+}
+// --------------------------------------
