@@ -149,18 +149,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 10%;
+  padding-bottom: 10%;
+  position: relative;
 }
 .design_contributor_edit_heading1{
   font-family: "ヒラギノ明朝 ProN W6";
   font-size: 60px;
   font-weight: bold;
+  color: rgb(70, 40, 20);
   text-align: center;
 }
 .design_contributor_edit_form{
   margin: 0 auto;
-  width: 700px;
+  width: 500px;
   margin-top: 5%;
-  background-color: red;
 }
 .design_contributor_edit_input_form{
   display: flex;
@@ -169,18 +171,36 @@
   font-family: serif;
   font-weight: bold;
 }
+.input_edit_profile_image1{
+  width: 300px;
+  font-size: 15px;
+  color: rgb(249, 242, 237);
+  background-color: rgb(65, 33, 11);
+  text-align: center;
+  margin: 20px 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.input_edit_profile_image2{
+  display: none;
+}
 .design_contributor_edit_label{
-  width: 250px;
+  width: 150px;
   font-size: 20px;
-  background-color: green;
+  margin-right: 50px;
 }
 .design_contributor_edit_input{
-  width: 250px;
+  width: 300px;
   padding: 5px 10px;
   font-size: 15px;
   font-family: serif;
   font-weight: bold;
   background-color: rgb(249, 242, 237);
+}
+.pen_name_edit_input{
+  width: 200px;
 }
 .design_contributor_edit_btn_form{
   text-align: center;
