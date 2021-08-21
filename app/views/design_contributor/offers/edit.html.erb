@@ -1,18 +1,36 @@
-<h1>オファー編集画面</h1>
+<!--デザイン投稿者オファー編集編集画面-->
 
-<%= attachment_image_tag @post, :post_image, :fill, 300, 400 %>
-<p>このデザインに商品化のオファーが来ています</p>
+<div class="content_width offer_edit_back">
 
-<%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image.jpg" %>
-<%= @offer.company.company_name %>
-<%= @offer.offer_comment %>
-<!------------------------>
-<p>返信する</p>
-<p>オファーを</p>
-<%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
-  <%= f.radio_button :offer_status, :established %>
-  <%= f.label :offer_status_established, "お受けする" %>
-  <%= f.radio_button :offer_status, :failure %>
-  <%= f.label :offer_status_failure, "お断りする" %>
-  <%= f.submit "送信する" %>
-<% end %>
+  <h1 class="offer_edit_heading1">オファーが届いています</h1>
+
+  <div class="offer_detail">
+    <div class="offer_detail1">
+      <%= attachment_image_tag @post, :post_image, :fill, 300, 420, class: "offer_post_image" %>
+      <p class="offer_announce">このデザインに商品化のオファーが来ています</p>
+    </div>
+    <div class="offer_detail2">
+      <div class="offer_profile_image">
+        <%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image.png", size: "200x200" %>
+      </div>
+      <div>
+        <%= @offer.company.company_name %>
+        <div class="offer_comment">
+          <%= @offer.offer_comment %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------------------------------------------------------------------------->
+  <div class="offer_reply">
+    <p>返信する</p>
+    <p>オファーを</p>
+    <%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
+      <%= f.radio_button :offer_status, :established %>
+      <%= f.label :offer_status_established, "お受けする" %>
+      <%= f.radio_button :offer_status, :failure %>
+      <%= f.label :offer_status_failure, "お断りする" %>
+      <%= f.submit "送信する" %>
+    <% end %>
+  </div>
+</div>

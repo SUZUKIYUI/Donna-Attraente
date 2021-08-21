@@ -1,3 +1,55 @@
 // Place all the styles related to the design_contributor/offers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// ---------------------------------------------------
+
+
+
+
+// offer編集画面
+.offer_edit_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.offer_edit_heading1{
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.offer_detail{
+  margin-top: 3%;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+}
+.offer_detail1{
+  text-align: center;
+}
+.offer_announce{
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-indent: 2px;
+}
+.offer_detail2{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: red;
+}
+.offer_profile_image{
+  margin-right: 5%;
+}
+.offer_comment{
+  width: 500px;
+  padding: 10px 15px;
+  border
+  background-color: green;
+}
