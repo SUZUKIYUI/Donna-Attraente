@@ -25,14 +25,21 @@
   </div>
   <!--------------------------------------------------------------------------------------------->
   <div class="offer_reply">
-    <p>返信する</p>
-    <p>オファーを</p>
+    <p class="offer_reply_heading">返信する</p>
+    <p class="offer_reply_intro">オファーを</p>
     <%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
-      <%= f.radio_button :offer_status, :established %>
-      <%= f.label :offer_status_established, "お受けする" %>
-      <%= f.radio_button :offer_status, :failure %>
-      <%= f.label :offer_status_failure, "お断りする" %>
-      <%= f.submit "送信する" %>
+      <div class="offer_reply_form">
+        <div class="offer_edit_input_form">
+          <%= f.radio_button :offer_status, :established, class: "offer_edit_input" %>
+          <%= f.label :offer_status_established, "お受けする", class: "offer_edit_input" %>
+        </div>
+        <div class="offer_edit_input_form offer_status_failure">
+          <%= f.radio_button :offer_status, :failure, class: "offer_edit_input" %>
+          <%= f.label :offer_status_failure, "お断りする", class: "offer_edit_input" %>
+        </div>
+      </div>
+      <div class="offer_edit_btn_form">
+        <%= f.submit "送信する", class: "offer_edit_btn" %>
+      </div>
     <% end %>
-  </div>
 </div>

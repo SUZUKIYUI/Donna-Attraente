@@ -67,3 +67,59 @@
   border: 10px solid transparent;
   border-right: 30px solid rgb(246, 238, 233);
 }
+.offer_reply{
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  margin: 0 10%;
+}
+.offer_reply_heading{
+  font-size: 20px;
+  border: double 3px rgb(70, 40, 20);
+  display: inline-block;
+  padding: 10px 50px;
+  letter-spacing: 5px;
+  text-indent: 5px;
+}
+.offer_reply_intro{
+  font-size: 20px;
+  margin: 5% 0;
+  text-align: center;
+}
+.offer_reply_form{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.offer_edit_input_form:hover{
+  color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
+}
+.offer_edit_label:hover{
+  cursor: pointer;
+}
+.offer_edit_input{
+  cursor: pointer;
+}
+.offer_status_failure{
+  margin-left: 10%;
+}
+.offer_edit_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+.offer_edit_btn{
+  background-color: rgb(70, 40, 20);
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: rgb(197, 180, 169);
+  padding: 12px 32px;
+  letter-spacing: 8px;
+  text-indent: 8px;
+}
+.offer_edit_btn:hover{
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
+}
+
