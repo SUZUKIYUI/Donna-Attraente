@@ -14,7 +14,9 @@
         <%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image.png", size: "200x200" %>
       </div>
       <div>
-        <%= @offer.company.company_name %>
+        <div class="offer_company_name">
+          <%= @offer.company.company_name %>
+        </div>
         <div class="offer_comment">
           <%= @offer.offer_comment %>
         </div>

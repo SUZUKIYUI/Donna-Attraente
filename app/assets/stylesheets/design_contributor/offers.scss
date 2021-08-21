@@ -40,16 +40,30 @@
 .offer_detail2{
   display: flex;
   justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  background-color: red;
+  margin: 5% 10%;
+  padding-bottom: 5%;
+  border-bottom: solid 5px rgb(70, 40, 20);
 }
 .offer_profile_image{
   margin-right: 5%;
 }
+.offer_company_name{
+  margin-bottom: 5px;
+  font-size: 20px;
+}
 .offer_comment{
   width: 500px;
   padding: 10px 15px;
-  border
-  background-color: green;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgb(246, 238, 233);
+}
+.offer_comment:before{
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -40px;
+  margin-top: -15px;
+  border: 10px solid transparent;
+  border-right: 30px solid rgb(246, 238, 233);
 }
