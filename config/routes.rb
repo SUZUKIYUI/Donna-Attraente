@@ -24,6 +24,8 @@ Rails.application.routes.draw do
       resources :offers, only: [:edit, :update]
     end
   end
+
+  get "/design_contributor/posts/:post_id/offers/:id" => "design_contributor/offers#edit"
   # -------------------------------------------
 
 

@@ -5,7 +5,7 @@
   <h1 class="design_contributor_edit_heading1">プロフィール編集</h1>
 
   <div class="design_contributor_edit_form">
-    <!-------------------------未入力の時のエラー文表示------------------------->
+    <!----------------------------未入力の時のエラー文表示--------------------------->
     <% if @design_contributor.errors.any? %>
       <div class="error_box">
         <p class="error_heading"><%= @design_contributor.errors.count %>件のエラー</p>
@@ -18,7 +18,7 @@
         </ul>
       </div>
     <% end %>
-    <!-------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------->
     <%= form_with model: @design_contributor, url: design_contributor_design_contributor_path(@design_contributor.id), local: true do |f| %>
       <div class="design_contributor_edit_input_form">
         <label class="input_edit_profile_image1">プロフィール画像を選択してください
