@@ -1,6 +1,6 @@
 <h1>デザイン投稿者詳細画面（企業用）</h1>
 
-<%= attachment_image_tag @design_contributor, :profile_image, :fill, 300, 300 %>
+<%= attachment_image_tag @design_contributor, :profile_image, :fill, 300, 300, fallback: "no_image.png", size: "300x300" %>
 <%= @design_contributor.pen_name %>
 <p>自己紹介</p>
 <%= @design_contributor.self_introduction %>

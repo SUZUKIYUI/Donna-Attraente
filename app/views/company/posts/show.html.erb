@@ -3,7 +3,7 @@
 <%= attachment_image_tag @post, :post_image, :fill, 300, 400 %>
 
 <%= link_to company_design_contributor_path(@post.design_contributor_id) do %>
-  <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 100, 100 %>
+  <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 100, 100, fallback: "no_image.png", size: "100x100" %>
   <%= @post.design_contributor.pen_name %>
 <% end %>
 <p>作者コメント</p>
@@ -16,7 +16,7 @@
 <p>コメント一覧</p>
 <% @post.comments.each do |comment| %>
   <%= link_to company_design_contributor_path(comment.design_contributor_id) do %>
-    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50 %>
+    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50" %>
     <%= comment.design_contributor.pen_name %>
   <% end %>
   <%= comment.comment %>

@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get "/design_contributor/posts/:post_id/offers/:id" => "design_contributor/offers#edit"
+  get "design_contributor/posts/:post_id/offers/:id" => "design_contributor/offers#edit"
   # -------------------------------------------
 
 

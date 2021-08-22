@@ -31,7 +31,7 @@
             <%= link_to company_design_contributor_path(post.design_contributor_id) do %>
               <div class="index_user_link1">
                 <div class="index_user_link2">
-                  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.jpg", class: "index_profile_image" %>
+                  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.png", size: "45x45", class: "index_profile_image" %>
                 </div>
                 <div class="index_user_link3">
                   <%= post.design_contributor.pen_name %>

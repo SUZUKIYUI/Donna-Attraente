@@ -1,6 +1,6 @@
 <h1>企業詳細画面（企業用）</h1>
 
-<%= attachment_image_tag @company, :profile_image, :fill, 300, 300, fallback: "no_image.jpg" %>
+<%= attachment_image_tag @company, :profile_image, :fill, 300, 300, fallback: "no_image_company.png", size: "300x300" %>
 <%= @company.company_name_kana %>
 <%= @company.company_name %>
 <p>住所</p>

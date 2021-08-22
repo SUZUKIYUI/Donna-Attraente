@@ -3,7 +3,7 @@
 <p>企業一覧</p>
 <% @companies.each do |company| %>
   <%= link_to company_company_path(company.id) do %>
-    <%= attachment_image_tag company, :profile_image, :fill, 350, 300, fallback: "no_image.jpg" %>
+    <%= attachment_image_tag company, :profile_image, :fill, 300, 300, fallback: "no_image_company.png", size: "300x300" %>
     <%= company.company_name %>
   <% end %>
 <% end %>
