@@ -195,6 +195,35 @@
   font-weight: bold;
   color: rgb(70, 40, 20);
 }
+.post_show_top{
+  display: flex;
+  justify-content: center;
+}
+.post_show_top2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 50px;
+  // background-color: green;
+}
+.post_show_user2{
+  text-align: center;
+  font-size: 30px;
+}
+.post_show_author_comment1{
+  padding: 10px 15px;
+  width: 300px;
+  background-color: rgb(249, 242, 237);
+  border-radius: 5px;
+}
+.comment_edit_link{
+  text-align: right;
+}
+.post_show_created_at{
+  text-align: right;
+}
 
 // --------------------------------------
 
