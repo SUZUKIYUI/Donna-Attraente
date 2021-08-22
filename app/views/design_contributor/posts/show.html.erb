@@ -1,94 +1,97 @@
-<h1>作品詳細画面</h1>
-<%= attachment_image_tag @post, :post_image, :fill, 300, 400 %>
-<%= link_to design_contributor_design_contributor_path(@post.design_contributor.id) do %>
-  <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 100, 100, fallback: "no_image.png", size: "100x100" %>
-  <%= @post.design_contributor.pen_name %>
-<% end %>
-<p>作者コメント</p>
-<%= @post.author_comment %>
-<% if @post.design_contributor_id == current_design_contributor.id %>
-  <%= link_to "コメント編集", edit_design_contributor_post_path(@post.id) %>
-<% end %>
-<%= @post.created_at.strftime('%Y/%m/%d %H:%M') %><span>公開</span>
+<!--デザイン投稿者投稿作品詳細画面-->
 
-<!-----------------------------------なにこれ欲しいボタン--------------------------------------->
-<% if current_design_contributor.wanted_by?(@post.id) %>
-  <%= link_to "なにこれ欲しい★", design_contributor_post_wants_path(@post.id), method: :delete %>
-<% else %>
-  <%= link_to "なにこれ欲しい☆", design_contributor_post_wants_path(@post.id), method: :post %>
-<% end %>
-<span>☆</span><%= @post.wants.count %>
-<!--------------------------------------作品削除ボタン---------------------------------------->
-<% if @post.design_contributor_id == current_design_contributor.id %>
-  <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete %>
-<% end %>
-<!--------------------------------------------------------------------------------------->
-
-
-<!-----------------------------------------コメント一覧----------------------------------------->
-<p>コメント一覧</p>
-<% @post.comments.each do |comment| %>
-  <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
-    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50" %>
-    <%= comment.design_contributor.pen_name %>
+<div class="content_width post_show_back">
+  <%= attachment_image_tag @post, :post_image, :fill, 450, 650 %>
+  <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id) do %>
+    <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 100, 100, fallback: "no_image.png", size: "100x100" %>
+    <%= @post.design_contributor.pen_name %>
   <% end %>
-  <%= comment.comment %>
-  <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
-  <% if comment.design_contributor_id == current_design_contributor.id %>
-    <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
+  <p>作者コメント</p>
+  <%= @post.author_comment %>
+  <% if @post.design_contributor_id == current_design_contributor.id %>
+    <%= link_to "コメント編集", edit_design_contributor_post_path(@post.id) %>
   <% end %>
-<% end %>
-<!-----------------------------------------作品への反応---------------------------------------->
-<p>このデザインへの反応</p>
-<span>コメント</span>
-<%= @post.comments.count %>件
-<span>オファー</span>
-<!--オファーモデルは存在するか-->
-<% if @post.offered_by? %>
-  <!--------------------------交渉中のオファーが存在するか-------------------------->
-  <% if @post.offered_negotiation_by?(@post.id) %>
-    <p>オファーが来ています</p>
-    <% if @post.design_contributor_id == current_design_contributor.id %>
-      <%= link_to "確認する", edit_design_contributor_post_offer_path(@post, @offer) %>
-    <% else %>
-      <span>現在</span>
-      <%= @offer.company.company_name %>
-      <span>様と交渉中</span>
+  <%= @post.created_at.strftime('%Y/%m/%d %H:%M') %><span>公開</span>
+
+  <!-----------------------------------なにこれ欲しいボタン--------------------------------------->
+  <% if current_design_contributor.wanted_by?(@post.id) %>
+    <%= link_to "なにこれ欲しい★", design_contributor_post_wants_path(@post.id), method: :delete %>
+  <% else %>
+    <%= link_to "なにこれ欲しい☆", design_contributor_post_wants_path(@post.id), method: :post %>
+  <% end %>
+  <span>☆</span><%= @post.wants.count %>
+  <!--------------------------------------作品削除ボタン---------------------------------------->
+  <% if @post.design_contributor_id == current_design_contributor.id %>
+    <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete %>
+  <% end %>
+  <!--------------------------------------------------------------------------------------->
+
+
+  <!-----------------------------------------コメント一覧----------------------------------------->
+  <p>コメント一覧</p>
+  <% @post.comments.each do |comment| %>
+    <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
+      <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50" %>
+      <%= comment.design_contributor.pen_name %>
     <% end %>
-  <!--------------------------交渉成立オファーが存在するか-------------------------->
-  <% elsif @post.offered_established_by?(@post.id) %>
-    <p>オファー成立済みです</p>
-  <!-------------------------交渉不成立オファーが存在するか------------------------->
-  <% elsif @post.offered_failure_by?(@post.id) %>
-    <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
-    <p>現在オファーはありません</p>
-  <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
+    <%= comment.comment %>
+    <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+    <% if comment.design_contributor_id == current_design_contributor.id %>
+      <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
+    <% end %>
+  <% end %>
+  <!-----------------------------------------作品への反応---------------------------------------->
+  <p>このデザインへの反応</p>
+  <span>コメント</span>
+  <%= @post.comments.count %>件
+  <span>オファー</span>
+  <!--オファーモデルは存在するか-->
+  <% if @post.offered_by? %>
+    <!--------------------------交渉中のオファーが存在するか-------------------------->
+    <% if @post.offered_negotiation_by?(@post.id) %>
+      <p>オファーが来ています</p>
+      <% if @post.design_contributor_id == current_design_contributor.id %>
+        <%= link_to "確認する", edit_design_contributor_post_offer_path(@post, @offer) %>
+      <% else %>
+        <span>現在</span>
+        <%= @offer.company.company_name %>
+        <span>様と交渉中</span>
+      <% end %>
+    <!--------------------------交渉成立オファーが存在するか-------------------------->
+    <% elsif @post.offered_established_by?(@post.id) %>
+      <p>オファー成立済みです</p>
+    <!-------------------------交渉不成立オファーが存在するか------------------------->
+    <% elsif @post.offered_failure_by?(@post.id) %>
+      <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
+      <p>現在オファーはありません</p>
+    <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
+    <% else %>
+      <p>現在オファーはありません</p>
+    <% end %>
+  <!-----------------------------オファーモデルが存在しない--------------------------->
   <% else %>
     <p>現在オファーはありません</p>
   <% end %>
-<!-----------------------------オファーモデルが存在しない--------------------------->
-<% else %>
-  <p>現在オファーはありません</p>
-<% end %>
-<!----------------------------------コメント投稿フォーム-------------------------------------->
-<!----------------未入力の時のエラー文表示---------------->
-<% if @comment.errors.any? %>
-  <ul>
-    <% @comment.errors.full_messages.each do |message| %>
-      <li>
-        <%= message %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-<!-------------------------------------------------------->
-<%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
-  <%= f.label :comment, "コメントする" %>
-  <%= f.text_area :comment %>
-  <%= f.submit "投稿" %>
-<% end %>
-<!---------------------------------------------------------------------------------------------------------------->
+  <!----------------------------------コメント投稿フォーム-------------------------------------->
+  <!----------------未入力の時のエラー文表示---------------->
+  <% if @comment.errors.any? %>
+    <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <!-------------------------------------------------------->
+  <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
+    <%= f.label :comment, "コメントする" %>
+    <%= f.text_area :comment %>
+    <%= f.submit "投稿" %>
+  <% end %>
+  <!---------------------------------------------------------------------------------------------------------------->
 
-<p>ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
+  <p>ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
 
-<%= link_to "デザイン一覧に戻る", design_contributor_posts_path %>
+  <%= link_to "デザイン一覧に戻る", design_contributor_posts_path %>
+</div>
