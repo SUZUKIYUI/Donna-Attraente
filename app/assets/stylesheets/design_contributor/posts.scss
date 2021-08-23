@@ -187,17 +187,33 @@
 
 // posts詳細画面
 .post_show_back{
-  background-image: url("../base_back3");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding: 5%;
+  // background-image: url("../base_back3");
+  // background-size: 100%;
+  // background-repeat: no-repeat;
+  padding: 5% 10%;
   font-family: "ヒラギノ明朝 ProN W6";
   font-weight: bold;
   color: rgb(70, 40, 20);
+  background-color: rgb(249, 242, 237);
 }
 .post_show_top{
   display: flex;
   justify-content: center;
+}
+.want_link{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 18px;
+}
+.want_link1{
+  color: rgb(70, 40, 20);
+}
+.want_link1:hover{
+  color: rgba(70, 40, 20, 0.7);
+}
+.want_link2 span{
+  margin-right: 5px;
 }
 .post_show_top2{
   display: flex;
@@ -206,24 +222,97 @@
   align-items: center;
   margin-top: 100px;
   margin-left: 50px;
-  // background-color: green;
+  margin-bottom: 40px;
+}
+.post_show_user{
+  text-align: center;
 }
 .post_show_user2{
-  text-align: center;
+  display: inline-block;
   font-size: 30px;
+  color: rgb(70, 40, 20);
+}
+.post_show_author_comment p{
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 .post_show_author_comment1{
   padding: 10px 15px;
-  width: 300px;
-  background-color: rgb(249, 242, 237);
+  width: 320px;
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 .comment_edit_link{
   text-align: right;
+  margin-top: 5px;
+}
+.comment_edit_link1{
+  color: rgb(179, 179, 179);
+}
+.comment_edit_link1:hover{
+  color: rgb(120, 120, 120);
 }
 .post_show_created_at{
   text-align: right;
 }
+.post_show_created_at span{
+  margin-left: 10px;
+}
+.post_delete_link{
+  display: block;
+  text-align: right;
+  color: rgb(70, 40, 20);
+}
+.post_delete_link:hover{
+  color: rgba(70, 40, 20, 0.7);
+}
+.post_show_bottom{
+  border-top: solid 1px rgb(70, 40, 20);
+  margin-top: 5px;
+  // background-color: red;
+}
+.post_show_comment_heading{
+  display: inline-block;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  padding: 10px 25px;
+  font-size: 20px;
+  border: double 5px rgb(59, 34, 33);
+}
+.post_show_comment_index{
+  display: flex;
+  width: 650px;
+  padding: 2%;
+  background-color: rgb(221, 212, 205);
+  border-left: solid 10px rgb(50, 26, 10);
+}
+.post_show_comment_user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+.post_show_comment_user1{
+  border-radius: 100%;
+}
+.post_show_comment_user2{
+}
+.post_show_comment{
+  // background-color: red;
+}
+.post_show_comment1{
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 10px 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.post_show_comment2{
+  text-align: right;
+  font-size: 15px;
+}
+
+
 
 // --------------------------------------
 
