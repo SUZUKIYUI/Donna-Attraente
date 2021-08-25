@@ -8,6 +8,9 @@ ja:
       offer:
         offer_comment: オファーコメント
         offer_status: オファー状態
+      # ----------------------------
+      comment:
+        comment: コメント
   # --------------------------------
   enums:
     offer:

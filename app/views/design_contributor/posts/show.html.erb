@@ -92,63 +92,70 @@
     <!-----------------------------------------コメント一覧----------------------------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
     <div class="post_show_comment_content">
-      <div class="post_show_comment_index">
-        <% @post.comments.each do |comment| %>
-          <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
-            <div class="post_show_comment_user">
-              <div class="post_show_comment_user2">
-                <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user1" %>
+      <div class="post_show_comment_left">
+        <% if Comment.exists?(post_id: @post.id) %>
+          <% @post.comments.each do |comment| %>
+            <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
+              <div class="post_show_comment_user">
+                <div class="post_show_comment_user2">
+                  <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user1" %>
+                </div>
+                <div class="post_show_comment_user2">
+                  <%= comment.design_contributor.pen_name %>
+                </div>
               </div>
-              <div class="post_show_comment_user2">
-                <%= comment.design_contributor.pen_name %>
+            <% end %>
+            <div class="post_show_comment">
+              <div class="post_show_comment1">
+                <%= comment.comment %>
               </div>
+              <div class="post_show_comment2">
+                <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+              </div>
+              <% if comment.design_contributor_id == current_design_contributor.id %>
+                <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
+              <% end %>
             </div>
           <% end %>
-          <div class="post_show_comment">
-            <div class="post_show_comment1">
-              <%= comment.comment %>
-            </div>
-            <div class="post_show_comment2">
-              <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
-            </div>
-            <% if comment.design_contributor_id == current_design_contributor.id %>
-              <%= link_to "削除", design_contributor_post_comment_path(@post, comment), method: :delete %>
-            <% end %>
-          </div>
+        <% else %>
+          <p class="post_show_no_comment">コメントはまだありません</p>
         <% end %>
       </div>
       <!----------------------------------コメント投稿フォーム-------------------------------------->
       <!----------------未入力の時のエラー文表示---------------->
-      <div class="post_show_comment_new1">
-        <% if @comment.errors.any? %>
-          <div class="error_box">
-            <ul>
-              <% @comment.errors.full_messages.each do |message| %>
-                <li class="error_list">
-                  <%= message %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-        <!-------------------------------------------------------->
-        <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
-          <div class="post_show_comment_new2">
-            <div class="post_show_comment_label">
-              <%= f.label :comment, "コメントする" %>
+      <div class="post_show_comment_right">
+        <div class="post_show_comment_new">
+          <% if @comment.errors.any? %>
+            <div class="error_box post_show_comment_new1">
+              <ul>
+                <% @comment.errors.full_messages.each do |message| %>
+                  <li class="error_list">
+                    <%= message %>
+                  </li>
+                <% end %>
+              </ul>
             </div>
-            <div class="post_show_comment_area1">
-              <%= f.text_area :comment, class: "post_show_comment_area2" %>
+          <% end %>
+          <!-------------------------------------------------------->
+          <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
+            <div class="post_show_comment_new2">
+              <div class="post_show_comment_label">
+                <%= f.label :comment, "コメントする" %>
+              </div>
+              <div class="post_show_comment_area1">
+                <%= f.text_area :comment, class: "post_show_comment_area2" %>
+              </div>
+              <div class="post_show_comment_btn_form">
+                <%= f.submit "投稿", class: "post_show_comment_btn" %>
+              </div>
             </div>
-            <div class="post_show_comment_btn_form">
-              <%= f.submit "投稿", class: "post_show_comment_btn" %>
-            </div>
-          </div>
-        <% end %>
-        <!---------------------------------------------------------------------------------------------------------------->
-        <p class="post_show_comment_new3">ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
+          <% end %>
+          <!---------------------------------------------------------------------------------------------------------------->
+          <p class="post_show_comment_new3">ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
+        </div>
+        <%= link_to "デザイン一覧に戻る", design_contributor_posts_path, class: "post_index_link" %>
+        <div class="post_index_link_decoration"></div>
       </div>
     </div>
-    <%= link_to "デザイン一覧に戻る", design_contributor_posts_path %>
   </div>
 </div>

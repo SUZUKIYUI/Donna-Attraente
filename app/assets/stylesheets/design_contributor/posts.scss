@@ -195,6 +195,7 @@
   font-weight: bold;
   color: rgb(70, 40, 20);
   background-color: rgb(249, 242, 237);
+  position: relative;
 }
 .post_show_top{
   display: flex;
@@ -270,7 +271,6 @@
 .post_show_bottom{
   border-top: solid 1px rgb(70, 40, 20);
   margin-top: 5px;
-  // background-color: red;
 }
 .post_show_comment_heading{
   display: inline-block;
@@ -282,15 +282,13 @@
 }
 .post_show_comment_content{
   display: flex;
-  // justify-content: space-between;
-  // background-color: red;
 }
-.post_show_comment_index{
+.post_show_comment_left{
   display: flex;
   width: 50%;
   height: 700px;
   padding: 2%;
-  margin-right: 2%;
+  margin-right: 5%;
   background-color: rgb(221, 212, 205);
   border-left: solid 10px rgb(50, 26, 10);
 }
@@ -316,8 +314,19 @@
   text-align: right;
   font-size: 15px;
 }
-.post_show_comment_new1{
+.post_show_no_comment{
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+.post_show_comment_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 40%;
+}
+.post_show_comment_new1{
+  margin-bottom: 5%;
 }
 .post_show_comment_new2{
   padding: 15px 30px;
@@ -358,8 +367,25 @@
 .post_show_comment_new3{
   margin-top: 20px;
   text-align: center;
-  letter-spacing: 4px;
-  text-indent: 4px;
+  letter-spacing: 3px;
+  text-indent: 3px;
+}
+.post_index_link{
+  text-align: right;
+  font-size: 25px;
+  color: rgb(70, 40, 20);
+}
+.post_index_link:hover{
+  color: rgba(70, 40, 20, 0.7);
+}
+.post_index_link_decoration{
+  background-image: url("../post_show_back2");
+  background-size: contain;
+  width: 120px;
+  height: 170px;
+  position: absolute;
+  left: 85%;
+  top: 88%;
 }
 
 
