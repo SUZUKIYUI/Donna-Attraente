@@ -9,6 +9,19 @@ class DesignContributor::CommentsController < ApplicationController
       @post.create_notification_comment!(current_design_contributor, @comment.id, @post.design_contributor.id)
       redirect_to design_contributor_post_path(@post.id)
     else
+    # オファーモデルが存在するか
+      if Offer.exists?
+        # 交渉中のオファーが存在すれば@offerへ定義
+        if Offer.where(post_id: @post.id, offer_status: :negotiation).exists?
+          @offer = Offer.find_by(post_id: @post.id, offer_status: :negotiation)
+        # 交渉成立オファーが存在すれば@offerへ定義
+        elsif Offer.where(post_id: @post.id, offer_status: :established).exists?
+          @offer = Offer.find_by(post_id: @post.id, offer_status: :established)
+        # 交渉不成立オファーが存在すれば@offersへ定義
+        # elsif Offer.where(post_id: @post.id, offer_status: "failure").exists?
+        #   @offers = Offer.where(post_id: @post.id, offer_status: "failure")
+        end
+      end
       render template: "design_contributor/posts/show"
     end
   end

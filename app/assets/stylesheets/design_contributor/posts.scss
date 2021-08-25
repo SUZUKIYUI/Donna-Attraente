@@ -282,14 +282,15 @@
 }
 .post_show_comment_content{
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   // background-color: red;
 }
 .post_show_comment_index{
   display: flex;
-  width: 55%;
+  width: 50%;
   height: 700px;
   padding: 2%;
+  margin-right: 2%;
   background-color: rgb(221, 212, 205);
   border-left: solid 10px rgb(50, 26, 10);
 }
@@ -316,7 +317,7 @@
   font-size: 15px;
 }
 .post_show_comment_new1{
-  width: 42%;
+  width: 40%;
 }
 .post_show_comment_new2{
   padding: 15px 30px;
@@ -329,7 +330,7 @@
 }
 .post_show_comment_area2{
   width: 100%;
-  height: 150px;
+  height: 155px;
   padding: 10px 15px;
   font-family: "ヒラギノ明朝 ProN W6";
   font-size: 20px;
