@@ -1,0 +1,464 @@
+@charset "UTF-8";
+.posts_index_top {
+  background-image: url("../posts_index_back1.png"); }
+
+.posts_index_heading2 {
+  position: absolute;
+  top: 34%;
+  left: 48%; }
+
+.posts_index_bottom {
+  background-image: url("../base_back2.png"); }
+
+.posts_index_heading3 {
+  display: flex;
+  align-items: flex-end; }
+
+.posts_index_heading3 h3 {
+  color: #3b2221;
+  font-family: serif;
+  font-size: 30px;
+  border: double 10px #3b2221;
+  width: 250px;
+  text-align: center; }
+
+.posts_index_heading3 span {
+  margin-left: 50px;
+  color: #3b2221;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold; }
+
+.posts_index_list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5%; }
+
+.post_show_link {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #e1d6ce;
+  border-radius: 5px; }
+
+.post_show_link:hover {
+  background-color: #462814;
+  opacity: 0.8; }
+
+.post_index_image {
+  margin-bottom: 0px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.user_show_link {
+  display: inline-block;
+  height: 53px;
+  margin-top: 5px; }
+
+.user_show_link:hover {
+  opacity: 0.7; }
+
+.user_show_link1 {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+.user_show_link2 {
+  height: 100%; }
+
+.user_profile_image {
+  border-radius: 50%;
+  padding: 2px;
+  border: solid 2px #462814; }
+
+.user_show_link3 {
+  color: #3b2221;
+  font-family: serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px;
+  display: inline-block; }
+
+.post_new_top {
+  background-image: url("../post_new_back1.png"); }
+
+.post_new_heading2 {
+  position: absolute;
+  top: 34%;
+  left: 48%; }
+
+.post_new_decoration {
+  background-image: url("../post_new_back2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  right: 5%; }
+
+.post_new_bottom {
+  background-image: url("../base_back3"); }
+
+.post_new_form {
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 5%; }
+
+.post_input_form {
+  display: flex;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: #3b2221;
+  font-family: serif;
+  font-weight: bold; }
+
+.post_image_form {
+  justify-content: center;
+  margin-top: 20px; }
+
+.post_input_image1 {
+  width: 250px;
+  font-size: 15px;
+  color: #f9f2ed;
+  background-color: #41210b;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.post_input_image1:hover {
+  background-color: rgba(65, 33, 11, 0.7); }
+
+.post_input_image2 {
+  display: none; }
+
+.post_label {
+  width: 200px;
+  font-size: 20px; }
+
+.post_input {
+  height: 100px;
+  width: 300px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: serif;
+  font-weight: bold;
+  background-color: #f9f2ed; }
+
+.post_new_btn_form {
+  text-align: center;
+  margin-top: 100px; }
+
+.post_new_btn {
+  background-color: #462814;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: #c5b4a9;
+  letter-spacing: 8px;
+  text-indent: 8px; }
+
+.post_new_btn:hover {
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer; }
+
+.post_show_back {
+  padding: 5% 10%;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-weight: bold;
+  color: #462814;
+  background-color: #f9f2ed;
+  position: relative; }
+
+.post_show_top {
+  display: flex;
+  justify-content: center; }
+
+.want_link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 18px; }
+
+.want_link1 {
+  color: #462814; }
+
+.want_link1:hover {
+  color: rgba(70, 40, 20, 0.7); }
+
+.want_link2 span {
+  margin-right: 5px; }
+
+.post_show_top2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 40px; }
+
+.post_show_user {
+  text-align: center; }
+
+.post_show_user1:hover {
+  opacity: 0.7; }
+
+.post_show_user1:hover + .post_show_user2 {
+  opacity: 0.7; }
+
+.post_show_user2 {
+  display: inline-block;
+  font-size: 30px;
+  color: #462814; }
+
+.post_show_user2:hover {
+  opacity: 0.7; }
+
+.post_show_author_comment p {
+  font-size: 20px;
+  margin-bottom: 5px; }
+
+.post_show_author_comment1 {
+  padding: 10px 15px;
+  width: 320px;
+  background-color: white;
+  border-radius: 5px; }
+
+.comment_edit_link {
+  text-align: right;
+  margin-top: 5px; }
+
+.comment_edit_link1 {
+  color: #b3b3b3; }
+
+.comment_edit_link1:hover {
+  color: #787878; }
+
+.post_show_created_at {
+  text-align: right; }
+
+.post_show_created_at span {
+  margin-left: 10px; }
+
+.post_delete_link {
+  display: block;
+  text-align: right;
+  color: #462814;
+  margin-right: 10px; }
+
+.post_delete_link:hover {
+  color: rgba(70, 40, 20, 0.7); }
+
+.post_show_bottom {
+  border-top: solid 1px #462814;
+  margin-top: 5px; }
+
+.post_show_reaction {
+  width: 300px;
+  margin-top: 10px;
+  margin-left: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ddd4cd; }
+
+.post_show_reaction_heading {
+  border-top: solid 1px #462814;
+  border-bottom: solid 1px #462814;
+  margin: 10px 0; }
+
+.post_show_reaction_content {
+  display: flex;
+  justify-content: space-between; }
+
+.post_show_reaction_want span {
+  margin-right: 5px; }
+
+.post_show_reaction_comment span {
+  margin-left: 5px; }
+
+.post_show_comment_heading {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 2%;
+  padding: 10px 25px;
+  font-size: 20px;
+  border: double 5px #3b2221; }
+
+.post_show_comment_content {
+  display: flex; }
+
+.post_show_comment_left {
+  display: flex;
+  width: 50%;
+  height: 700px;
+  padding: 2%;
+  margin-right: 5%;
+  background-color: #ddd4cd;
+  border-left: solid 10px #321a0a; }
+
+.post_show_comment_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px; }
+
+.post_show_comment_user1 {
+  border-radius: 100%; }
+
+.post_show_comment1 {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 5px; }
+
+.post_show_comment2 {
+  text-align: right;
+  font-size: 15px; }
+
+.post_show_no_comment {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px; }
+
+.post_show_comment_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%; }
+
+.post_show_comment_new1 {
+  margin-bottom: 5%; }
+
+.post_show_comment_new2 {
+  padding: 15px 30px;
+  color: #9d9d9d;
+  background-color: white; }
+
+.post_show_comment_label {
+  font-size: 20px;
+  margin-bottom: 5px; }
+
+.post_show_comment_area2 {
+  width: 100%;
+  height: 155px;
+  padding: 10px 15px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 20px;
+  font-weight: bold;
+  border: solid 2px #9d9d9d; }
+
+.post_show_comment_btn_form {
+  text-align: center;
+  margin-top: 10px; }
+
+.post_show_comment_btn {
+  background-color: #462814;
+  padding: 10px 40px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: #c5b4a9;
+  letter-spacing: 10px;
+  text-indent: 10px; }
+
+.post_show_comment_btn:hover {
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer; }
+
+.post_show_comment_new3 {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-indent: 3px; }
+
+.post_index_link {
+  text-align: right;
+  font-size: 25px;
+  color: #462814; }
+
+.post_index_link:hover {
+  color: rgba(70, 40, 20, 0.7); }
+
+.post_index_link_decoration {
+  background-image: url("../post_show_back2");
+  background-size: contain;
+  width: 120px;
+  height: 170px;
+  position: absolute;
+  left: 85%;
+  top: 88%; }
+
+.post_edit_back {
+  background-image: url("../base_back3.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 10%;
+  width: 100%;
+  height: 0;
+  margin: 0 auto; }
+
+.post_edit_heading1 {
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 50px;
+  font-weight: bold;
+  color: #462814;
+  text-align: center; }
+
+.post_edit_content {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5%; }
+
+.post_edit_comment {
+  margin-left: 10%;
+  width: 300px; }
+
+.post_edit_label {
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-size: 22px;
+  font-weight: bold;
+  color: #462814;
+  margin-top: 20%;
+  margin-bottom: 5px; }
+
+.post_edit_form1 {
+  width: 100%; }
+
+.post_edit_form2 {
+  width: 100%;
+  height: 120px;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-family: "ヒラギノ明朝 ProN W6";
+  font-weight: bold;
+  color: #3b2221;
+  background-color: #f9f2ed; }
+
+.post_edit_btn_form {
+  text-align: center;
+  margin-top: 50px; }
+
+.post_edit_btn {
+  background-color: #462814;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: #c5b4a9;
+  letter-spacing: 8px;
+  text-indent: 8px; }
+
+.post_edit_btn:hover {
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer; }
+
+/*# sourceMappingURL=posts.css.map */
