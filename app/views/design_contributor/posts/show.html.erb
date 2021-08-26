@@ -52,7 +52,9 @@
   </div>
   <!--------------------------------------作品削除ボタン---------------------------------------->
   <% if @post.design_contributor_id == current_design_contributor.id %>
-    <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete, class: "post_delete_link" %>
+    <div class="post_delete_link1">
+      <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete, class: "post_delete_link2" %>
+    </div>
   <% end %>
   <!--------------------------------------------------------------------------------------->
 
@@ -72,36 +74,53 @@
           <%= @post.comments.count %><span>件</span>
         </div>
       </div>
-      <div class="post_show_reaction_content">
-        <p>オファー</p>
-        <!--オファーモデルは存在するか-->
-        <% if @post.offered_by? %>
-          <!--------------------------交渉中のオファーが存在するか-------------------------->
-          <% if @post.offered_negotiation_by?(@post.id) %>
-            <p>オファーが来ています</p>
-            <% if @post.design_contributor_id == current_design_contributor.id %>
-              <%= link_to "確認する", edit_design_contributor_post_offer_path(@post, @offer) %>
-            <% else %>
-              <span>現在</span>
-              <%= @offer.company.company_name %>
-              <span>様と交渉中</span>
-            <% end %>
-          <!--------------------------交渉成立オファーが存在するか-------------------------->
-          <% elsif @post.offered_established_by?(@post.id) %>
-            <p>オファー成立済み</p>
-          <!-------------------------交渉不成立オファーが存在するか------------------------->
-          <% elsif @post.offered_failure_by?(@post.id) %>
-            <span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
-            <p>現在オファーはありません</p>
-          <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
+      <!--オファーモデルは存在するか-->
+      <% if @post.offered_by? %>
+        <!--------------------------交渉中のオファーが存在するか-------------------------->
+        <% if @post.offered_negotiation_by?(@post.id) %>
+          <% if @post.design_contributor_id == current_design_contributor.id %>
+            <div class="post_show_reaction_content">
+              <p>オファー</p>
+              <p>オファーが来ています</p>
+            </div>
+            <div class="post_show_offer_link1">
+              <%= link_to "確認する", edit_design_contributor_post_offer_path(@post.id, @offer.id), class: "post_show_offer_link2" %>
+            </div>
           <% else %>
-            <p>現在オファーはありません</p>
+            <div class="post_show_reaction_content post_show_offer_negotiation">
+              <p>オファー</p>
+              <p><%= @offer.company.company_name %><span>様と交渉中</span></p>
+            </div>
           <% end %>
-        <!-----------------------------オファーモデルが存在しない--------------------------->
+        <!--------------------------交渉成立オファーが存在するか-------------------------->
+        <% elsif @post.offered_established_by?(@post.id) %>
+          <div class="post_show_reaction_content">
+            <p>オファー</p>
+            <p>オファー成立済み</p>
+          </div>
+        <!-------------------------交渉不成立オファーが存在するか------------------------->
+        <% elsif @post.offered_failure_by?(@post.id) %>
+          <div class="post_show_reaction_content">
+            <p>オファー</p>
+            <div>
+              <p><span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span></p>
+              <p>現在オファーはありません</p>
+            </div>
+          </div>
+        <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
         <% else %>
-          <p>現在オファーはありません</p>
+          <div class="post_show_reaction_content">
+            <p>オファー</p>
+            <p>現在オファーはありません</p>
+          </div>
         <% end %>
-      </div>
+      <!-----------------------------オファーモデルが存在しない--------------------------->
+      <% else %>
+        <div class="post_show_reaction_content">
+          <p>オファー</p>
+          <p>現在オファーはありません</p>
+        </div>
+      <% end %>
     </div>
     <!-----------------------------------------コメント一覧----------------------------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
