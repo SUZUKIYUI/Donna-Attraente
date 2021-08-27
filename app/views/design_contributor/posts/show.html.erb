@@ -81,10 +81,12 @@
           <% if @post.design_contributor_id == current_design_contributor.id %>
             <div class="post_show_reaction_content">
               <p>オファー</p>
-              <p>オファーが来ています</p>
-            </div>
-            <div class="post_show_offer_link1">
-              <%= link_to "確認する", edit_design_contributor_post_offer_path(@post.id, @offer.id), class: "post_show_offer_link2" %>
+              <div class="post_show_offer_link">
+                <p>オファーが来ています</p>
+                <div class="post_show_offer_link1">
+                  <%= link_to "確認する", edit_design_contributor_post_offer_path(@post.id, @offer.id), class: "post_show_offer_link2" %>
+                </div>
+              </div>
             </div>
           <% else %>
             <div class="post_show_reaction_content post_show_offer_negotiation">
@@ -128,16 +130,16 @@
       <div class="post_show_comment_left">
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
-            <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id) do %>
-              <div class="post_show_comment_user">
+            <div class="post_show_comment_user">
+              <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id), class: "post_show_comment_user_link" do %>
                 <div class="post_show_comment_user2">
                   <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user1" %>
                 </div>
                 <div class="post_show_comment_user2">
                   <%= comment.design_contributor.pen_name %>
                 </div>
-              </div>
-            <% end %>
+              <% end %>
+            </div>
             <div class="post_show_comment">
               <div class="post_show_comment1">
                 <%= comment.comment %>
