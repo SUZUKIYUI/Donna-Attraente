@@ -1,8 +1,8 @@
 <!--デザイン投稿者詳細画面-->
 
 <div class="content_width">
-  <div class="top_content design_contributor_show_top">
-    <div class="heading2 design_contributor_show_heading2">
+  <div class="top_content user_show_top">
+    <div class="heading2 user_show_heading2">
       <% if @design_contributor == current_design_contributor %>
         <h2>マイページ</h2>
       <% else %>
@@ -17,29 +17,31 @@
         <h1>User page</h1>
       <% end %>
     </div>
-    <div class="design_contributor_show_decoration"></div>
+    <div class="user_show_decoration"></div>
   </div>
 
-  <div class="bottom_content design_contributor_show_bottom">
-    <div class="design_contributor_show_introduction">
-      <div class="design_contributor_show_introduction1">
-        <div class="design_contributor_image_frame">
-          <%= attachment_image_tag @design_contributor, :profile_image, :fill, 220, 220, fallback: "no_image.png", class: "design_contributor_image" %>
+  <div class="bottom_content user_show_bottom">
+    <div class="user_show_introduction">
+      <div class="user_show_introduction1">
+        <div class="user_image_frame">
+          <%= attachment_image_tag @design_contributor, :profile_image, :fill, 220, 220, fallback: "no_image.png", size: "220x220", class: "user_image" %>
         </div>
-        <div class="design_contributor_show_name">
+        <div class="user_show_name">
           <%= @design_contributor.pen_name %>
         </div>
       </div>
-      <div class="design_contributor_show_introduction2">
+      <div class="user_show_introduction2">
         <p>自己紹介</p>
-        <div class="design_contributor_show_self_introduction">
+        <div class="user_show_self_introduction">
           <%= @design_contributor.self_introduction %>
         </div>
       </div>
     </div>
-    <div class="design_contributor_edit_link1">
-      <%= link_to "プロフィールを編集する", edit_design_contributor_design_contributor_path(@design_contributor.id), class: "design_contributor_edit_link2" %>
-    </div>
+    <% if @design_contributor == current_design_contributor %>
+      <div class="user_edit_link1">
+        <%= link_to "プロフィールを編集する", edit_design_contributor_design_contributor_path(@design_contributor.id), class: "user_edit_link2" %>
+      </div>
+    <% end %>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->
     <h3 class="design_contributor_show_heading3">デザイン一覧</h3>
     <% if @design_contributor.posts.exists? %>

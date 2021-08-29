@@ -7,15 +7,15 @@
 
 
 // デザイン投稿者詳細画面
-.design_contributor_show_top{
+.user_show_top{
   background-image: url("../user_show_back1.png");
 }
-.design_contributor_show_heading2{
+.user_show_heading2{
   position: absolute;
   top: 40%;
   right: 18%;
 }
-.design_contributor_show_decoration{
+.user_show_decoration{
   background-image: url("../post_new_back2.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -25,21 +25,21 @@
   top: 40%;
   right: 2%;
 }
-.design_contributor_show_bottom{
+.user_show_bottom{
   background-image: url("../base_back4");
 }
-.design_contributor_show_introduction{
+.user_show_introduction{
   display: flex;
   align-items: flex-end;
   width: 680px;
   margin-left: 20px;
 }
-.design_contributor_image_frame{
+.user_image_frame{
   position: relative;
   width: 220px;
   height: 220px;
 }
-.design_contributor_image_frame::after {
+.user_image_frame::after {
   position: absolute;
   content: '';
   top: 0;
@@ -49,10 +49,10 @@
   box-shadow: inset 0 0 5px 5px rgb(197, 180, 169);
   border-radius: 15px;
 }
-.design_contributor_image{
+.user_image{
   border-radius: 15px;
 }
-.design_contributor_show_name{
+.user_show_name{
   font-size: 23px;
   width: 220px;
   text-align: center;
@@ -60,27 +60,26 @@
   font-family: serif;
   font-weight: bold;
 }
-.design_contributor_show_introduction2{
+.user_show_introduction2{
   margin-left: 60px;
   color: rgb(59, 34, 33);
   font-weight: bold;
 }
-.design_contributor_show_introduction2 p{
+.user_show_introduction2 p{
   font-size: 23px;
   font-family: serif;
   letter-spacing: 3px;
   margin-bottom: 2px;
 }
-.design_contributor_show_self_introduction{
+.user_show_self_introduction{
   position: relative;
-  height: 150px;
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 18px;
   font-family: "ヒラギノ明朝 ProN W6";
   background-color: rgb(249, 242, 237);
 }
-.design_contributor_show_self_introduction::after{
+.user_show_self_introduction::after{
   position: absolute;
   content: '';
   top: 0;
@@ -90,21 +89,21 @@
   box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
   border-radius: 10px;
 }
-.design_contributor_edit_link1{
+.user_edit_link1{
   width: 700px;
   margin-top: 10px;
   margin-left: 20px;
   text-align: right;
 }
-.design_contributor_edit_link2{
+.user_edit_link2{
   font-family: "ヒラギノ明朝 ProN W6";
   color: rgb(59, 34, 33);
   border-bottom: solid 1px rgb(59, 34, 33);
 }
-.design_contributor_edit_link2:hover{
+.user_edit_link2:hover{
   opacity: 0.7;
 }
-.design_contributor_show_heading3{
+.user_show_heading3{
   display: inline-block;
   font-size: 25px;
   font-family: "ヒラギノ明朝 ProN W6";

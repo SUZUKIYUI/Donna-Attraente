@@ -1,57 +1,106 @@
-<h1>企業詳細画面（企業用）</h1>
+<!--企業詳細画面-->
 
-<%= attachment_image_tag @company, :profile_image, :fill, 300, 300, fallback: "no_image_company.png", size: "300x300" %>
-<%= @company.company_name_kana %>
-<%= @company.company_name %>
-<p>住所</p>
-<span>〒</span>
-<%= @company.postal_code.insert(3,"-") %>
-<%= @company.address %>
-<p>TEL</p>
-<%= @company.phone_number %>
-<p>企業紹介</p>
-<%= @company.company_introduction %>
-<% if @company.id == current_company.id %>
-  <%= link_to "プロフィールを編集する", edit_company_company_path(@company.id) %>
-<% end %>
-<!---------------------------------------------->
-<p>オファー履歴一覧</p>
-<!--オファーモデルは存在するか-->
-<% if @company.offered_by? %>
-  <!---------------------交渉中のオファーあれば全て表示--------------------->
-  <% if @company.offered_negotiation_by?(@company.id) %>
-    <p>交渉中</p>
-    <%= @company.offered_negotiation_count(@company.id) %><span>件</span>
-    <% @company.offers.where(offer_status: :negotiation).each do |offer| %>
-      <%= link_to company_post_path(offer.post.id) do %>
-        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+<div class="content_width">
+  <div class="top_content user_show_top">
+    <div class="heading2 user_show_heading2">
+      <% if @company == current_company %>
+        <h2>マイページ</h2>
+      <% else %>
+        <h2>ユーザーページ</h2>
+      <% end %>
+    </div>
+    <!-----------------見出し------------------>
+    <div class="heading1">
+      <% if @company == current_company %>
+        <h1>My page</h1>
+      <% else %>
+        <h1>User page</h1>
+      <% end %>
+    </div>
+    <div class="user_show_decoration"></div>
+  </div>
+
+  <div class="bottom_content user_show_bottom">
+    <div class="company_show_introduction">
+      <div class="company_show_introduction1">
+        <div class="user_image_frame">
+          <%= attachment_image_tag @company, :profile_image, 220, 220, fallback: "no_image_company.png", size: "220x220", class: "user_image" %>
+        </div>
+        <div class="company_show_name">
+          <div class="company_show_name1">
+            <%= @company.company_name_kana %>
+          </div>
+          <div class="company_show_name2">
+            <%= @company.company_name %>
+          </div>
+        </div>
+      </div>
+      <div class="company_show_introduction2">
+        <p class="company_address_tag">住所</p>
+        <div class="company_detail">
+          <span>〒</span>
+          <%= @company.postal_code.insert(3,"-") %>
+        </div>
+        <div class="company_detail">
+          <%= @company.address %>
+        </div>
+        <p class="company_phone_number_tag">TEL</p>
+        <div class="company_detail">
+          <%= @company.phone_number %>
+        </div>
+      </div>
+    </div>
+    <div class="company_show_introduction3">
+      <p>企業紹介</p>
+      <div class="company_show_self_introduction">
+        <%= @company.company_introduction %>
+      </div>
+    </div>
+    <% if @company == current_company %>
+      <div class="company_edit_link1">
+        <%= link_to "プロフィールを編集する", edit_company_company_path(@company.id), class: "company_edit_link2" %>
+      </div>
+    <% end %>
+    <!---------------------------------------------->
+    <p>オファー履歴一覧</p>
+    <!--オファーモデルは存在するか-->
+    <% if @company.offered_by? %>
+      <!---------------------交渉中のオファーあれば全て表示--------------------->
+      <% if @company.offered_negotiation_by?(@company.id) %>
+        <p>交渉中</p>
+        <%= @company.offered_negotiation_count(@company.id) %><span>件</span>
+        <% @company.offers.where(offer_status: :negotiation).each do |offer| %>
+          <%= link_to company_post_path(offer.post.id) do %>
+            <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
-<% if @company.offered_by? %>
-  <!---------------------交渉成立オファーあれば全て表示-------------------->
-  <% if @company.offered_established_by?(@company.id) %>
-    <p>交渉成立</p>
-    <%= @company.offered_established_count(@company.id) %><span>件</span>
-    <% @company.offers.where(offer_status: :established).each do |offer| %>
-      <%= link_to company_post_path(offer.post.id) do %>
-        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+    <% if @company.offered_by? %>
+      <!---------------------交渉成立オファーあれば全て表示-------------------->
+      <% if @company.offered_established_by?(@company.id) %>
+        <p>交渉成立</p>
+        <%= @company.offered_established_count(@company.id) %><span>件</span>
+        <% @company.offers.where(offer_status: :established).each do |offer| %>
+          <%= link_to company_post_path(offer.post.id) do %>
+            <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
-<% if @company.offered_by? %>
-  <!--------------------交渉不成立オファーあれば全て表示------------------->
-  <% if @company.offered_failure_by?(@company.id) %>
-    <p>交渉不成立</p>
-    <%= @company.offered_failure_count(@company.id) %><span>件</span>
-    <% @company.offers.where(offer_status: :failure).each do |offer| %>
-      <%= link_to company_post_path(offer.post.id) do %>
-        <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+    <% if @company.offered_by? %>
+      <!--------------------交渉不成立オファーあれば全て表示------------------->
+      <% if @company.offered_failure_by?(@company.id) %>
+        <p>交渉不成立</p>
+        <%= @company.offered_failure_count(@company.id) %><span>件</span>
+        <% @company.offers.where(offer_status: :failure).each do |offer| %>
+          <%= link_to company_post_path(offer.post.id) do %>
+            <%= attachment_image_tag offer.post, :post_image, :fill, 200, 300 %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
-<% if Offer.find_by(company_id: @company.id).nil? %>
-<% end %>
+    <% if Offer.find_by(company_id: @company.id).nil? %>
+    <% end %>
+  </div>
+</div>
