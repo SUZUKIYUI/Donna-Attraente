@@ -118,3 +118,33 @@
 .offer_post_image:hover{
   opacity: 0.8;
 }
+// ------------------------------------------
+
+
+
+// 企業編集画面
+.company_edit_form{
+  margin: 0 auto;
+  width: 650px;
+  margin-top: 5%;
+}
+.user_edit_input_form{
+  // background-color: red;
+}
+.company_image_choice{
+  margin: 20px 175px;
+}
+.company_edit_label{
+  width: 200px;
+  // background-color: green;
+  font-size: 20px;
+}
+.company_edit_input{
+  width: 450px;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: serif;
+  font-weight: bold;
+  background-color: rgb(249, 242, 237);
+}
+

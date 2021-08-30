@@ -1,33 +1,65 @@
-<h1>プロフィール編集（企業用）</h1>
+<!--企業編集画面-->
 
-<!--------------------未入力の時のエラー文---------------------->
-<% if @company.errors.any? %>
-  <%= @company.errors.count %><span>件のエラー</span>
-  <ul>
-    <% @company.errors.full_messages.each do |message| %>
-      <li>
-        <%= message %>
-      </li>
+<div class="content_width user_edit_back">
+
+  <h1 class="user_edit_heading1">プロフィール編集</h1>
+
+  <div class="company_edit_form">
+    <!--------------------未入力の時のエラー文---------------------->
+    <% if @company.errors.any? %>
+      <div class="error_box">
+        <p class="error_heading"><%= @company.errors.count %>件のエラー</p>
+        <ul>
+          <% @company.errors.full_messages.each do |message| %>
+            <li class="error_list">
+              <%= message %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
-  </ul>
-<% end %>
-<!-------------------------------------------------------------->
-<%= form_with model: @company, url: company_company_path(@company.id), local: true do |f| %>
-  <%= f.label :profile_image, "プロフィール画像" %>
-  <%= f.attachment_field :profile_image %>
-  <%= f.label :company_name, "企業名" %>
-  <%= f.text_field :company_name %>
-  <%= f.label :company_name_kana, "企業名（フリガナ）" %>
-  <%= f.text_field :company_name_kana %>
-  <%= f.label :postal_code, "郵便番号" %>
-  <%= f.text_field :postal_code %>
-  <%= f.label :address, "住所" %>
-  <%= f.text_field :address %>
-  <%= f.label :phone_number, "TEL" %>
-  <%= f.text_field :phone_number %>
-  <%= f.label :email, "メールアドレス" %>
-  <%= f.text_field :email %>
-  <%= f.label :company_introduction, "企業紹介" %>
-  <%= f.text_area :company_introduction %>
-  <%= f.submit "編集する" %>
-<% end %>
+    <!-------------------------------------------------------------->
+    <%= form_with model: @company, url: company_company_path(@company.id), local: true do |f| %>
+      <div class="user_edit_input_form">
+        <label class="input_edit_profile_image1 company_image_choice">プロフィール画像を選択してください
+          <%= f.attachment_field :profile_image, class: "user_edit_input input_edit_profile_image2" %>
+        </label>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :company_name, class: "company_edit_label" %>
+        <%= f.text_field :company_name, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :company_name_kana, class: "company_edit_label" %>
+        <%= f.text_field :company_name_kana, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :postal_code, class: "company_edit_label" %>
+        <%= f.text_field :postal_code, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :address, class: "company_edit_label" %>
+        <%= f.text_field :address, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :phone_number, class: "company_edit_label" %>
+        <%= f.text_field :phone_number, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :email, class: "company_edit_label" %>
+        <%= f.text_field :email, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_input_form">
+        <%= f.label :company_introduction, class: "company_edit_label" %>
+        <%= f.text_area :company_introduction, class: "company_edit_input" %>
+      </div>
+      <div class="user_edit_btn_form">
+        <%= f.submit "編集する", class: "user_edit_btn" %>
+      </div>
+    <% end %>
+
+
+
+
+  </div>
+</div>
