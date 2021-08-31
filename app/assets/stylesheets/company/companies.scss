@@ -125,26 +125,36 @@
 // 企業編集画面
 .company_edit_form{
   margin: 0 auto;
-  width: 650px;
+  width: 700px;
   margin-top: 5%;
 }
 .user_edit_input_form{
   // background-color: red;
 }
 .company_image_choice{
-  margin: 20px 175px;
+  margin: 20px 200px;
 }
 .company_edit_label{
-  width: 200px;
+  width: 250px;
   // background-color: green;
   font-size: 20px;
 }
 .company_edit_input{
-  width: 450px;
+  width: 300px;
   padding: 5px 10px;
   font-size: 15px;
   font-family: serif;
   font-weight: bold;
   background-color: rgb(249, 242, 237);
+}
+.postal_code_edit_input{
+  width: 150px;
+}
+.address_edit_input{
+  width: 450px;
+}
+.company_introduction_edit_input{
+  width: 450px;
+  height: 200px;
 }
 

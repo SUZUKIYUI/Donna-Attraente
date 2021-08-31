@@ -12,7 +12,7 @@ ja:
       company:
         company_name: 企業名
         company_name_kana: 企業名（フリガナ）
-        postal_code: 郵便番号
+        postal_code: 郵便番号（ハイフンなし）
         address: 住所
         phone_number: 電話番号
         email: メールアドレス
