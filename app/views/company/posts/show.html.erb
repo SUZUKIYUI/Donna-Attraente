@@ -53,12 +53,12 @@
       <% if @post.offered_by? %>
         <!---------------------交渉中のオファーが存在するか---------------------->
         <% if @post.offered_negotiation_by?(@post.id) %>
-          <span>交渉中</span><br />
           <% if @offer.company == current_company %>
-            <p>
-              現在交渉しております。<br />
-              デザイン投稿者様の返信をお待ちください。
-            </p>
+            <div class="post_show_reaction_content">
+              <p>オファー</p>
+              <p>交渉中</p>
+            </div>
+            <p class="post_offer_announce">現在交渉しております。<br /><%= @post.design_contributor.pen_name %>様の返信をお待ちください。</p>
           <% else %>
             <%= @offer.company.company_name %><span>様と交渉中</span>
             <p>
@@ -66,6 +66,40 @@
               ※交渉不成立となった場合、再度こちらのページからオファーが可能です。
             </p>
           <% end %>
+        <!---------------------交渉成立オファーあれば表示----------------------->
+        <% elsif @post.offered_established_by?(@post.id) %>
+          <span>交渉成立済み</span><br />
+          <% if @offer.company == current_company %>
+            <p><%= @post.design_contributor.pen_name %>様が商品化を承諾されました</p>
+          <% else %>
+            <%= @offer.company.company_name %><span>様と交渉成立済み</span>
+            <p>
+              交渉成立済みの為、今後こちらのデザインへはオファーができません<br />
+              新たなデザインをお探しください
+            </p>
+          <% end %>
+        <!---------------------交渉不成立オファーあれば表示--------------------->
+        <% elsif @post.offered_failure_by?(@post.id) %>
+          <span>交渉不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
+          <span>現在オファー受付中です</span><br />
+          <%= link_to new_company_post_offer_path(@post.id) do %>
+            <p>商品化の<br />オファーを送る</p>
+          <% end %>
+        <!-----オファーモデルは存在するがこのデザインにオファーが来ていない----->
+        <% else %>
+          <span>現在オファー受付中です</span>
+          <%= link_to new_company_post_offer_path(@post.id) do %>
+            <p>商品化の<br />オファーを送る</p>
+          <% end %>
+        <% end %>
+      <!-----------------------オファーモデルが存在しない---------------------->
+      <% else %>
+        <span>現在オファー受付中です</span>
+        <%= link_to new_company_post_offer_path(@post.id) do %>
+          <p>商品化の<br />オファーを送る</p>
+        <% end %>
+      <% end %>
+      <!--------------------------------------------------------------------------->
 
 
     </div>
@@ -88,62 +122,13 @@
     <%= comment.comment %>
     <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
   <% end %>
-  <!-----------------------------------作品への反応--------------------------------------->
-  <span>オファー</span>
 
 
 
 
 
-    <!---------------------交渉中のオファーがあれば表示---------------------->
-    <% if @post.offered_negotiation_by?(@post.id) %>
-      <span>交渉中</span><br />
-      <% if @offer.company == current_company %>
-        <p>
-          現在交渉しております。<br />
-          デザイン投稿者様の返信をお待ちください。
-        </p>
-      <% else %>
-        <%= @offer.company.company_name %><span>様と交渉中</span>
-        <p>
-          現在交渉中の為、こちらのデザインへはオファーができません。<br />
-          ※交渉不成立となった場合、再度こちらのページからオファーが可能です。
-        </p>
-      <% end %>
-    <!---------------------交渉成立オファーあれば表示----------------------->
-    <% elsif @post.offered_established_by?(@post.id) %>
-      <span>交渉成立済み</span><br />
-      <% if @offer.company == current_company %>
-        <p><%= @post.design_contributor.pen_name %>様が商品化を承諾されました</p>
-      <% else %>
-        <%= @offer.company.company_name %><span>様と交渉成立済み</span>
-        <p>
-          交渉成立済みの為、今後こちらのデザインへはオファーができません<br />
-          新たなデザインをお探しください
-        </p>
-      <% end %>
-    <!---------------------交渉不成立オファーあれば表示--------------------->
-    <% elsif @post.offered_failure_by?(@post.id) %>
-      <span>交渉不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span>
-      <span>現在オファー受付中です</span><br />
-      <%= link_to new_company_post_offer_path(@post.id) do %>
-        <p>商品化の<br />オファーを送る</p>
-      <% end %>
-    <!-----オファーモデルは存在するがこのデザインにオファーが来ていない----->
-    <% else %>
-      <span>現在オファー受付中です</span>
-      <%= link_to new_company_post_offer_path(@post.id) do %>
-        <p>商品化の<br />オファーを送る</p>
-      <% end %>
-    <% end %>
-  <!-----------------------オファーモデルが存在しない---------------------->
-  <% else %>
-    <span>現在オファー受付中です</span>
-    <%= link_to new_company_post_offer_path(@post.id) do %>
-      <p>商品化の<br />オファーを送る</p>
-    <% end %>
-  <% end %>
-  <!--------------------------------------------------------------------------->
+
+
   <p>ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
   <%= link_to "デザイン一覧に戻る", company_posts_path %>
 
