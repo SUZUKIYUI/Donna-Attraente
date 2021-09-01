@@ -15,9 +15,60 @@
 .company_want_detail span{
   margin: 0 5px;
 }
-.post_offer_announce{
+.company_post_show_bottom_content{
+  display: flex;
+}
+.company_post_show_bottom_left{
+  width: 50%;
+  height: 700px;
+  padding: 2%;
+  margin-right: 5%;
+  background-color: rgb(221, 212, 205);
+  border-left: solid 10px rgb(50, 26, 10);
+}
+.company_post_show_bottom_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  // background-color: red;
+}
+.company_post_show_reaction{
+  margin-bottom: 50px;
+}
+.post_offer_announce1{
   padding: 10px 20px;
   margin: 10px 0;
   color: white;
   background-color: rgb(61, 36, 34);
+}
+.post_offer_announce2{
+  text-align: center;
+  font-size: 15px;
+  width: 300px;
+  padding: 55px 20px;
+  color: rgb(221, 212, 205);
+  background-color: rgb(50, 26, 10);
+}
+.offer_new_link1{
+  margin: 20px;
+}
+.offer_new_link2{
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  width: 300px;
+  padding: 55px 0;
+  color: rgb(221, 212, 205);
+  background-color: rgb(50, 26, 10);
+}
+.offer_new_link2:hover{
+  opacity: 0.8;
+}
+.offer_new_link3{
+  text-align: center;
+}
+.company_post_index_link{
+  margin-left: auto;
 }
