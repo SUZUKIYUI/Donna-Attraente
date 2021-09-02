@@ -1,4 +1,4 @@
-<!--デザイン投稿者オファー編集編集画面-->
+<!--デザイン投稿者オファー編集画面-->
 
 <div class="content_width offer_edit_back">
 
@@ -39,11 +39,11 @@
     <%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
       <div class="offer_reply_form">
         <div class="offer_edit_input_form">
-          <%= f.radio_button :offer_status, :established, class: "offer_edit_input" %>
+          <%= f.radio_button :offer_status, :established %>
           <%= f.label :offer_status_established, "お受けする", class: "offer_edit_input",required: "required" %>
         </div>
         <div class="offer_edit_input_form offer_status_failure">
-          <%= f.radio_button :offer_status, :failure, class: "offer_edit_input" %>
+          <%= f.radio_button :offer_status, :failure %>
           <%= f.label :offer_status_failure, "お断りする", class: "offer_edit_input" %>
         </div>
       </div>
