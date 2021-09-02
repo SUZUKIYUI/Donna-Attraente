@@ -280,10 +280,12 @@
 .post_show_reaction{
   width: 300px;
   margin-top: 10px;
-  margin-left: auto;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: rgb(221, 212, 205);
+}
+.design_contributor_post_show_reaction{
+  margin-left: auto;
 }
 .post_show_reaction_heading{
   border-top: solid 1px rgb(70, 40, 20);

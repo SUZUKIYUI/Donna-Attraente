@@ -31,10 +31,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 450px;
-  // background-color: red;
+  width: 480px;
+}
+.company_post_show_bottom_right1{
+  margin: 0 auto;
 }
 .company_post_show_reaction{
+  margin: 0 auto;
   margin-bottom: 50px;
 }
 .post_offer_announce1{
@@ -44,12 +47,18 @@
   background-color: rgb(61, 36, 34);
 }
 .post_offer_announce2{
-  text-align: center;
   font-size: 15px;
   width: 300px;
   padding: 55px 20px;
+  margin: 0 auto;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
+}
+.post_offer_announce2 span{
+  margin: 0 5px;
+}
+.post_offer_announce2_center{
+  text-align: center;
 }
 .offer_new_link1{
   margin: 20px;
@@ -66,9 +75,10 @@
 .offer_new_link2:hover{
   opacity: 0.8;
 }
-.offer_new_link3{
+.post_offer_announce3{
+  margin-top: 10px;
   text-align: center;
 }
-.company_post_index_link{
+.company_post_show_bottom_right2{
   margin-left: auto;
 }
