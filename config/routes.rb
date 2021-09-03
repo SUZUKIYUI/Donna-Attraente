@@ -45,6 +45,8 @@ Rails.application.routes.draw do
       resources :offers, only: [:new, :create]
     end
   end
+
+  get "/company/posts/:post_id/offers" => "company/offers#new"
   # -------------------------------
 
 

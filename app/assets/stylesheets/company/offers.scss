@@ -1,3 +1,51 @@
 // Place all the styles related to the company/offers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// ---------------------------------------------------
+
+
+
+
+// offer新規登録画面
+.offer_post{
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 600px;
+}
+.company_offer_error_box{
+  margin-bottom: 5%;
+}
+.offer_new_form{
+  display: flex;
+  justify-content: space-between;
+}
+.offer_new_label{
+  font-size: 20px;
+  color: rgb(61, 36, 34);
+}
+.offer_new_input{
+  width: 400px;
+  height: 200px;
+  font-size: 18px;
+  font-family: "HiraMinProN-W6";
+  color: rgb(61, 36, 34);
+  padding: 10px 15px;
+}
+.offer_new_btn_form{
+  text-align: center;
+  margin-top: 50px;
+}
+.offer_new_btn{
+  background-color: #462814;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: bold;
+  color: #c5b4a9;
+  padding: 12px 32px;
+  letter-spacing: 8px;
+  text-indent: 8px;
+}
+.offer_new_btn:hover{
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
+}
