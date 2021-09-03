@@ -61,7 +61,7 @@
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 18px;
-  font-family: "ヒラギノ明朝 ProN W6";
+  font-family: "HiraMinProN-W6";
   background-color: rgb(249, 242, 237);
 }
 .company_show_self_introduction::after{
@@ -81,7 +81,7 @@
   text-align: right;
 }
 .company_edit_link2{
-  font-family: "ヒラギノ明朝 ProN W6";
+  font-family: "HiraMinProN-W6";
   color: rgb(59, 34, 33);
   border-bottom: solid 1px rgb(59, 34, 33);
 }
@@ -91,7 +91,7 @@
 .offer_status_tag{
   margin-top: 50px;
   margin-bottom: 5px;
-  font-family: "ヒラギノ明朝 ProN W6";
+  font-family: "HiraMinProN-W6";
   font-size: 20px;
   color: rgb(59, 34, 33);
 }
@@ -129,14 +129,12 @@
   margin-top: 5%;
 }
 .user_edit_input_form{
-  // background-color: red;
 }
 .company_image_choice{
   margin: 20px 200px;
 }
 .company_edit_label{
   width: 250px;
-  // background-color: green;
   font-size: 20px;
 }
 .company_edit_input{

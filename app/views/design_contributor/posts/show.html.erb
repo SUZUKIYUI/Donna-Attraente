@@ -104,11 +104,9 @@
         <% elsif @post.offered_failure_by?(@post.id) %>
           <div class="post_show_reaction_content">
             <p>オファー</p>
-            <div>
-              <p><span>オファー不成立</span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %><span>件</span></p>
-              <p>現在オファーはありません</p>
-            </div>
+            <p class="post_show_failure_reaction1">オファー不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
           </div>
+          <p class="post_show_failure_reaction2">現在オファーなし</p>
         <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
         <% else %>
           <div class="post_show_reaction_content">
@@ -120,7 +118,7 @@
       <% else %>
         <div class="post_show_reaction_content">
           <p>オファー</p>
-          <p>現在オファーはありません</p>
+          <p>なし</p>
         </div>
       <% end %>
     </div>
