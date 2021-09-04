@@ -15,7 +15,7 @@
 
 // About画面
 .about_top{
-  background-image: url("posts_index_back1.png");
+  background-image: url("about_top.png");
 }
 .about_heading2{
   position: absolute;
@@ -32,12 +32,31 @@
   // background-color: red;
 }
 .about_heading2 p{
-  line-height: 20px;
+  line-height: 23px;
   letter-spacing: 1px;
 }
-.about_bottom{
+.about_bottom1{
+  // background-image: url("");
+  background-color: red;
+}
+.about_bottom_content{
+  width: 600px;
+  color: rgb(61, 36, 34);
+  background-color: green;
+}
+.about_bottom_heading{
+  letter-spacing: 2px;
+}
+.about_bottom_content p{
+  margin: 20px 0;
+  line-height: 30px;
+}
+.about_bottom2{
   // background-image: url("");
   background-color: gray;
+}
+.about_bottom2_content{
+  margin-left: auto;
 }
 
 // ----------------------
