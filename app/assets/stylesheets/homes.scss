@@ -14,7 +14,30 @@
 
 
 // About画面
-
-
+.about_top{
+  background-image: url("posts_index_back1.png");
+}
+.about_heading2{
+  position: absolute;
+  top: 34%;
+  left: 48%;
+}
+.about_heading2 h2{
+  margin-bottom: 10px;
+  // background-color: green;
+}
+.about_heading2 span{
+  display: block;
+  font-size: 15px;
+  // background-color: red;
+}
+.about_heading2 p{
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+.about_bottom{
+  // background-image: url("");
+  background-color: gray;
+}
 
 // ----------------------
