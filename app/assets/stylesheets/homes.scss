@@ -24,39 +24,54 @@
 }
 .about_heading2 h2{
   margin-bottom: 10px;
-  // background-color: green;
 }
 .about_heading2 span{
   display: block;
   font-size: 15px;
-  // background-color: red;
 }
 .about_heading2 p{
   line-height: 23px;
   letter-spacing: 1px;
 }
+.about_bottom{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+  padding-top: calc(1200 / 2500 * 100%);
+  position: relative;
+}
 .about_bottom1{
-  // background-image: url("");
-  background-color: red;
+  background-image: url("about_bottom_back1.png");
 }
 .about_bottom_content{
   width: 600px;
+  height: 380px;
+  margin: 20px;
   color: rgb(61, 36, 34);
-  background-color: green;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+}
+.about_bottom1_content{
+  top: 10%;
+  left: 15%;
 }
 .about_bottom_heading{
+  font-size: 22px;
   letter-spacing: 2px;
 }
 .about_bottom_content p{
-  margin: 20px 0;
-  line-height: 30px;
+  margin: 15px 0;
+  line-height: 25px;
 }
 .about_bottom2{
-  // background-image: url("");
-  background-color: gray;
+  background-image: url("about_bottom_back2.png");
 }
 .about_bottom2_content{
-  margin-left: auto;
+  top: 0;
+  right: 10%;
 }
 
 // ----------------------
