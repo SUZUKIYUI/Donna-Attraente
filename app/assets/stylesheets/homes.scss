@@ -80,7 +80,6 @@
 .about_bottom3_content{
   width: 800px;
   margin: 0 auto;
-  // background-color: yellow;
 }
 .offer_structure_heading{
   font-size: 25px;
@@ -102,7 +101,6 @@
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 20%;
-  // background-color: green;
 }
 .registered_person_detail{
   width: 350px;
@@ -137,40 +135,26 @@
   font-weight: bold;
 }
 
-
 .offer_structure2{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 5%;
-  // background-color: red;
+  margin-bottom: 20%;
 }
 .offer_flow_detail{
   width: 350px;
   text-align: center;
   margin: 25px;
-  // background-color: green;
 }
 .offer_flow_detail_text1{
   font-size: 20px;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 .offer_flow{
   width: 320px;
   border-radius: 15px;
 }
-.offer_flow_detail_text2{
-  width: 350px;
-  height: 80px;
-  margin: 0 auto;
-  padding: 15px 20px;
-  text-align: left;
-  border-radius: 10px;
-  background-color: rgb(249, 242, 237);
-}
-
-
-
 .offer_flow_detail_text2_frame{
   position: relative;
   width: 350px;
@@ -186,5 +170,15 @@
   right: 0;
   box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
   border-radius: 10px;
+}
+.offer_flow_detail_text2{
+  width: 350px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 15px 20px;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #F5F5F5;
 }
 // ----------------------
