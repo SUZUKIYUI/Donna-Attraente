@@ -85,7 +85,11 @@
 .offer_structure_heading{
   font-size: 25px;
   text-align: center;
-  margin-bottom: 5%;
+  margin: 5% 0;
+}
+.offer_structure_heading span{
+  margin-left: 10px;
+  letter-spacing: 2px;
 }
 .offer_structure_detail{
   text-align: center;
@@ -97,6 +101,7 @@
   display: flex;
   justify-content: center;
   margin-top: 5%;
+  margin-bottom: 20%;
   // background-color: green;
 }
 .registered_person_detail{
@@ -115,7 +120,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: inset 0 0 8px 8px rgb(197, 180, 169);
+  box-shadow: inset 0 0 5px 5px rgb(197, 180, 169);
   border-radius: 15px;
 }
 .registered_person{
@@ -133,6 +138,53 @@
 }
 
 
+.offer_structure2{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  // background-color: red;
+}
+.offer_flow_detail{
+  width: 350px;
+  text-align: center;
+  margin: 25px;
+  // background-color: green;
+}
+.offer_flow_detail_text1{
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.offer_flow{
+  width: 320px;
+  border-radius: 15px;
+}
+.offer_flow_detail_text2{
+  width: 350px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  text-align: left;
+  border-radius: 10px;
+  background-color: rgb(249, 242, 237);
+}
 
 
+
+.offer_flow_detail_text2_frame{
+  position: relative;
+  width: 350px;
+  height: 80px;
+  margin: 0 auto;
+}
+.offer_flow_detail_text2_frame::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
+  border-radius: 10px;
+}
 // ----------------------
