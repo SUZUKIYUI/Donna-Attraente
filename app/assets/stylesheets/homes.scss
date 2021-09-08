@@ -74,7 +74,10 @@
   left: 45%;
 }
 .about_bottom3{
-  padding: 5% 0;
+  background-image: url("about_bottom_back3.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 10% 0;
   background-color: rgb(197, 180, 169);
 }
 .about_bottom3_content{
@@ -140,7 +143,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 5%;
-  margin-bottom: 20%;
 }
 .offer_flow_detail{
   width: 350px;
