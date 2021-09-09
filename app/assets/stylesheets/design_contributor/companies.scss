@@ -7,5 +7,52 @@
 
 
 // 企業詳細画面
-
+.company_show_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.company_show_heading1{
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.company_show_content{
+  margin: 5% 10%;
+}
+.company_show1{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 750px;
+  margin: 0 auto;
+  color: rgb(61, 36, 34);
+  // background-color: red;
+}
+.company_show1_name{
+  margin-top: 10px;
+  text-align: center;
+}
+.company_show1_company_name{
+  font-size: 30px;
+}
+.company_show1_company_name_kana{
+  font-size: 15px;
+}
+.company_show1_introduction{
+  width: 350px;
+  margin-left: 50px;
+  margin-bottom: 80px;
+  // background-color: green;
+}
+.company_show1_introduction_title{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.company_show1_introduction_text{
+  font-size: 17px;
+}
 // -----------------------------
