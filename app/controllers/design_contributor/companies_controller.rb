@@ -10,7 +10,7 @@ class DesignContributor::CompaniesController < ApplicationController
     if Offer.exists?
       # 交渉成立オファーが存在すれば@offersへ定義
       if Offer.where(company_id: @company.id, offer_status: :established).exists?
-        @offers = Offer.where(post_id: @post.id, offer_status: :established)
+        @offers = Offer.where(company_id: @company.id, offer_status: :established)
       end
     end
   end
