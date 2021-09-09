@@ -1,18 +1,22 @@
 <!--Top画面-->
 
 <div class="content_width">
-  <div class="top_content top_top">
-    <div class="heading2 top_heading2">
-      <h2><span>あなたのアイデアとブランドを繋ぐ</span>Donna Attraente</h2>
-      <p>イタリア語で”魅力的な女性”を意味する言葉<br />
-        女性はどんな時でも美しくきれいでありたいもの<br />
-        そんな女性の魅力を惹き出すワンピースをデザイン
-      </p>
-    </div>
-  </div>
+  <!--<div class="top_content top_top">-->
+  <!--  <div class="heading2 top_heading2">-->
+  <!--    <h2><span>あなたのアイデアとブランドを繋ぐ</span>Donna Attraente</h2>-->
+  <!--    <p>イタリア語で”魅力的な女性”を意味する言葉<br />-->
+  <!--      女性はどんな時でも美しくきれいでありたいもの<br />-->
+  <!--      そんな女性の魅力を惹き出すワンピースをデザイン-->
+  <!--    </p>-->
+  <!--  </div>-->
+  <!--</div>-->
 
-  <div class="bottom_content posts_index_bottom">
-
+  <div class="bottom_content top_bottom">
+    <% if company_signed_in? %>
+      <%= link_to "登録ブランド一覧", company_companies_path %>
+    <% elsif design_contributor_signed_in? %>
+      <%= link_to "登録ブランド一覧", design_contributor_companies_path %>
+    <% end %>
   </div>
 </div>
 
