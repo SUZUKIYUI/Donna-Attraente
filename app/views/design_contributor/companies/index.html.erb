@@ -1,9 +1,21 @@
-<h1>企業一覧画面</h1>
+<!--企業一覧画面-->
 
-<p>企業一覧</p>
-<% @companies.each do |company| %>
-  <%= link_to design_contributor_company_path(company.id) do %>
-    <%= attachment_image_tag company, :profile_image, :fill, 400, 350, fallback: "no_image_company.png" %>
-    <%= company.company_name %>
-  <% end %>
-<% end %>
+<div class="content_width company_index_back">
+
+  <h1 class="company_index_heading1">ブランド紹介</h1>
+  <p class="company_index_lead">Donna Attraenteに登録しているブランド一覧です。<br />以下の企業があなたのアイデアを探しています。</p>
+
+  <div class="company_index_area">
+    <% @companies.each do |company| %>
+      <div class="company_show_link">
+        <%= link_to design_contributor_company_path(company.id) do %>
+          <%= attachment_image_tag company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
+          <div class="company_show_link_name">
+            <%= company.company_name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
