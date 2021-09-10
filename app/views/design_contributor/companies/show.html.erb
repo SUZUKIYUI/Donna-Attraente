@@ -4,67 +4,62 @@
 
     <h1 class="company_show_heading1">Brand Detail</h1>
 
-    <div class="company_show_content">
-        <div class="company_show1">
-            <div>
-                <%= attachment_image_tag @company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
-                <div class="company_show1_name">
-                    <div class="company_show1_company_name">
-                        <%= @company.company_name %>
-                    </div>
-                    <div class="company_show1_company_name_kana">
-                        <%= @company.company_name_kana %>
-                    </div>
+    <div class="company_show1">
+        <div>
+            <%= attachment_image_tag @company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
+            <div class="company_show1_name">
+                <div class="company_show1_company_name">
+                    <%= @company.company_name %>
                 </div>
-            </div>
-            <div class="company_show1_introduction">
-                <p class="company_show1_introduction_title">紹介文</p>
-                <div class="company_show1_introduction_text">
-                    <%= @company.company_introduction %>
+                <div class="company_show1_company_name_kana">
+                    <%= @company.company_name_kana %>
                 </div>
             </div>
         </div>
-        <!----------------------------------------------------------------------------------------------------------------------------->
-
-        <!-------------------もし商品化決定デザインがあれば全て公開------------------->
-        <% if @company.offered_by? && @company.offered_established_by?(@company.id) %>
-            <div class="company_show2">
-                <p class="company_show2_title">商品化決定デザイン</p>
-                <div class="company_show2_flex">
-                    <% @offers.each do |offer| %>
-                        <div class="company_show2_post_show_link">
-                            <%= link_to design_contributor_post_path(offer.post.id) do %>
-                                <%= attachment_image_tag offer.post, :post_image, :fill, 210,310 %>
-                            <% end %>
-                        </div>
-                    <% end %>
-                </div>
+        <div class="company_show1_introduction">
+            <p class="company_show1_introduction_title">紹介文</p>
+            <div class="company_show_decoration"></div>
+            <div class="company_show1_introduction_text">
+                <%= @company.company_introduction %>
             </div>
-        <% end %>
-        <!---------------------------------------------------------------------------->
-
-        <!----------------------------------------------------------------------->
-        <div class="company_show3">
-            <div class="company_show3_flex company_show3_flex_address">
-                <p>住所</p>
-                <div>
-                    <div>
-                        <span>〒</span><%= @company.postal_code.insert(3, "-") %><br />
-                        <%= @company.address %>
+        </div>
+    </div>
+    <!-------------------------もし商品化決定デザインがあれば全て公開-------------------------->
+    <% if @company.offered_by? && @company.offered_established_by?(@company.id) %>
+        <div class="company_show2">
+            <p class="company_show2_title">商品化決定デザイン</p>
+            <div class="company_show2_flex">
+                <% @offers.each do |offer| %>
+                    <div class="company_show2_post_show_link">
+                        <%= link_to design_contributor_post_path(offer.post.id) do %>
+                            <%= attachment_image_tag offer.post, :post_image, :fill, 210,310 %>
+                        <% end %>
                     </div>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+    <!--------------------------------------------------------------------------------------->
+    <div class="company_show3">
+        <div class="company_show3_flex company_show3_flex_address">
+            <p>住所</p>
+            <div>
+                <div>
+                    <span>〒</span><%= @company.postal_code.insert(3, "-") %><br />
+                    <%= @company.address %>
                 </div>
             </div>
-            <div class="company_show3_flex">
-                <p>TEL</p>
-                <div>
-                    <%= @company.phone_number %>
-                </div>
+        </div>
+        <div class="company_show3_flex">
+            <p>TEL</p>
+            <div>
+                <%= @company.phone_number %>
             </div>
-            <div class="company_show3_flex">
-                <p>E-mail</p>
-                <div>
-                    <%= @company.email %>
-                </div>
+        </div>
+        <div class="company_show3_flex">
+            <p>E-mail</p>
+            <div>
+                <%= @company.email %>
             </div>
         </div>
     </div>
