@@ -21,16 +21,15 @@
   text-align: center;
 }
 .company_show_content{
-  margin: 5% 0;
+  // margin-top: 5%;
 }
 .company_show1{
   display: flex;
   justify-content: center;
   align-items: end;
   width: 800px;
-  margin: 0 auto;
+  margin: 5% auto;
   color: rgb(61, 36, 34);
-  // background-color: red;
 }
 .company_show1_name{
   margin-top: 10px;
@@ -46,7 +45,6 @@
   width: 350px;
   margin-left: 50px;
   margin-bottom: 80px;
-  // background-color: green;
 }
 .company_show1_introduction_title{
   font-size: 20px;
@@ -55,14 +53,46 @@
 .company_show1_introduction_text{
   font-size: 17px;
 }
+.company_show2{
+  width: 800px;
+  margin: 5% auto;
+  color: rgb(61, 36, 34);
+  // background-color: red;
+}
+.company_show2_title{
+  font-size: 25px;
+  padding-left: 15px;
+  border-bottom: solid 1px ;
+}
+.company_show2_flex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+.company_show2_post_show_link{
+  padding: 13px;
+  margin: 15px;
+  background-color: rgb(70, 40, 20);
+}
+.company_show2_post_show_link:hover{
+  opacity: 0.8;
+}
 .company_show3{
   width: 800px;
   margin: 0 auto;
-  padding: 30px;
-  color: white;
+  padding: 20px 60px;
+  color: rgb(246, 238, 233);
   background-color: rgb(50, 26, 10);
 }
 .company_show3_flex{
   display: flex;
+  margin: 5px 0;
+}
+.company_show3_flex_address{
+  margin-bottom: 15px;
+}
+.company_show3_flex p{
+  width: 150px;
 }
 // -----------------------------
