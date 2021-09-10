@@ -21,13 +21,13 @@
   text-align: center;
 }
 .company_show_content{
-  margin: 5% 10%;
+  margin: 5% 0;
 }
 .company_show1{
   display: flex;
   justify-content: center;
   align-items: end;
-  width: 750px;
+  width: 800px;
   margin: 0 auto;
   color: rgb(61, 36, 34);
   // background-color: red;
@@ -54,5 +54,15 @@
 }
 .company_show1_introduction_text{
   font-size: 17px;
+}
+.company_show3{
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  color: white;
+  background-color: rgb(50, 26, 10);
+}
+.company_show3_flex{
+  display: flex;
 }
 // -----------------------------

@@ -28,24 +28,39 @@
 
         <!-------------------もし商品化決定デザインがあれば全て公開------------------->
         <% if @company.offered_by? && @company.offered_established_by?(@company.id) %>
-            <p>商品化決定デザイン</p>
-            <% @offers.each do |offer| %>
-                <%= link_to design_contributor_post_path(offer.post.id) do %>
-                    <%= attachment_image_tag offer.post, :post_image, :fill, 300,400 %>
+            <div class="company_show2">
+                <p>商品化決定デザイン</p>
+                <% @offers.each do |offer| %>
+                    <%= link_to design_contributor_post_path(offer.post.id) do %>
+                        <%= attachment_image_tag offer.post, :post_image, :fill, 300,400 %>
+                    <% end %>
                 <% end %>
-            <% end %>
+            </div>
         <% end %>
         <!---------------------------------------------------------------------------->
 
         <!----------------------------------------------------------------------->
-        <p>住所</p>
-        <span>郵便番号</span>
-        <%= @company.postal_code.insert(3, "-") %>
-        <%= @company.address %>
-        <p>TEL</p>
-        <%= @company.phone_number %>
-        <p>E-mail</p>
-        <%= @company.email %>
+        <div class="company_show3">
+            <div class="company_show3_flex">
+                <p>住所</p>
+                <div>
+                    <span>〒</span><%= @company.postal_code.insert(3, "-") %>
+                    <%= @company.address %>
+                </div>
+            </div>
+            <div class="company_show3_flex">
+                <p>TEL</p>
+                <div>
+                    <%= @company.phone_number %>
+                </div>
+            </div>
+            <div class="company_show3_flex">
+                <p>E-mail</p>
+                <div>
+                    <%= @company.email %>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
