@@ -1,7 +1,14 @@
-<p>オファー通知</p>
+<!--個人宛オファー通知画面-->
 
-<% if @notification2s.exists? %>
-  <%= render @notification2s %>
-<% else %>
-  <p>通知はありません</p>
-<% end %>
+<div class="content_width notification_back">
+
+  <h1 class="notification_heading1">オファー通知</h1>
+
+  <% if @notification2s.exists? %>
+    <%= render @notification2s %>
+  <% else %>
+    <div class="notification_content">
+      <p>通知はありません</p>
+    </div>
+  <% end %>
+</div>

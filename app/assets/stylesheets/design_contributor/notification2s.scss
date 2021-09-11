@@ -1,3 +1,45 @@
 // Place all the styles related to the design_contributor/notification2s controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// ---------------------------------------------------
+
+
+
+
+// 個人宛オファー通知画面
+.notification_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.notification_heading1{
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.notification_content{
+  color: rgb(59, 34, 33);
+  text-align: center;
+  margin: 5%;
+}
+.notification_content_flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification_content1:hover{
+  opacity: 0.8;
+}
+.notification_content2{
+  margin-left: 10px;
+}
+.notification_content2 a{
+  color: #AA0000;
+}
+.notification_content2 a:hover{
+  color: #DD0000;
+}
+// ----------------------------
