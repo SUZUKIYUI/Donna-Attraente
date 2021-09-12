@@ -5,7 +5,9 @@
   <h1 class="notification_heading1">なにこれ欲しい・コメント通知</h1>
 
   <% if @notifications.exists? %>
-    <%= render @notifications %>
+    <div class="notification_content">
+      <%= render @notifications %>
+    </div>
   <% else %>
     <div class="notification_content">
       <p>通知はありません</p>
