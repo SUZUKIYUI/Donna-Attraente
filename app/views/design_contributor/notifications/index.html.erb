@@ -1,7 +1,14 @@
-<p>なにこれ欲しい・コメント通知</p>
+<!--いいね・コメント通知画面-->
 
-<% if @notifications.exists? %>
-  <%= render @notifications %>
-<% else %>
-  <p>通知はありません</p>
-<% end %>
+<div class="content_width notification_back">
+
+  <h1 class="notification_heading1">なにこれ欲しい・コメント通知</h1>
+
+  <% if @notifications.exists? %>
+    <%= render @notifications %>
+  <% else %>
+    <div class="notification_content">
+      <p>通知はありません</p>
+    </div>
+  <% end %>
+</div>
