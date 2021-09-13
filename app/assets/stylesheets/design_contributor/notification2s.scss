@@ -21,19 +21,25 @@
   text-align: center;
 }
 .notification_content{
+  width: 550px;
   color: rgb(59, 34, 33);
   text-align: center;
-  margin: 5%;
+  margin: 5% auto;
 }
 .notification_content_flex{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: solid 1px rgba(59, 34, 33, 0.3);
 }
 .notification_content1:hover{
   opacity: 0.8;
 }
+.notification_content_img{
+    border-radius: 100%;
+}
 .notification_content2{
+  margin-top: 10px;
   margin-left: 10px;
 }
 .notification_content2 a{
@@ -41,5 +47,8 @@
 }
 .notification_content2 a:hover{
   color: #DD0000;
+}
+.notification_content2 span{
+  font-size: 13px;
 }
 // ----------------------------
