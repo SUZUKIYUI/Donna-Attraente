@@ -1,27 +1,112 @@
 <!--Top画面-->
 
 <div class="content_width">
-  <!--<div class="top_content top_top">-->
-  <!--  <div class="heading2 top_heading2">-->
-  <!--    <h2><span>あなたのアイデアとブランドを繋ぐ</span>Donna Attraente</h2>-->
-  <!--    <p>イタリア語で”魅力的な女性”を意味する言葉<br />-->
-  <!--      女性はどんな時でも美しくきれいでありたいもの<br />-->
-  <!--      そんな女性の魅力を惹き出すワンピースをデザイン-->
-  <!--    </p>-->
-  <!--  </div>-->
-  <!--</div>-->
+  <div class="top_content top_top">
+    <div class="top_top_heading">
+      <h1>あなたのデザインを形に</h1>
+      <p>オリジナルワンピースが作れるマッチングサイト</p>
+    </div>
+  </div>
 
   <div class="bottom_content top_bottom">
-    <% if company_signed_in? %>
-      <%= link_to "登録ブランド一覧", company_companies_path %>
-    <% elsif design_contributor_signed_in? %>
-      <%= link_to "登録ブランド一覧", design_contributor_companies_path %>
+    <div class="top_bottom_heading1">
+      <h2>皆様のデザインしたワンピース</h2>
+    </div>
+    <br />
+    <h3 class="top_bottom_heading2">商品化希望の多いデザイン</h3>
+    <div>
+
+
+
+
+
+
+    </div>
+    <!---------------------------------------------------------------->
+
+
+    <h3 class="top_bottom_heading2">新着のデザイン</h3>
+    <!----------------------------------------------------------------デザイン投稿者がログイン中の時--------------------------------------------------------------------->
+    <% if design_contributor_signed_in? %>
+      <div class="top_bottom_new_content1">
+        <% @new_posts.each do |new_post| %>
+          <div class="top_bottom_new_content2">
+            <%= link_to design_contributor_post_path(new_post.id) do %>
+              <div class="top_bottom_post_image1">
+                <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2" %>
+              </div>
+            <% end %>
+            <%= link_to design_contributor_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor" do %>
+              <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
+              <%= new_post.design_contributor.pen_name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="top_bottom_posts_link1">
+        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_posts_link2" %>
+      </div>
+    <!---------------------------------------------------------------------企業がログイン中の時-------------------------------------------------------------------------->
+    <% elsif company_signed_in? %>
+      <div class="top_bottom_new_content1">
+        <% @new_posts.each do |new_post| %>
+          <div class="top_bottom_new_content2">
+            <%= link_to company_post_path(new_post.id) do %>
+              <div class="top_bottom_post_image1">
+                <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2" %>
+              </div>
+            <% end %>
+            <%= link_to company_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor" do %>
+              <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
+              <%= new_post.design_contributor.pen_name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="top_bottom_posts_link1">
+        <%= link_to "すべてのデザインを見にいく", company_posts_path, class: "top_bottom_posts_link2" %>
+      </div>
+    <!--------------------------------------------------------------------------ログアウト時----------------------------------------------------------------------------->
+    <% else %>
+      <div class="top_bottom_new_content1">
+        <% @new_posts.each do |new_post| %>
+          <div class="top_bottom_new_content2">
+            <%= link_to design_contributor_post_path(new_post.id) do %>
+              <div class="top_bottom_post_image1">
+                <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2" %>
+              </div>
+            <% end %>
+            <%= link_to design_contributor_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor" do %>
+              <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
+              <%= new_post.design_contributor.pen_name %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="top_bottom_posts_link1">
+        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_posts_link2" %>
+      </div>
     <% end %>
+    <!------------------------------------------------------------------------------------------------------------>
+
+
+    <h3 class="top_bottom_heading2">実際に商品化したデザイン</h3>
+    <div>
+
+
+
+
+
+      <% if company_signed_in? %>
+      <div>
+        <%= link_to "登録ブランド一覧", company_companies_path %>
+      </div>
+    <% elsif design_contributor_signed_in? %>
+      <div>
+        <%= link_to "登録ブランド一覧", design_contributor_companies_path %>
+      </div>
+    <% end %>
+    </div>
   </div>
 </div>
 
-
-
-
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
