@@ -21,31 +21,38 @@
 }
 .top_bottom_heading1{
   display: inline-block;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   background-color: rgb(70, 40, 20);
 }
 .top_bottom_heading1 h2{
   color: rgb(249, 242, 237);
   padding: 15px 30px;
-  border: dashed 3px rgb(249, 242, 237);
-  border-radius: 5px;
+  border: dashed 2px rgb(249, 242, 237);
+  border-radius: 3px;
 }
 .top_bottom_heading2{
   display: inline-block;
   color: rgb(70, 40, 20);
+  font-size: 20px;
   padding: 5px 25px;
-  margin: 30px 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
   border-top: double 5px rgb(70, 40, 20);
   border-bottom: double 5px rgb(70, 40, 20);
 }
-.top_bottom_new_content1{
+.top_bottom_content1{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.top_bottom_new_content2{
+.top_bottom_content2{
   margin: 20px;
+}
+.top_bottom_want_rank{
+  color: rgb(123, 0, 2);
+  font-size: 20px;
+  margin-left: 5px;
 }
 .top_bottom_post_image1{
   position: relative;
@@ -66,13 +73,16 @@
 .top_bottom_post_image2{
   border-radius: 10px;
 }
-.top_bottom_design_contributor{
-  display: flex;
-  align-items: center;
+.top_bottom_design_contributor1{
+  display: inline-block;
   color: rgb(70, 40, 20);
 }
-.top_bottom_design_contributor:hover{
+.top_bottom_design_contributor1:hover{
   opacity: 0.8;
+}
+.top_bottom_design_contributor2{
+  display: flex;
+  align-items: center;
 }
 .top_bottom_profile_image{
   margin-right: 10px;
