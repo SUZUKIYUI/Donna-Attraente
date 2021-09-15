@@ -101,8 +101,8 @@
           </div>
         <% end %>
       </div>
-      <div class="top_bottom_posts_link1">
-        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_posts_link2" %>
+      <div class="top_bottom_link1">
+        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_link2" %>
       </div>
     <!----企業がログイン中の時---->
     <% elsif company_signed_in? %>
@@ -123,8 +123,8 @@
           </div>
         <% end %>
       </div>
-      <div class="top_bottom_posts_link1">
-        <%= link_to "すべてのデザインを見にいく", company_posts_path, class: "top_bottom_posts_link2" %>
+      <div class="top_bottom_link1">
+        <%= link_to "すべてのデザインを見にいく", company_posts_path, class: "top_bottom_link2" %>
       </div>
     <!--ログアウト時-->
     <% else %>
@@ -145,8 +145,8 @@
           </div>
         <% end %>
       </div>
-      <div class="top_bottom_posts_link1">
-        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_posts_link2" %>
+      <div class="top_bottom_link1">
+        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_link2" %>
       </div>
     <% end %>
     <!------------------------------------------------------------------------------------------------------------>
@@ -159,15 +159,15 @@
 
 
 
-      <% if company_signed_in? %>
-      <div>
-        <%= link_to "登録ブランド一覧", company_companies_path %>
-      </div>
-    <% elsif design_contributor_signed_in? %>
-      <div>
-        <%= link_to "登録ブランド一覧", design_contributor_companies_path %>
-      </div>
-    <% end %>
+      <% if design_contributor_signed_in? %>
+        <div class="top_bottom_link1">
+          <%= link_to "登録ブランド一覧", design_contributor_companies_path, class: "top_bottom_link2" %>
+        </div>
+      <% elsif company_signed_in? %>
+        <div class="top_bottom_link1">
+          <%= link_to "登録ブランド一覧", company_companies_path, class: "top_bottom_link2" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
