@@ -51,7 +51,7 @@
 }
 .top_bottom_want_rank{
   color: rgb(123, 0, 2);
-  font-size: 20px;
+  font-size: 23px;
   margin-left: 5px;
 }
 .top_bottom_post_image1{
@@ -76,6 +76,8 @@
 .top_bottom_design_contributor1{
   display: inline-block;
   color: rgb(70, 40, 20);
+  margin-top: 8px;
+  margin-left: 5px;
 }
 .top_bottom_design_contributor1:hover{
   opacity: 0.8;
@@ -83,6 +85,9 @@
 .top_bottom_design_contributor2{
   display: flex;
   align-items: center;
+}
+.top_bottom_design_contributor2 span{
+  margin-left: 2px;
 }
 .top_bottom_profile_image{
   margin-right: 10px;
@@ -99,6 +104,35 @@
 .top_bottom_link2:hover{
   opacity: 0.8;
 }
+.top_bottom_item_content{
+  display: flex;
+  flex-wrap: wrap;
+  // background-color: red;
+}
+.top_bottom_item{
+  margin: 0 10px;
+  position: relative;
+}
+.top_bottom_item_image{
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  object-position: 100% 100%
+}
+.top_bottom_item_lead{
+  color: white;
+  position: absolute;
+}
+.top_bottom_item_lead1{
+  left: 25px;
+  bottom: 75px;
+}
+.top_bottom_item_lead2{
+  top: 40px;
+  right: 25px;
+  // bottom: 80px;
+}
+
 
 // ----------------------
 
