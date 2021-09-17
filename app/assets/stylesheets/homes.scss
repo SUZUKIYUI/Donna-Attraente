@@ -86,6 +86,7 @@
 .top_bottom_design_contributor2{
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 .top_bottom_design_contributor2 span{
   margin-left: 2px;
@@ -129,9 +130,6 @@
   border-radius: 10px;
 }
 .top_bottom_item_image2{
-
-}
-.top_bottom_item_image2{
   width: 400px;
   height: 600px;
   object-fit: cover;
@@ -148,8 +146,12 @@
   bottom: 75px;
 }
 .top_bottom_item_lead2{
-  top: 60%;
-  right: 25px;
+  top: 58%;
+  right: 30px;
+  text-align: center;
+}
+.top_bottom_item_lead span{
+  margin-left: 3px;
 }
 .top_bottom_inquiry_content_back{
   margin-top: 10%;
@@ -187,7 +189,82 @@
 .top_bottom_inquiry2 span{
   font-size: 15px;
 }
-// ----------------------
+// ---------------------------------------
+
+// -----------1400px以下に適用------------
+@media (max-width: 1400px){
+  .top_bottom_post_image2_rank{
+    width: 250px;
+  }
+  .top_bottom_post_image2_new{
+    width: 200px;
+  }
+  .top_bottom_design_contributor2{
+    font-size: 16px;
+  }
+  .top_bottom_profile_image{
+    width: 40px;
+    height: 40px;
+  }
+}
+// --------------------------------------
+
+// -----------1200px以下に適用------------
+@media (max-width: 1200px){
+  .top_bottom_content2{
+    margin: 10px;
+  }
+  .top_bottom_post_image2_rank{
+    width: 200px;
+  }
+  .top_bottom_item_image2{
+    width: 340px;
+    height: 520px;
+  }
+}
+// --------------------------------------
+
+// -----------1000px以下に適用（未完）------------
+@media (max-width: 1000px){
+  .top_top_heading{
+    letter-spacing: 2px;
+  }
+  .top_bottom_item_image2{
+    width: 268px;
+    height: 400px;
+  }
+  .top_bottom_item_lead1{
+    left: 25px;
+    bottom: 45px;
+  }
+  .top_bottom_item_lead2{
+    top: 60%;
+    right: 25px;
+  }
+  .top_bottom_item_lead{
+    font-size: 15px;
+  }
+}
+// --------------------------------------
+
+// -----------800px以下に適用（未完）------------
+@media (max-width: 800px){
+  .top_top_heading{
+    letter-spacing: 0px;
+  }
+  .top_top_heading h1{
+    font-size: 23px;
+  }
+  .top_top_heading p{
+    font-size: 15px;
+  }
+}
+
+// -----------600px以下に適用（未完）------------
+@media (max-width: 600px){
+
+}
+// ------------------------------------------------------------------------------------
 
 
 
