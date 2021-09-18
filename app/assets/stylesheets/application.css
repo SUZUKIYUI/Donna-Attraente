@@ -263,20 +263,25 @@ footer{
 /*----------------------------------------------ログイン画面----------------------------------------------*/
 .login_content{
   background-color: rgb(197, 180, 169);
+  padding: 0 10%;
   padding-bottom: 5%;
+  position: relative;
 }
 
 .login_background1{
   background-image: url("login_back1.png");
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .login_lead{
   text-align: right;
   padding-top: 10%;
-  padding-right: 10%;
   padding-bottom: 5%;
 }
 
@@ -292,7 +297,8 @@ footer{
 
 .login_form_content{
   display: flex;
-  margin-right: 10%;
+  margin-top: 50px;
+  margin-right: 200px;
 }
 
 .login_form{
@@ -300,6 +306,7 @@ footer{
   height: 200px;
   margin: 0 0 0 auto;
   margin-bottom: 30px;
+  position: relative;
 }
 .login_input_form{
   display: flex;
@@ -323,25 +330,28 @@ footer{
 }
 
 .login_btn{
-  background-color: rgb(241, 215, 213);
   padding: 8px 30px;
   font-size: 18px;
   font-family: serif;
   font-weight: bold;
-  color: rgb(61, 36, 34);
+  color: rgb(249, 242, 237);
+  background-color: rgb(50, 26, 10);
   letter-spacing: 5px;
 }
 
 .login_btn:hover{
-  background-color: rgb(223, 183, 180);
+  opacity: 0.7;
   cursor: pointer;
 }
 
 .login_background2{
   width: 200px;
   height: 200px;
-  background-image: url("login_back2.png");
+  background-image: url("decorate_back2.png");
   background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 
 .under_login_form{
@@ -350,7 +360,6 @@ footer{
 }
 
 .login_heading{
-  margin-left: 10%;
   display: inline-block;
   padding-bottom: 2px;
   border-bottom: solid 5px rgba(50, 26, 10, 0.6);
@@ -367,7 +376,6 @@ footer{
 }
 
 .another_user_link{
-  margin-right: 10%;
   margin-top: 3%;
 }
 
@@ -381,16 +389,35 @@ footer{
 .another_user_link:hover{
   opacity: 0.6;
 }
+/*--------------------------------------*/
 
-/*タブレット*/
-@media(max-width: 1024px){
-
+/*-----------1200px以下に適用------------*/
+@media(max-width: 1200px){
+  .login_form_content{
+    margin-top: 50px;
+    margin-right: 150px;
+  }
+  .login_form{
+    width: 450px;
+  }
+  .login_input_form{
+    font-size: 22px;
+  }
+  .email_form, .password_form{
+    width: 260px;
+    padding-left: 10px;
+  }
+  .login_background2{
+    left: 90%;
+  }
 }
+/*--------------------------------------*/
 
-/*スマホ*/
-@media(max-width: 599px){
+/*-----------1000px以下に適用------------*/
 
-}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------新規登録画面----------------------------------------------*/
