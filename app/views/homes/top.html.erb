@@ -19,9 +19,9 @@
     <h3 class="top_bottom_heading2">商品化希望の多いデザイン</h3>
     <!-----------------デザイン投稿者がログイン中の時------------>
     <% if design_contributor_signed_in? %>
-      <div class="top_bottom_content1">
+      <div class="top_bottom_content1 top_bottom_content1_rank">
         <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2">
+          <div class="top_bottom_content2 top_bottom_content2_rank">
             <p class="top_bottom_want_rank">第<%= i %>位</p>
             <%= link_to design_contributor_post_path(want_post.id) do %>
               <div class="top_bottom_post_image1">
@@ -39,9 +39,9 @@
       </div>
     <!----企業がログイン中の時--->
     <% elsif company_signed_in? %>
-      <div class="top_bottom_content1">
+      <div class="top_bottom_content1 top_bottom_content1_rank">
         <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2">
+          <div class="top_bottom_content2 top_bottom_content2_rank">
             <p class="top_bottom_want_rank">第<%= i %>位</p>
             <%= link_to company_post_path(want_post.id) do %>
               <div class="top_bottom_post_image1">
@@ -59,9 +59,9 @@
       </div>
     <!--ログアウト時-->
     <% else %>
-      <div class="top_bottom_content1">
+      <div class="top_bottom_content1 top_bottom_content1_rank">
         <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2">
+          <div class="top_bottom_content2 top_bottom_content2_rank">
             <p class="top_bottom_want_rank">第<%= i %>位</p>
             <%= link_to design_contributor_post_path(want_post.id) do %>
               <div class="top_bottom_post_image1">
@@ -189,7 +189,7 @@
 
 
     <div class="top_bottom_inquiry_content_back">
-      <h3 class="top_bottom_heading2">お問い合わせ</h3>
+      <h3 class="top_bottom_heading2 top_bottom_heading2_inquiry">お問い合わせ</h3>
       <div class="top_bottom_inquiry_content">
         <div class="top_bottom_inquiry_content1">
           <p class="top_bottom_inquiry_lead">お問い合わせ方法</p>
