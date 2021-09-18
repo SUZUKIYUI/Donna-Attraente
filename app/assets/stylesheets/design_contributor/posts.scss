@@ -10,10 +10,16 @@
 .posts_index_top{
   background-image: url("../posts_index_back1.png");
 }
-.posts_index_heading2{
+.posts_index_heading_back{
+  background-image: url("../decorate_back1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  top: 34%;
-  left: 48%;
+  top: 25%;
+  left: 45%;
+}
+.posts_index_heading2{
+  margin: 80px 80px 140px 140px;
 }
 .posts_index_bottom{
   background-image: url("../base_back2.png");
@@ -39,9 +45,12 @@
 }
 .posts_index_list{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 5%;
+}
+.post_index_box{
+  margin: 0 15px;
 }
 .post_show_link{
   padding: 10px;
@@ -55,7 +64,6 @@
 }
 .post_index_image{
   margin-bottom: 0px;
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,6 +110,31 @@
   color: rgb(130, 0, 9);
 }
 
+// -----------1400px以下に適用------------
+@media(max-width: 1400px){
+  .posts_index_heading_back{
+    top: 20%;
+    left: 40%;
+  }
+  .post_index_image{
+    width: 230px;
+  }
+}
+// --------------------------------------
+
+// -----------1200px以下に適用------------
+@media(max-width: 1200px){
+
+}
+// --------------------------------------
+
+// -----------1000px以下に適用（未完）------------
+// --------------------------------------
+
+// -----------800px以下に適用（未完）------------
+// --------------------------------------
+
+// -----------600px以下に適用（未完）------------
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
