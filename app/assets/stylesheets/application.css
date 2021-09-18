@@ -195,7 +195,35 @@ header{
   background-size: cover;
   background-repeat: no-repeat;
 }
+/*---------------------------------------*/
 
+/*-----------1200px以下に適用------------*/
+@media (max-width: 1200px){
+  .heading2 h2{
+    font-size: 28px;
+  }
+  .heading2 p{
+    font-size: 15px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media (max-width: 1000px){
+  .heading2 h2{
+    font-size: 25px;
+  }
+  .heading2 p{
+    font-size: 12px;
+  }
+  .heading1{
+    border-bottom: solid 3px rgba(50, 26, 10, 0.6);
+  }
+  .heading1 h1{
+    padding-right: 30px;
+    font-size: 70px;
+  }
+}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 

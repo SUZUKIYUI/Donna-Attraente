@@ -19,7 +19,7 @@
   left: 45%;
 }
 .posts_index_heading2{
-  margin: 80px 80px 140px 140px;
+  margin: 75px 80px 145px 140px;
 }
 .posts_index_bottom{
   background-image: url("../base_back2.png");
@@ -122,13 +122,22 @@
 }
 // --------------------------------------
 
-// -----------1200px以下に適用------------
+// -----------1200px以下に適用（未完）------------
 @media(max-width: 1200px){
 
 }
 // --------------------------------------
 
 // -----------1000px以下に適用（未完）------------
+@media(max-width: 1000px){
+  .posts_index_heading_back{
+    top: 18%;
+    left: 35%;
+  }
+  .posts_index_heading2{
+    margin: 65px 70px 135px 130px;
+  }
+}
 // --------------------------------------
 
 // -----------800px以下に適用（未完）------------
