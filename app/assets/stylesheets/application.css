@@ -268,8 +268,8 @@ footer{
   position: relative;
 }
 
-.login_background1{
-  background-image: url("login_back1.png");
+.login_decorate_back1{
+  background-image: url("decorate_back3.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 500px;
@@ -293,10 +293,10 @@ footer{
   border-bottom: solid 1px rgb(59, 34, 33);
   line-height: 1;
   display: inline-block;
+  position: relative;
 }
 
 .login_form_content{
-  display: flex;
   margin-top: 50px;
   margin-right: 200px;
 }
@@ -320,7 +320,7 @@ footer{
 
 .email_form, .password_form{
   width: 300px;
-  padding-left: 10px;
+  padding: 0 10px;
   background-color: rgb(249, 242, 237);
 }
 
@@ -344,7 +344,7 @@ footer{
   cursor: pointer;
 }
 
-.login_background2{
+.login_decorate_back2{
   width: 200px;
   height: 200px;
   background-image: url("decorate_back2.png");
@@ -394,7 +394,6 @@ footer{
 /*-----------1200px以下に適用------------*/
 @media(max-width: 1200px){
   .login_form_content{
-    margin-top: 50px;
     margin-right: 150px;
   }
   .login_form{
@@ -405,19 +404,80 @@ footer{
   }
   .email_form, .password_form{
     width: 260px;
-    padding-left: 10px;
   }
-  .login_background2{
+  .login_decorate_back2{
     left: 90%;
   }
 }
 /*--------------------------------------*/
 
 /*-----------1000px以下に適用------------*/
-
+@media(max-width: 1000px){
+  .login_decorate_back1{
+    width: 350px;
+    height: 350px;
+  }
+  .login_lead h2{
+    font-size: 35px;
+  }
+  .login_form_content{
+    margin-right: 100px;
+  }
+  .login_decorate_back2{
+    width: 180px;
+    height: 180px;
+  }
+  .login_heading h1{
+    padding-right: 25px;
+    font-size: 70px;
+  }
+  .another_link_font{
+    font-size: 18px;
+  }
+}
 /*--------------------------------------*/
 
-/*-----------1000px以下に適用------------*/
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .login_decorate_back1{
+    width: 290px;
+    height: 290px;
+  }
+  .login_form_content{
+    margin-right: 0px;
+  }
+  .login_form{
+    width: 400px;
+    margin: 0 auto;
+  }
+  .login_input_form{
+    margin-bottom: 15px;
+    color: rgb(59, 34, 33);
+    font-size: 20px;
+  }
+  .email_form, .password_form{
+    width: 250px;
+    background-color: rgb(249, 242, 237);
+  }
+  .login_btn{
+    font-size: 15px;
+  }
+  .login_decorate_back2{
+    width: 100px;
+    height: 100px;
+    top: 95px;
+    left: 80%;
+  }
+  .login_heading h1{
+    padding-right: 10px;
+    font-size: 50px;
+  }
+  .another_link_font{
+    font-size: 16px;
+  }
+}
+/*--------------------------------------*/
+
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------新規登録画面----------------------------------------------*/

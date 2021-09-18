@@ -1,28 +1,27 @@
 <!--企業ログイン画面-->
 
 <div class="content_width login_content">
-  <div class="login_background1">
-    <div class="login_lead">
-      <h2>アパレル関係者様用</h2>
-    </div>
-    <!----------------------------メールアドレス・パスワード入力フォーム----------------------------->
-    <div class="login_form_content">
-      <div class="login_form">
-        <%= form_with model: @company, url: company_session_path, local: true do |f| %>
-          <div class="field login_input_form">
-            <%= f.label :email, "メールアドレス" %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
-          </div>
-          <div class="field login_input_form">
-            <%= f.label :password, "パスワード" %>
-            <%= f.password_field :password, autocomplete: "current-password", class: "password_form" %>
-          </div>
-          <div class="actions login_btn_form">
-            <%= f.submit "ログイン", class: "login_btn" %>
-          </div>
-        <% end %>
-      </div>
-      <div class="login_background2"></div>
+  <div class="login_decorate_back1"></div>
+  <div class="login_lead">
+    <h2>アパレル関係者様用</h2>
+  </div>
+  <!----------------------------メールアドレス・パスワード入力フォーム----------------------------->
+  <div class="login_form_content">
+    <div class="login_form">
+      <%= form_with model: @company, url: company_session_path, local: true do |f| %>
+        <div class="field login_input_form">
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
+        </div>
+        <div class="field login_input_form">
+          <%= f.label :password, "パスワード" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "password_form" %>
+        </div>
+        <div class="actions login_btn_form">
+          <%= f.submit "ログイン", class: "login_btn" %>
+        </div>
+      <% end %>
+      <div class="login_decorate_back2"></div>
     </div>
   </div>
   <div class="under_login_form">
