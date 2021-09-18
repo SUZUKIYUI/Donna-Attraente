@@ -89,7 +89,18 @@
   padding: 0 10px;
   display: inline-block;
 }
-
+.index_paginate{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+.pagination a{
+  color: rgb(70, 40, 20);
+}
+.pagination .current{
+  font-size: 23px;
+  color: rgb(130, 0, 9);
+}
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

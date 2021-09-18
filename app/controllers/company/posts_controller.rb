@@ -1,7 +1,11 @@
 class Company::PostsController < ApplicationController
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    if Post.count > 12
+      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(12)
+    else
+      @posts = Post.all.order(created_at: :desc)
+    end
   end
 
   def show

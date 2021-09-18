@@ -40,5 +40,8 @@
         </div>
       <% end %>
     </div>
+    <% if Post.count > 12 %>
+      <div class="index_paginate"><%= paginate @posts %></div>
+    <% end %>
   </div>
 </div>
