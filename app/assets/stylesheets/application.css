@@ -644,8 +644,23 @@ footer{
 }
 /*--------------------------------------*/
 
+/*-----------1200px以下に適用------------*/
+@media(max-width: 1200px){
+  .signup_heading2 span{
+    font-size: 20px;
+    margin-left: 15px;
+    letter-spacing: 4px;
+  }
+}
+/*--------------------------------------*/
+
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
+  .signup_heading2 span{
+    font-size: 18px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
   .signup_heading1 h1{
     padding-right: 25px;
     font-size: 70px;
