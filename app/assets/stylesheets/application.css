@@ -362,6 +362,7 @@ footer{
 .under_login_form{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .login_heading{
@@ -378,10 +379,6 @@ footer{
   font-weight: bold;
   color: rgba(249, 242, 237, 0.9);
   background: linear-gradient(transparent 70%, rgb(50, 26, 10) 80%);
-}
-
-.another_user_link{
-  margin-top: 3%;
 }
 
 .another_link_font{
@@ -473,6 +470,9 @@ footer{
     top: 95px;
     left: 80%;
   }
+  .login_heading{
+    border-bottom: solid 2px rgba(50, 26, 10, 0.6);
+  }
   .login_heading h1{
     padding-right: 10px;
     font-size: 50px;
@@ -545,6 +545,7 @@ footer{
 .signup_flex{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .signup_heading3{
@@ -689,5 +690,26 @@ footer{
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .signup_decorate_back{
+    width: 80px;
+    height: 80px;
+  }
+  .signup_heading1{
+    border-bottom: solid 2px rgba(50, 26, 10, 0.6);
+  }
+  .signup_heading1 h1{
+    padding-right: 10px;
+    font-size: 50px;
+  }
+  .signup_heading3{
+    font-size: 20px;
+    border: double 7px rgb(59, 34, 33);
+  }
+  .signup_form{
+    width: 570px;
+    background-color: red;
+  }
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
