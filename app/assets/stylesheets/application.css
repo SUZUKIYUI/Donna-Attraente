@@ -668,7 +668,6 @@ footer{
   .signup_heading3{
     font-size: 25px;
     border: double 7px rgb(59, 34, 33);
-    padding: 10px 20px;
   }
   .signup_form{
     width: 570px;
@@ -691,7 +690,7 @@ footer{
     height: 80px;
   }
   .postal_code_input{
-    width: 150px;
+    width: 180px;
   }
   .address_input{
     width: 400px;
@@ -718,12 +717,42 @@ footer{
     font-size: 50px;
   }
   .signup_heading3{
-    font-size: 20px;
-    border: double 7px rgb(59, 34, 33);
+    font-size: 16px;
+    border: double 6px rgb(59, 34, 33);
   }
   .signup_form{
-    width: 570px;
-    background-color: red;
+    width: 430px;
+  }
+  .signup_input_form{
+    margin-bottom: 12px;
+  }
+  .signup_label{
+    width: 150px;
+    font-size: 16px;
+  }
+  .signup_input{
+    width: 180px;
+    font-size: 11px;
+  }
+  .email_input, .password_input, .introduction_input{
+    width: 230px;
+  }
+  .postal_code_input{
+    width: 140px;
+  }
+  .address_input{
+    width: 280px;
+  }
+  .input_profile_image1{
+    width: 220px;
+    font-size: 11px;
+    margin: 20px 105px;
+  }
+  .signup_btn{
+    padding: 6px 20px;
+    font-size: 15px;
+    letter-spacing: 18px;
+    text-indent: 18px;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
