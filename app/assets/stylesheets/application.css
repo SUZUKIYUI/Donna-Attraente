@@ -18,16 +18,21 @@
 /*----------レスポンシブ画面----------*/
 
 /*ブレイクポイント*/
+
 /*-----①1400px-----*/
-/*Top画面*/
+/*Top画面/ログイン画面*/
+
 /*-----②1200px-----*/
-/*Top画面*/
+/*Top画面/ログイン画面*/
+
 /*-----③1000px-----*/
-/*Top画面*/
+/*Top画面/ログイン画面*/
+
 /*-----④800px------*/
-/*Top画面（未完成）*/
+/*ログイン画面*/
+
 /*-----⑤600px------*/
-/*Top画面（未完成）*/
+/**/
 
 /*------------------------------------*/
 
@@ -489,7 +494,11 @@ footer{
   display: flex;
   position: absolute;
   top: 34%;
-  right: 18%;
+  right: 20%;
+}
+
+.signup_heading2{
+  position: relative;
 }
 
 .signup_heading2 span{
@@ -498,11 +507,14 @@ footer{
   color: rgb(148, 26, 16);
 }
 
-.signup_top2{
+.signup_decorate_back{
   width: 100px;
   height: 100px;
-  background-image: url("signup_back2.png");
+  background-image: url("decorate_back2.png");
   background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 100%;
 }
 
 .signup_heading1{
@@ -527,7 +539,7 @@ footer{
   background-image: url("base_back1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5% 10%;
+  padding: 10%;
 }
 
 .signup_flex{
@@ -615,19 +627,67 @@ footer{
 }
 
 .signup_btn{
-  background-color: rgb(241, 215, 213);
   padding: 8px 30px;
   font-size: 18px;
   font-family: serif;
   font-weight: bold;
-  color: rgb(61, 36, 34);
+  color: rgb(249, 242, 237);
+  background-color: rgb(61, 36, 34);
   letter-spacing: 20px;
   text-indent: 20px;
 }
 
 .signup_btn:hover{
-  background-color: rgb(223, 183, 180);
+  opacity: 0.7;
   cursor: pointer;
 }
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .signup_heading1 h1{
+    padding-right: 25px;
+    font-size: 70px;
+  }
+  .signup_heading3{
+    font-size: 25px;
+    border: double 7px rgb(59, 34, 33);
+    padding: 10px 20px;
+  }
+  .signup_form{
+    width: 570px;
+  }
+  .signup_input_form{
+    margin-bottom: 15px;
+  }
+  .signup_label{
+    width: 170px;
+    font-size: 18px;
+  }
+  .signup_input{
+    width: 230px;
+    font-size: 13px;
+  }
+  .email_input, .password_input, .introduction_input{
+    width: 320px;
+  }
+  .introduction_input{
+    height: 80px;
+  }
+  .postal_code_input{
+    width: 150px;
+  }
+  .address_input{
+    width: 400px;
+  }
+  .input_profile_image1{
+    width: 270px;
+    font-size: 13px;
+    margin: 20px 150px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
