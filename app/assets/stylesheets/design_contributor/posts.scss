@@ -256,6 +256,34 @@
     font-size: 14px;
   }
 }
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .post_new_decoration{
+    width: 20%;
+    top: 60%;
+  }
+  .post_new_form{
+    width: 400px;
+  }
+  .post_input_image1{
+    width: 200px;
+    font-size: 12px;
+    margin: 0 100px;
+  }
+  .post_label{
+    width: 130px;
+    font-size: 18px;
+  }
+  .post_input{
+    width: 270px;
+  }
+  .post_new_btn{
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
