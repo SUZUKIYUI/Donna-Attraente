@@ -30,12 +30,14 @@
           <%= @design_contributor.pen_name %>
         </div>
       </div>
-      <div class="user_show_introduction2">
-        <p>自己紹介</p>
-        <div class="user_show_self_introduction">
-          <%= @design_contributor.self_introduction %>
+      <% if @design_contributor.self_introduction.present? %>
+        <div class="user_show_introduction2">
+          <p>自己紹介</p>
+          <div class="user_show_self_introduction">
+            <%= @design_contributor.self_introduction %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
     <% if @design_contributor == current_design_contributor %>
       <div class="user_edit_link1">
