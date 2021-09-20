@@ -148,17 +148,17 @@
 
 
 
-// ----------------------------------------------posts新規登録画面----------------------------------------------
+// posts新規登録画面
 .post_new_top{
   background-image: url("../post_new_back1.png");
 }
 .post_new_heading2{
   position: absolute;
-  top: 34%;
+  top: 40%;
   left: 48%;
 }
 .post_new_decoration{
-  background-image: url("../post_new_back2.png");
+  background-image: url("../decorate_back4.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 25%;
@@ -172,12 +172,11 @@
 }
 .post_new_form{
   margin: 0 auto;
-  width: 700px;
+  width: 500px;
   margin-top: 5%;
 }
 .post_input_form{
   display: flex;
-  width: 500px;
   margin: 0 auto;
   margin-bottom: 30px;
   color: rgb(59, 34, 33);
@@ -194,6 +193,7 @@
   color: rgb(249, 242, 237);
   background-color: rgb(65, 33, 11);
   text-align: center;
+  margin: 0 125px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
@@ -220,7 +220,7 @@
 }
 .post_new_btn_form{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .post_new_btn{
   background-color: rgb(70, 40, 20);
@@ -236,11 +236,31 @@
   background-color: rgba(70, 40, 20, 0.7);
   cursor: pointer;
 }
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .post_new_form{
+    width: 450px;
+  }
+  .post_input_image1{
+    width: 230px;
+    font-size: 13px;
+    margin: 0 110px;
+  }
+  .post_label{
+    width: 150px;
+  }
+  .post_input{
+    width: 300px;
+    font-size: 14px;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-// ----------------------------------------------posts詳細画面----------------------------------------------
+// posts詳細画面
 .post_show_back{
   background-image: url("../post_show_back1");
   background-size: cover;
@@ -529,7 +549,7 @@
 
 
 
-// ----------------------------------------------posts編集画面----------------------------------------------
+// posts編集画面
 .post_edit_back{
   background-image: url("../base_back3.png");
   background-size: 100%;
