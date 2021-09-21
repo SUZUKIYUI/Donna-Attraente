@@ -4,16 +4,16 @@
   <h1 class="post_edit_heading1">コメント編集</h1>
   <div class="post_edit_content">
     <div>
-      <%= attachment_image_tag @post, :post_image, :fill, 400, 570 %>
+      <%= attachment_image_tag @post, :post_image, :fill, 400, 570, class: "post_edit_post_image" %>
     </div>
     <div class="post_edit_comment">
       <!--------------未入力の時のエラー文--------------->
       <% if @post.errors.any? %>
-        <div class="error_box">
+        <div class="error_box post_edit_error_box">
           <ul>
             <% @post.errors.full_messages.each do |message| %>
-              <li class="error_list">
-                <%= message %>
+              <li class="error_list post_edit_error_list">
+                <p><%= message %></p>
               </li>
             <% end %>
           </ul>
