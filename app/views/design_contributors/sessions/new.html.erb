@@ -9,6 +9,7 @@
   <div class="login_form_content">
     <div class="login_form">
       <%= form_with model: @design_contributor, url: design_contributor_session_path, local: true do |f| %>
+        <%= render "design_contributors/shared/error_messages", resource: resource %>
         <div class="field login_input_form">
           <%= f.label :email, "メールアドレス" %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
