@@ -8,7 +8,6 @@
     <!----------------------------未入力の時のエラー文表示--------------------------->
     <% if @design_contributor.errors.any? %>
       <div class="error_box">
-        <p class="error_heading"><%= @design_contributor.errors.count %>件のエラー</p>
         <ul>
           <% @design_contributor.errors.full_messages.each do |message| %>
             <li class="error_list">
@@ -35,7 +34,7 @@
       </div>
       <div class="user_edit_input_form">
         <%= f.label :self_introduction, class: "design_contributor_edit_label" %>
-        <%= f.text_area :self_introduction, class: "design_contributor_edit_input" %>
+        <%= f.text_area :self_introduction, class: "design_contributor_edit_input self_introduction_edit_input" %>
       </div>
       <div class="user_edit_btn_form">
         <%= f.submit "編集する", class: "user_edit_btn" %>
