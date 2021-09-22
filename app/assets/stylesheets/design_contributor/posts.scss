@@ -578,6 +578,9 @@
   .post_show_post_image{
     width: 350px;
   }
+  .want_link{
+    margin-top: 10px;
+  }
   .post_show_top2{
     margin-bottom: 45px;
     margin-left: 30px;
@@ -593,6 +596,39 @@
 /*--------------------------------------*/
 
 /*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .post_show_post_image{
+    width: 250px;
+  }
+  .want_link{
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  .post_show_user{
+    margin-top:  30px;
+  }
+  .post_show_profile_image{
+    width: 140px;
+    height: 140px;
+  }
+  .post_show_user2{
+    font-size: 20px;
+  }
+  .post_show_author_comment p{
+    font-size: 18px;
+  }
+  .post_show_author_comment1{
+    padding: 8px 13px;
+    width: 280px;
+    font-size: 15px;
+  }
+  .post_show_created_at{
+    font-size: 14px;
+  }
+  .post_delete_link2{
+    font-size: 16px;
+  }
+}
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
