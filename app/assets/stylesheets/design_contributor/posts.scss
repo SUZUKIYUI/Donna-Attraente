@@ -324,12 +324,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
   margin-left: 50px;
   margin-bottom: 40px;
 }
 .post_show_user{
   text-align: center;
+  margin-top:  50px;
 }
 .post_show_user_hover:hover{
   opacity: 0.7;
@@ -509,10 +509,10 @@
   justify-content: space-between;
   width: 40%;
 }
-.post_show_comment_new1{
+.post_show_error_box{
   margin-bottom: 5%;
 }
-.post_show_comment_new2{
+.post_show_comment_new1{
   padding: 15px 30px;
   color: rgb(157, 157, 157);
   background-color: rgb(255, 255, 255);
@@ -548,7 +548,7 @@
   background-color: rgba(70, 40, 20, 0.7);
   cursor: pointer;
 }
-.post_show_comment_new3{
+.post_show_comment_new2{
   margin-top: 20px;
   text-align: center;
   letter-spacing: 3px;
@@ -571,6 +571,31 @@
   left: 85%;
   top: 88%;
 }
+/*--------------------------------------*/
+
+/*-----------1200px以下に適用------------*/
+@media(max-width: 1200px){
+  .post_show_post_image{
+    width: 350px;
+  }
+  .post_show_top2{
+    margin-bottom: 45px;
+    margin-left: 30px;
+  }
+  .post_show_profile_image{
+    width: 170px;
+    height: 170px;
+  }
+  .post_show_error_list p{
+    font-size: 17px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
 
 
 
