@@ -254,7 +254,14 @@ header{
     font-size: 70px;
   }
 }
+/*--------------------------------------*/
 
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .content_width{
+    width: 95%;
+  }
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------フッター（完成）----------------------------------------------*/
@@ -338,6 +345,7 @@ footer{
   margin-bottom: 30px;
   position: relative;
 }
+
 .login_input_form{
   display: flex;
   justify-content: space-between;
@@ -479,12 +487,10 @@ footer{
   }
   .login_input_form{
     margin-bottom: 15px;
-    color: rgb(59, 34, 33);
     font-size: 20px;
   }
   .email_form, .password_form{
     width: 250px;
-    background-color: rgb(249, 242, 237);
   }
   .login_btn{
     font-size: 15px;
@@ -508,6 +514,57 @@ footer{
 }
 /*--------------------------------------*/
 
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .login_decorate_back1{
+    width: 45%;
+  }
+  .login_lead{
+    text-align: center;
+    padding-top: 20%;
+  }
+  .login_lead h2{
+    font-size: 22px;
+  }
+  .login_form_content{
+    margin-top: 30px;
+  }
+  .login_form{
+    width: 230px;
+    margin: 0 auto;
+  }
+  .login_input_form{
+    flex-direction: column;
+    font-size: 16px;
+  }
+  .email_form, .password_form{
+    width: 100%;
+    padding: 8px 10px;
+  }
+  .login_btn_form{
+    margin-top: 30px;
+  }
+  .login_btn{
+    padding: 6px 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+  .login_decorate_back2{
+    top: 150px;
+    left: 60%;
+  }
+  .under_login_form{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .login_heading h1{
+    font-size: 35px;
+  }
+  .another_link_font{
+    margin: 15px 0;
+    font-size: 14px;
+  }
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*----------------------------------------------新規登録画面----------------------------------------------*/
