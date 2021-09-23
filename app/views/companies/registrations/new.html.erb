@@ -2,7 +2,7 @@
 
 <div class="content_width">
   <div class="top_content signup_top1">
-    <div class="signup_heading2_content">
+    <div class="signup_heading2_content signup_heading2_content_company">
       <div class="heading2 signup_heading2">
         <h2>新規登録<span>アパレル関係者様用</span></h2>
         <p>デザインを採用される企業の方は<br />こちらのフォームから会員登録をお願いします。</p>
@@ -18,12 +18,10 @@
   <div class="signup_bottom">
     <div class="signup_flex">
       <h3 class="signup_heading3">アパレル関係者会員登録</h3>
-      <div class="another_user_link">
-        <%= link_to new_design_contributor_registration_path do %>
-          <i class="fas fa-arrow-circle-right another_link_font"></i>
-          <span class="another_link_font">個人の方はこちらへ</span>
-        <% end %>
-      </div>
+      <%= link_to new_design_contributor_registration_path, class: "another_user_link" do %>
+        <i class="fas fa-arrow-circle-right another_link_font"></i>
+        <span class="another_link_font">個人の方はこちらへ</span>
+      <% end %>
     </div>
     <div class="signup_form">
       <%= form_with model: @company, url: company_registration_path, id: "new_company", class: "new_company", local: true do |f| %>

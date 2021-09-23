@@ -90,6 +90,7 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
   color: rgb(40, 184, 47);
   background-color: rgb(203, 255, 232);
 }
+
 .alert{
   text-align: center;
   font-family: "HiraMinProN-W6";
@@ -108,9 +109,19 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
+  .error_box{
+    padding: 0px;
+    border: double 5px #CC0000;
+  }
+
+  .error_list{
+    font-size: 12px;
+  }
+
   .notice{
     font-size: 14px;
   }
+
   .alert{
     font-size: 14px;
   }
@@ -547,7 +558,7 @@ footer{
     margin-top: 30px;
   }
   .login_form{
-    width: 230px;
+    width: 240px;
     margin: 0 auto;
   }
   .login_input_form{
@@ -706,7 +717,7 @@ footer{
   color: rgb(249, 242, 237);
   background-color: rgb(65, 33, 11);
   text-align: center;
-  margin: 20px 200px;
+  margin: 20px auto;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
@@ -797,7 +808,6 @@ footer{
   .input_profile_image1{
     width: 270px;
     font-size: 13px;
-    margin: 20px 150px;
   }
 }
 /*--------------------------------------*/
@@ -845,13 +855,82 @@ footer{
   .input_profile_image1{
     width: 220px;
     font-size: 11px;
-    margin: 20px 105px;
   }
   .signup_btn{
     padding: 6px 20px;
     font-size: 15px;
     letter-spacing: 18px;
     text-indent: 18px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .signup_heading2_content{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 70px;
+  }
+  .signup_heading2_content_company{
+    height: 90px;
+  }
+  .signup_heading2{
+    margin: 0 auto;
+    text-align: center;
+  }
+  .signup_heading2 span{
+    display: block;
+    font-size: 15px;
+  }
+  .signup_decorate_back{
+    width: 50px;
+    height: 50px;
+    top: -15%;
+    left: 85%;
+  }
+  .signup_heading1{
+    display: none;
+  }
+  .signup_flex{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .signup_heading3{
+    font-size: 15px;
+    padding: 8px 18px;
+    border: double 4px rgb(59, 34, 33);
+  }
+  .signup_form{
+    width: 240px;
+  }
+  .signup_input_form{
+    flex-direction: column;
+  }
+  .input_profile_image1{
+    width: 180px;
+    font-size: 10px;
+  }
+  .signup_label{
+    font-size: 15px;
+  }
+  .signup_input{
+    width: 100%;
+  }
+  .postal_code_input{
+    width: 60%;
+  }
+  .signup_btn_form{
+    margin-top: 30px;
+  }
+  .signup_btn{
+    padding: 6px 18px;
+    font-size: 13px;
+    letter-spacing: 16px;
+    text-indent: 16px;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
