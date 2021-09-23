@@ -808,4 +808,43 @@
     font-size: 18px;
   }
 }
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .post_edit_heading1{
+    font-size: 22px;
+  }
+  .post_edit_content{
+    width: 100%;
+  }
+  .post_edit_post_image{
+    width: 200px;
+  }
+  .post_edit_comment{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .post_edit_comment .post_edit_error_box{
+    padding: 10px;
+  }
+  .post_edit_error_list p{
+    font-size: 13px;
+  }
+  .post_edit_label{
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  .post_edit_input{
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+  .post_edit_btn_form{
+    margin-top: 30px;
+  }
+  .post_edit_btn{
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
