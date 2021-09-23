@@ -193,7 +193,7 @@
   color: rgb(249, 242, 237);
   background-color: rgb(65, 33, 11);
   text-align: center;
-  margin: 0 125px;
+  margin: 0 auto;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 5px;
@@ -247,7 +247,6 @@
   .post_input_image1{
     width: 230px;
     font-size: 13px;
-    margin: 0 110px;
   }
   .post_label{
     width: 150px;
@@ -271,7 +270,6 @@
   .post_input_image1{
     width: 200px;
     font-size: 12px;
-    margin: 0 100px;
   }
   .post_label{
     width: 130px;
@@ -283,6 +281,57 @@
   .post_new_btn{
     padding: 10px 25px;
     font-size: 15px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .post_new_heading2{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 70px;
+  }
+  .post_new_heading2 h2{
+    text-align: center;
+  }
+  .post_new_heading2 p{
+    text-align: center;
+  }
+  .post_new_form{
+    width: 240px;
+  }
+  .post_new_form .post_new_error_box{
+    padding: 10px;
+  }
+  .post_new_error_list p{
+    font-size: 13px;
+  }
+  .post_input_form{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .post_input_image1{
+    width: 180px;
+    font-size: 10px;
+  }
+  .post_label{
+    margin-right: auto;
+    font-size: 15px;
+  }
+  .post_input{
+    width: 100%;
+  }
+  .post_new_btn_form{
+    margin-top: 30px;
+  }
+  .post_new_btn{
+    padding: 8px 20px;
+    font-size: 13px;
   }
 }
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

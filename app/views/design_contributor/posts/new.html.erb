@@ -7,7 +7,7 @@
       <p>デザインしたワンピースのイラスト画像と<br />コメントを投稿してください</p>
     </div>
     <!-----------------見出し------------------>
-    <div class="heading1">
+    <div class="heading1 post_new_heading1">
       <h1>Post</h1>
     </div>
     <div class="post_new_decoration"></div>
@@ -18,11 +18,11 @@
       <%= form_with model: @post, url: design_contributor_posts_path, local: true do |f| %>
       <!------------未入力の場合のエラー文表示------------->
         <% if @post.errors.any? %>
-          <div class="error_box">
+          <div class="error_box post_new_error_box">
             <ul>
               <% @post.errors.full_messages.each do |message| %>
-                <li class="error_list">
-                  <%= message %>
+                <li class="error_list post_new_error_list">
+                  <p><%= message %></p>
                 </li>
               <% end %>
             </ul>
