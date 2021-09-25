@@ -5,7 +5,7 @@
   <div class="login_lead">
     <h2>アパレル関係者様用</h2>
   </div>
-  <!-----------------------------メールアドレス・パスワード入力フォーム------------------------------>
+  <!----------------------------メールアドレス・パスワード入力フォーム----------------------------->
   <div class="login_form_content">
     <div class="login_form">
       <%= form_with model: @company, url: company_session_path, local: true do |f| %>
@@ -25,14 +25,16 @@
     </div>
   </div>
   <div class="under_login_form">
-    <!--------大見出し-------->
+    <!-----------------見出し------------------>
     <div class="login_heading">
       <h1>Log in</h1>
     </div>
-    <!----------------------デザイン投稿者用ログイン画面リンク---------------------->
-    <%= link_to new_design_contributor_session_path, class: "another_user_link" do %>
-      <i class="fas fa-arrow-circle-right another_link_font"></i>
-      <span class="another_link_font">個人の方はこちらへ</span>
-    <% end %>
+    <!-------------デザイン投稿者用ログイン画面リンク------------->
+    <div class="another_user_link">
+      <%= link_to new_design_contributor_session_path do %>
+        <i class="fas fa-arrow-circle-right another_link_font"></i>
+        <span class="another_link_font">個人の方はこちらへ</span>
+      <% end %>
+    </div>
   </div>
 </div>
