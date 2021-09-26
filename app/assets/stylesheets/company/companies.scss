@@ -170,11 +170,6 @@
   width: 700px;
   margin-top: 5%;
 }
-.user_edit_input_form{
-}
-.company_image_choice{
-  margin: 20px 200px;
-}
 .company_edit_label{
   width: 250px;
   font-size: 20px;
@@ -197,4 +192,47 @@
   width: 450px;
   height: 200px;
 }
+/*--------------------------------------*/
 
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .company_edit_form{
+    width: 560px;
+  }
+  .company_edit_label{
+    width: 180px;
+    font-size: 18px;
+  }
+  .company_edit_input{
+    width: 250px;
+    font-size: 13px;
+  }
+  .postal_code_edit_input{
+    width: 125px;
+  }
+  .address_edit_input, .company_introduction_edit_input{
+    width: 380px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+
+
+
+
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+// company_edit_form
+// company_edit_label
+// company_edit_input
+// postal_code_edit_input
+// address_edit_input
+// company_introduction_edit_input
