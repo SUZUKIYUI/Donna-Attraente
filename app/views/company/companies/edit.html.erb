@@ -19,36 +19,36 @@
     <% end %>
     <!----------------------------------------------------------------------------------------->
     <%= form_with model: @company, url: company_company_path(@company.id), local: true do |f| %>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <label class="input_edit_profile_image1">プロフィール画像を選択してください
           <%= f.attachment_field :profile_image, class: "company_edit_input input_edit_profile_image2" %>
         </label>
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :company_name, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :company_name, placeholder: "（例）株式会社　パステル", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.text_field :company_name, placeholder: "(例)株式会社　パステル", class: "company_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :company_name_kana, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :company_name_kana, placeholder: "（例）カブシキガイシャ　パステル", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.text_field :company_name_kana, placeholder: "(例)カブシキガイシャ　パステル", class: "company_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :postal_code, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :postal_code, placeholder: "（例）2390831", class: "company_edit_input postal_code_edit_input" %><!--ここだ！-->
+        <%= f.text_field :postal_code, placeholder: "(例)2390831", class: "company_edit_input postal_code_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :address, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :address, placeholder: "（例）神奈川県横須賀市久里浜○-○-○ ○○ビル2階", class: "company_edit_input address_edit_input" %><!--ここだ！-->
+        <%= f.text_field :address, placeholder: "(例)神奈川県横須賀市久里浜○-○-○ ○○ビル2階", class: "company_edit_input address_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :phone_number, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :phone_number, placeholder: "（例）080-1234-5678", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.text_field :phone_number, placeholder: "(例)080-1234-5678", class: "company_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form">
         <%= f.label :email, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :email, placeholder: "（例）×××@×××××.jp", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.text_field :email, placeholder: "(例)×××@×××××.jp", class: "company_edit_input" %><!--ここだ！-->
       </div>
-      <div class="user_edit_input_form">
+      <div class="company_edit_input_form company_edit_input_form_introduction">
         <%= f.label :company_introduction, class: "company_edit_label" %><!--ここだ！-->
         <%= f.text_area :company_introduction, placeholder: "自社ブランドの紹介、どんな商品を取り扱っているのか、どんなワンピースを求めているのかなど", class: "company_edit_input company_introduction_edit_input" %><!--ここだ！-->
       </div>

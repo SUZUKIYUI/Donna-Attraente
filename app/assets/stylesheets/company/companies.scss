@@ -170,6 +170,17 @@
   width: 700px;
   margin-top: 5%;
 }
+.company_edit_input_form{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: rgb(59, 34, 33);
+  font-family: serif;
+  font-weight: bold;
+}
+.company_edit_input_form_introduction{
+  align-items: flex-start;
+}
 .company_edit_label{
   width: 250px;
   font-size: 20px;
@@ -178,6 +189,7 @@
   width: 300px;
   padding: 5px 10px;
   font-size: 15px;
+  color: rgb(59, 34, 33);
   font-family: serif;
   font-weight: bold;
   background-color: rgb(249, 242, 237);
@@ -217,22 +229,48 @@
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
-
-
-
-
+@media(max-width: 800px){
+  .company_edit_form{
+    width: 420px;
+  }
+  .company_edit_input_form{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .company_edit_label{
+    width: 100%;
+  }
+  .company_edit_input{
+    width: 280px;
+    font-size: 15px;
+  }
+  .postal_code_edit_input{
+    width: 140px;
+  }
+  .address_edit_input, .company_introduction_edit_input{
+    width: 100%;
+  }
+}
 /*--------------------------------------*/
 
 /*-----------600px以下に適用------------*/
-
-
-
-
+@media(max-width: 600px){
+  .company_edit_form{
+    width: 100%;
+  }
+  .company_edit_label{
+    margin-bottom: 2px;
+    font-size: 16px;
+  }
+  .company_edit_input{
+    width: 240px;
+    font-size: 13px;
+  }
+  .postal_code_edit_input{
+    width: 120px;
+  }
+  .address_edit_input, .company_introduction_edit_input{
+    width: 100%;
+  }
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-// company_edit_form
-// company_edit_label
-// company_edit_input
-// postal_code_edit_input
-// address_edit_input
-// company_introduction_edit_input

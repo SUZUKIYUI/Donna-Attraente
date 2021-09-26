@@ -243,16 +243,20 @@
   text-align: center;
 }
 .design_contributor_edit_form{
+  width: 520px;
   margin: 0 auto;
-  width: 500px;
   margin-top: 5%;
 }
-.user_edit_input_form{
+.design_contributor_edit_input_form{
   display: flex;
+  align-items: center;
   margin-bottom: 20px;
   color: rgb(59, 34, 33);
   font-family: serif;
   font-weight: bold;
+}
+.design_contributor_edit_input_form_introduction{
+  align-items: flex-start;
 }
 .input_edit_profile_image1{
   width: 300px;
@@ -277,7 +281,7 @@
   font-size: 20px;
 }
 .design_contributor_edit_input{
-  width: 300px;
+  width: 320px;
   padding: 5px 10px;
   font-size: 15px;
   color: rgb(59, 34, 33);
@@ -373,8 +377,9 @@
   .design_contributor_edit_form{
     width: 240px;
   }
-  .user_edit_input_form{
+  .design_contributor_edit_input_form{
     flex-direction: column;
+    align-items: flex-start;
   }
   .input_edit_profile_image1{
     margin: 0 auto;
@@ -382,6 +387,7 @@
   }
   .design_contributor_edit_label{
     margin-bottom: 2px;
+    font-size: 16px;
   }
   .design_contributor_edit_input{
     width: 100%;
