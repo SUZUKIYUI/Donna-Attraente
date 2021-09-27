@@ -222,6 +222,70 @@
     width: 196px;
   }
 }
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .user_show_heading2{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 30px;
+  }
+  .user_show_heading2 h2{
+    text-align: center;
+  }
+  .user_show_introduction{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+  .user_image_frame{
+    width: 120px;
+    height: 120px;
+  }
+  .user_image_frame::after {
+    box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
+    border-radius: 100%;
+  }
+  .user_image{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+  }
+  .user_show_introduction2{
+    margin-left: 0px;
+  }
+  .user_show_introduction2 p{
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .user_show_self_introduction{
+    font-size: 13px;
+  }
+  .user_edit_link1{
+    margin-top: 5px;
+  }
+  .user_edit_link2{
+    font-size: 14px;
+  }
+  .user_show_heading3{
+    font-size: 15px;
+    padding: 3px 18px;
+    border-top: double 3px rgb(59, 34, 33);
+    border-bottom: double 3px rgb(59, 34, 33);
+  }
+  .design_contributor_item1{
+    margin: 5px;
+  }
+  .design_contributor_item2{
+    width: 111px;
+  }
+}
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
