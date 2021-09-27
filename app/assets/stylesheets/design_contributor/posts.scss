@@ -6,7 +6,7 @@
 
 
 
-// ----------------------------------------------posts一覧画面----------------------------------------------
+// posts一覧画面
 .posts_index_top{
   background-image: url("../posts_index_back1.png");
 }
@@ -491,10 +491,9 @@
   display: flex;
 }
 .post_show_comment_left{
-  width: 50%;
+  width: 550px;
   height: 700px;
   padding: 2%;
-  margin-right: 5%;
   background-color: rgb(221, 212, 205);
   border-left: solid 10px rgb(50, 26, 10);
 }
@@ -517,6 +516,9 @@
   text-align: center;
   color: rgb(70, 40, 20);
 }
+.post_show_comment{
+  margin-right: 5px;
+}
 .post_show_comment1{
   word-break: break-all;
   margin-top: 10px;
@@ -529,7 +531,7 @@
 .post_show_comment1:before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 22px;
   left: -24px;
   margin-top: -12px;
   border: 12px solid transparent;
@@ -556,7 +558,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 40%;
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
 }
 .post_show_error_box{
   margin-bottom: 5%;
@@ -617,8 +621,19 @@
   width: 120px;
   height: 170px;
   position: absolute;
-  left: 85%;
-  top: 88%;
+  left: 95%;
+  bottom: 0;
+}
+/*--------------------------------------*/
+
+/*-----------1400px以下に適用------------*/
+@media(max-width: 1400px){
+  .post_show_comment_left{
+    width: 450px;
+  }
+  .post_show_comment_right{
+    width: 350px;
+  }
 }
 /*--------------------------------------*/
 
@@ -638,8 +653,39 @@
     width: 170px;
     height: 170px;
   }
+  .post_show_comment_left{
+    width: 380px;
+  }
+  .post_show_comment1{
+    margin-left: 20px;
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+  .post_show_comment1:before {
+    top: 20px;
+    left: -20px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-right: 10px solid rgb(255, 255, 255);
+  }
+  .post_show_comment2{
+    font-size: 13px;
+  }
+ .post_show_comment_right{
+    width: 300px;
+  }
   .post_show_error_list p{
     font-size: 17px;
+  }
+  .post_show_comment_label{
+    font-size: 18px;
+  }
+  .post_show_comment_area2{
+    font-size: 18px;
+  }
+  .post_show_comment_btn{
+    padding: 10px 30px;
+    font-size: 16px;
   }
 }
 /*--------------------------------------*/
@@ -676,6 +722,64 @@
   }
   .post_delete_link2{
     font-size: 16px;
+  }
+  .design_contributor_post_show_reaction{
+    width: 280px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .post_show_comment_content{
+    // background-color: red;
+  }
+  .post_show_comment_left{
+    width: 310px;
+  }
+  .post_show_comment1{
+    font-size: 13px;
+  }
+  .post_show_comment1:before {
+    top: 20px;
+    left: -20px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-right: 10px solid rgb(255, 255, 255);
+  }
+  .post_show_comment2{
+    font-size: 13px;
+  }
+ .post_show_comment_right{
+    width: 240px;
+    // background-color: green;
+  }
+  .post_show_error_list p{
+    font-size: 17px;
+  }
+  .post_show_comment_new1{
+    padding: 13px 20px;
+  }
+  .post_show_comment_label{
+    font-size: 16px;
+  }
+  .post_show_comment_area2{
+    font-size: 16px;
+    height: 100px;
+    padding: 6px 9px;
+  }
+  .post_show_comment_btn{
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  .post_show_comment_new2{
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-indent: 3px;
+  }
+  .post_index_link{
+    font-size: 20px;
   }
 }
 /*--------------------------------------*/

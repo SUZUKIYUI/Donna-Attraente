@@ -76,7 +76,7 @@
       </div>
       <!--オファーモデルは存在するか-->
       <% if @post.offered_by? %>
-        <!--------------------------交渉中のオファーが存在するか-------------------------->
+        <!---------交渉中のオファーが存在するか-------->
         <% if @post.offered_negotiation_by?(@post.id) %>
           <% if @post.design_contributor_id == current_design_contributor.id %>
             <div class="post_show_reaction_content">
@@ -94,27 +94,27 @@
               <p><%= @offer.company.company_name %><span>様と交渉中</span></p>
             </div>
           <% end %>
-        <!--------------------------交渉成立オファーが存在するか-------------------------->
+        <!----------交渉成立オファーが存在するか---------->
         <% elsif @post.offered_established_by?(@post.id) %>
           <div class="post_show_reaction_content">
             <p>オファー</p>
             <p>オファー成立済み</p>
           </div>
-        <!-------------------------交渉不成立オファーが存在するか------------------------->
+        <!-------交渉不成立オファーが存在するか------->
         <% elsif @post.offered_failure_by?(@post.id) %>
           <div class="post_show_reaction_content">
             <p>オファー</p>
             <p class="post_show_failure_reaction1">オファー不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
           </div>
           <p class="post_show_failure_reaction2">現在オファーなし</p>
-        <!----------オファーモデルは存在するがこのデザインにオファーが来ていない---------->
+        <!---オファーモデルは存在するがこのデザインにオファーが来ていない-->
         <% else %>
           <div class="post_show_reaction_content">
             <p>オファー</p>
             <p>なし</p>
           </div>
         <% end %>
-      <!-----------------------------オファーモデルが存在しない--------------------------->
+      <!--オファーモデルが存在しない-->
       <% else %>
         <div class="post_show_reaction_content">
           <p>オファー</p>
@@ -122,7 +122,7 @@
         </div>
       <% end %>
     </div>
-    <!-----------------------------------------コメント一覧----------------------------------------->
+    <!-------------------コメント一覧------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
     <div class="post_show_comment_content">
       <div class="post_show_comment_left">
@@ -160,10 +160,10 @@
           <p class="post_show_no_comment">コメントはまだありません</p>
         <% end %>
       </div>
-      <!----------------------------------コメント投稿フォーム-------------------------------------->
-      <!----------------未入力の時のエラー文表示---------------->
+      <!-------コメント投稿フォーム------->
       <div class="post_show_comment_right">
         <div class="post_show_comment_new">
+          <!--未入力の時のエラー文表示-->
           <% if @comment.errors.any? %>
             <div class="error_box post_show_error_box">
               <ul>
@@ -175,7 +175,7 @@
               </ul>
             </div>
           <% end %>
-          <!-------------------------------------------------------->
+          <!------------------------------------------------------------------------------------------------------------------------->
           <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
             <div class="post_show_comment_new1">
               <div class="post_show_comment_label">
@@ -189,7 +189,7 @@
               </div>
             </div>
           <% end %>
-          <!---------------------------------------------------------------------------------------------------------------->
+          <!---------------------------------------------------------------------------------------------->
           <p class="post_show_comment_new2">ステキなデザインだと思ったら<br />ぜひ感想を伝えてください♪</p>
         </div>
         <%= link_to "デザイン一覧に戻る", design_contributor_posts_path, class: "post_index_link" %>
