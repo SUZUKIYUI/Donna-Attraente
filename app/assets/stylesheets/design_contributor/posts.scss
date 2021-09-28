@@ -375,12 +375,12 @@
   align-items: center;
   margin-left: 50px;
   margin-bottom: 40px;
+  padding-top: 50px;
 }
 .post_show_user{
   text-align: center;
-  margin-top:  50px;
 }
-.post_show_user_hover:hover{
+.post_show_user:hover{
   opacity: 0.7;
 }
 .post_show_user2{
@@ -560,6 +560,8 @@
   justify-content: space-between;
   width: 400px;
   margin: 0 auto;
+}
+.post_show_comment_new{
   position: relative;
 }
 .post_show_error_box{
@@ -607,12 +609,15 @@
   letter-spacing: 3px;
   text-indent: 3px;
 }
-.post_index_link{
+.post_index_link1{
   text-align: right;
+}
+.post_index_link2{
+  display: inline-block;
   font-size: 25px;
   color: rgb(70, 40, 20);
 }
-.post_index_link:hover{
+.post_index_link2:hover{
   color: rgba(70, 40, 20, 0.7);
 }
 .post_index_link_decoration{
@@ -621,8 +626,8 @@
   width: 120px;
   height: 170px;
   position: absolute;
-  left: 95%;
-  bottom: 0;
+  top: 80%;
+  left: 100%;
 }
 /*--------------------------------------*/
 
@@ -699,9 +704,6 @@
     margin-top: 5px;
     font-size: 16px;
   }
-  .post_show_user{
-    margin-top:  30px;
-  }
   .post_show_profile_image{
     width: 140px;
     height: 140px;
@@ -730,9 +732,6 @@
     font-size: 15px;
     border-radius: 10px;
   }
-  .post_show_comment_content{
-    // background-color: red;
-  }
   .post_show_comment_left{
     width: 310px;
   }
@@ -751,10 +750,12 @@
   }
  .post_show_comment_right{
     width: 240px;
-    // background-color: green;
+  }
+  .post_show_comment_new .post_show_error_box{
+    padding: 10px;
   }
   .post_show_error_list p{
-    font-size: 17px;
+    font-size: 15px;
   }
   .post_show_comment_new1{
     padding: 13px 20px;
@@ -778,16 +779,154 @@
     letter-spacing: 3px;
     text-indent: 3px;
   }
-  .post_index_link{
+  .post_index_link2{
     font-size: 20px;
   }
 }
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .post_show_top{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .post_show_post_image{
+    width: 350px;
+  }
+  .post_show_top2{
+    margin-left: 0;
+  }
+  .post_show_profile_image{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+  }
+  .post_show_author_comment{
+    width: 350px;
+  }
+  .post_show_author_comment1{
+    width: 100%;
+  }
+  .design_contributor_post_show_reaction{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .post_show_comment_content{
+    flex-direction: column;
+  }
+  .post_show_comment_left{
+    width: 100%;
+  }
+  .post_show_comment_right{
+    width: 400px;
+    margin-top: 50px;
+  }
+  .post_show_comment_new1{
+    padding: 15px 30px;
+  }
+  .post_show_comment_label{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .post_show_comment_area2{
+    height: 155px;
+    padding: 10px 15px;
+    font-size: 20px;
+  }
+  .post_show_comment_btn{
+    padding: 10px 40px;
+    font-size: 18px;
+  }
+  .post_index_link1 {
+    margin-top: 80px;
+  }
+  .post_index_link_decoration {
+    width: 80px;
+    height: 120px;
+    top: 87%;
+    left: 95%;
+  }
+}
+/*--------------------------------------*/
 
-
-
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .post_show_post_image{
+    width: 100%;
+  }
+  .post_show_profile_image{
+    width: 80px;
+    height: 80px;
+  }
+  .post_show_author_comment{
+    width: 100%;
+    margin-top: 15px;
+  }
+  .design_contributor_post_show_reaction{
+    width: 240px;
+    font-size: 13px;
+  }
+  .post_show_comment_heading{
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .post_show_comment_left{
+    border-left: solid 5px #321a0a;
+  }
+  .post_show_comment_box{
+    margin: 5px 0;
+  }
+  .post_show_comment_user1{
+    width: 40px;
+    height: 40px;
+  }
+  .post_show_comment_user2 p{
+    font-size: 12px;
+  }
+  .post_show_comment1:before{
+    top: 16px;
+    left: -16px;
+    margin-top: -8px;
+    border: 8px solid transparent;
+    border-right: 8px solid rgb(255, 255, 255);
+  }
+  .post_show_comment1{
+    padding: 5px 10px;
+  }
+  .post_show_comment_right{
+    width: 100%;
+  }
+  .post_show_comment_new1{
+    padding: 13px 20px;
+  }
+  .post_show_comment_label{
+    font-size: 16px;
+  }
+  .post_show_comment_area2{
+    font-size: 16px;
+    height: 100px;
+    padding: 6px 9px;
+  }
+  .post_show_comment_btn{
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  .post_show_comment_new2{
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-indent: 3px;
+  }
+  .post_index_link2{
+    font-size: 16px;
+  }
+  .post_index_link_decoration{
+    display: none;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
