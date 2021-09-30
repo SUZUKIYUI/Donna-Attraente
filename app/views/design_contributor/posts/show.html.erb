@@ -24,16 +24,14 @@
     </div>
 
     <div class="post_show_top2">
-      <!--<div class="post_show_user">-->
-        <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
-          <div class="post_show_user1 post_show_user">
-            <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
-          </div>
-          <div class="post_show_user2 post_show_user">
-            <%= @post.design_contributor.pen_name %>
-          </div>
-        <% end %>
-      <!--</div>-->
+      <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
+        <div class="post_show_user1 post_show_user">
+          <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
+        </div>
+        <div class="post_show_user2 post_show_user">
+          <%= @post.design_contributor.pen_name %>
+        </div>
+      <% end %>
       <div class="post_show_author_comment">
         <p>作者コメント</p>
         <div class="post_show_author_comment1">
@@ -50,28 +48,28 @@
       </div>
     </div>
   </div>
-  <!--------------------------------------作品削除ボタン---------------------------------------->
+  <!--------------------------作品削除ボタン-------------------------->
   <% if @post.design_contributor_id == current_design_contributor.id %>
     <div class="post_delete_link1">
       <%= link_to "作品を削除する", design_contributor_post_path(@post.id), method: :delete, class: "post_delete_link2" %>
     </div>
   <% end %>
-  <!--------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------------------------------------------------------------------->
 
   <div class="post_show_bottom">
+    <!--------------------------作品への反応----------------------------->
     <div class="post_show_reaction design_contributor_post_show_reaction">
-      <!-----------------------------------------作品への反応---------------------------------------->
       <p class="post_show_reaction_heading">このデザインへの反応</p>
       <div class="post_show_reaction_content post_show_reaction_want">
         <p>なにこれ欲しい☆</p>
         <div>
-          <span>★</span><%= @post.wants.count %>
+          <span><%= @post.wants.count %></span>★
         </div>
       </div>
       <div class="post_show_reaction_content post_show_reaction_comment">
         <p>コメント</p>
         <div>
-          <%= @post.comments.count %><span>件</span>
+          <span><%= @post.comments.count %></span>件
         </div>
       </div>
       <!--オファーモデルは存在するか-->
@@ -104,7 +102,7 @@
         <% elsif @post.offered_failure_by?(@post.id) %>
           <div class="post_show_reaction_content">
             <p>オファー</p>
-            <p class="post_show_failure_reaction1">オファー不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
+            <p class="post_show_reaction_content">オファー不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
           </div>
           <p class="post_show_failure_reaction2">現在オファーなし</p>
         <!---オファーモデルは存在するがこのデザインにオファーが来ていない-->
@@ -124,8 +122,8 @@
     </div>
     <!-------------------コメント一覧------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
-    <div class="post_show_comment_content">
-      <div class="post_show_comment_left">
+    <div class="post_show_bottom_content">
+      <div class="post_show_bottom_left">
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
             <div class="post_show_comment_box">
@@ -161,7 +159,7 @@
         <% end %>
       </div>
       <!-------コメント投稿フォーム------->
-      <div class="post_show_comment_right">
+      <div class="post_show_bottom_right">
         <div class="post_show_comment_new">
           <!--未入力の時のエラー文表示-->
           <% if @comment.errors.any? %>

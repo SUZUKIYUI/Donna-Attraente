@@ -3,7 +3,7 @@
 <div class="content_width post_show_back">
   <div class="post_show_top">
     <div class="post_show_top1">
-      <%= attachment_image_tag @post, :post_image, :fill, 450, 650 %>
+      <%= attachment_image_tag @post, :post_image, :fill, 450, 650, class: "post_show_post_image" %>
       <div class="company_want_detail">
         <p>なにこれ欲しい<span>☆</span></p>
         <p><span>★</span><%= @post.wants.count %></p>
@@ -11,16 +11,14 @@
     </div>
 
     <div class="post_show_top2">
-      <div class="post_show_user">
-        <%= link_to company_design_contributor_path(@post.design_contributor.id) do %>
-          <div class="post_show_user1 post_show_user_hover">
-            <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_user_hover" %>
-          </div>
-          <div class="post_show_user2 post_show_user_hover">
-            <%= @post.design_contributor.pen_name %>
-          </div>
-        <% end %>
-      </div>
+      <%= link_to company_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
+        <div class="post_show_user1 post_show_user">
+          <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
+        </div>
+        <div class="post_show_user2 post_show_user">
+          <%= @post.design_contributor.pen_name %>
+        </div>
+      <% end %>
       <div class="post_show_author_comment">
         <p>作者コメント</p>
         <div class="post_show_author_comment1">
@@ -34,10 +32,10 @@
   </div>
 
   <div class="post_show_bottom">
-    <!-------------------------------コメント一覧--------------------------------->
+    <!-------------------コメント一覧-------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
-    <div class="company_post_show_bottom_content">
-      <div class="company_post_show_bottom_left">
+    <div class="post_show_bottom_content">
+      <div class="post_show_bottom_left">
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
             <div class="post_show_comment_box">
@@ -50,7 +48,7 @@
                     <% if comment.design_contributor.id == @post.design_contributor.id %>
                       <p>投稿者</p>
                     <% else %>
-                      <%= comment.design_contributor.pen_name %>
+                      <p><%= comment.design_contributor.pen_name %></p>
                     <% end %>
                   </div>
                 <% end %>
@@ -69,33 +67,33 @@
           <p class="post_show_no_comment">コメントはまだありません</p>
         <% end %>
       </div>
-
-      <div class="company_post_show_bottom_right">
+      <!----------------------------------------->
+      <div class="post_show_bottom_right">
         <div class="company_post_show_bottom_right1">
-          <!-----------------------------------------作品への反応---------------------------------------->
+          <!---------------------作品への反応----------------------->
           <div class="post_show_reaction company_post_show_reaction">
             <p class="post_show_reaction_heading">このデザインへの反応</p>
             <div class="post_show_reaction_content post_show_reaction_want">
               <p>なにこれ欲しい☆</p>
               <div>
-                <span>★</span><%= @post.wants.count %>
+                <span><%= @post.wants.count %></span>★
               </div>
             </div>
             <div class="post_show_reaction_content post_show_reaction_comment">
               <p>コメント</p>
               <div>
-                <%= @post.comments.count %><span>件</span>
+                <span><%= @post.comments.count %></span>件
               </div>
             </div>
             <!--オファーモデルは存在するか-->
             <% if @post.offered_by? %>
-              <!---------------------交渉中のオファーが存在するか---------------------->
+              <!--------交渉中のオファーが存在するか--------->
               <% if @post.offered_negotiation_by?(@post.id) %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
                   <p>現在交渉中</p>
                 </div>
-              <!---------------------交渉成立オファーあれば表示----------------------->
+              <!----------交渉成立オファーあれば表示------------>
               <% elsif @post.offered_established_by?(@post.id) %>
                 <% if @offer.company == current_company %>
                   <div class="post_show_reaction_content">
@@ -108,29 +106,31 @@
                     <p>他社と交渉成立済</p>
                   </div>
                 <% end %>
-              <!---------------------交渉不成立オファーあれば表示--------------------->
+              <!---------交渉不成立オファーあれば表示-------->
               <% elsif @post.offered_failure_by?(@post.id) %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p>交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
+                  <p class="offered_failure_by_count">交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
                 </div>
                 <p class="post_offer_announce1">現在オファー受付中です</p>
-              <!-----オファーモデルは存在するがこのデザインにオファーが来ていない----->
+              <!--オファーモデルは存在するがこのデザインにオファーが来ていない-->
               <% else %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p>現在オファー受付中です</p>
+                  <p>0件</p>
                 </div>
+                <p class="post_offer_announce1">現在オファー受付中です</p>
               <% end %>
-            <!-----------------------オファーモデルが存在しない---------------------->
+            <!-------オファーモデルが存在しない------>
             <% else %>
               <div class="post_show_reaction_content">
                 <p>オファー</p>
-                <p>現在オファー受付中です</p>
+                <p>0件</p>
               </div>
+              <p class="post_offer_announce1">現在オファー受付中です</p>
             <% end %>
           </div>
-          <!------------------------------------------------------------------------------>
+          <!------------------------>
           <% if @post.offered_by? %>
             <% if @post.offered_negotiation_by?(@post.id) %>
               <% if @offer.company == current_company %>

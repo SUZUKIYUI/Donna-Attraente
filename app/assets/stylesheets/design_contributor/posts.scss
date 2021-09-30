@@ -449,18 +449,12 @@
   display: flex;
   justify-content: space-between;
 }
-.post_show_failure_reaction1 span{
-  margin: 0 5px;
-}
 .post_show_failure_reaction2{
   text-align: center;
   margin-top: 5px;
 }
-.post_show_reaction_want span{
-  margin-right: 5px;
-}
-.post_show_reaction_comment span{
-  margin-left: 5px;
+.post_show_reaction_content span{
+  margin: 0 5px;
 }
 .post_show_offer_link1{
   text-align: center;
@@ -481,16 +475,16 @@
 }
 .post_show_comment_heading{
   display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px 25px;
   font-size: 20px;
   border: double 5px rgb(59, 34, 33);
 }
-.post_show_comment_content{
+.post_show_bottom_content{
   display: flex;
 }
-.post_show_comment_left{
+.post_show_bottom_left{
   width: 550px;
   height: 700px;
   padding: 2%;
@@ -554,7 +548,7 @@
   width: 100%;
   margin-top: 50px;
 }
-.post_show_comment_right{
+.post_show_bottom_right{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -633,10 +627,10 @@
 
 /*-----------1400px以下に適用------------*/
 @media(max-width: 1400px){
-  .post_show_comment_left{
+  .post_show_bottom_left{
     width: 450px;
   }
-  .post_show_comment_right{
+  .post_show_bottom_right{
     width: 350px;
   }
 }
@@ -658,7 +652,7 @@
     width: 170px;
     height: 170px;
   }
-  .post_show_comment_left{
+  .post_show_bottom_left{
     width: 380px;
   }
   .post_show_comment1{
@@ -676,7 +670,7 @@
   .post_show_comment2{
     font-size: 13px;
   }
- .post_show_comment_right{
+ .post_show_bottom_right{
     width: 300px;
   }
   .post_show_error_list p{
@@ -732,7 +726,7 @@
     font-size: 15px;
     border-radius: 10px;
   }
-  .post_show_comment_left{
+  .post_show_bottom_left{
     width: 310px;
   }
   .post_show_comment1{
@@ -748,7 +742,7 @@
   .post_show_comment2{
     font-size: 13px;
   }
- .post_show_comment_right{
+ .post_show_bottom_right{
     width: 240px;
   }
   .post_show_comment_new .post_show_error_box{
@@ -813,13 +807,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .post_show_comment_content{
+  .post_show_bottom_content{
     flex-direction: column;
   }
-  .post_show_comment_left{
+  .post_show_bottom_left{
     width: 100%;
   }
-  .post_show_comment_right{
+  .post_show_bottom_right{
     width: 400px;
     margin-top: 50px;
   }
@@ -872,7 +866,7 @@
     font-size: 16px;
     margin-bottom: 15px;
   }
-  .post_show_comment_left{
+  .post_show_bottom_left{
     border-left: solid 5px #321a0a;
   }
   .post_show_comment_box{
@@ -895,7 +889,7 @@
   .post_show_comment1{
     padding: 5px 10px;
   }
-  .post_show_comment_right{
+  .post_show_bottom_right{
     width: 100%;
   }
   .post_show_comment_new1{
