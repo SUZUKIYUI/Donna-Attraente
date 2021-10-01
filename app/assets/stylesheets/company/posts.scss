@@ -15,34 +15,19 @@
 .company_want_detail span{
   margin: 0 5px;
 }
-.company_post_show_bottom_content{
-  display: flex;
-}
-.company_post_show_bottom_left{
-  width: 50%;
-  height: 700px;
-  padding: 2%;
-  margin-right: 5%;
-  background-color: rgb(221, 212, 205);
-  border-left: solid 10px rgb(50, 26, 10);
-}
-.company_post_show_bottom_right{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 480px;
-}
 .company_post_show_bottom_right1{
   margin: 0 auto;
+  text-align: center;
 }
-.company_post_show_reaction{
+.company_post_show_bottom_right1 .company_post_show_reaction{
   margin: 0 auto;
   margin-bottom: 50px;
+  maegin-top: 0;
 }
 .post_offer_announce1{
   padding: 10px 20px;
   margin: 10px 0;
+  text-align: center;
   color: white;
   background-color: rgb(61, 36, 34);
 }
@@ -61,13 +46,16 @@
   text-align: center;
 }
 .offer_new_link1{
-  margin: 20px;
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
 }
 .offer_new_link2{
   text-align: center;
   font-size: 18px;
   line-height: 30px;
-  width: 300px;
+  margin: 0 auto;
   padding: 55px 0;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
@@ -75,10 +63,43 @@
 .offer_new_link2:hover{
   opacity: 0.8;
 }
-.post_offer_announce3{
+.company_post_show_call{
   margin-top: 10px;
-  text-align: center;
 }
 .company_post_show_bottom_right2{
   margin-left: auto;
 }
+/*--------------------------------------*/
+
+/*-----------1400px以下に適用------------*/
+@media(max-width: 1400px){
+  .post_show_bottom_content .company_post_show_bottom_left{
+    width: 500px;
+  }
+  .post_show_bottom_content .company_post_show_bottom_right{
+    width: 350px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------1200px以下に適用------------*/
+@media(max-width: 1200px){
+  .post_show_bottom_content .company_post_show_bottom_left{
+    width: 400px;
+  }
+  .post_show_bottom_content .company_post_show_bottom_right{
+    width: 300px;
+  }
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 260px;
+  }
+  .company_post_show_bottom_right1 .offer_new_link1{
+    width: 260px;
+  }
+  .company_post_show_call{
+    font-size: 15px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
