@@ -25,7 +25,7 @@
   maegin-top: 0;
 }
 .post_offer_announce1{
-  padding: 10px 20px;
+  padding: 10px 0;
   margin: 10px 0;
   text-align: center;
   color: white;
@@ -103,3 +103,27 @@
 /*--------------------------------------*/
 
 /*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .post_show_bottom_content .company_post_show_bottom_left{
+    width: 60%;
+  }
+  .post_show_bottom_content .company_post_show_bottom_right{
+    width: 40%;
+    font-size: 12px;
+  }
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 90%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+  }
+  .company_post_show_bottom_right1 .offer_new_link1{
+    width: 90%;
+  }
+  .offer_new_link2{
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .company_post_show_call{
+    font-size: 11px;
+  }
+}
