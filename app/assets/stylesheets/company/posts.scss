@@ -15,9 +15,13 @@
 .company_want_detail span{
   margin: 0 5px;
 }
+.company_post_show_bottom_right{
+  position: relative;
+}
 .company_post_show_bottom_right1{
   margin: 0 auto;
   text-align: center;
+  width: 95%;
 }
 .company_post_show_bottom_right1 .company_post_show_reaction{
   margin: 0 auto;
@@ -68,6 +72,16 @@
 }
 .company_post_show_bottom_right2{
   margin-left: auto;
+}
+.company_post_index_link_decoration{
+  background-image: url("../post_show_back2");
+  background-size: contain;
+  width: 120px;
+  height: 170px;
+  position: absolute;
+  top: 80%;
+  left: 92%;
+  z-index: 1;
 }
 /*--------------------------------------*/
 
@@ -120,10 +134,65 @@
     width: 90%;
   }
   .offer_new_link2{
-    line-height: 20px;
+    line-height: 18px;
     font-size: 16px;
   }
   .company_post_show_call{
     font-size: 11px;
+  }
+  .company_post_index_link_decoration{
+    left: 88%;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .post_show_bottom_content .company_post_show_bottom_left{
+    width: 100%;
+  }
+  .post_show_bottom_content .company_post_show_bottom_right{
+    width: 400px;
+    margin-top: 50px;
+    font-size: 18px;
+  }
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 80%;
+  }
+  .company_post_show_bottom_right1 .offer_new_link1{
+    width: 75%;
+  }
+  .offer_new_link2{
+    line-height: 30px;
+  }
+  .company_post_show_call{
+    font-size: 18px;
+  }
+  .company_post_index_link_decoration {
+    width: 80px;
+    height: 120px;
+    top: 87%;
+    left: 95%;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .post_show_bottom_content .company_post_show_bottom_right{
+    width: 100%;
+    font-size: 12px;
+  }
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 230px;
+  }
+  .company_post_show_bottom_right1 .offer_new_link1{
+    width: 220px;
+  }
+  .offer_new_link2{
+    line-height: 20px;
+  }
+  .company_post_show_call{
+    font-size: 12px;
   }
 }

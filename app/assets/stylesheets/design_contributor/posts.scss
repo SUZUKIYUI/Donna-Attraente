@@ -610,6 +610,8 @@
   display: inline-block;
   font-size: 25px;
   color: rgb(70, 40, 20);
+  position: relative;
+  z-index: 99;
 }
 .post_index_link2:hover{
   color: rgba(70, 40, 20, 0.7);
@@ -622,6 +624,7 @@
   position: absolute;
   top: 80%;
   left: 100%;
+  z-index: 1;
 }
 /*--------------------------------------*/
 
