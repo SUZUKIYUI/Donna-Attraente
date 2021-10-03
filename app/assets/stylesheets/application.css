@@ -170,6 +170,8 @@ header{
 .header_list{
   text-align: center;
   font-size: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .header_link{
@@ -183,6 +185,13 @@ header{
 .header_list_ruby{
   font-size: 10px;
   display: block;
+}
+
+.notification_color_ball{
+  position: absolute;
+  top: -30%;
+  right: 70%;
+  z-index: 10;
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 

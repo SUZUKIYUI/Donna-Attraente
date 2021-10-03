@@ -66,11 +66,11 @@
               <% end %>
             </li>
             <!--なにこれ欲しい・コメントの通知-->
-            <% if unchecked_notifications.any? %>
-              <i class="fa fa-circle" style="color: gold;"></i>
-            <% end %>
             <li class="header_list">
               <%= link_to design_contributor_notifications_path do %>
+                <% if unchecked_notifications.any? %>
+                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                <% end %>
                 <div class="header_link">
                   <i class="fas fa-bell"></i>
                   <span class="header_list_ruby">通知</span>
@@ -78,11 +78,11 @@
               <% end %>
             </li>
             <!-----------オファーの通知---------->
-            <% if unchecked_notification2s.any? %>
-              <i class="fa fa-circle" style="color: gold;"></i>
-            <% end %>
             <li class="header_list">
               <%= link_to design_contributor_notification2s_path do %>
+                <% if unchecked_notification2s.any? %>
+                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                <% end %>
                 <div class="header_link">
                   <i class="far fa-envelope"></i>
                   <span class="header_list_ruby">オファー</span>
@@ -135,11 +135,11 @@
               <% end %>
             </li>
             <!---------オファー（返信）の通知--------->
-            <% if unchecked_offer_notifications.any? %>
-              <i class="fa fa-circle" style="color: gold;"></i>
-            <% end %>
             <li class="header_list">
               <%= link_to company_notifications_path do %>
+                <% if unchecked_offer_notifications.any? %>
+                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                <% end %>
                 <div class="header_link">
                   <i class="fas fa-envelope"></i>
                   <span class="header_list_ruby">オファー返信</span>
