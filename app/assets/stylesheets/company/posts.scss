@@ -76,6 +76,7 @@
 .company_post_index_link_decoration{
   background-image: url("../post_show_back2");
   background-size: contain;
+  background-repeat: no-repeat;
   width: 120px;
   height: 170px;
   position: absolute;
@@ -171,7 +172,7 @@
   .company_post_index_link_decoration {
     width: 80px;
     height: 120px;
-    top: 87%;
+    top: 80%;
     left: 95%;
   }
 }
@@ -194,5 +195,8 @@
   }
   .company_post_show_call{
     font-size: 12px;
+  }
+  .company_post_index_link_decoration{
+    display: none;
   }
 }
