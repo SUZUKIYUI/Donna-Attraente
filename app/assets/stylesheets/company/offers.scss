@@ -9,7 +9,7 @@
 // offer新規登録画面
 .offer_new_content{
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 10%;
   width: 600px;
 }
 .offer_new_form{
@@ -22,8 +22,8 @@
 }
 .offer_new_input{
   width: 380px;
-  height: 200px;
-  font-size: 18px;
+  height: 210px;
+  font-size: 20px;
   font-family: "HiraMinProN-W6";
   color: rgb(61, 36, 34);
   padding: 10px 15px;
@@ -58,5 +58,59 @@
   }
   .offer_new_input{
     width: 350px;
+    height: 190px;
+    font-size: 18px;
   }
 }
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .offer_new_content{
+    width: 420px;
+    margin-top: 12%;
+  }
+  .offer_new_label{
+    font-size: 18px;
+  }
+  .offer_new_input{
+    width: 260px;
+    height: 150px;
+    font-size: 16px;
+  }
+  .offer_new_btn_form{
+    margin-top: 30px;
+  }
+  .offer_new_btn{
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    text-indent: 2px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .offer_new_form{
+    flex-direction: column;
+  }
+  .offer_new_content{
+    width: 240px;
+  }
+  .offer_new_input{
+    width: 100%;
+    height: 120px;
+    font-size: 16px;
+  }
+  .offer_new_btn_form{
+    margin-top: 15px;
+  }
+  .offer_new_btn{
+    font-size: 14px;
+    padding: 8px 18px;
+    letter-spacing: 1px;
+    text-indent: 1px;
+  }
+}
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
