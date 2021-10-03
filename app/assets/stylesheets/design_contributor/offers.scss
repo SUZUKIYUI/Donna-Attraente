@@ -38,8 +38,9 @@
 .offer_detail2{
   display: flex;
   justify-content: center;
-  margin: 5% 10%;
+  width: 700px;
   padding-bottom: 5%;
+  margin: 5% auto;
   border-bottom: solid 3px rgb(70, 40, 20);
 }
 .offer_profile_image{
@@ -50,7 +51,6 @@
   font-size: 20px;
 }
 .offer_comment{
-  width: 500px;
   padding: 10px 15px;
   border-radius: 10px;
   position: relative;
@@ -67,9 +67,10 @@
   z-index: 2;
 }
 .offer_edit_content{
+  width: 700px;
   font-weight: bold;
   color: rgb(70, 40, 20);
-  margin: 0 10%;
+  margin: 0 auto;
 }
 .offer_edit_heading{
   font-size: 20px;
@@ -199,7 +200,7 @@ input[type=radio]:checked + .offer_edit_input::after {
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .offer_heading{
-    font-size: 22px;
+    font-size: 21px;
   }
   .offer_post_image{
     width: 230px;
