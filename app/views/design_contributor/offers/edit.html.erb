@@ -6,7 +6,7 @@
 
   <div class="offer_detail">
     <div class="offer_detail1">
-      <%= attachment_image_tag @post, :post_image, :fill, 300, 420, class: "offer_post_image" %>
+      <%= attachment_image_tag @post, :post_image, :fill, 400, 550, class: "offer_post_image" %>
       <p class="offer_announce">このデザインに商品化のオファーが来ています</p>
     </div>
     <div class="offer_detail2">
@@ -24,11 +24,11 @@
     </div>
   </div>
   <!--------------------------------------------------------------------------------------------->
-  <div class="offer_reply">
-    <p class="offer_reply_heading">返信する</p>
+  <div class="offer_edit_content">
+    <p class="offer_edit_heading">返信する</p>
     <!----------------------------未入力の時のエラー文表示--------------------------->
     <% if flash[:offer_edit] %>
-      <div class="error_box offer_edit_error_box">
+      <div class="error_box offer_error_box">
         <div class="error_list">
           <%= flash[:offer_edit] %>
         </div>

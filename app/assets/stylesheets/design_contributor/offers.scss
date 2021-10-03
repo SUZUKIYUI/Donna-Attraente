@@ -9,8 +9,7 @@
 // offer編集画面
 .offer_back{
   background-image: url("../base_back3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100%;
   font-family: "HiraMinProN-W6";
   padding-top: 10%;
   padding-bottom: 10%;
@@ -22,7 +21,7 @@
   text-align: center;
 }
 .offer_detail{
-  margin-top: 3%;
+  margin-top: 5%;
   font-weight: bold;
   color: rgb(70, 40, 20);
 }
@@ -30,7 +29,7 @@
   text-align: center;
 }
 .offer_announce{
-  font-size: 18px;
+  font-size: 20px;
   color: rgb(61, 36, 34);
   text-align: center;
   margin-top: 10px;
@@ -68,18 +67,21 @@
   border-right: 12px solid rgb(246, 238, 233);
   z-index: 2;
 }
-.offer_reply{
+.offer_edit_content{
   font-weight: bold;
   color: rgb(70, 40, 20);
   margin: 0 10%;
 }
-.offer_reply_heading{
+.offer_edit_heading{
   font-size: 20px;
   border: double 3px rgb(70, 40, 20);
   display: inline-block;
   padding: 10px 50px;
   letter-spacing: 5px;
   text-indent: 5px;
+}
+.offer_error_box{
+  margin: 20px 0;
 }
 .offer_reply_intro{
   font-size: 20px;
@@ -165,4 +167,43 @@ input[type=radio]:checked + .offer_edit_input::after {
   margin: 0 auto;
   margin-top: 5%;
   width: 500px;
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .offer_heading{
+    font-size: 40px;
+  }
+  .offer_post_image{
+    width: 300px;
+  }
+  .offer_announce{
+    font-size: 18px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .offer_heading{
+    font-size: 30px;
+  }
+  .offer_announce{
+    font-size: 16px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .offer_heading{
+    font-size: 22px;
+  }
+  .offer_post_image{
+    width: 230px;
+  }
+  .offer_announce{
+    font-size: 11px;
+  }
 }

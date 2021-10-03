@@ -7,24 +7,21 @@
 
 
 // offer新規登録画面
-.offer_post{
+.offer_new_content{
   margin: 0 auto;
   margin-top: 5%;
   width: 600px;
-}
-.company_offer_error_box{
-  margin-bottom: 5%;
 }
 .offer_new_form{
   display: flex;
   justify-content: space-between;
 }
 .offer_new_label{
-  font-size: 20px;
+  font-size: 22px;
   color: rgb(61, 36, 34);
 }
 .offer_new_input{
-  width: 400px;
+  width: 380px;
   height: 200px;
   font-size: 18px;
   font-family: "HiraMinProN-W6";
@@ -42,10 +39,24 @@
   font-weight: bold;
   color: #c5b4a9;
   padding: 12px 32px;
-  letter-spacing: 8px;
-  text-indent: 8px;
+  letter-spacing: 4px;
+  text-indent: 4px;
 }
 .offer_new_btn:hover{
   background-color: rgba(70, 40, 20, 0.7);
   cursor: pointer;
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .offer_new_content{
+    width: 550px;
+  }
+  .offer_new_label{
+    font-size: 20px;
+  }
+  .offer_new_input{
+    width: 350px;
+  }
 }
