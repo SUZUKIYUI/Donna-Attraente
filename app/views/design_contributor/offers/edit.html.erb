@@ -10,9 +10,7 @@
       <p class="offer_announce">このデザインに<span>商品化のオファーが来ています</span></p>
     </div>
     <div class="offer_detail2">
-      <div class="offer_profile_image">
-        <%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image_company.png", size: "200x200" %>
-      </div>
+      <%= attachment_image_tag @offer.company, :profile_image, 200, 200, fallback: "no_image_company.png", size: "200x200", class: "offer_profile_image" %>
       <div>
         <div class="offer_company_name">
           <%= @offer.company.company_name %>
