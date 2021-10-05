@@ -24,21 +24,12 @@
   <!--------------------------------------------------------------------------------------------->
   <div class="offer_edit_content">
     <p class="offer_edit_heading">返信する</p>
-    <!----------------------------未入力の時のエラー文表示--------------------------->
-    <% if flash[:offer_edit] %>
-      <div class="error_box offer_error_box">
-        <div class="error_list">
-          <%= flash[:offer_edit] %>
-        </div>
-      </div>
-    <% end %>
-    <!-------------------------------------------------------------------------------->
-    <p class="offer_reply_intro">オファーを</p>
+    <p class="offer_edit_intro">オファーを</p>
     <%= form_with model: [@post, @offer], url: design_contributor_post_offer_path(post_id: @post.id, id: @offer.id), local: true do |f| %>
-      <div class="offer_reply_form">
+      <div class="offer_edit_form">
         <div class="offer_edit_input_form">
-          <%= f.radio_button :offer_status, :established %>
-          <%= f.label :offer_status_established, "お受けする", class: "offer_edit_input",required: "required" %>
+          <%= f.radio_button :offer_status, :established, required: "required" %>
+          <%= f.label :offer_status_established, "お受けする", class: "offer_edit_input" %>
         </div>
         <div class="offer_edit_input_form offer_status_failure">
           <%= f.radio_button :offer_status, :failure %>

@@ -13,7 +13,6 @@ class DesignContributor::OffersController < ApplicationController
       @post.create_notification_offer!(current_design_contributor, @offer.id, @offer.company.id)
       redirect_to design_contributor_post_path(@post.id)
     else
-      flash[:offer_edit] = "どちらか選択してください"
       render :edit
     end
   end
