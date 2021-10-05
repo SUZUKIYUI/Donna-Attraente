@@ -6,48 +6,6 @@
 
 
 
-// 企業一覧画面
-.company_index_back{
-  background-image: url("../base_back3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
-.company_index_heading1{
-  font-size: 50px;
-  font-weight: bold;
-  color: rgb(70, 40, 20);
-  text-align: center;
-}
-.company_index_lead{
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(70, 40, 20);
-  text-align: center;
-}
-.company_index_area{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 5%;
-}
-.company_show_link{
-  text-align: center;
-}
-.company_show_link:hover{
-  opacity: 0.8;
-}
-.company_show_link_name{
-  color: rgb(61, 36, 34);
-  font-size: 20px;
-}
-/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-
 
 // 企業詳細画面
 .company_show_name1{

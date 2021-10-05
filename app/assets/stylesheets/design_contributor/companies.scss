@@ -6,6 +6,109 @@
 
 
 
+
+// 企業一覧画面
+.company_index_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.company_index_heading1{
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.company_index_lead{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.company_index_area{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 760px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.company_show_link{
+  text-align: center;
+}
+.company_show_link:hover{
+  opacity: 0.8;
+}
+.company_show_link_name{
+  color: rgb(61, 36, 34);
+  font-size: 20px;
+}
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .company_index_heading1{
+    font-size: 40px;
+  }
+  .company_index_lead{
+    font-size: 18px;
+  }
+  .company_index_area{
+    width: 450px;
+  }
+  .company_index_profile_image{
+    width: 200px;
+    height: 170px;
+  }
+  .company_show_link_name{
+    font-size: 18px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .company_index_heading1{
+    font-size: 30px;
+  }
+  .company_index_lead{
+    font-size: 16px;
+  }
+  .company_index_area{
+    width: 400px;
+  }
+  .company_index_profile_image{
+    width: 180px;
+    height: 150px;
+  }
+  .company_show_link_name{
+    font-size: 16px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .company_index_heading1{
+    font-size: 22px;
+  }
+  .company_index_lead{
+    font-size: 11px;
+  }
+  .company_index_area{
+    justify-content: center;
+    width: 240px;
+  }
+  .company_show_link{
+    margin: 20px 0;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
 // 企業詳細画面
 .company_show_back{
   background-image: url("../base_back3.png");

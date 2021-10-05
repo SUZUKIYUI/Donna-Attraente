@@ -7,14 +7,14 @@
 
   <div class="company_index_area">
     <% @companies.each do |company| %>
-      <div class="company_show_link">
-        <%= link_to design_contributor_company_path(company.id) do %>
-          <%= attachment_image_tag company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
+      <!--<div class="company_show_link">-->
+        <%= link_to design_contributor_company_path(company.id), class: "company_show_link" do %>
+          <%= attachment_image_tag company, :profile_image, :fill, 350, 310, fallback: "no_image_company.png", size: "350x310", class: "company_index_profile_image" %>
           <div class="company_show_link_name">
             <%= company.company_name %>
           </div>
         <% end %>
-      </div>
+      <!--</div>-->
     <% end %>
   </div>
 
