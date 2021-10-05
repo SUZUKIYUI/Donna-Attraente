@@ -6,7 +6,7 @@
 
     <div class="company_show1">
         <div>
-            <%= attachment_image_tag @company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
+            <%= attachment_image_tag @company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300", class: "company_show_profile_image" %>
             <div class="company_show1_name">
                 <div class="company_show1_company_name">
                     <%= @company.company_name %>
@@ -32,7 +32,7 @@
                 <% @offers.each do |offer| %>
                     <div class="company_show2_post_show_link">
                         <%= link_to design_contributor_post_path(offer.post.id) do %>
-                            <%= attachment_image_tag offer.post, :post_image, :fill, 210,310 %>
+                            <%= attachment_image_tag offer.post, :post_image, :fill, 210,310, class: "company_show_offer_post" %>
                         <% end %>
                     </div>
                 <% end %>

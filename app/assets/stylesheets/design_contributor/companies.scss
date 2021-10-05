@@ -205,4 +205,61 @@
 .company_show3_flex p{
   width: 150px;
 }
-// -----------------------------
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .company_show_heading1{
+    font-size: 40px;
+  }
+  .company_show1{
+    width: 550px;
+  }
+  .company_show_profile_image{
+    width: 200px;
+    height: 170px;
+  }
+  .company_show1_name{
+    margin-top: 0px;
+  }
+  .company_show1_company_name{
+    font-size: 20px;
+  }
+  .company_show1_company_name_kana{
+    font-size: 13px;
+  }
+  .company_show1_introduction{
+    width: 350px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+  }
+  .company_show_decoration{
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: 65px;
+  }
+  .company_show1_introduction_text{
+    font-size: 15px;
+  }
+  .company_show2{
+    width: 550px;
+  }
+  .company_show2_post_show_link {
+    padding: 10px;
+    margin: 15px;
+  }
+  .company_show_offer_post{
+    width: 150px;
+  }
+  .company_show3{
+    width: 550px;
+    padding: 20px 30px;
+    font-size: 15px;
+  }
+  .company_show3_flex p{
+    width: 100px;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
