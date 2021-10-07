@@ -14,12 +14,16 @@
   background-image: url("../decorate_back1.png");
   background-repeat: no-repeat;
   background-size: contain;
+  width: 540px;
+  height: 300px;
   position: absolute;
   top: 25%;
   left: 45%;
 }
 .posts_index_heading2{
-  margin: 75px 80px 145px 140px;
+  position: absolute;
+  top: 22%;
+  left: 25%;
 }
 .posts_index_bottom{
   background-image: url("../base_back2.png");
@@ -124,6 +128,10 @@
 
 // -----------1200px以下に適用------------
 @media(max-width: 1200px){
+  .posts_index_heading_back{
+    width: 450px;
+    height: 250px;
+  }
   .post_index_image{
     width: 190px;
   }
@@ -136,11 +144,8 @@
 // -----------1000px以下に適用------------
 @media(max-width: 1000px){
   .posts_index_heading_back{
-    top: 18%;
-    left: 35%;
-  }
-  .posts_index_heading2{
-    margin: 65px 70px 135px 130px;
+    width: 360px;
+    height: 200px;
   }
   .content_width .posts_index_bottom{
     padding: 5% 10% 10%;
@@ -160,14 +165,11 @@
 // -----------800px以下に適用------------
 @media(max-width: 800px){
   .posts_index_heading_back{
-    width: 330px;
-    height: 190px;
-    top: 15%;
-    left: 36%;
-    // background-color: red;
+    background-image: none;
   }
   .posts_index_heading2{
-    margin: 36px 30px 50px 68px;
+    top: 20%;
+    left: 20%;
   }
   .post_index_image{
     width: 170px;
@@ -178,7 +180,36 @@
 }
 // --------------------------------------
 
-// -----------600px以下に適用（未完）------------
+// -----------600px以下に適用------------
+@media(max-width: 600px){
+  .posts_index_heading_back{
+    width: 300px;
+    height: 70px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .posts_index_heading2{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 70px;
+    text-align: center;
+  }
+  .posts_index_heading3 h3{
+    font-size: 20px;
+    border: double 6px #3b2221;
+    width: 160px;
+  }
+  .posts_index_heading3 span{
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
