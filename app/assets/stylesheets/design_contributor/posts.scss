@@ -50,7 +50,7 @@
   margin-top: 5%;
 }
 .post_index_box{
-  margin: 0 15px;
+  margin: 15px;
 }
 .post_show_link{
   padding: 10px;
@@ -122,13 +122,18 @@
 }
 // --------------------------------------
 
-// -----------1200px以下に適用（未完）------------
+// -----------1200px以下に適用------------
 @media(max-width: 1200px){
-
+  .post_index_image{
+    width: 190px;
+  }
+  .post_show_link{
+    padding: 8px;
+  }
 }
 // --------------------------------------
 
-// -----------1000px以下に適用（未完）------------
+// -----------1000px以下に適用------------
 @media(max-width: 1000px){
   .posts_index_heading_back{
     top: 18%;
@@ -137,10 +142,40 @@
   .posts_index_heading2{
     margin: 65px 70px 135px 130px;
   }
+  .content_width .posts_index_bottom{
+    padding: 5% 10% 10%;
+  }
+  .posts_index_heading3 h3{
+    font-size: 25px;
+    border: double 8px #3b2221;
+    width: 200px;
+  }
+  .posts_index_heading3 span{
+    margin-left: 30px;
+    font-size: 18px;
+  }
 }
 // --------------------------------------
 
-// -----------800px以下に適用（未完）------------
+// -----------800px以下に適用------------
+@media(max-width: 800px){
+  .posts_index_heading_back{
+    width: 330px;
+    height: 190px;
+    top: 15%;
+    left: 36%;
+    // background-color: red;
+  }
+  .posts_index_heading2{
+    margin: 36px 30px 50px 68px;
+  }
+  .post_index_image{
+    width: 170px;
+  }
+  .post_show_link{
+    padding: 6px;
+  }
+}
 // --------------------------------------
 
 // -----------600px以下に適用（未完）------------
