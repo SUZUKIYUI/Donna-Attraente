@@ -605,17 +605,9 @@
   .about_top .about_heading2 h2{
     letter-spacing: 2px;
   }
-  .about_bottom_content {
-    width: 600px;
+  .about_bottom_content{
+    width: 500px;
     height: 320px;
-    margin: 20px;
-    color: #3d2422;
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-  }
-  .about_bottom1_content{
-    top: 20%;
   }
   .about_bottom2_content{
     left: 40%;
@@ -643,15 +635,13 @@
     font-size: 20px;
     letter-spacing: 1px;
   }
+  .about_bottom_content{
+    width: 420px;
+    height: 300px;
+  }
   .about_bottom_content p{
     font-size: 14px;
     margin: 10px 0;
-  }
-  .about_bottom1_content{
-    top: 30%;
-  }
-  .about_bottom2_content{
-    top: 10%;
   }
   .about_bottom3_content{
     width: 650px;
@@ -686,7 +676,39 @@
 
 // -----------800px以下に適用------------
 @media(max-width: 800px){
-
+  .about_heading2{
+    top: 35%;
+    left: 45%;
+  }
+  .about_heading2 p{
+    display: none;
+  }
+  .about_bottom_content{
+    width: 350px;
+    height: 220px;
+  }
+  .about_bottom_heading{
+    font-size: 16px;
+  }
+  .about_bottom_content p{
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .about_bottom2_content{
+    left: 36%;
+  }
+  .about_bottom2_content span{
+    display: none;
+  }
+  .about_bottom3_content{
+    width: 90%;
+  }
+  .offer_structure_heading{
+    font-size: 20px;
+  }
+  .offer_structure_detail {
+      font-size: 12px;
+  }
 }
 // --------------------------------------
 
