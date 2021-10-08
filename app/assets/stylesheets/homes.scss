@@ -424,13 +424,13 @@
 
 
 
-// ----------------------------------------------About画面----------------------------------------------
+// About画面
 .about_top{
   background-image: url("about_top.png");
 }
 .about_heading2{
   position: absolute;
-  top: 34%;
+  top: 33%;
   left: 48%;
 }
 .about_heading2 h2{
@@ -489,6 +489,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 10% 0;
+  color: #3d2422;
   background-color: rgb(197, 180, 169);
 }
 .about_bottom3_content{
@@ -594,4 +595,101 @@
   border-radius: 10px;
   background-color: #F5F5F5;
 }
+// --------------------------------------
+
+// -----------1200px以下に適用------------
+@media(max-width: 1200px){
+  .about_heading2{
+    top: 31%;
+  }
+  .about_top .about_heading2 h2{
+    letter-spacing: 2px;
+  }
+  .about_bottom_content {
+    width: 600px;
+    height: 320px;
+    margin: 20px;
+    color: #3d2422;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+  .about_bottom1_content{
+    top: 20%;
+  }
+  .about_bottom2_content{
+    left: 40%;
+  }
+  .about_bottom_content p{
+    margin: 15px 0;
+    line-height: 20px;
+  }
+}
+// --------------------------------------
+
+// -----------1000px以下に適用------------
+@media(max-width: 1000px){
+  .about_heading2{
+    top: 30%;
+  }
+  .about_heading2 h2{
+    margin-bottom: 0px;
+  }
+  .about_heading2 p{
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+  .about_bottom_heading{
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .about_bottom_content p{
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .about_bottom1_content{
+    top: 30%;
+  }
+  .about_bottom2_content{
+    top: 10%;
+  }
+  .about_bottom3_content{
+    width: 650px;
+  }
+  .offer_structure_detail{
+    font-size: 14px;
+  }
+  .registered_person_detail{
+    width: 320px;
+  }
+  .offer_flow_detail{
+    width: 300px;
+    margin: 20px 5px;
+  }
+  .offer_flow {
+    width: 100%;
+  }
+  .offer_flow_detail_text1{
+    font-size: 18px;
+  }
+  .offer_flow_detail_text2_frame{
+    width: 100%;
+    height: 70px;
+  }
+  .offer_flow_detail_text2{
+    width: 100%;
+    height: 70px;
+    font-size: 13px;
+  }
+}
+// --------------------------------------
+
+// -----------800px以下に適用------------
+@media(max-width: 800px){
+
+}
+// --------------------------------------
+
+// -----------600px以下に適用------------
+
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
