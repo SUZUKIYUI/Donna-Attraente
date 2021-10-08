@@ -744,5 +744,29 @@
 // --------------------------------------
 
 // -----------600px以下に適用------------
+@media(max-width: 600px){
+  .offer_structure_heading{
+    font-size: 15px;
+  }
+  .offer_structure_heading span{
+    margin-left: 3px;
+    letter-spacing: 1px;
+  }
+  .offer_structure_detail{
+    text-align: left;
+  }
+  .offer_structure1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .registered_person_detail{
+    margin-top: 25px;
+  }
+  .offer_structure2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+}
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
