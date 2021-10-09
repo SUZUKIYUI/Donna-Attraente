@@ -466,7 +466,7 @@
   margin: auto;
 }
 .about_bottom1_content{
-  top: 10%;
+  top: 15%;
   left: 15%;
 }
 .about_bottom_heading{
@@ -745,6 +745,48 @@
 
 // -----------600px以下に適用------------
 @media(max-width: 600px){
+  .about_top{
+    background-image: url("about_top_max_600.png");
+  }
+  .about_heading2{
+    width: 90%;
+    height: 56px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .about_heading2 span{
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .about_bottom{
+    padding-top: calc(1500 / 2000 * 100%);
+  }
+  .about_bottom_content{
+    width: 90%;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .about_bottom_content p{
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .about_bottom1{
+    background-image: url("about_bottom_back1_max_600.png");
+  }
+  .about_bottom2{
+    background-image: url("about_bottom_back2_max_600.png");
+  }
+  .about_bottom3_content{
+    width: 90%;
+  }
   .offer_structure_heading{
     font-size: 15px;
   }
@@ -768,5 +810,19 @@
     margin-top: 10%;
   }
 }
+// --------------------------------------
 
+// -----------400px以下に適用------------
+@media(max-width: 400px){
+  .about_bottom_content{
+    height: 200px;
+  }
+  .about_bottom_heading{
+    font-size: 12px;
+  }
+  .about_bottom_content p{
+    font-size: 10px;
+    margin: 3px 0;
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
