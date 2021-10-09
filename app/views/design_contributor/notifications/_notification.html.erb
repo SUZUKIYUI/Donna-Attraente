@@ -5,7 +5,7 @@
     <% end %>
   </div>
   <div class="notification_content2">
-    <%= notification_form(notification) %><br />
+    <%= notification_form(notification) %>
     <span><%= "(#{time_ago_in_words(notification.created_at)}前)" %></span>
     <% if !@comment.nil? %>
       <p class="notification_comment"><%= @comment %></p>

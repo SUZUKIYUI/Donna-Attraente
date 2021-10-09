@@ -7,8 +7,103 @@
 
 
 // いいね・コメント通知画面
+.notification_back{
+  background-image: url("../base_back3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.notification_heading1{
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(70, 40, 20);
+  text-align: center;
+}
+.notification_content{
+  width: 550px;
+  color: rgb(59, 34, 33);
+  margin: 5% auto;
+}
+.notification_content_flex{
+  display: flex;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-bottom: solid 1px rgba(59, 34, 33, 0.3);
+}
+.notification_content1:hover{
+  opacity: 0.8;
+}
+.notification_content_img{
+    border-radius: 100%;
+}
+.notification_content2{
+    font-size: 17px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.notification_content2 a{
+  color: #AA0000;
+}
+.notification_content2 a:hover{
+  color: #DD0000;
+}
+.notification_content2 span{
+  font-size: 13px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
 .notification_comment{
     margin-top: 10px;
     color: rgba(59, 34, 33, 0.7);
+    text-align: center;
 }
-// ------------------------------
+/*--------------------------------------*/
+
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+    .notification_heading1{
+        font-size: 30px;
+    }
+    .notification_content{
+        width: 450px;
+    }
+    .notification_content2{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+    .notification_heading1{
+        font-size: 25px;
+    }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+    .notification_back {
+        padding: 10%;
+    }
+    .notification_heading1{
+        font-size: 17px;
+    }
+    .notification_content{
+        width: auto;
+    }
+    .notification_content_img{
+        width: 40px;
+        height: 40px;
+    }
+    .notification_content2{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
