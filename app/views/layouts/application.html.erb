@@ -22,177 +22,185 @@
             </div>
           <% end %>
         </div>
-        <% if design_contributor_signed_in? %>
-        <!---------------------デザイン投稿者がログインしている場合のヘッダーリスト---------------------->
-          <ul class="login_header_lists">
-            <li class="header_list">
-              <%= link_to root_path do %>
-                <div class="header_link">
-                  Top
-                  <span class="header_list_ruby">トップページ</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to design_contributor_posts_path do %>
-                <div class="header_link">
-                  Works
-                  <span class="header_list_ruby">作品一覧</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to new_design_contributor_post_path do %>
-                <div class="header_link">
-                  Post
-                  <span class="header_list_ruby">投稿する</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to design_contributor_design_contributor_path(current_design_contributor.id) do %>
-                <div class="header_link">
-                  My page
-                  <span class="header_list_ruby">マイページ</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to homes_about_path do %>
-                <div class="header_link">
-                  About
-                  <span class="header_list_ruby">Donna Attraenteとは</span>
-                </div>
-              <% end %>
-            </li>
-            <!--なにこれ欲しい・コメントの通知-->
-            <li class="header_list">
-              <%= link_to design_contributor_notifications_path do %>
-                <% if unchecked_notifications.any? %>
-                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
-                <% end %>
-                <div class="header_link">
-                  <i class="fas fa-bell"></i>
-                  <span class="header_list_ruby">通知</span>
-                </div>
-              <% end %>
-            </li>
-            <!-----------オファーの通知---------->
-            <li class="header_list">
-              <%= link_to design_contributor_notification2s_path do %>
-                <% if unchecked_notification2s.any? %>
-                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
-                <% end %>
-                <div class="header_link">
-                  <i class="far fa-envelope"></i>
-                  <span class="header_list_ruby">オファー</span>
-                </div>
-              <% end %>
-            </li>
-            <!--------------------------------------------------------------------->
-            <li class="header_list">
-              <%= link_to destroy_design_contributor_session_path, method: :delete do %>
-                <div class="header_link">
-                  Log out
-                  <span class="header_list_ruby">ログアウト</span>
-                </div>
-              <% end %>
-            </li>
-          </ul>
-        <% elsif company_signed_in? %>
-        <!----------------------企業がログインしている場合のヘッダーリスト----------------------->
-          <ul class="login_header_lists">
-            <li class="header_list">
-              <%= link_to root_path do %>
-                <div class="header_link">
-                  Top
-                  <span class="header_list_ruby">トップページ</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to company_posts_path do %>
-                <div class="header_link">
-                  Works
-                  <span class="header_list_ruby">作品一覧</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to company_company_path(current_company.id) do %>
-                <div class="header_link">
-                  My page
-                  <span class="header_list_ruby">マイページ</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to homes_about_path do %>
-                <div class="header_link">
-                  About
-                  <span class="header_list_ruby">Donna Attraenteとは</span>
-                </div>
-              <% end %>
-            </li>
-            <!---------オファー（返信）の通知--------->
-            <li class="header_list">
-              <%= link_to company_notifications_path do %>
-                <% if unchecked_offer_notifications.any? %>
-                  <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
-                <% end %>
-                <div class="header_link">
-                  <i class="fas fa-envelope"></i>
-                  <span class="header_list_ruby">オファー返信</span>
-                </div>
-              <% end %>
-            </li>
-            <!------------------------------------------------>
-            <li class="header_list">
-              <%= link_to destroy_company_session_path, method: :delete do %>
-                <div class="header_link">
-                  Log out
-                  <span class="header_list_ruby">ログアウト</span>
-                </div>
-              <% end %>
-            </li>
-          </ul>
-        <% else %>
-        <!------------ログインしていない場合のヘッダーリスト------------>
-          <ul class="logout_header_lists">
-            <li class="header_list">
-              <%= link_to root_path do %>
-                <div class="header_link">
-                  Top
-                  <span class="header_list_ruby">トップページ</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to homes_about_path do %>
-                <div class="header_link">
-                  About
-                  <span class="header_list_ruby">Donna Attraenteとは</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to new_design_contributor_session_path do %>
-                <div class="header_link">
-                  Log in
-                  <span class="header_list_ruby">ログイン</span>
-                </div>
-              <% end %>
-            </li>
-            <li class="header_list">
-              <%= link_to new_design_contributor_registration_path do %>
-                <div class="header_link">
-                  Sign up
-                  <span class="header_list_ruby">新規登録</span>
-                </div>
-              <% end %>
-            </li>
-          </ul>
-        <% end %>
+
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-btn-check">
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <!--以下ハンバーガーメニューの中身-->
+          <div class="menu-content">
+            <% if design_contributor_signed_in? %>
+            <!---------------------デザイン投稿者がログインしている場合のヘッダーリスト---------------------->
+              <ul class="login_header_lists">
+                <li class="header_list">
+                  <%= link_to root_path do %>
+                    <div class="header_link">
+                      Top
+                      <span class="header_list_ruby">トップページ</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to design_contributor_posts_path do %>
+                    <div class="header_link">
+                      Works
+                      <span class="header_list_ruby">作品一覧</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to new_design_contributor_post_path do %>
+                    <div class="header_link">
+                      Post
+                      <span class="header_list_ruby">投稿する</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to design_contributor_design_contributor_path(current_design_contributor.id) do %>
+                    <div class="header_link">
+                      My page
+                      <span class="header_list_ruby">マイページ</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to homes_about_path do %>
+                    <div class="header_link">
+                      About
+                      <span class="header_list_ruby">Donna Attraenteとは</span>
+                    </div>
+                  <% end %>
+                </li>
+                <!--なにこれ欲しい・コメントの通知-->
+                <li class="header_list">
+                  <%= link_to design_contributor_notifications_path do %>
+                    <% if unchecked_notifications.any? %>
+                      <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                    <% end %>
+                    <div class="header_link">
+                      <i class="fas fa-bell"></i>
+                      <span class="header_list_ruby">通知</span>
+                    </div>
+                  <% end %>
+                </li>
+                <!-----------オファーの通知---------->
+                <li class="header_list">
+                  <%= link_to design_contributor_notification2s_path do %>
+                    <% if unchecked_notification2s.any? %>
+                      <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                    <% end %>
+                    <div class="header_link">
+                      <i class="far fa-envelope"></i>
+                      <span class="header_list_ruby">オファー</span>
+                    </div>
+                  <% end %>
+                </li>
+                <!--------------------------------------------------------------------->
+                <li class="header_list">
+                  <%= link_to destroy_design_contributor_session_path, method: :delete do %>
+                    <div class="header_link">
+                      Log out
+                      <span class="header_list_ruby">ログアウト</span>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            <% elsif company_signed_in? %>
+            <!----------------------企業がログインしている場合のヘッダーリスト----------------------->
+              <ul class="login_header_lists">
+                <li class="header_list">
+                  <%= link_to root_path do %>
+                    <div class="header_link">
+                      Top
+                      <span class="header_list_ruby">トップページ</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to company_posts_path do %>
+                    <div class="header_link">
+                      Works
+                      <span class="header_list_ruby">作品一覧</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to company_company_path(current_company.id) do %>
+                    <div class="header_link">
+                      My page
+                      <span class="header_list_ruby">マイページ</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to homes_about_path do %>
+                    <div class="header_link">
+                      About
+                      <span class="header_list_ruby">Donna Attraenteとは</span>
+                    </div>
+                  <% end %>
+                </li>
+                <!---------オファー（返信）の通知--------->
+                <li class="header_list">
+                  <%= link_to company_notifications_path do %>
+                    <% if unchecked_offer_notifications.any? %>
+                      <i class="fa fa-circle notification_color_ball" style="color: gold;"></i>
+                    <% end %>
+                    <div class="header_link">
+                      <i class="fas fa-envelope"></i>
+                      <span class="header_list_ruby">オファー返信</span>
+                    </div>
+                  <% end %>
+                </li>
+                <!------------------------------------------------>
+                <li class="header_list">
+                  <%= link_to destroy_company_session_path, method: :delete do %>
+                    <div class="header_link">
+                      Log out
+                      <span class="header_list_ruby">ログアウト</span>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            <% else %>
+            <!------------ログインしていない場合のヘッダーリスト------------>
+              <ul class="logout_header_lists">
+                <li class="header_list">
+                  <%= link_to root_path do %>
+                    <div class="header_link">
+                      Top
+                      <span class="header_list_ruby">トップページ</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to homes_about_path do %>
+                    <div class="header_link">
+                      About
+                      <span class="header_list_ruby">Donna Attraenteとは</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to new_design_contributor_session_path do %>
+                    <div class="header_link">
+                      Log in
+                      <span class="header_list_ruby">ログイン</span>
+                    </div>
+                  <% end %>
+                </li>
+                <li class="header_list">
+                  <%= link_to new_design_contributor_registration_path do %>
+                    <div class="header_link">
+                      Sign up
+                      <span class="header_list_ruby">新規登録</span>
+                    </div>
+                  <% end %>
+                </li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
       </div>
     </header>
 
