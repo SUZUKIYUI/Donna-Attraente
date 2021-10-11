@@ -1,5 +1,7 @@
 class Company::NotificationsController < ApplicationController
 
+  before_action :authenticate_company!
+
   # デザイン投稿者から企業にきたオファーの返信通知一覧
   def index
     @notifications = current_company.passive_notifications

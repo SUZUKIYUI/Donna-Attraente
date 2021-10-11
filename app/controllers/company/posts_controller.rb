@@ -1,5 +1,7 @@
 class Company::PostsController < ApplicationController
 
+  before_action :authenticate_company!
+
   def index
     if Post.count > 12
       @posts = Post.all.order(created_at: :desc).page(params[:page]).per(12)

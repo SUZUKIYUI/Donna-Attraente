@@ -1,5 +1,7 @@
 class Company::OffersController < ApplicationController
 
+  before_action :authenticate_company!
+
   def new
     @post = Post.find(params[:post_id])
     @offer = Offer.new
