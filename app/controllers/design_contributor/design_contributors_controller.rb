@@ -1,5 +1,7 @@
 class DesignContributor::DesignContributorsController < ApplicationController
 
+  before_action :authenticate_design_contributor!, only: [:edit, :update]
+
   def show
     @design_contributor = DesignContributor.find(params[:id])
   end

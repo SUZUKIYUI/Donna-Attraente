@@ -1,5 +1,7 @@
 class DesignContributor::NotificationsController < ApplicationController
 
+  before_action :authenticate_design_contributor!
+
   # デザイン投稿者からデザイン投稿者にきたいいね・コメントの通知一覧
   def index
     notifications = current_design_contributor.passive_notifications

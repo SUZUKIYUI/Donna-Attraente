@@ -1,5 +1,7 @@
 class DesignContributor::PostsController < ApplicationController
 
+  before_action :authenticate_design_contributor!, only: [:new, :create, :show, :edit, :update, :destroy]
+
   def index
     if Post.count > 12
       @posts = Post.all.order(created_at: :desc).page(params[:page]).per(12)

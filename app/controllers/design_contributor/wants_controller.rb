@@ -1,5 +1,7 @@
 class DesignContributor::WantsController < ApplicationController
 
+  before_action :authenticate_design_contributor!
+
   def create
     @post = Post.find(params[:post_id])
     Want.create(design_contributor_id: current_design_contributor.id, post_id: @post.id)

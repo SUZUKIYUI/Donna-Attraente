@@ -1,5 +1,7 @@
 class DesignContributor::OffersController < ApplicationController
 
+  before_action :authenticate_design_contributor!
+
   def edit
     @post = Post.find(params[:post_id])
     @offer = Offer.find(params[:id])

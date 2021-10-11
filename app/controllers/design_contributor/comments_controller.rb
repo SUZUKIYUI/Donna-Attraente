@@ -1,5 +1,7 @@
 class DesignContributor::CommentsController < ApplicationController
 
+  before_action :authenticate_design_contributor!
+
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
