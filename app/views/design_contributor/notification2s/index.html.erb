@@ -5,7 +5,9 @@
   <h1 class="notification_heading1">オファー通知</h1>
 
   <% if @notification2s.exists? %>
-    <%= render @notification2s %>
+    <div class="notification_content">
+      <%= render @notification2s %>
+    </div>
   <% else %>
     <div class="notification_content">
       <p>通知はありません</p>
