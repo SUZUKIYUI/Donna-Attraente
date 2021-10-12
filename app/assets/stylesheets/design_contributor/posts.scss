@@ -73,7 +73,7 @@
   justify-content: center;
   align-items: center;
 }
-.established_text{
+.posts_index_established_text{
   width: 100%;
   font-size: 20px;
   padding: 0 5px;
@@ -85,7 +85,7 @@
   -ms-transform: translate(-50%, -50%);
   color: transparent;
 }
-.established_text::after{
+.posts_index_established_text::after{
   position: absolute;
   content: '商品化決定';
   color: red;
@@ -164,7 +164,7 @@
   .post_show_link{
     padding: 8px;
   }
-  .established_text{
+  .posts_index_established_text{
     font-size: 18px;
   }
 }
@@ -206,7 +206,7 @@
   .post_show_link{
     padding: 6px;
   }
-  .established_text{
+  .posts_index_established_text{
     font-size: 16px;
   }
 }
@@ -446,6 +446,22 @@
   font-weight: bold;
   color: rgb(70, 40, 20);
   position: relative;
+}
+.post_show_established_text{
+  text-align: center;
+  font-size: 20px;
+  color: #FFF0F5;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #462814;
+  border-radius: 5px;
+}
+.post_show_established_text p{
+  padding: 20px;
+  border: dashed 2px white;
+}
+.post_show_established_text span{
+  margin-left: 5px;
 }
 .post_show_top{
   display: flex;
@@ -793,6 +809,9 @@
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
+  .post_show_established_text{
+    font-size: 18px;
+  }
   .post_show_post_image{
     width: 250px;
   }
@@ -883,6 +902,13 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
+  .post_show_established_text{
+    font-size: 16px;
+    padding: 7px;
+  }
+  .post_show_established_text p{
+    padding: 15px;
+  }
   .post_show_top{
     flex-direction: column;
     align-items: center;

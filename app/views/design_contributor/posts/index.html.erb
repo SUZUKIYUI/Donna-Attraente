@@ -27,7 +27,7 @@
               <%= attachment_image_tag post, :post_image, :fill, 260, 350, class: "post_index_image" %>
               <% post.offers.each do |offer| %>
                 <% if offer.established? %>
-                  <div class="established_text">商品化決定</div>
+                  <div class="posts_index_established_text">商品化決定</div>
                 <% end %>
               <% end %>
             </div>

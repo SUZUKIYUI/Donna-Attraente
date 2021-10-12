@@ -1,6 +1,13 @@
 <!--デザイン投稿者投稿作品詳細画面-->
 
 <div class="content_width post_show_back">
+  <% @post.offers.each do |offer| %>
+    <% if offer.established? %>
+      <div class="post_show_established_text">
+        <p><%= offer.company.company_name %><span>様により商品化が決定しました</span></p>
+      </div>
+    <% end %>
+  <% end %>
   <div class="post_show_top">
     <div class="post_show_top1">
       <%= attachment_image_tag @post, :post_image, :fill, 450, 650, class: "post_show_post_image" %>
