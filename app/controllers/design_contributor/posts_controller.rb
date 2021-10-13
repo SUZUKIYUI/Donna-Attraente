@@ -1,6 +1,6 @@
 class DesignContributor::PostsController < ApplicationController
 
-  before_action :authenticate_design_contributor!, only: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :authenticate_design_contributor!, except: [:index]
 
   def index
     if Post.count > 12

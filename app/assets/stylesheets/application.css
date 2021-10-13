@@ -163,7 +163,7 @@ header{
 .logout_header_lists{
   display: flex;
   justify-content: space-between;
-  width: 330px;
+  width: 430px;
   line-height: 18px;
   font-family: serif;
 }
