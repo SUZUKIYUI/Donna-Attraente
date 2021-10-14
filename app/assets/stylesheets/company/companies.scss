@@ -14,7 +14,11 @@
 .company_show_name2{
   font-size: 23px;
 }
+.user_show_introduction .company_show_introduction2{
+  margin-bottom: 60px;
+}
 .company_offer_count{
+  color: #3b2221;
   margin-left: 20px;
   font-size: 20px;
 }
@@ -39,9 +43,21 @@
   .company_show_name2{
     font-size: 18px;
   }
+  .user_show_introduction .company_show_introduction2{
+    margin-bottom: 50px;
+  }
   .company_offer_count{
-    margin-left: 20px;
-    font-size: 20px;
+    margin-left: 15px;
+    font-size: 16px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------600px以下に適用------------*/
+@media(max-width: 600px){
+  .company_offer_count {
+    margin-left: 10px;
+    font-size: 12px;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

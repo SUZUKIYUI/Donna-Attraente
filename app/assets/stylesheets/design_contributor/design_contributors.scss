@@ -30,6 +30,7 @@
 }
 .user_show_introduction{
   display: flex;
+  align-items: flex-end;
   width: 720px;
 }
 .user_show_introduction1{
@@ -68,6 +69,7 @@
   width: 60%;
   color: rgb(59, 34, 33);
   font-weight: bold;
+  margin-bottom: 30px;
 }
 .user_show_introduction2 p{
   font-size: 23px;
