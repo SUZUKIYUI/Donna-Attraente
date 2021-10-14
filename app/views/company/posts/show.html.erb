@@ -1,6 +1,13 @@
 <!--企業投稿作品詳細画面-->
 
 <div class="content_width post_show_back">
+  <% @post.offers.each do |offer| %>
+    <% if offer.established? %>
+      <div class="post_show_established_text">
+        <p><%= offer.company.company_name %><span>様により商品化が決定しました</span></p>
+      </div>
+    <% end %>
+  <% end %>
   <div class="post_show_top">
     <div class="post_show_top1">
       <%= attachment_image_tag @post, :post_image, :fill, 450, 650, class: "post_show_post_image" %>
@@ -110,14 +117,14 @@
               <% elsif @post.offered_failure_by?(@post.id) %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p class="offered_failure_by_count">交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
+                  <p>交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
                 </div>
                 <p class="post_offer_announce1">現在オファー受付中です</p>
               <!--オファーモデルは存在するがこのデザインにオファーが来ていない-->
               <% else %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p>0件</p>
+                  <p><span>0</span>件</p>
                 </div>
                 <p class="post_offer_announce1">現在オファー受付中です</p>
               <% end %>
@@ -125,7 +132,7 @@
             <% else %>
               <div class="post_show_reaction_content">
                 <p>オファー</p>
-                <p>0件</p>
+                <p><span>0</span>件</p>
               </div>
               <p class="post_offer_announce1">現在オファー受付中です</p>
             <% end %>
@@ -134,26 +141,26 @@
           <% if @post.offered_by? %>
             <% if @post.offered_negotiation_by?(@post.id) %>
               <% if @offer.company == current_company %>
-                <p class="post_offer_announce2 post_offer_announce2_center">現在交渉しております。<br /><%= @post.design_contributor.pen_name %>様の返信をお待ちください。</p>
+                <p class="post_offer_announce2">現在交渉しております。<br /><%= @post.design_contributor.pen_name %>様の返信をお待ちください。</p>
               <% else %>
-                <p class="post_offer_announce2">現在<span><%= @offer.company.company_name %></span>様が商品化の交渉を行なっております。</p>
+                <p class="post_offer_announce2">現在<span><%= @offer.company.company_name %></span>様が<br />商品化の交渉を行なっております。</p>
                 <p class="company_post_show_call">※交渉不成立となった場合、<br />再度こちらのページからオファーが可能です</p>
               <% end %>
             <% elsif @post.offered_established_by?(@post.id) %>
               <% if @offer.company == current_company %>
-                <p class="post_offer_announce2 post_offer_announce2_center"><%= @post.design_contributor.pen_name %>様が商品化を承諾しました</p>
+                <p class="post_offer_announce2"><%= @post.design_contributor.pen_name %>様が<br />商品化を承諾しました</p>
               <% else %>
-                <p class="post_offer_announce2 post_offer_announce2_center"><%= @offer.company.company_name %>様と契約済</p>
+                <p class="post_offer_announce2"><%= @offer.company.company_name %>様と契約済</p>
                 <p class="company_post_show_call">商品化が決定した為、<br />こちらのデザインへはオファーができません<br />新たなデザインをお探しください</p>
               <% end %>
             <% else %>
-              <%= link_to new_company_post_offer_path(@post.id), class: "offer_new_link1" do %>
+              <%= link_to new_company_post_offer_path(@post.id), class: "post_offer_announce2 offer_new_link1" do %>
                 <p class="offer_new_link2">商品化の<br />オファーを送る</p>
               <% end %>
               <p class="company_post_show_call">ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
             <% end %>
           <% else %>
-            <%= link_to new_company_post_offer_path(@post.id), class: "offer_new_link1" do %>
+            <%= link_to new_company_post_offer_path(@post.id), class: "post_offer_announce2 offer_new_link1" do %>
               <p class="offer_new_link2">商品化の<br />オファーを送る</p>
             <% end %>
             <p class="company_post_show_call">ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>

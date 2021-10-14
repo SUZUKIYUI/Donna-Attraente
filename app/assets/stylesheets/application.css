@@ -203,6 +203,12 @@ header{
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
+
+  .notification_color_ball{
+    top: 10%;
+    right: 75%;
+  }
+
   /*ハンバーガーメニュー*/
   .menu-btn{
     position: fixed;

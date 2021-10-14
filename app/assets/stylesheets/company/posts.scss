@@ -37,6 +37,7 @@
 }
 .post_offer_announce2{
   font-size: 15px;
+  text-align: center;
   width: 300px;
   padding: 55px 20px;
   margin: 0 auto;
@@ -46,26 +47,18 @@
 .post_offer_announce2 span{
   margin: 0 5px;
 }
-.post_offer_announce2_center{
-  text-align: center;
-}
 .offer_new_link1{
   display: inline-block;
-  width: 300px;
-  text-align: center;
-  margin: 0 auto;
+}
+.offer_new_link1:hover{
+  opacity: 0.8;
 }
 .offer_new_link2{
   text-align: center;
   font-size: 18px;
-  line-height: 30px;
   margin: 0 auto;
-  padding: 55px 0;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
-}
-.offer_new_link2:hover{
-  opacity: 0.8;
 }
 .company_post_show_call{
   margin-top: 10px;
@@ -108,7 +101,7 @@
   .company_post_show_bottom_right1 .company_post_show_reaction{
     width: 260px;
   }
-  .company_post_show_bottom_right1 .offer_new_link1{
+  .company_post_show_bottom_right1 .post_offer_announce2{
     width: 260px;
   }
   .company_post_show_call{
@@ -131,11 +124,10 @@
     padding: 10px 15px;
     margin-bottom: 25px;
   }
-  .company_post_show_bottom_right1 .offer_new_link1{
+  .company_post_show_bottom_right1 .post_offer_announce2{
     width: 90%;
   }
   .offer_new_link2{
-    line-height: 18px;
     font-size: 16px;
   }
   .company_post_show_call{
@@ -160,11 +152,8 @@
   .company_post_show_bottom_right1 .company_post_show_reaction{
     width: 80%;
   }
-  .company_post_show_bottom_right1 .offer_new_link1{
+  .company_post_show_bottom_right1 .post_offer_announce2{
     width: 75%;
-  }
-  .offer_new_link2{
-    line-height: 30px;
   }
   .company_post_show_call{
     font-size: 18px;
@@ -187,11 +176,8 @@
   .company_post_show_bottom_right1 .company_post_show_reaction{
     width: 230px;
   }
-  .company_post_show_bottom_right1 .offer_new_link1{
+  .company_post_show_bottom_right1 .post_offer_announce2{
     width: 220px;
-  }
-  .offer_new_link2{
-    line-height: 20px;
   }
   .company_post_show_call{
     font-size: 12px;
