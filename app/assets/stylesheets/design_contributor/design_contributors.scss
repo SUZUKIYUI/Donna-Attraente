@@ -319,7 +319,7 @@
   text-align: center;
 }
 .design_contributor_edit_form{
-  width: 520px;
+  width: 600px;
   margin: 0 auto;
   margin-top: 5%;
 }
@@ -352,12 +352,12 @@
 .input_edit_profile_image2{
   display: none;
 }
-.design_contributor_edit_label{
+.user_edit_label{
   width: 200px;
   font-size: 20px;
 }
-.design_contributor_edit_input{
-  width: 320px;
+.user_edit_input{
+  width: 300px;
   padding: 5px 10px;
   font-size: 15px;
   color: rgb(59, 34, 33);
@@ -368,8 +368,9 @@
 .pen_name_edit_input{
   width: 200px;
 }
-.self_introduction_edit_input{
-  height: 150px;
+.introduction_edit_input{
+  width: 400px;
+  height: 200px;
 }
 .user_edit_btn_form{
   text-align: center;
@@ -397,22 +398,26 @@
     font-size: 40px;
   }
   .design_contributor_edit_form{
-    width: 450px;
+    width: 460px;
   }
   .input_edit_profile_image1{
     width: 250px;
     font-size: 13px;
   }
-  .design_contributor_edit_label{
-    width: 170px;
+  .user_edit_label{
+    width: 160px;
     font-size: 18px;
   }
-  .design_contributor_edit_input{
-    width: 280px;
+  .user_edit_input{
+    width: 240px;
     font-size: 13px;
   }
   .pen_name_edit_input{
-    width: 180px;
+    width: 150px;
+    }
+  .introduction_edit_input{
+    width: 320px;
+    height: 150px;
   }
 }
 /*--------------------------------------*/
@@ -423,20 +428,29 @@
     font-size: 30px;
   }
   .design_contributor_edit_form{
-    width: 400px;
+    width: 380px;
+  }
+  .design_contributor_edit_input_form{
+    flex-direction: column;
+    align-items: flex-start;
   }
   .input_edit_profile_image1{
     width: 220px;
     font-size: 11px;
   }
-  .design_contributor_edit_label{
-    width: 150px;
+  .user_edit_label{
+    width: auto;
   }
-  .design_contributor_edit_input{
+  .user_edit_input{
     width: 250px;
+    font-size: 15px;
   }
   .pen_name_edit_input{
     width: 160px;
+  }
+  .introduction_edit_input{
+    width: 100%;
+    height: 150px;
   }
   .user_edit_btn{
     padding: 8px 20px;
@@ -453,23 +467,24 @@
   .design_contributor_edit_form{
     width: 240px;
   }
-  .design_contributor_edit_input_form{
-    flex-direction: column;
-    align-items: flex-start;
-  }
   .input_edit_profile_image1{
     margin: 0 auto;
     margin-top: 20px;
   }
-  .design_contributor_edit_label{
+  .user_edit_label{
     margin-bottom: 2px;
     font-size: 16px;
   }
-  .design_contributor_edit_input{
-    width: 100%;
+  .user_edit_input{
+    width: 240px;
+    font-size: 13px;
   }
   .pen_name_edit_input{
-    width: 70%;
+    width: 180px;
+  }
+  .introduction_edit_input{
+    width: 100%;
+    height: 150px;
   }
   .user_edit_btn_form{
     margin-top: 30px;

@@ -4,7 +4,7 @@
 
   <h1 class="user_edit_heading1">プロフィール編集</h1>
 
-  <div class="company_edit_form"><!--ここだ！-->
+  <div class="company_edit_form">
     <!---未入力の時のエラー文--->
     <% if @company.errors.any? %>
       <div class="error_box">
@@ -25,32 +25,32 @@
         </label>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :company_name, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :company_name, placeholder: "(例)株式会社　パステル", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.label :company_name, class: "user_edit_label" %>
+        <%= f.text_field :company_name, placeholder: "(例)株式会社　パステル", class: "user_edit_input" %>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :company_name_kana, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :company_name_kana, placeholder: "(例)カブシキガイシャ　パステル", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.label :company_name_kana, class: "user_edit_label" %>
+        <%= f.text_field :company_name_kana, placeholder: "(例)カブシキガイシャ　パステル", class: "user_edit_input" %>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :postal_code, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :postal_code, placeholder: "(例)2390831", class: "company_edit_input postal_code_edit_input" %><!--ここだ！-->
+        <%= f.label :postal_code, class: "user_edit_label" %>
+        <%= f.text_field :postal_code, placeholder: "(例)2390831", class: "user_edit_input postal_code_edit_input" %>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :address, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :address, placeholder: "(例)神奈川県横須賀市久里浜○-○-○ ○○ビル2階", class: "company_edit_input address_edit_input" %><!--ここだ！-->
+        <%= f.label :address, class: "user_edit_label" %>
+        <%= f.text_field :address, placeholder: "(例)神奈川県横須賀市久里浜○-○-○ ○○ビル2階", class: "user_edit_input address_edit_input" %>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :phone_number, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :phone_number, placeholder: "(例)080-1234-5678", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.label :phone_number, class: "user_edit_label" %>
+        <%= f.text_field :phone_number, placeholder: "(例)080-1234-5678", class: "user_edit_input" %>
       </div>
       <div class="company_edit_input_form">
-        <%= f.label :email, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_field :email, placeholder: "(例)×××@×××××.jp", class: "company_edit_input" %><!--ここだ！-->
+        <%= f.label :email, class: "user_edit_label" %>
+        <%= f.text_field :email, placeholder: "(例)×××@×××××.jp", class: "user_edit_input" %>
       </div>
       <div class="company_edit_input_form company_edit_input_form_introduction">
-        <%= f.label :company_introduction, class: "company_edit_label" %><!--ここだ！-->
-        <%= f.text_area :company_introduction, placeholder: "自社ブランドの紹介、どんな商品を取り扱っているのか、どんなワンピースを求めているのかなど", class: "company_edit_input company_introduction_edit_input" %><!--ここだ！-->
+        <%= f.label :company_introduction, class: "user_edit_label" %>
+        <%= f.text_area :company_introduction, placeholder: "自社ブランドの紹介、どんな商品を取り扱っているのか、どんなワンピースを求めているのかなど", class: "user_edit_input introduction_edit_input" %>
       </div>
       <div class="user_edit_btn_form">
         <%= f.submit "編集する", class: "user_edit_btn" %>

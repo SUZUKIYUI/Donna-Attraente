@@ -66,8 +66,8 @@
 
 // 企業編集画面
 .company_edit_form{
-  margin: 0 auto;
   width: 700px;
+  margin: 0 auto;
   margin-top: 5%;
 }
 .company_edit_input_form{
@@ -81,28 +81,11 @@
 .company_edit_input_form_introduction{
   align-items: flex-start;
 }
-.company_edit_label{
-  width: 250px;
-  font-size: 20px;
-}
-.company_edit_input{
-  width: 300px;
-  padding: 5px 10px;
-  font-size: 15px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-  background-color: rgb(249, 242, 237);
-}
-.postal_code_edit_input{
+.company_edit_input_form .postal_code_edit_input{
   width: 150px;
 }
-.address_edit_input{
-  width: 450px;
-}
-.company_introduction_edit_input{
-  width: 450px;
-  height: 200px;
+.company_edit_input_form .address_edit_input{
+  width: 500px;
 }
 /*--------------------------------------*/
 
@@ -111,19 +94,11 @@
   .company_edit_form{
     width: 560px;
   }
-  .company_edit_label{
-    width: 180px;
-    font-size: 18px;
+  .company_edit_input_form .postal_code_edit_input{
+    width: 120px;
   }
-  .company_edit_input{
-    width: 250px;
-    font-size: 13px;
-  }
-  .postal_code_edit_input{
-    width: 125px;
-  }
-  .address_edit_input, .company_introduction_edit_input{
-    width: 380px;
+  .company_edit_input_form .address_edit_input{
+    width: 400px;
   }
 }
 /*--------------------------------------*/
@@ -137,17 +112,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .company_edit_label{
-    width: 100%;
+  .company_edit_input_form  .postal_code_edit_input{
+    width: 130px;
   }
-  .company_edit_input{
-    width: 280px;
-    font-size: 15px;
-  }
-  .postal_code_edit_input{
-    width: 140px;
-  }
-  .address_edit_input, .company_introduction_edit_input{
+  .company_edit_input_form .address_edit_input{
     width: 100%;
   }
 }
@@ -158,19 +126,8 @@
   .company_edit_form{
     width: 100%;
   }
-  .company_edit_label{
-    margin-bottom: 2px;
-    font-size: 16px;
-  }
-  .company_edit_input{
-    width: 240px;
-    font-size: 13px;
-  }
-  .postal_code_edit_input{
+  .company_edit_input_form  .postal_code_edit_input{
     width: 120px;
-  }
-  .address_edit_input, .company_introduction_edit_input{
-    width: 100%;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
