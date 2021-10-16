@@ -1,22 +1,18 @@
-<!--企業一覧画面-->
+<!--企業一覧画面（企業用）-->
 
 <div class="content_width company_index_back">
 
   <h1 class="company_index_heading1">ブランド紹介</h1>
-  <p class="company_index_lead">Donna Attraenteに登録しているブランド一覧です。<br />
-    <%= current_company.company_name %>様と同様に新しいデザインを探しています。
-  </p>
+  <p class="company_index_lead">Donna Attraenteに登録している<span>ブランド一覧です</span></p>
 
   <div class="company_index_area">
     <% @companies.each do |company| %>
-      <div class="company_show_link">
-        <%= link_to company_company_path(company.id) do %>
-          <%= attachment_image_tag company, :profile_image, :fill, 350, 300, fallback: "no_image_company.png", size: "350x300" %>
-          <div class="company_show_link_name">
-            <%= company.company_name %>
-          </div>
-        <% end %>
-      </div>
+      <%= link_to company_company_path(company.id), class: "company_show_link" do %>
+        <%= attachment_image_tag company, :profile_image, :fill, 350, 310, fallback: "no_image_company.png", size: "350x310", class: "company_index_profile_image" %>
+        <div class="company_show_link_name">
+          <%= company.company_name %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 

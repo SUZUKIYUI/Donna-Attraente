@@ -10,9 +10,8 @@
 // 企業一覧画面
 .company_index_back{
   background-image: url("../base_back3.png");
-  background-size: cover;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  background-size: 100%;
+  padding: 10%;
 }
 .company_index_heading1{
   font-size: 50px;
@@ -36,6 +35,7 @@
 }
 .company_show_link{
   text-align: center;
+  margin: 20px 0;
 }
 .company_show_link:hover{
   opacity: 0.8;
@@ -43,6 +43,18 @@
 .company_show_link_name{
   color: rgb(61, 36, 34);
   font-size: 20px;
+}
+/*--------------------------------------*/
+
+/*-----------1200px以下に適用------------*/
+@media(max-width: 1200px){
+  .company_index_area{
+    width: 650px;
+  }
+  .company_index_profile_image{
+    width: 300px;
+    height: 260px;
+  }
 }
 /*--------------------------------------*/
 
@@ -94,7 +106,13 @@
     font-size: 22px;
   }
   .company_index_lead{
-    font-size: 11px;
+    font-size: 13px;
+  }
+  .company_index_lead span{
+    display: block;
+  }
+  .company_index_lead br{
+    display: none;
   }
   .company_index_area{
     justify-content: center;
