@@ -354,8 +354,7 @@ header{
 
 .bottom_content{
   padding: 3% 10% 10%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100%;
 }
 /*---------------------------------------*/
 

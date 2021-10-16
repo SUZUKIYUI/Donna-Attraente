@@ -24,7 +24,7 @@
     <div class="user_show_introduction">
       <div class="user_show_introduction1">
         <div class="user_image_frame">
-          <%= attachment_image_tag @company, :profile_image, 220, 220, fallback: "no_image_company.png", size: "220x220", class: "user_image" %>
+          <%= attachment_image_tag @company, :profile_image, :fill, 220, 220, fallback: "no_image_company.png", size: "220x220", class: "user_image" %>
         </div>
         <div class="user_show_name">
           <div class="company_show_name1">
