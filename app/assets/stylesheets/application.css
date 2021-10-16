@@ -697,8 +697,10 @@ footer{
   .login_heading h1{
     font-size: 35px;
   }
-  .another_link_font{
+  .another_user_link{
     margin: 15px 0;
+  }
+  .another_link_font{
     font-size: 14px;
   }
 }
