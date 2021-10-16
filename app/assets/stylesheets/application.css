@@ -496,6 +496,8 @@ footer{
 .email_form, .password_form{
   width: 300px;
   padding: 0 10px;
+  font-family: "HiraMinProN-W6";
+  color: rgb(59, 34, 33);
   background-color: rgb(249, 242, 237);
 }
 
@@ -801,7 +803,7 @@ footer{
   width: 250px;
   padding: 5px 10px;
   font-size: 15px;
-  font-family: serif;
+  font-family: "HiraMinProN-W6";
   font-weight: bold;
   background-color: rgb(249, 242, 237);
 }
