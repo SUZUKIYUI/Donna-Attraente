@@ -25,9 +25,13 @@ Rails.application.routes.draw do
     end
   end
 
+  # エラーの時のリロード
+  devise_scope :design_contributor do
+    get "/design_contributors" => "design_contributors/registrations#new"
+  end
   get "design_contributor/posts/:post_id/offers/:id" => "design_contributor/offers#edit"
   get "/design_contributor/posts/:id/comments" => "design_contributor/posts#show"
-  # -------------------------------------------
+  # ----------------------------------------------------------------------------
 
 
   # --------------企業側---------------
@@ -46,8 +50,12 @@ Rails.application.routes.draw do
     end
   end
 
+  # エラーの時のリロード
+  devise_scope :company do
+    get "/companies" => "companies/registrations#new"
+  end
   get "/company/posts/:post_id/offers" => "company/offers#new"
-  # -------------------------------
+  # ----------------------------------------------------------
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

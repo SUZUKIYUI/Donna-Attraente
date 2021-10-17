@@ -73,12 +73,6 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
   align-items: center;
 }
 
-.error_heading{
-  font-size: 18px;
-  border-bottom: solid 1px #CC0000;
-  margin-bottom: 15px;
-}
-
 .error_list{
   font-size: 20px;
   margin: 5px 0;
@@ -101,8 +95,8 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
-  .error_heading{
-    display: none;
+  .error_list{
+    font-size: 16px;
   }
 }
 /*--------------------------------------*/
@@ -110,7 +104,7 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .error_box{
-    padding: 0px;
+    padding: 10px 0;
     border: double 5px #CC0000;
   }
 
@@ -782,6 +776,12 @@ footer{
 
 .signup_form{
   margin: 0 auto;
+  width: 540px;
+  margin-top: 5%;
+}
+
+.company_signup_form{
+  margin: 0 auto;
   width: 700px;
   margin-top: 5%;
 }
@@ -795,33 +795,43 @@ footer{
 }
 
 .signup_label{
+  width: 200px;
+  font-size: 20px;
+}
+
+.company_signup_label{
   width: 250px;
   font-size: 20px;
 }
 
 .signup_input{
-  width: 250px;
+  width: 340px;
   padding: 5px 10px;
   font-size: 15px;
   font-family: "HiraMinProN-W6";
   font-weight: bold;
+  color: rgb(59, 34, 33);
   background-color: rgb(249, 242, 237);
 }
 
-.email_input, .password_input, .introduction_input{
-  width: 350px;
+.pen_name_input{
+  width: 255px;
 }
 
 .introduction_input{
-  height: 100px;
+  height: 150px;
 }
 
 .postal_code_input{
-  width: 200px;
+  width: 170px;
 }
 
 .address_input{
   width: 450px;
+}
+
+.phone_number_input{
+  width: 255px;
 }
 
 .input_profile_image1{
@@ -893,30 +903,40 @@ footer{
     border: double 7px rgb(59, 34, 33);
   }
   .signup_form{
+    width: 450px;
+  }
+  .company_signup_form{
     width: 570px;
   }
   .signup_input_form{
     margin-bottom: 15px;
   }
   .signup_label{
+    width: 150px;
+    font-size: 18px;
+  }
+  .company_signup_label{
     width: 170px;
     font-size: 18px;
   }
   .signup_input{
-    width: 230px;
+    width: 300px;
     font-size: 13px;
   }
-  .email_input, .password_input, .introduction_input{
-    width: 320px;
+  .pen_name_input{
+    width: 225px;
   }
   .introduction_input{
-    height: 80px;
+    height: 130px;
   }
   .postal_code_input{
-    width: 180px;
+    width: 150px;
   }
   .address_input{
     width: 400px;
+  }
+  .phone_number_input{
+    width: 225px;
   }
   .input_profile_image1{
     width: 270px;
@@ -943,27 +963,40 @@ footer{
     border: double 6px rgb(59, 34, 33);
   }
   .signup_form{
+    width: 380px;
+  }
+  .company_signup_form{
     width: 430px;
   }
   .signup_input_form{
     margin-bottom: 12px;
   }
   .signup_label{
+    width: 130px;
+    font-size: 16px;
+  }
+  .company_signup_label{
     width: 150px;
     font-size: 16px;
   }
   .signup_input{
-    width: 180px;
+    width: 250px;
     font-size: 11px;
   }
-  .email_input, .password_input, .introduction_input{
-    width: 230px;
+  .pen_name_input{
+    width: 188px;
+  }
+  .introduction_input{
+    height: 105px;
   }
   .postal_code_input{
-    width: 140px;
+    width: 125px;
   }
   .address_input{
     width: 280px;
+  }
+  .phone_number_input{
+    width: 188px;
   }
   .input_profile_image1{
     width: 220px;
@@ -1020,6 +1053,9 @@ footer{
   .signup_form{
     width: 240px;
   }
+  .company_signup_form{
+    width: 240px;
+  }
   .signup_input_form{
     flex-direction: column;
   }
@@ -1028,13 +1064,27 @@ footer{
     font-size: 10px;
   }
   .signup_label{
+    width: auto;
+    font-size: 15px;
+  }
+  .company_signup_label{
+    width: auto;
     font-size: 15px;
   }
   .signup_input{
     width: 100%;
   }
+  .pen_name_input{
+    width: 180px;
+  }
+  .introduction_input{
+    height: 100px;
+  }
   .postal_code_input{
-    width: 60%;
+    width: 55%;
+  }
+  .phone_number_input{
+    width: 80%;
   }
   .signup_btn_form{
     margin-top: 30px;
