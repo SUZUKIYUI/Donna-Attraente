@@ -1,13 +1,49 @@
-<h1>デザイン投稿者詳細画面（企業用）</h1>
+<!--デザイン投稿者詳細画面（企業用）-->
 
-<%= attachment_image_tag @design_contributor, :profile_image, :fill, 300, 300, fallback: "no_image.png", size: "300x300" %>
-<%= @design_contributor.pen_name %>
-<p>自己紹介</p>
-<%= @design_contributor.self_introduction %>
-<!----------------------------------------->
-<p>デザイン一覧</p>
-<% @design_contributor.posts.each do |post| %>
-  <%= link_to company_post_path(post.id) do %>
-    <%= attachment_image_tag post, :post_image, :fill, 300, 400 %>
+<div class="content_width the_other_user_show_back">
+
+  <h1 class="the_other_user_show_heading1">Contributor Detail</h1>
+
+  <div class="the_other_user_show1">
+    <div>
+      <%= attachment_image_tag @design_contributor, :profile_image, :fill, 350, 350, fallback: "no_image.png", size: "350x350", class: "design_contributor_show_profile_image" %><!--ここ！！！！！！-->
+      <div class="the_other_user_show1_name">
+        <%= @design_contributor.pen_name %>
+      </div>
+    </div>
+    <div class="the_other_user_show1_introduction">
+      <p class="the_other_user_show1_introduction_title">紹介文</p>
+      <div class="the_other_user_show_decoration"></div>
+      <div class="the_other_user_show1_introduction_text">
+        <% if @design_contributor.self_introduction.present? %>
+          <p class="the_other_user_show1_no_introduction_text">まだ記載されていません</p>
+        <% else %>
+          <%= @design_contributor.self_introduction %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <!------------------もし投稿作品があれば全て公開-------------------->
+  <% if Post.where(design_contributor_id: @design_contributor.id).exists? %>
+    <div class="the_other_user_show2">
+      <p class="the_other_user_show2_title">デザイン一覧</p>
+      <div class="the_other_user_show2_flex">
+        <% @design_contributor.posts.each do |post| %>
+          <div class="the_other_user_show2_post_show_link">
+            <%= link_to company_post_path(post.id) do %>
+              <%= attachment_image_tag post, :post_image, :fill, 210,310, class: "the_other_user_show_offer_post" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-<% end %>
+  <!------------------------>
+
+  <p>デザイン一覧</p>
+
+
+      <%= attachment_image_tag post, :post_image, :fill, 300, 400 %>
+
+
+</div>
