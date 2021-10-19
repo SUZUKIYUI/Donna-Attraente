@@ -127,12 +127,11 @@
 
 
 
-// 企業詳細画面
+// 相手方ユーザー詳細画面
 .the_other_user_show_back{
   background-image: url("../base_back3.png");
   background-size: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding: 10%;
 }
 .the_other_user_show_heading1{
   font-size: 50px;
@@ -144,9 +143,12 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  width: 800px;
+  width: 700px;
   margin: 5% auto;
   color: rgb(61, 36, 34);
+}
+.design_contributor_show_profile_image{
+  border-radius: 100%;
 }
 .the_other_user_show1_name{
   font-size: 30px;
@@ -182,7 +184,7 @@
   text-align: center;
 }
 .the_other_user_show2{
-  width: 800px;
+  width: 700px;
   margin: 5% auto;
   color: rgb(61, 36, 34);
 }
@@ -195,21 +197,34 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 3%;
 }
-.the_other_user_show2_post_show_link{
-  padding: 13px;
-  margin: 15px;
-  background-color: rgb(70, 40, 20);
+.the_other_user_show2_post_show_link1{
+  position: relative;
+  width: 210px;
+  height: 310px;
+  margin: 25px auto;
 }
-.the_other_user_show2_post_show_link:hover{
+.the_other_user_show2_post_show_link1::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 5px 5px rgb(197, 180, 169);
+  border-radius: 100%;
+}
+.the_other_user_show2_post_show_link1:hover{
   opacity: 0.8;
   cursor: pointer;
 }
+.the_other_user_show2_post_show_link2{
+  border-radius: 100%;
+}
 .company_show3{
-  width: 800px;
+  width: 700px;
   margin: 0 auto;
-  padding: 20px 60px;
+  padding: 20px 50px;
   color: rgb(246, 238, 233);
   background-color: rgb(50, 26, 10);
 }
@@ -221,7 +236,7 @@
   margin-bottom: 15px;
 }
 .company_show3_flex p{
-  width: 150px;
+  width: 100px;
 }
 /*--------------------------------------*/
 
@@ -235,6 +250,10 @@
   }
   .company_show_profile_image{
     width: 200px;
+    height: 170px;
+  }
+  .design_contributor_show_profile_image{
+    width: 170px;
     height: 170px;
   }
   .the_other_user_show1_name{
@@ -261,20 +280,21 @@
   .the_other_user_show2{
     width: 550px;
   }
-  .the_other_user_show2_post_show_link {
-    padding: 10px;
-    margin: 15px;
+  .the_other_user_show2_post_show_link1{
+    width: 160px;
+    height: 230px;
   }
-  .the_other_user_show_offer_post{
-    width: 150px;
+  .the_other_user_show2_post_show_link2{
+    width: 160px;
+    height: 230px;
   }
   .company_show3{
     width: 550px;
-    padding: 20px 30px;
+    padding: 20px 25px;
     font-size: 15px;
   }
   .company_show3_flex p{
-    width: 100px;
+    width: 80px;
   }
 }
 /*--------------------------------------*/
@@ -287,23 +307,31 @@
   .the_other_user_show1{
     flex-direction: column;
     align-items: center;
-    width: 450px;
+    width: 420px;
   }
   .the_other_user_show1_introduction{
     width: 350px;
-    margin-left: 0;
-    margin-top: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
   .the_other_user_show2{
-    width: 450px;
+    width: 420px;
     margin: 10% auto;
   }
   .the_other_user_show2_title{
     font-size: 20px;
     padding-left: 10px;
   }
+  .the_other_user_show2_post_show_link1{
+    width: 180px;
+    height: 250px;
+  }
+  .the_other_user_show2_post_show_link2{
+    width: 180px;
+    height: 250px;
+  }
   .company_show3{
-    width: 450px;
+    width: 420px;
     font-size: 13px;
   }
   .company_show3_flex p{
@@ -319,6 +347,10 @@
   }
   .the_other_user_show1{
     width: 80%;
+  }
+  .company_show_profile_image{
+    width: 190px;
+    height: 160px;
   }
   .the_other_user_show1_introduction{
     width: 100%;
@@ -339,6 +371,10 @@
   .the_other_user_show2_title{
     font-size: 16px;
     padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .the_other_user_show2_post_show_link1{
+    margin: 10px auto;
   }
   .company_show3{
     width: 80%;

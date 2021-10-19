@@ -6,7 +6,7 @@
 
   <div class="the_other_user_show1">
     <div>
-      <%= attachment_image_tag @design_contributor, :profile_image, :fill, 350, 350, fallback: "no_image.png", size: "350x350", class: "design_contributor_show_profile_image" %><!--ここ！！！！！！-->
+      <%= attachment_image_tag @design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "design_contributor_show_profile_image" %>
       <div class="the_other_user_show1_name">
         <%= @design_contributor.pen_name %>
       </div>
@@ -16,9 +16,9 @@
       <div class="the_other_user_show_decoration"></div>
       <div class="the_other_user_show1_introduction_text">
         <% if @design_contributor.self_introduction.present? %>
-          <p class="the_other_user_show1_no_introduction_text">まだ記載されていません</p>
-        <% else %>
           <%= @design_contributor.self_introduction %>
+        <% else %>
+          <p class="the_other_user_show1_no_introduction_text">まだ記載されていません</p>
         <% end %>
       </div>
     </div>
@@ -29,21 +29,11 @@
       <p class="the_other_user_show2_title">デザイン一覧</p>
       <div class="the_other_user_show2_flex">
         <% @design_contributor.posts.each do |post| %>
-          <div class="the_other_user_show2_post_show_link">
-            <%= link_to company_post_path(post.id) do %>
-              <%= attachment_image_tag post, :post_image, :fill, 210,310, class: "the_other_user_show_offer_post" %>
-            <% end %>
-          </div>
+          <%= link_to company_post_path(post.id), class: "the_other_user_show2_post_show_link1" do %>
+            <%= attachment_image_tag post, :post_image, :fill, 210,310, class: "the_other_user_show2_post_show_link2" %>
+          <% end %>
         <% end %>
       </div>
     </div>
   <% end %>
-  <!------------------------>
-
-  <p>デザイン一覧</p>
-
-
-      <%= attachment_image_tag post, :post_image, :fill, 300, 400 %>
-
-
 </div>
