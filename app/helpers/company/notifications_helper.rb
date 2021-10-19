@@ -2,9 +2,10 @@ module Company::NotificationsHelper
 
   # デザイン投稿者からきたオファーのみの通知を表示
   def notification_form(notification)
+    @visitor = notification.visitor
     case notification.action
       when "offer" then
-        tag.a("#{notification.design_contributor.pen_name}様のデザイン", href: company_post_path(notification.post_id)) + "のオファー結果が届いています"
+        tag.a("#{@visitor.pen_name}様のデザイン", href: company_post_path(notification.post)) + "のオファー結果が届いています"
     end
   end
 
