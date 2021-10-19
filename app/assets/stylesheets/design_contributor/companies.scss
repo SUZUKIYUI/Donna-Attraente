@@ -221,6 +221,17 @@
 .the_other_user_show2_post_show_link2{
   border-radius: 100%;
 }
+.the_other_user_established_user_items{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #FF0000;
+  font-size: 20px;
+  text-shadow: 0px 0px 5px #FFE4E1;
+}
 .company_show3{
   width: 700px;
   margin: 0 auto;
@@ -288,6 +299,9 @@
     width: 160px;
     height: 230px;
   }
+  .the_other_user_established_user_items{
+    font-size: 16px;
+  }
   .company_show3{
     width: 550px;
     padding: 20px 25px;
@@ -329,6 +343,9 @@
   .the_other_user_show2_post_show_link2{
     width: 180px;
     height: 250px;
+  }
+  .the_other_user_established_user_items{
+    font-size: 18px;
   }
   .company_show3{
     width: 420px;

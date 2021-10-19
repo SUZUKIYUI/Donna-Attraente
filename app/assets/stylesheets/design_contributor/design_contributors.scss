@@ -138,7 +138,19 @@
   border-radius: 10px;
 }
 .user_item2{
+  position: relative;
   border-radius: 10px;
+}
+.established_user_items{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: #FF0000;
+  font-size: 25px;
+  text-shadow: 0px 0px 5px #FFE4E1;
 }
 .design_contributor_no_item{
   font-size: 20px;
