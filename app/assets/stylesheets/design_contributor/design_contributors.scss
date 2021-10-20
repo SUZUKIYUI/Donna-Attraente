@@ -120,8 +120,13 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.user_item1{
+.user_item{
+  display: flex;
+  flex-direction: column;
   margin: 10px;
+}
+.user_item1{
+  height: 420px;
   position: relative;
 }
 .user_item1:hover{
@@ -141,6 +146,11 @@
   position: relative;
   border-radius: 10px;
 }
+.user_item_time{
+  font-size: 17px;
+  text-align: right;
+  margin-right: 5px;
+}
 .established_user_items{
   position: absolute;
   top: 50%;
@@ -149,7 +159,7 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: #FF0000;
-  font-size: 25px;
+  font-size: 28px;
   text-shadow: 0px 0px 5px #FFE4E1;
 }
 .design_contributor_no_item{
@@ -161,16 +171,33 @@
 
 /*-----------1400px以下に適用------------*/
 @media(max-width: 1400px){
+  .user_item1{
+    height: 375px;
+  }
   .user_item2{
     width: 268px;
+    height: 375px;
+  }
+  .established_user_items{
+    font-size: 25px;
   }
 }
 /*--------------------------------------*/
 
 /*-----------1200px以下に適用------------*/
 @media(max-width: 1200px){
+  .user_item1{
+    height: 314px;
+  }
   .user_item2{
     width: 220px;
+    height: 314px;
+  }
+  .user_item_time{
+    font-size: 14px;
+  }
+  .established_user_items{
+    font-size: 20px;
   }
 }
 /*--------------------------------------*/
@@ -204,11 +231,21 @@
     border-top: double 5px rgb(59, 34, 33);
     border-bottom: double 5px rgb(59, 34, 33);
   }
+  .user_item1{
+    height: 375px;
+  }
   .user_item2{
     width: 268px;
+    height: 375px;
+  }
+  .user_item_time{
+    font-size: 17px;
+  }
+  .established_user_items{
+    font-size: 25px;
   }
   .design_contributor_no_item{
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 /*--------------------------------------*/
@@ -236,8 +273,18 @@
   .user_show_self_introduction{
     font-size: 15px;
   }
+  .user_item1{
+    height: 274px;
+  }
   .user_item2{
     width: 196px;
+    height: 274px;
+  }
+  .user_item_time{
+    font-size: 13px;
+  }
+  .established_user_items{
+    font-size: 18px;
   }
 }
 /*--------------------------------------*/
@@ -299,12 +346,6 @@
     padding: 3px 18px;
     border-top: double 3px rgb(59, 34, 33);
     border-bottom: double 3px rgb(59, 34, 33);
-  }
-  .user_item1{
-    margin: 5px;
-  }
-  .user_item2{
-    width: 111px;
   }
   .design_contributor_no_item{
     font-size: 14px;

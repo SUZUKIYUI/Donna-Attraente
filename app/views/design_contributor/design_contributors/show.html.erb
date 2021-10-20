@@ -49,12 +49,14 @@
     <% if @design_contributor.posts.exists? %>
       <div class="user_all_items">
         <% @design_contributor.posts.each do |post| %>
-          <%= link_to design_contributor_post_path(post.id), class: "user_item1" do %>
-            <%= attachment_image_tag post, :post_image, :fill, 300, 420, class: "user_item2" %>
-            <% if Offer.where(post_id: post.id, offer_status: :established).exists? %>
-              <p class="established_user_items">商品化決定</p>
+          <div class="user_item">
+            <%= link_to design_contributor_post_path(post.id), class: "user_item1" do %>
+              <%= attachment_image_tag post, :post_image, :fill, 300, 420, class: "user_item2" %>
+              <% if Offer.where(post_id: post.id, offer_status: :established).exists? %>
+                <p class="established_user_items">商品化決定</p>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         <% end %>
       </div>
     <% else %>
