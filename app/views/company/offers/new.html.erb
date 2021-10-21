@@ -10,7 +10,7 @@
   </div>
 
   <div class="offer_new_content">
-    <!-----------------未入力の時のエラー文表示------------------>
+    <!--未入力の時のエラー文表示-->
     <% if @offer.errors.any? %>
       <div class="error_box offer_error_box">
         <ul>
@@ -22,11 +22,11 @@
         </ul>
       </div>
     <% end %>
-    <!----------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------->
     <%= form_with model: [@post, @offer], url: company_post_offers_path(post_id: @post.id), local: true do |f| %>
       <div class="offer_new_form">
         <%= f.label :offer_comment, class: "offer_new_label" %>
-        <%= f.text_area :offer_comment, class: "offer_new_input" %>
+        <%= f.text_area :offer_comment, placeholder: "商品化したいと思った理由・商品化に際しての変更点・その他デザイン作者に伝えたいこと等", class: "offer_new_input" %>
       </div>
       <div class="offer_new_btn_form">
         <%= f.submit "オファーする", class: "offer_new_btn" %>
