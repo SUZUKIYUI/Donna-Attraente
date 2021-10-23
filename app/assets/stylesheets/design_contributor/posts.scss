@@ -27,14 +27,13 @@
 }
 .posts_index_bottom{
   background-image: url("../base_back2.png");
+  color: rgb(59, 34, 33);
 }
 .posts_index_heading3{
   display: flex;
   align-items: flex-end;
 }
 .posts_index_heading3 h3{
-  color: rgb(59, 34, 33);
-  font-family: serif;
   font-size: 30px;
   border: double 10px rgb(59, 34, 33);
   width: 250px;
@@ -42,8 +41,6 @@
 }
 .posts_index_heading3 span{
   margin-left: 50px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -58,7 +55,6 @@
 }
 .post_show_link{
   padding: 10px;
-  margin-bottom: 5px;
   background-color: rgb(225, 214, 206);
   border-radius: 5px;
   position: relative;
@@ -68,10 +64,7 @@
   opacity: 0.8;
 }
 .post_index_image{
-  margin-bottom: 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .posts_index_established_text{
   width: 100%;
@@ -88,28 +81,31 @@
 .posts_index_established_text::after{
   position: absolute;
   content: '商品化決定';
-  color: red;
+  color: rgb(225, 214, 206);
   text-align: center;
   left: 0;
-  bottom: -100%;
+  top: 50%;
   width: 100%;
   padding: 3px 0;
-  background-color: #FFE4E1;
-  transform: skewY(-10deg);
+  background-color: rgb(70, 40, 20);
+  border-top: double 4px rgb(225, 214, 206);
+  border-bottom: double 4px rgb(225, 214, 206);
+  box-shadow: 0px 3px 5px gray;
+  transform: skewY(-7deg);
   transform-origin: bottom left;
 }
 .user_show_link{
   display: inline-block;
-  height: 53px;
-  margin-top: 5px;
-}
-.user_show_link:hover{
-  opacity: 0.7;
+  height: 45px;
+  margin-top: 10px;
 }
 .user_show_link1{
   display: flex;
   align-items: center;
   height: 100%;
+}
+.user_show_link1:hover{
+  opacity: 0.7;
 }
 .user_show_link2{
   height: 100%;
@@ -121,7 +117,6 @@
 }
 .user_show_link3{
   color: rgb(59, 34, 33);
-  font-family: serif;
   font-size: 18px;
   font-weight: bold;
   padding: 0 10px;
@@ -176,9 +171,6 @@
     width: 360px;
     height: 200px;
   }
-  .content_width .posts_index_bottom{
-    padding: 5% 10% 10%;
-  }
   .posts_index_heading3 h3{
     font-size: 25px;
     border: double 8px #3b2221;
@@ -226,10 +218,7 @@
   .posts_index_heading2{
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
-    margin: auto;
-    height: 70px;
     text-align: center;
   }
   .posts_index_heading3 h3{

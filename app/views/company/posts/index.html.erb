@@ -33,14 +33,12 @@
             </div>
           <% end %>
           <div class="user_show_link">
-            <%= link_to company_design_contributor_path(post.design_contributor_id) do %>
-              <div class="user_show_link1">
-                <div class="user_show_link2">
-                  <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.png", size: "45x45", class: "user_profile_image" %>
-                </div>
-                <div class="user_show_link3">
-                  <%= post.design_contributor.pen_name %>
-                </div>
+            <%= link_to company_design_contributor_path(post.design_contributor_id), class: "user_show_link1" do %>
+              <div class="user_show_link2">
+                <%= attachment_image_tag post.design_contributor, :profile_image, :fill, 45, 45, fallback: "no_image.png", size: "45x45", class: "user_profile_image" %>
+              </div>
+              <div class="user_show_link3">
+                <%= post.design_contributor.pen_name %>
               </div>
             <% end %>
           </div>
