@@ -9,11 +9,12 @@
 // offer新規登録画面
 .offer_new_content{
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 80px;
+  margin-bottom: 30px;
   width: 600px;
 }
 .offer_error_box{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .offer_new_form{
   display: flex;
@@ -21,7 +22,6 @@
 }
 .offer_new_label{
   font-size: 22px;
-  color: rgb(61, 36, 34);
 }
 .offer_new_input{
   width: 380px;
@@ -30,18 +30,19 @@
   font-family: "HiraMinProN-W6";
   color: rgb(61, 36, 34);
   padding: 10px 15px;
+  background-color: rgb(249, 242, 237);
 }
 .offer_new_btn_form{
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .offer_new_btn{
-  background-color: #462814;
+  background-color: rgb(70, 40, 20);
   font-size: 18px;
-  font-family: serif;
+  font-family: "HiraMinProN-W6";
   font-weight: bold;
-  color: #c5b4a9;
-  padding: 12px 32px;
+  color: rgb(249, 242, 237);
+  padding: 15px 30px;
   letter-spacing: 4px;
   text-indent: 4px;
 }
@@ -54,66 +55,60 @@
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
   .offer_new_content{
-    width: 550px;
+    width: 530px;
+    margin-top: 60px;
   }
   .offer_new_label{
     font-size: 20px;
   }
   .offer_new_input{
     width: 350px;
-    height: 190px;
+    height: 180px;
     font-size: 18px;
+  }
+  .offer_new_btn_form{
+    margin-top: 60px;
+  }
+  .offer_new_btn{
+    font-size: 17px;
+    padding: 14px 28px;
+    letter-spacing: 3px;
+    text-indent: 3px;
   }
 }
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
+  .offer_new_form{
+    flex-direction: column;
+  }
   .offer_new_content{
-    width: 420px;
-    margin-top: 12%;
-  }
-  .offer_new_label{
-    font-size: 18px;
-  }
-  .offer_new_input{
-    width: 260px;
-    height: 150px;
-    font-size: 16px;
-  }
-  .offer_new_btn_form{
-    margin-top: 30px;
-  }
-  .offer_new_btn{
-    font-size: 16px;
-    padding: 10px 20px;
-    letter-spacing: 2px;
-    text-indent: 2px;
+    width: 350px;
   }
 }
 /*--------------------------------------*/
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
-  .offer_new_form{
-    flex-direction: column;
-  }
   .offer_new_content{
-    width: 240px;
+    width: 100%;
+  }
+  .offer_new_label{
+    font-size: 18px;
   }
   .offer_new_input{
     width: 100%;
-    height: 120px;
     font-size: 16px;
   }
   .offer_new_btn_form{
-    margin-top: 15px;
+    margin: 30px 0;
   }
   .offer_new_btn{
-    font-size: 14px;
-    padding: 8px 18px;
-    letter-spacing: 1px;
-    text-indent: 1px;
+    font-size: 15px;
+    padding: 12px 24px;
+    letter-spacing: 2px;
+    text-indent: 2px;
   }
 }
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
