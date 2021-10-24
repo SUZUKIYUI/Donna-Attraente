@@ -93,6 +93,9 @@
 
 /*-----------1200px以下に適用------------*/
 @media(max-width: 1200px){
+  .company_want_detail{
+    width: 350px;
+  }
   .post_show_bottom_content .company_post_show_bottom_left{
     width: 400px;
   }
@@ -113,6 +116,10 @@
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
+  .company_want_detail{
+    width: 250px;
+    font-size: 15px;
+  }
   .post_show_bottom_content .company_post_show_bottom_left{
     width: 60%;
   }
@@ -142,6 +149,9 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
+  .company_want_detail{
+    margin-left: auto;
+  }
   .post_show_bottom_content .company_post_show_bottom_left{
     width: 100%;
   }
@@ -170,6 +180,9 @@
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
+  .company_want_detail{
+    width: 240px;
+  }
   .post_show_bottom_content .company_post_show_bottom_right{
     width: 100%;
     font-size: 12px;
