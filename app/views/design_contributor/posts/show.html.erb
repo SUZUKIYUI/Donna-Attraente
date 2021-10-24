@@ -32,10 +32,10 @@
 
     <div class="post_show_top2">
       <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
-        <div class="post_show_user1 post_show_user">
+        <div class="post_show_user1">
           <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
         </div>
-        <div class="post_show_user2 post_show_user">
+        <div class="post_show_user2">
           <%= @post.design_contributor.pen_name %>
         </div>
       <% end %>

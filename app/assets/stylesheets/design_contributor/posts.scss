@@ -428,10 +428,8 @@
 // posts詳細画面
 .post_show_back{
   background-image: url("../post_show_back1");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100%;
   padding: 5% 10%;
-  font-family: "HiraMinProN-W6";
   font-weight: bold;
   color: rgb(70, 40, 20);
   position: relative;
@@ -452,9 +450,11 @@
 .post_show_established_text span{
   margin-left: 5px;
 }
-.post_show_top{
+.post_show_top_flex{
   display: flex;
   justify-content: center;
+  align-items: flex-end;
+  width: 840px;
 }
 .want_link{
   display: flex;
@@ -476,8 +476,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 650px;
   margin-left: 50px;
-  margin-bottom: 40px;
   padding-top: 50px;
 }
 .post_show_user{
@@ -485,6 +485,9 @@
 }
 .post_show_user:hover{
   opacity: 0.7;
+}
+.post_show_profile_image{
+  border-radius: 100%;
 }
 .post_show_user2{
   display: inline-block;
@@ -517,6 +520,10 @@
 }
 .post_show_created_at span{
   margin-left: 10px;
+}
+.post_show_top3{
+  width: 840px;
+  
 }
 .post_delete_link1{
   text-align: right;
@@ -753,7 +760,6 @@
     margin-top: 10px;
   }
   .post_show_top2{
-    margin-bottom: 45px;
     margin-left: 30px;
   }
   .post_show_profile_image{
@@ -801,6 +807,9 @@
 @media(max-width: 1000px){
   .post_show_established_text{
     font-size: 18px;
+  }
+  .post_show_established_text p{
+    padding: 18px;
   }
   .post_show_post_image{
     width: 250px;
@@ -895,14 +904,14 @@
   .post_show_established_text{
     font-size: 16px;
     padding: 7px;
+    margin-bottom: 40px;
   }
   .post_show_established_text p{
-    padding: 15px;
+    padding: 16px;
   }
-  .post_show_top{
+  .post_show_top_flex{
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
   }
   .post_show_post_image{
     width: 350px;
@@ -965,6 +974,9 @@
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
+  .post_show_back{
+    padding: 10%;
+  }
   .post_show_post_image{
     width: 100%;
   }
