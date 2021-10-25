@@ -522,19 +522,19 @@
 .want_link1:hover{
   color: rgba(70, 40, 20, 0.7);
 }
-.want_link2 span{
-  margin-right: 5px;
+.want_link span{
+  margin: 0 5px;
 }
 .post_delete_link1{
   text-align: right;
 }
 .post_delete_link2{
   font-size: 18px;
-  color: rgb(67, 14, 29);
+  color: rgb(161, 0, 45);
   margin-right: 10px;
 }
 .post_delete_link2:hover{
-  color: rgb(161, 0, 45);
+  color: #DD0000;
 }
 .post_show_bottom{
   border-top: solid 1px rgb(70, 40, 20);
@@ -863,10 +863,7 @@
   }
   .design_contributor_post_show_reaction{
     width: 280px;
-    margin-top: 10px;
-    padding: 10px 20px;
     font-size: 15px;
-    border-radius: 10px;
   }
   .post_show_bottom_left{
     width: 310px;
@@ -958,6 +955,7 @@
     margin-top: 40px;
   }
   .want_link{
+    width: 240px;
     margin-left: auto;
   }
   .post_delete_link1{
@@ -1021,12 +1019,10 @@
     width: 100%;
     margin-top: 15px;
   }
-  .want_link{
-    width: 240px;
-  }
   .design_contributor_post_show_reaction{
     width: 240px;
     font-size: 13px;
+    padding: 8px 18px;
   }
   .post_show_comment_heading{
     font-size: 16px;
