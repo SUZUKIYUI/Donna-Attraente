@@ -45,7 +45,7 @@
     <!-------------------コメント一覧-------------------->
     <p class="post_show_comment_heading">コメント一覧</p>
     <div class="post_show_bottom_content">
-      <div class="post_show_bottom_left company_post_show_bottom_left">
+      <div class="post_show_bottom_left">
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
             <div class="post_show_comment_box">
