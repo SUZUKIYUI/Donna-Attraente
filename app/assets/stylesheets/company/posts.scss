@@ -47,8 +47,6 @@
   text-align: center;
   font-size: 18px;
   margin: 0 auto;
-  color: rgb(221, 212, 205);
-  background-color: rgb(50, 26, 10);
 }
 .company_post_show_call{
   margin-top: 10px;
@@ -69,22 +67,8 @@
 }
 /*--------------------------------------*/
 
-/*-----------1400px以下に適用------------*/
-@media(max-width: 1400px){
-  .post_show_bottom_content .company_post_show_bottom_right{
-    width: 350px;
-  }
-}
-/*--------------------------------------*/
-
 /*-----------1200px以下に適用------------*/
 @media(max-width: 1200px){
-  .post_show_bottom_content .company_post_show_bottom_right{
-    width: 300px;
-  }
-  .company_post_show_bottom_right1 .company_post_show_reaction{
-    width: 260px;
-  }
   .company_post_show_bottom_right1 .post_offer_announce2{
     width: 260px;
   }
@@ -97,13 +81,11 @@
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
   .post_show_bottom_content .company_post_show_bottom_right{
-    width: 220px;
     font-size: 13px;
   }
   .company_post_show_bottom_right1 .company_post_show_reaction{
     width: 220px;
-    padding: 10px 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .company_post_show_bottom_right1 .post_offer_announce2{
     width: 220px;
@@ -123,8 +105,8 @@
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
   .post_show_bottom_content .company_post_show_bottom_right{
-    width: 400px;
-    margin-top: 50px;
+    // width: 400px;
+    // margin-top: 50px;
     font-size: 18px;
   }
   .company_post_show_bottom_right1 .company_post_show_reaction{
@@ -148,7 +130,7 @@
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .post_show_bottom_content .company_post_show_bottom_right{
-    width: 100%;
+    // width: 100%;
     font-size: 13px;
   }
   .company_post_show_bottom_right1 .company_post_show_reaction{

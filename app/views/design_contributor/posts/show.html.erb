@@ -139,20 +139,18 @@
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
             <div class="post_show_comment_box">
-              <div class="post_show_comment_user">
-                <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id), class: "post_show_comment_user_link" do %>
-                  <div class="post_show_comment_user2">
-                    <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user1" %>
-                  </div>
-                  <div class="post_show_comment_user2">
-                    <% if comment.design_contributor.id == @post.design_contributor.id %>
-                      <p>投稿者</p>
-                    <% else %>
-                      <p><%= comment.design_contributor.pen_name %></p>
-                    <% end %>
-                  </div>
-                <% end %>
-              </div>
+              <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id), class: "post_show_comment_user_link" do %>
+                <div>
+                  <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user_image" %>
+                </div>
+                <div>
+                  <% if comment.design_contributor.id == @post.design_contributor.id %>
+                    <p>投稿者</p>
+                  <% else %>
+                    <p><%= comment.design_contributor.pen_name %></p>
+                  <% end %>
+                </div>
+              <% end %>
               <div class="post_show_comment">
                 <div class="post_show_comment1">
                   <%= comment.comment %>
