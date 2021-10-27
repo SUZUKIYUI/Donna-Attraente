@@ -81,13 +81,13 @@
           <!---------------------作品への反応----------------------->
           <div class="post_show_reaction company_post_show_reaction">
             <p class="post_show_reaction_heading">このデザインへの反応</p>
-            <div class="post_show_reaction_content post_show_reaction_want">
+            <div class="post_show_reaction_content">
               <p>なにこれ欲しい☆</p>
               <div>
                 <span><%= @post.wants.count %></span>★
               </div>
             </div>
-            <div class="post_show_reaction_content post_show_reaction_comment">
+            <div class="post_show_reaction_content">
               <p>コメント</p>
               <div>
                 <span><%= @post.comments.count %></span>件
@@ -167,10 +167,10 @@
             <p class="company_post_show_call">ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
           <% end %>
         </div>
-        <div class="post_index_link1 company_post_show_bottom_right2">
+        <div class="post_index_link1">
           <%= link_to "デザイン一覧に戻る", company_posts_path, class: "post_index_link2" %>
         </div>
-        <div class="company_post_index_link_decoration"></div>
+        <div class="post_index_link_decoration"></div>
       </div>
     </div>
   </div>

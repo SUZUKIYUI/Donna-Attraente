@@ -7,11 +7,7 @@
 
 
 // posts詳細画面
-.company_post_show_bottom_right{
-  position: relative;
-}
 .company_post_show_bottom_right1{
-  margin: 0 auto;
   text-align: center;
 }
 .company_post_show_bottom_right1 .company_post_show_reaction{
@@ -21,16 +17,12 @@
 .post_offer_announce1{
   padding: 10px 0;
   margin: 10px 0;
-  text-align: center;
   color: white;
   background-color: rgb(61, 36, 34);
 }
 .post_offer_announce2{
-  font-size: 15px;
-  text-align: center;
-  width: 300px;
-  padding: 55px 20px;
-  margin: 0 auto;
+  width: 260px;
+  padding: 55px 0;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
 }
@@ -44,33 +36,47 @@
   opacity: 0.8;
 }
 .offer_new_link2{
-  text-align: center;
   font-size: 18px;
-  margin: 0 auto;
 }
 .company_post_show_call{
   margin-top: 10px;
-}
-.company_post_show_bottom_right2{
-  margin-left: auto;
-}
-.company_post_index_link_decoration{
-  background-image: url("../post_show_back2");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 120px;
-  height: 170px;
-  position: absolute;
-  top: 80%;
-  left: 92%;
-  z-index: 1;
+  font-size: 15px;
 }
 /*--------------------------------------*/
 
-/*-----------1200px以下に適用------------*/
-@media(max-width: 1200px){
+/*-----------1000px以下に適用------------*/
+@media(max-width: 1000px){
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 240px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .company_post_show_bottom_right1 .post_offer_announce2{
+    width: 200px;
+    padding: 45px 0;
+  }
+  .offer_new_link2{
+    font-size: 15px;
+  }
+  .company_post_show_call{
+    font-size: 12px;
+  }
+}
+/*--------------------------------------*/
+
+/*-----------800px以下に適用------------*/
+@media(max-width: 800px){
+  .company_post_show_bottom_right1 .company_post_show_reaction{
+    width: 300px;
+    margin-bottom: 50px;
+    font-size: 17px;
+  }
   .company_post_show_bottom_right1 .post_offer_announce2{
     width: 260px;
+    padding: 55px 0;
+  }
+  .offer_new_link2{
+    font-size: 18px;
   }
   .company_post_show_call{
     font-size: 15px;
@@ -78,71 +84,20 @@
 }
 /*--------------------------------------*/
 
-/*-----------1000px以下に適用------------*/
-@media(max-width: 1000px){
-  .post_show_bottom_content .company_post_show_bottom_right{
-    font-size: 13px;
-  }
-  .company_post_show_bottom_right1 .company_post_show_reaction{
-    width: 220px;
-    margin-bottom: 30px;
-  }
-  .company_post_show_bottom_right1 .post_offer_announce2{
-    width: 220px;
-  }
-  .offer_new_link2{
-    font-size: 16px;
-  }
-  .company_post_show_call{
-    font-size: 11px;
-  }
-  .company_post_index_link_decoration{
-    left: 88%;
-  }
-}
-/*--------------------------------------*/
-
-/*-----------800px以下に適用------------*/
-@media(max-width: 800px){
-  .post_show_bottom_content .company_post_show_bottom_right{
-    // width: 400px;
-    // margin-top: 50px;
-    font-size: 18px;
-  }
-  .company_post_show_bottom_right1 .company_post_show_reaction{
-    width: 300px;
-  }
-  .company_post_show_bottom_right1 .post_offer_announce2{
-    width: 300px;
-  }
-  .company_post_show_call{
-    font-size: 18px;
-  }
-  .company_post_index_link_decoration {
-    width: 80px;
-    height: 120px;
-    top: 80%;
-    left: 95%;
-  }
-}
-/*--------------------------------------*/
-
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
-  .post_show_bottom_content .company_post_show_bottom_right{
-    // width: 100%;
-    font-size: 13px;
-  }
   .company_post_show_bottom_right1 .company_post_show_reaction{
     width: 240px;
+    font-size: 14px;
   }
   .company_post_show_bottom_right1 .post_offer_announce2{
-    width: 240px;
+    width: 200px;
+    padding: 45px 0;
+  }
+  .offer_new_link2{
+    font-size: 15px;
   }
   .company_post_show_call{
     font-size: 12px;
-  }
-  .company_post_index_link_decoration{
-    display: none;
   }
 }

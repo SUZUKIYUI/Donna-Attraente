@@ -542,8 +542,10 @@
 }
 .post_show_reaction{
   width: 300px;
+  font-size: 17px;
   margin-top: 10px;
   padding: 10px 20px;
+  text-align: center;
   border-radius: 10px;
   background-color: rgb(221, 212, 205);
 }
@@ -662,6 +664,7 @@
   justify-content: space-between;
   width: 400px;
   margin: 0 auto;
+  position: relative;
 }
 .post_show_comment_new{
   position: relative;
@@ -732,7 +735,7 @@
   height: 170px;
   position: absolute;
   top: 80%;
-  left: 100%;
+  left: 92%;
   z-index: 1;
 }
 /*--------------------------------------*/
@@ -905,6 +908,9 @@
   .post_index_link2{
     font-size: 20px;
   }
+  .post_index_link_decoration{
+    left: 88%;
+  }
 }
 /*--------------------------------------*/
 
@@ -988,7 +994,7 @@
   .post_index_link_decoration {
     width: 80px;
     height: 120px;
-    top: 87%;
+    top: 80%;
     left: 95%;
   }
 }
