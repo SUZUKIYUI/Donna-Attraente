@@ -586,6 +586,12 @@
 .post_show_offer_negotiation span{
   margin-left: 2px;
 }
+.post_show_reaction_offer_announce{
+  padding: 10px 0;
+  margin: 10px 0;
+  color: white;
+  background-color: rgb(61, 36, 34);
+}
 .post_show_comment_heading{
   display: inline-block;
   margin-top: 20px;
@@ -718,7 +724,6 @@
   text-align: right;
 }
 .post_index_link2{
-  display: inline-block;
   font-size: 25px;
   color: rgb(70, 40, 20);
   position: relative;
@@ -909,7 +914,7 @@
     font-size: 20px;
   }
   .post_index_link_decoration{
-    left: 88%;
+    left: 90%;
   }
 }
 /*--------------------------------------*/

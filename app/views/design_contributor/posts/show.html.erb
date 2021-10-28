@@ -116,7 +116,7 @@
             <p>オファー</p>
             <p>オファー不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
           </div>
-          <p class="post_offer_announce1">現在オファーなし</p>
+          <p class="post_show_reaction_offer_announce">現在オファーなし</p>
         <!---オファーモデルは存在するがこのデザインにオファーが来ていない-->
         <% else %>
           <div class="post_show_reaction_content">

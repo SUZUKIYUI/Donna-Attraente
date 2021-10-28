@@ -7,26 +7,20 @@
 
 
 // posts詳細画面
-.company_post_show_bottom_right1{
+.company_post_show_bottom_right_center{
   text-align: center;
 }
-.company_post_show_bottom_right1 .company_post_show_reaction{
+.company_post_show_bottom_right_center .company_post_show_reaction{
   margin: 0 auto;
   margin-bottom: 50px;
 }
-.post_offer_announce1{
-  padding: 10px 0;
-  margin: 10px 0;
-  color: white;
-  background-color: rgb(61, 36, 34);
-}
-.post_offer_announce2{
+.company_post_show_offer_announce{
   width: 260px;
   padding: 55px 0;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
 }
-.post_offer_announce2 span{
+.company_post_show_offer_announce span{
   margin: 0 5px;
 }
 .offer_new_link1{
@@ -46,12 +40,12 @@
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
-  .company_post_show_bottom_right1 .company_post_show_reaction{
+  .company_post_show_bottom_right_center .company_post_show_reaction{
     width: 240px;
     margin-bottom: 30px;
     font-size: 14px;
   }
-  .company_post_show_bottom_right1 .post_offer_announce2{
+  .company_post_show_bottom_right_center .company_post_show_offer_announce{
     width: 200px;
     padding: 45px 0;
   }
@@ -66,12 +60,12 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
-  .company_post_show_bottom_right1 .company_post_show_reaction{
+  .company_post_show_bottom_right_center .company_post_show_reaction{
     width: 300px;
     margin-bottom: 50px;
     font-size: 17px;
   }
-  .company_post_show_bottom_right1 .post_offer_announce2{
+  .company_post_show_bottom_right_center .company_post_show_offer_announce{
     width: 260px;
     padding: 55px 0;
   }
@@ -86,11 +80,11 @@
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
-  .company_post_show_bottom_right1 .company_post_show_reaction{
+  .company_post_show_bottom_right_center .company_post_show_reaction{
     width: 240px;
     font-size: 14px;
   }
-  .company_post_show_bottom_right1 .post_offer_announce2{
+  .company_post_show_bottom_right_center .company_post_show_offer_announce{
     width: 200px;
     padding: 45px 0;
   }
