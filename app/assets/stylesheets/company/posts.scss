@@ -7,10 +7,10 @@
 
 
 // posts詳細画面
-.company_post_show_bottom_right_center{
+.company_post_show_bottom_right_main{
   text-align: center;
 }
-.company_post_show_bottom_right_center .company_post_show_reaction{
+.company_post_show_bottom_right_main .company_post_show_reaction{
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -23,14 +23,12 @@
 .company_post_show_offer_announce span{
   margin: 0 5px;
 }
-.offer_new_link1{
+.company_offer_new_link{
   display: inline-block;
-}
-.offer_new_link1:hover{
-  opacity: 0.8;
-}
-.offer_new_link2{
   font-size: 18px;
+}
+.company_offer_new_link:hover{
+  opacity: 0.8;
 }
 .company_post_show_call{
   margin-top: 10px;
@@ -40,16 +38,16 @@
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
-  .company_post_show_bottom_right_center .company_post_show_reaction{
+  .company_post_show_bottom_right_main .company_post_show_reaction{
     width: 240px;
     margin-bottom: 30px;
     font-size: 14px;
   }
-  .company_post_show_bottom_right_center .company_post_show_offer_announce{
+  .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 200px;
     padding: 45px 0;
   }
-  .offer_new_link2{
+  .company_offer_new_link{
     font-size: 15px;
   }
   .company_post_show_call{
@@ -60,16 +58,16 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
-  .company_post_show_bottom_right_center .company_post_show_reaction{
+  .company_post_show_bottom_right_main .company_post_show_reaction{
     width: 300px;
     margin-bottom: 50px;
     font-size: 17px;
   }
-  .company_post_show_bottom_right_center .company_post_show_offer_announce{
+  .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 260px;
     padding: 55px 0;
   }
-  .offer_new_link2{
+  .company_offer_new_link{
     font-size: 18px;
   }
   .company_post_show_call{
@@ -80,15 +78,15 @@
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
-  .company_post_show_bottom_right_center .company_post_show_reaction{
+  .company_post_show_bottom_right_main .company_post_show_reaction{
     width: 240px;
     font-size: 14px;
   }
-  .company_post_show_bottom_right_center .company_post_show_offer_announce{
+  .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 200px;
     padding: 45px 0;
   }
-  .offer_new_link2{
+  .company_offer_new_link{
     font-size: 15px;
   }
   .company_post_show_call{
