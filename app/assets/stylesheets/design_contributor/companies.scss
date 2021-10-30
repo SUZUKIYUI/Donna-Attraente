@@ -117,9 +117,6 @@
     justify-content: center;
     width: 240px;
   }
-  .company_show_link{
-    margin: 20px 0;
-  }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -131,11 +128,11 @@
   background-image: url("../base_back3.png");
   background-size: 100%;
   padding: 10%;
+  color: rgb(70, 40, 20);
 }
 .the_other_user_show_heading1{
   font-size: 50px;
   font-weight: bold;
-  color: rgb(70, 40, 20);
   text-align: center;
 }
 .the_other_user_show1{
@@ -144,14 +141,12 @@
   align-items: end;
   width: 700px;
   margin: 5% auto;
-  color: rgb(61, 36, 34);
 }
 .design_contributor_show_profile_image{
   border-radius: 100%;
 }
 .the_other_user_show1_name{
   font-size: 30px;
-  margin-top: 10px;
   text-align: center;
 }
 .company_show1_company_name_kana{
@@ -160,7 +155,7 @@
 .the_other_user_show1_introduction{
   width: 350px;
   margin-left: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   position: relative;
 }
 .the_other_user_show1_introduction_title{
@@ -267,7 +262,6 @@
     height: 170px;
   }
   .the_other_user_show1_name{
-    margin-top: 0px;
     font-size: 20px;
   }
   .company_show1_company_name_kana{
