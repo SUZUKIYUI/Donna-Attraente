@@ -33,47 +33,42 @@
   display: flex;
   align-items: flex-end;
   width: 720px;
+  margin-top: 30px;
 }
 .user_show_introduction1{
   width: 40%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 30px;
 }
-.user_image_frame{
+.user_show_user_image_frame{
   position: relative;
   width: 220px;
   height: 220px;
   margin: 0 auto;
 }
-.user_image_frame::after {
+.user_show_user_image_frame::after {
   position: absolute;
   content: '';
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: inset 0 0 5px 5px rgb(197, 180, 169);
+  box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
   border-radius: 15px;
 }
-.user_image{
+.user_show_user_image{
   border-radius: 15px;
 }
 .user_show_name{
   font-size: 23px;
   text-align: center;
-  font-family: serif;
-  font-weight: bold;
 }
 .user_show_introduction2{
   width: 60%;
-  font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 .user_show_introduction2 p{
   font-size: 23px;
-  font-family: serif;
   letter-spacing: 3px;
+  margin-left: 5px;
 }
 .user_show_self_introduction{
   position: relative;
@@ -205,11 +200,11 @@
   .user_show_introduction{
     width: 100%;
   }
-  .user_image_frame{
+  .user_show_user_image_frame{
     width: 200px;
     height: 200px;
   }
-  .user_image{
+  .user_show_user_image{
     width: 200px;
     height: 200px;
   }
@@ -250,19 +245,16 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
-  .user_image_frame{
+  .user_show_user_image_frame{
     width: 160px;
     height: 160px;
   }
-  .user_image{
+  .user_show_user_image{
     width: 160px;
     height: 160px;
   }
   .user_show_name{
     font-size: 20px;
-  }
-  .user_show_introduction2{
-    margin-top: 10px;
   }
   .user_show_introduction2 p{
     font-size: 18px;
@@ -302,33 +294,30 @@
   }
   .user_show_introduction{
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 15px;
   }
   .user_show_introduction1{
     width: 100%;
   }
-  .user_image_frame{
+  .user_show_user_image_frame{
     width: 120px;
     height: 120px;
   }
-  .user_image_frame::after {
-    box-shadow: inset 0 0 3px 3px rgb(197, 180, 169);
+  .user_show_user_image_frame::after {
     border-radius: 100%;
   }
-  .user_image{
+  .user_show_user_image{
     width: 120px;
     height: 120px;
     border-radius: 100%;
+  }
+  .user_show_name{
+    font-size: 18px;
   }
   .user_show_introduction2{
     width: 100%;
-    margin-left: 0px;
   }
   .user_show_introduction2 p{
     font-size: 15px;
-    margin-left: 5px;
   }
   .user_show_self_introduction{
     font-size: 13px;

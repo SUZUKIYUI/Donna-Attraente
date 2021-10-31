@@ -306,17 +306,12 @@ header{
   padding: 10% 10% 0% 10%;
   background-size: 100%;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 0;
-  margin: 0 auto;
   padding-top: calc(1100 / 2500 * 100%);
   position: relative;
 }
 
 .heading2{
   color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
 }
 
 .heading2 h2{
@@ -329,21 +324,17 @@ header{
 }
 
 .heading1{
-  display: inline-block;
   padding-bottom: 2px;
-  border-bottom: solid 5px rgba(50, 26, 10, 0.6);
+  border-bottom: solid 5px rgba(50, 26, 10, 0.8);
   position: absolute;
   bottom: 10px;
 }
 
 .heading1 h1{
-  display: inline-block;
   padding-right: 40px;
-  font-family: "HiraMinProN-W6";
   font-size: 90px;
-  font-weight: bold;
-  color: rgba(249, 242, 237, 0.9);
-  background: linear-gradient(transparent 70%, rgb(50, 26, 10) 80%);
+  color: rgb(25, 12, 3);
+  background: linear-gradient(transparent 70%, rgba(70, 40, 20, 0.9) 80%);
 }
 
 .bottom_content{
