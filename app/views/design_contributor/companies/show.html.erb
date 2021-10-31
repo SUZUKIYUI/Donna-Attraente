@@ -41,13 +41,11 @@
     <% end %>
     <!------------------------>
     <div class="company_show3">
-        <div class="company_show3_flex company_show3_flex_address">
+        <div class="company_show3_flex">
             <p>住所</p>
             <div>
-                <div>
-                    <span>〒</span><%= @company.postal_code.insert(3, "-") %><br />
-                    <%= @company.address %>
-                </div>
+                <span>〒</span><%= @company.postal_code.insert(3, "-") %><br />
+                <%= @company.address %>
             </div>
         </div>
         <div class="company_show3_flex">

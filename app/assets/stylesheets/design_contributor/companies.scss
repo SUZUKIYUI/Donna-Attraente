@@ -153,14 +153,13 @@
   font-size: 15px;
 }
 .the_other_user_show1_introduction{
-  width: 350px;
   margin-left: 50px;
   margin-bottom: 70px;
   position: relative;
 }
 .the_other_user_show1_introduction_title{
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .the_other_user_show_decoration{
   background-image: url("../signup_back2.png");
@@ -180,7 +179,6 @@
 .the_other_user_show2{
   width: 700px;
   margin: 5% auto;
-  color: rgb(61, 36, 34);
 }
 .the_other_user_show2_title{
   font-size: 25px;
@@ -191,12 +189,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 15px 0;
 }
 .the_other_user_show2_post_show_link1{
   position: relative;
   width: 210px;
   height: 310px;
-  margin: 25px auto;
+  margin: 10px;
 }
 .the_other_user_show2_post_show_link1::after {
   position: absolute;
@@ -235,10 +234,7 @@
 }
 .company_show3_flex{
   display: flex;
-  margin: 5px 0;
-}
-.company_show3_flex_address{
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 .company_show3_flex p{
   width: 100px;
@@ -268,7 +264,6 @@
     font-size: 13px;
   }
   .the_other_user_show1_introduction{
-    width: 325px;
     margin-left: 25px;
     margin-bottom: 50px;
   }
@@ -276,7 +271,6 @@
     width: 50px;
     height: 50px;
     top: -20px;
-    left: 65px;
   }
   .the_other_user_show1_introduction_text{
     font-size: 15px;
@@ -297,7 +291,7 @@
   }
   .company_show3{
     width: 550px;
-    padding: 20px 25px;
+    padding: 20px 30px;
     font-size: 15px;
   }
   .company_show3_flex p{
@@ -317,7 +311,6 @@
     width: 420px;
   }
   .the_other_user_show1_introduction{
-    width: 350px;
     margin: 0 auto;
     margin-top: 30px;
   }
@@ -362,12 +355,12 @@
     width: 190px;
     height: 160px;
   }
-  .the_other_user_show1_introduction{
-    width: 100%;
+  .design_contributor_show_profile_image{
+    width: 140px;
+    height: 140px;
   }
   .the_other_user_show1_introduction_title{
     font-size: 18px;
-    margin-bottom: 5px;
   }
   .the_other_user_show_decoration{
     top: -25px;
@@ -379,12 +372,9 @@
     width: 80%;
   }
   .the_other_user_show2_title{
-    font-size: 16px;
-    padding-left: 5px;
+    font-size: 18px;
+    padding-left: 8px;
     margin-bottom: 10px;
-  }
-  .the_other_user_show2_post_show_link1{
-    margin: 10px auto;
   }
   .company_show3{
     width: 80%;
@@ -396,10 +386,7 @@
     margin: 10px 0;
   }
   .company_show3_flex p{
-    width: 60px;
-  }
-  .company_show3_flex_address{
-    margin-bottom: 0;
+    width: auto;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
