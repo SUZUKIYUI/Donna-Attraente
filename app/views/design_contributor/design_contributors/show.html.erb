@@ -46,9 +46,9 @@
     <% end %>
     <!------------------------------------------------------------------------------------------------------------------------------------------->
     <h3 class="user_show_heading3">デザイン一覧</h3>
-    <% if @design_contributor.posts.exists? %>
+    <% if @posts.exists? %>
       <div class="user_all_items">
-        <% @design_contributor.posts.each do |post| %>
+        <% @posts.each do |post| %>
           <div class="user_item">
             <%= link_to design_contributor_post_path(post.id), class: "user_item1" do %>
               <%= attachment_image_tag post, :post_image, :fill, 300, 420, class: "user_item2" %>
@@ -59,6 +59,9 @@
           </div>
         <% end %>
       </div>
+      <% if Post.count > 12 %>
+        <div class="index_paginate"><%= paginate @posts %></div>
+      <% end %>
     <% else %>
       <p class="design_contributor_no_item">デザインはまだありません</p>
     <% end %>

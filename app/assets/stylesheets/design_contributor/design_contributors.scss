@@ -88,8 +88,7 @@
   border-radius: 10px;
 }
 .user_edit_link1{
-  width: 700px;
-  margin-top: 10px;
+  width: 720px;
   text-align: right;
 }
 .user_edit_link2{
@@ -103,7 +102,7 @@
   display: inline-block;
   font-size: 25px;
   padding: 5px 30px;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 30px;
   border-top: double 6px rgb(59, 34, 33);
   border-bottom: double 6px rgb(59, 34, 33);
@@ -115,7 +114,6 @@
 }
 .user_item{
   display: flex;
-  flex-direction: column;
   margin: 10px;
 }
 .user_item1{
@@ -220,7 +218,6 @@
   }
   .user_show_heading3{
     font-size: 20px;
-    padding: 5px 20px;
     border-top: double 5px rgb(59, 34, 33);
     border-bottom: double 5px rgb(59, 34, 33);
   }
@@ -315,6 +312,7 @@
   }
   .user_show_introduction2{
     width: 100%;
+    margin-bottom: 0;
   }
   .user_show_introduction2 p{
     font-size: 15px;
@@ -330,9 +328,8 @@
   }
   .user_show_heading3{
     font-size: 15px;
-    padding: 3px 18px;
-    border-top: double 3px rgb(59, 34, 33);
-    border-bottom: double 3px rgb(59, 34, 33);
+    border-top: double 4px rgb(59, 34, 33);
+    border-bottom: double 4px rgb(59, 34, 33);
   }
   .design_contributor_no_item{
     font-size: 14px;
