@@ -15,19 +15,16 @@
 }
 .offer_heading{
   font-size: 50px;
-  font-weight: bold;
   text-align: center;
 }
 .offer_detail{
   margin-top: 5%;
-  font-weight: bold;
 }
 .offer_detail1{
   text-align: center;
 }
 .offer_announce{
   font-size: 20px;
-  text-align: center;
   margin-top: 10px;
   letter-spacing: 2px;
   text-indent: 2px;
@@ -65,7 +62,6 @@
 }
 .offer_edit_content{
   width: 700px;
-  font-weight: bold;
   margin: 0 auto;
 }
 .offer_edit_heading{
@@ -99,7 +95,6 @@ input[type=radio] {
   border: 1px solid rgb(87, 47, 21);
   border-radius: 50%;
   content: '';
-  display: block;
   height: 16px;
   left: -22px;
   margin-top: -8px;
@@ -111,7 +106,6 @@ input[type=radio] {
   background: rgb(87, 47, 21);
   border-radius: 50%;
   content: '';
-  display: block;
   height: 10px;
   left: -18px;
   margin-top: -4px;
@@ -128,7 +122,7 @@ input[type=radio]:checked + .offer_edit_input::after {
   opacity: 1;
 }
 .offer_status_failure{
-  margin-left: 10%;
+  margin-left: 100px;
 }
 .offer_edit_btn_form{
   text-align: center;
@@ -163,14 +157,14 @@ input[type=radio]:checked + .offer_edit_input::after {
     margin-top: 8px;
   }
   .offer_detail2{
-    width: 550px;
+    width: 560px;
   }
   .offer_profile_image{
     width: 170px;
     height: 170px;
   }
   .offer_edit_content{
-    width: 550px;
+    width: 560px;
   }
   .offer_edit_btn{
     font-size: 17px;
@@ -241,9 +235,8 @@ input[type=radio]:checked + .offer_edit_input::after {
   .offer_detail2{
     flex-direction: column;
     align-items: center;
-    width: 240px;
-    padding-bottom: 10%;
-    margin: 15% auto;
+    width: 100%;
+    margin-top: 10%;
   }
   .offer_profile_image{
     margin-right: 0%;
@@ -252,35 +245,38 @@ input[type=radio]:checked + .offer_edit_input::after {
     text-align: center;
   }
   .offer_comment{
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .offer_comment:before{
     top: -15px;
     left: 50%;
+    margin-top: -15px;
     margin-left: -15px;
     border: 15px solid transparent;
     border-bottom: 15px solid rgb(249, 242, 237);
   }
   .offer_edit_content{
-    width: 240px;
+    width: 100%;
     margin-bottom: 10%;
   }
   .offer_edit_heading{
     font-size: 15px;
-    padding: 5px 25px;
+    padding: 8px 30px;
   }
   .offer_edit_intro {
-    font-size: 15px;
-    margin: 10% 0;
+    font-size: 16px;
   }
   .offer_edit_form{
-    font-size: 15px;
+    font-size: 16px;
   }
   .offer_edit_input::before {
     margin-top: -9px;
   }
   .offer_edit_input::after {
     margin-top: -5px;
+  }
+  .offer_status_failure{
+    margin-left: 15%;
   }
   .offer_edit_btn_form{
     margin-top: 30px;
