@@ -249,62 +249,54 @@
   margin: 0 auto;
   width: 500px;
   margin-top: 5%;
+  color: rgb(70, 40, 20);
+}
+.post_new_error_box{
+  margin-bottom: 50px;
 }
 .post_input_form{
   display: flex;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
-}
-.post_image_form{
-  justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 50px;
 }
 .post_input_image1{
   width: 250px;
   font-size: 15px;
   color: rgb(249, 242, 237);
-  background-color: rgb(65, 33, 11);
+  background-color: rgb(70, 40, 20);
   text-align: center;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   border-radius: 5px;
-  cursor: pointer;
 }
 .post_input_image1:hover{
-  background-color: rgba(65, 33, 11, 0.7);
+  background-color: rgba(70, 40, 20, 0.7);
+  cursor: pointer;
 }
 .post_input_image2{
   display: none;
 }
 .post_label{
-  width: 200px;
+  width: 150px;
   font-size: 20px;
 }
 .post_input{
-  height: 100px;
-  width: 300px;
+  height: 150px;
+  width: 350px;
   padding: 5px 10px;
-  font-size: 15px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
+  font-size: 18px;
+  color: rgb(70, 40, 20);
+  font-family: "HiraMinProN-W6";
   background-color: rgb(249, 242, 237);
 }
 .post_new_btn_form{
   text-align: center;
-  margin-top: 50px;
 }
 .post_new_btn{
-  background-color: rgb(70, 40, 20);
   padding: 12px 32px;
   font-size: 18px;
-  font-family: serif;
-  font-weight: bold;
-  color: rgb(197, 180, 169);
+  font-family: "HiraMinProN-W6";
+  color: rgb(249, 242, 237);
+  background-color: rgb(70, 40, 20);
   letter-spacing: 8px;
   text-indent: 8px;
 }
@@ -319,28 +311,20 @@
   .post_new_form{
     width: 450px;
   }
-  .post_input_image1{
-    width: 230px;
-    font-size: 13px;
-  }
-  .post_label{
-    width: 150px;
-  }
   .post_input{
     width: 300px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
-  .post_new_decoration{
-    width: 20%;
-    top: 60%;
-  }
   .post_new_form{
     width: 400px;
+  }
+  .post_input_form{
+    margin-bottom: 30px;
   }
   .post_input_image1{
     width: 200px;
@@ -354,7 +338,6 @@
     width: 270px;
   }
   .post_new_btn{
-    padding: 10px 25px;
     font-size: 15px;
   }
 }
@@ -366,7 +349,8 @@
     height: 70px;
   }
   .post_new_form{
-    width: 240px;
+    width: 100%;
+    margin: 10% auto;
   }
   .post_new_form .post_new_error_box{
     padding: 10px;
@@ -376,26 +360,14 @@
   }
   .post_input_form{
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .post_input_image1{
-    width: 180px;
-    font-size: 10px;
   }
   .post_label{
-    margin-right: auto;
-    font-size: 15px;
+    width: 90%;
+    margin: 0 auto;
   }
   .post_input{
-    width: 100%;
-  }
-  .post_new_btn_form{
-    margin-top: 30px;
-  }
-  .post_new_btn{
-    padding: 8px 20px;
-    font-size: 13px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
