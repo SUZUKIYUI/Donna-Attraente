@@ -36,13 +36,13 @@
 .posts_index_heading3 h3{
   font-size: 30px;
   border: double 10px rgb(59, 34, 33);
-  width: 250px;
+  padding: 15px 60px;
   text-align: center;
 }
 .posts_index_heading3 span{
   margin-left: 50px;
   font-size: 20px;
-  font-weight: bold;
+  letter-spacing: 2px;
 }
 .posts_index_list{
   display: flex;
@@ -69,13 +69,10 @@
 .posts_index_established_text{
   width: 100%;
   font-size: 20px;
-  padding: 0 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   color: transparent;
 }
 .posts_index_established_text::after{
@@ -90,25 +87,19 @@
   background-color: rgb(70, 40, 20);
   border-top: double 4px rgb(225, 214, 206);
   border-bottom: double 4px rgb(225, 214, 206);
-  box-shadow: 0px 3px 5px gray;
   transform: skewY(-7deg);
   transform-origin: bottom left;
 }
 .user_show_link{
   display: inline-block;
-  height: 45px;
   margin-top: 10px;
 }
 .user_show_link1{
   display: flex;
   align-items: center;
-  height: 100%;
 }
 .user_show_link1:hover{
   opacity: 0.7;
-}
-.user_show_link2{
-  height: 100%;
 }
 .user_profile_image{
   border-radius: 50%;
@@ -118,9 +109,7 @@
 .user_show_link3{
   color: rgb(59, 34, 33);
   font-size: 18px;
-  font-weight: bold;
   padding: 0 10px;
-  display: inline-block;
 }
 .index_paginate{
   margin-top: 30px;
@@ -174,7 +163,6 @@
   .posts_index_heading3 h3{
     font-size: 25px;
     border: double 8px #3b2221;
-    width: 200px;
   }
   .posts_index_heading3 span{
     margin-left: 30px;
@@ -224,11 +212,12 @@
   .posts_index_heading3 h3{
     font-size: 20px;
     border: double 6px #3b2221;
-    width: 160px;
+    padding: 10px 40px;
   }
   .posts_index_heading3 span{
     margin-left: 20px;
     font-size: 16px;
+    letter-spacing: 0;
   }
   .index_paginate{
     margin-top: 20px;
