@@ -12,9 +12,26 @@
     <div class="post_show_top_flex">
       <div class="post_show_top1">
         <%= attachment_image_tag @post, :post_image, :fill, 450, 650, class: "post_show_post_image" %>
+        <!----------------------------------------------なにこれ欲しいボタン--------------------------------------------------->
+        <% if current_design_contributor.wanted_by?(@post.id) %>
+          <div class="want_link">
+            <%= link_to "なにこれ欲しい★", design_contributor_post_wants_path(@post.id), method: :delete, class: "want_link1" %>
+            <div class="want_link2">
+              <span>★</span><%= @post.wants.count %>
+            </div>
+          </div>
+        <% else %>
+          <div class="want_link">
+            <%= link_to "なにこれ欲しい☆", design_contributor_post_wants_path(@post.id), method: :post, class: "want_link1" %>
+            <div class="want_link2">
+              <span>☆</span><%= @post.wants.count %>
+            </div>
+          </div>
+        <% end %>
+        <!-------------------------------------------------------------------------------------------------------------------->
       </div>
       <div class="post_show_top2">
-        <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
+        <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %><!--ここから！！！！！！！！！-->
           <div class="post_show_user1">
             <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
           </div>
@@ -38,27 +55,6 @@
         </div>
       </div>
     </div>
-    <!----------------------------------------------なにこれ欲しいボタン--------------------------------------------------->
-    <% if current_design_contributor.wanted_by?(@post.id) %>
-    <div class="post_show_top3">
-      <div class="want_link">
-        <%= link_to "なにこれ欲しい★", design_contributor_post_wants_path(@post.id), method: :delete, class: "want_link1" %>
-        <div class="want_link2">
-          <span>★</span><%= @post.wants.count %>
-        </div>
-      </div>
-    </div>
-    <% else %>
-    <div class="post_show_top3">
-      <div class="want_link">
-        <%= link_to "なにこれ欲しい☆", design_contributor_post_wants_path(@post.id), method: :post, class: "want_link1" %>
-        <div class="want_link2">
-          <span>☆</span><%= @post.wants.count %>
-        </div>
-      </div>
-    </div>
-    <% end %>
-    <!-------------------------------------------------------------------------------------------------------------------->
     <!--------------------------作品削除ボタン-------------------------->
     <% if @post.design_contributor_id == current_design_contributor.id %>
       <div class="post_delete_link1">

@@ -379,9 +379,7 @@
   background-image: url("../post_show_back1");
   background-size: 100%;
   padding: 5% 10%;
-  font-weight: bold;
   color: rgb(70, 40, 20);
-  position: relative;
 }
 .post_show_established_text{
   text-align: center;
@@ -402,17 +400,31 @@
 .post_show_top_flex{
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   width: 840px;
   margin: 0 auto;
+}
+.want_link{
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 240px;
+  font-size: 18px;
+}
+.want_link1{
+  color: rgb(70, 40, 20);
+}
+.want_link1:hover{
+  color: rgba(70, 40, 20, 0.7);
+}
+.want_link span{
+  margin: 0 5px;
 }
 .post_show_top2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   height: 650px;
-  padding-top: 50px;
+  padding-top: 74px;
 }
 .post_show_user{
   text-align: center;
@@ -454,25 +466,6 @@
 }
 .post_show_created_at span{
   margin-left: 10px;
-}
-.post_show_top3{
-  width: 840px;
-  margin: 0 auto;
-}
-.want_link{
-  display: flex;
-  justify-content: space-between;
-  width: 450px;
-  font-size: 18px;
-}
-.want_link1{
-  color: rgb(70, 40, 20);
-}
-.want_link1:hover{
-  color: rgba(70, 40, 20, 0.7);
-}
-.want_link span{
-  margin: 0 5px;
 }
 .post_delete_link1{
   text-align: right;
@@ -714,12 +707,9 @@
     width: 350px;
     height: 500px;
   }
-  .want_link{
-    width: 350px;
-  }
   .post_show_top2{
     height: 500px;
-    padding-top: 40px;
+    padding-top: 56px;
   }
   .post_show_profile_image{
     width: 150px;
@@ -727,9 +717,6 @@
   }
   .post_show_user2{
     font-size: 25px;
-  }
-  .post_show_top3{
-    width: 700px;
   }
   .post_show_bottom_left{
     width: 380px;
@@ -785,7 +772,7 @@
   }
   .post_show_top2{
     height: 360px;
-    padding-top: 30px;
+    padding-top: 44px;
   }
   .post_show_profile_image{
     width: 100px;
@@ -805,11 +792,7 @@
   .post_show_created_at{
     font-size: 14px;
   }
-  .post_show_top3{
-    width: 560px;
-  }
   .want_link{
-    width: 250px;
     font-size: 16px;
   }
   .post_delete_link2{
@@ -899,14 +882,6 @@
   }
   .post_show_author_comment1{
     width: 100%;
-  }
-  .post_show_top3{
-    width: 100%;
-    margin-top: 40px;
-  }
-  .want_link{
-    width: 240px;
-    margin-left: auto;
   }
   .post_delete_link1{
     margin-top: 10px;
