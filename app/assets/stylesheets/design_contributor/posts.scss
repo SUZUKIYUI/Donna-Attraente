@@ -21,7 +21,6 @@
   left: 45%;
 }
 .posts_index_heading2{
-  position: absolute;
   top: 22%;
   left: 25%;
 }
@@ -203,12 +202,6 @@
     left: 0;
     margin: auto;
   }
-  .posts_index_heading2{
-    top: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-  }
   .posts_index_heading3 h3{
     font-size: 20px;
     border: double 6px #3b2221;
@@ -236,7 +229,6 @@
   background-image: url("../post_new_back1.png");
 }
 .post_new_heading2{
-  position: absolute;
   top: 40%;
   left: 48%;
 }
@@ -371,18 +363,7 @@
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .post_new_heading2{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
     height: 70px;
-  }
-  .post_new_heading2 h2{
-    text-align: center;
-  }
-  .post_new_heading2 p{
-    text-align: center;
   }
   .post_new_form{
     width: 240px;

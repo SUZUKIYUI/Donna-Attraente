@@ -312,6 +312,7 @@ header{
 
 .heading2{
   color: rgb(59, 34, 33);
+  position: absolute;
 }
 
 .heading2 h2{
@@ -376,6 +377,14 @@ header{
 @media(max-width: 600px){
   .content_width{
     width: 95%;
+  }
+  .heading2{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
   }
   .heading2 h2{
     font-size: 22px;
@@ -990,7 +999,6 @@ footer{
   }
   .signup_heading2{
     margin: 0 auto;
-    text-align: center;
   }
   .signup_heading2 span{
     display: block;

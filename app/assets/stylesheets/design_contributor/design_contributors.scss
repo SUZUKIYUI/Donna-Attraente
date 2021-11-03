@@ -11,7 +11,6 @@
   background-image: url("../user_show_back1.png");
 }
 .user_show_heading2{
-  position: absolute;
   top: 40%;
   right: 18%;
 }
@@ -279,15 +278,7 @@
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .user_show_heading2{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
     height: 30px;
-  }
-  .user_show_heading2 h2{
-    text-align: center;
   }
   .user_show_introduction{
     flex-direction: column;
