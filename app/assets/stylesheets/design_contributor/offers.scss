@@ -164,12 +164,6 @@ input[type=radio]:checked + .offer_edit_input::after {
   .offer_edit_content{
     width: 560px;
   }
-  .offer_edit_btn{
-    // font-size: 17px;
-    // padding: 14px 28px;
-    // letter-spacing: 9px;
-    // text-indent: 9px;
-  }
 }
 /*--------------------------------------*/
 
@@ -203,14 +197,14 @@ input[type=radio]:checked + .offer_edit_input::after {
   .offer_edit_content{
     width: 420px;
   }
-  .offer_edit_heading{
-    margin-bottom: 20px;
+  .offer_edit_intro{
+    margin: 10% 0;
   }
   .offer_edit_btn{
-    // font-size: 16px;
-    // padding: 13px 26px;
-    // letter-spacing: 8px;
-    // text-indent: 8px;
+    font-size: 16px;
+    padding: 14px 28px;
+    letter-spacing: 8px;
+    text-indent: 8px;
   }
 }
 /*--------------------------------------*/
