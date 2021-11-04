@@ -31,10 +31,8 @@
         <!-------------------------------------------------------------------------------------------------------------------->
       </div>
       <div class="post_show_top2">
-        <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %><!--ここから！！！！！！！！！-->
-          <div class="post_show_user1">
-            <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
-          </div>
+        <%= link_to design_contributor_design_contributor_path(@post.design_contributor.id), class: "post_show_user" do %>
+          <%= attachment_image_tag @post.design_contributor, :profile_image, :fill, 200, 200, fallback: "no_image.png", size: "200x200", class: "post_show_profile_image" %>
           <div class="post_show_user2">
             <%= @post.design_contributor.pen_name %>
           </div>
@@ -66,7 +64,7 @@
 
   <div class="post_show_bottom">
     <!--------------------------作品への反応----------------------------->
-    <div class="post_show_reaction design_contributor_post_show_reaction">
+    <div class="post_show_reaction design_contributor_post_show_reaction"><!--ここから！！！！！！！！！-->
       <p class="post_show_reaction_heading">このデザインへの反応</p>
       <div class="post_show_reaction_content">
         <p>なにこれ欲しい☆</p>
@@ -135,18 +133,16 @@
         <% if Comment.exists?(post_id: @post.id) %>
           <% @post.comments.each do |comment| %>
             <div class="post_show_comment_box">
-              <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id), class: "post_show_comment_user_link" do %>
-                <div>
+              <div>
+                <%= link_to design_contributor_design_contributor_path(comment.design_contributor_id), class: "post_show_comment_user_link" do %>
                   <%= attachment_image_tag comment.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "post_show_comment_user_image" %>
-                </div>
-                <div>
                   <% if comment.design_contributor.id == @post.design_contributor.id %>
                     <p>投稿者</p>
                   <% else %>
                     <p><%= comment.design_contributor.pen_name %></p>
                   <% end %>
-                </div>
-              <% end %>
+                <% end %>
+              </div>
               <div class="post_show_comment">
                 <div class="post_show_comment1">
                   <%= comment.comment %>

@@ -423,11 +423,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 320px;
   height: 650px;
   padding-top: 74px;
 }
 .post_show_user{
-  text-align: center;
+  margin: 0 auto;
+  width: 200px;
 }
 .post_show_user:hover{
   opacity: 0.7;
@@ -436,8 +438,8 @@
   border-radius: 100%;
 }
 .post_show_user2{
-  display: inline-block;
   font-size: 30px;
+  text-align: center;
   color: rgb(70, 40, 20);
 }
 .post_show_author_comment p{
@@ -446,7 +448,6 @@
 }
 .post_show_author_comment1{
   padding: 10px 15px;
-  width: 320px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   word-break: break-all;
@@ -536,8 +537,7 @@
 }
 .post_show_comment_heading{
   display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   padding: 10px 25px;
   font-size: 20px;
   border: double 5px rgb(59, 34, 33);
@@ -573,7 +573,7 @@
 }
 .post_show_comment1{
   word-break: break-all;
-  margin-top: 10px;
+  margin-top: 3px;
   margin-left: 30px;
   padding: 10px 15px;
   background-color: rgb(255, 255, 255);
@@ -711,6 +711,9 @@
     height: 500px;
     padding-top: 56px;
   }
+  .post_show_user{
+    width: 150px;
+  }
   .post_show_profile_image{
     width: 150px;
     height: 150px;
@@ -729,7 +732,7 @@
   .post_show_comment1:before {
     top: 20px;
     left: -20px;
-    margin-top: -10px;
+    margin-top: -11px;
     border: 10px solid transparent;
     border-right: 10px solid rgb(255, 255, 255);
   }
@@ -771,8 +774,12 @@
     height: 360px;
   }
   .post_show_top2{
+    width: 280px;
     height: 360px;
     padding-top: 44px;
+  }
+  .post_show_user {
+    width: 100px;
   }
   .post_show_profile_image{
     width: 100px;
@@ -785,8 +792,7 @@
     font-size: 18px;
   }
   .post_show_author_comment1{
-    padding: 8px 13px;
-    width: 280px;
+    padding: 8px 12px;
     font-size: 14px;
   }
   .post_show_created_at{
@@ -809,7 +815,7 @@
     font-size: 13px;
   }
   .post_show_comment1:before {
-    top: 18px;
+    margin-top: -12px;
   }
  .post_show_bottom_right{
     width: 240px;
@@ -853,6 +859,9 @@
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
+  .post_show_back{
+    padding: 10%;
+  }
   .post_show_established_text{
     font-size: 16px;
     padding: 7px;
@@ -868,20 +877,16 @@
   }
   .post_show_top2{
     padding: 0;
+    width: 350px;
     height: auto;
   }
   .post_show_user{
-    margin: 40px 0 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
   }
   .post_show_post_image{
     width: 350px;
     height: 500px;
-  }
-  .post_show_author_comment{
-    width: 350px;
-  }
-  .post_show_author_comment1{
-    width: 100%;
   }
   .post_delete_link1{
     margin-top: 10px;
@@ -895,7 +900,6 @@
   }
   .post_show_bottom_left{
     width: 420px;
-    margin: 0 auto;
   }
   .post_show_bottom_right{
     width: 400px;
@@ -931,9 +935,6 @@
 
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
-  .post_show_back{
-    padding: 10%;
-  }
   .post_show_top_flex{
     width: 100%;
   }
@@ -941,9 +942,11 @@
     width: 100%;
     height: auto;
   }
+  .post_show_top2{
+    width: 100%;
+  }
   .post_show_author_comment{
     width: 100%;
-    margin-top: 15px;
   }
   .design_contributor_post_show_reaction{
     width: 240px;
@@ -967,14 +970,12 @@
     font-size: 12px;
   }
   .post_show_comment1:before{
-    top: 15px;
     left: -16px;
-    margin-top: -8px;
     border: 8px solid transparent;
     border-right: 8px solid rgb(255, 255, 255);
   }
   .post_show_comment1{
-    padding: 5px 10px;
+    padding: 6px 9px;
   }
   .post_show_bottom_right{
     width: 100%;
