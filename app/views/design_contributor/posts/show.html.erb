@@ -64,7 +64,7 @@
 
   <div class="post_show_bottom">
     <!--------------------------作品への反応----------------------------->
-    <div class="post_show_reaction design_contributor_post_show_reaction"><!--ここから！！！！！！！！！-->
+    <div class="post_show_reaction design_contributor_post_show_reaction">
       <p class="post_show_reaction_heading">このデザインへの反応</p>
       <div class="post_show_reaction_content">
         <p>なにこれ欲しい☆</p>
@@ -93,7 +93,7 @@
               </div>
             </div>
           <% else %>
-            <div class="post_show_reaction_content post_show_offer_negotiation">
+            <div class="post_show_reaction_content">
               <p>オファー</p>
               <p><%= @offer.company.company_name %><span>様と交渉中</span></p>
             </div>
@@ -161,7 +161,7 @@
         <% end %>
       </div>
       <!-------コメント投稿フォーム------->
-      <div class="post_show_bottom_right">
+      <div class="post_show_bottom_right"><!--ここから！！！！！！！！！-->
         <div class="post_show_comment_new">
           <!--未入力の時のエラー文表示-->
           <% if @comment.errors.any? %>
