@@ -63,9 +63,7 @@ textarea, input[type="submit"], input[type="email"], input[type="password"], inp
 /*---------------エラー---------------*/
 .error_box{
   color: #CC0000;
-  font-family: serif;
-  font-weight: bold;
-  padding: 20px;
+  padding: 20px 0;
   border: double 10px #CC0000;
   background-color: #FFFF99;
   display: flex;

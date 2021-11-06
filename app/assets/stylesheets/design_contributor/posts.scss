@@ -612,28 +612,23 @@
   margin: 0 auto;
   position: relative;
 }
-.post_show_comment_new{
-  position: relative;
-}
 .post_show_error_box{
   margin-bottom: 5%;
 }
-.post_show_comment_new1{
+.post_show_comment_new{
   padding: 15px 30px;
   color: rgb(157, 157, 157);
   background-color: rgb(255, 255, 255);
 }
-.post_show_comment_label{
+.post_show_comment_new_label{
   font-size: 20px;
-  margin-bottom: 5px;
 }
-.post_show_comment_area2{
+.post_show_comment_new_input{
   width: 100%;
   height: 155px;
   padding: 10px 15px;
   font-family: "HiraMinProN-W6";
   font-size: 20px;
-  font-weight: bold;
   border: solid 2px rgb(157, 157, 157);
 }
 .post_show_comment_btn_form{
@@ -644,8 +639,7 @@
   background-color: rgb(70, 40, 20);
   padding: 10px 40px;
   font-size: 18px;
-  font-family: serif;
-  font-weight: bold;
+  font-family: "HiraMinProN-W6";
   color: rgb(197, 180, 169);
   letter-spacing: 10px;
   text-indent: 10px;
@@ -655,7 +649,8 @@
   cursor: pointer;
 }
 .post_show_call{
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 17px;
   text-align: center;
   letter-spacing: 3px;
   text-indent: 3px;
@@ -743,14 +738,13 @@
   .post_show_error_list p{
     font-size: 17px;
   }
-  .post_show_comment_label{
+  .post_show_comment_new_label{
     font-size: 18px;
   }
-  .post_show_comment_area2{
+  .post_show_comment_new_input{
     font-size: 18px;
   }
   .post_show_comment_btn{
-    padding: 10px 30px;
     font-size: 16px;
   }
 }
@@ -818,33 +812,26 @@
  .post_show_bottom_right{
     width: 240px;
   }
-  .post_show_comment_new .post_show_error_box{
-    padding: 10px;
-  }
   .post_show_error_list p{
     font-size: 15px;
   }
-  .post_show_comment_new1{
-    padding: 13px 20px;
+  .post_show_comment_new{
+    padding: 12px 18px;
   }
-  .post_show_comment_label{
+  .post_show_comment_new_label{
     font-size: 16px;
   }
-  .post_show_comment_area2{
+  .post_show_comment_new_input{
     font-size: 16px;
-    height: 100px;
+    height: 120px;
     padding: 6px 9px;
   }
   .post_show_comment_btn{
-    padding: 8px 20px;
+    padding: 8px 32px;
     font-size: 14px;
   }
   .post_show_call{
     font-size: 14px;
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 3px;
-    text-indent: 3px;
   }
   .post_index_link2{
     font-size: 20px;
@@ -903,14 +890,13 @@
     width: 400px;
     margin-top: 50px;
   }
-  .post_show_comment_new1{
+  .post_show_comment_new{
     padding: 15px 30px;
   }
-  .post_show_comment_label{
+  .post_show_comment_new_label{
     font-size: 20px;
-    margin-bottom: 5px;
   }
-  .post_show_comment_area2{
+  .post_show_comment_new_input{
     height: 155px;
     padding: 10px 15px;
     font-size: 20px;
@@ -919,14 +905,18 @@
     padding: 10px 40px;
     font-size: 18px;
   }
+  .post_show_call{
+    font-size: 17px;
+  }
   .post_index_link1 {
     margin-top: 80px;
   }
+  .post_index_link2{
+    font-size: 25px;
+  }
   .post_index_link_decoration {
-    width: 80px;
-    height: 120px;
-    top: 80%;
-    left: 95%;
+    top: 68%;
+    left: 92%;
   }
 }
 /*--------------------------------------*/
@@ -978,30 +968,26 @@
   .post_show_bottom_right{
     width: 100%;
   }
-  .post_show_comment_new1{
-    padding: 13px 20px;
+  .post_show_comment_new{
+    padding: 12px 18px;
   }
-  .post_show_comment_label{
+  .post_show_comment_new_label{
     font-size: 16px;
   }
-  .post_show_comment_area2{
+  .post_show_comment_new_input{
     font-size: 16px;
-    height: 100px;
+    height: 120px;
     padding: 6px 9px;
   }
   .post_show_comment_btn{
-    padding: 8px 20px;
+    padding: 8px 32px;
     font-size: 14px;
   }
   .post_show_call{
     font-size: 14px;
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 3px;
-    text-indent: 3px;
   }
   .post_index_link2{
-    font-size: 16px;
+    font-size: 20px;
   }
   .post_index_link_decoration{
     display: none;

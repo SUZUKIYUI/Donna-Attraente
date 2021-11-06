@@ -161,8 +161,8 @@
         <% end %>
       </div>
       <!-------コメント投稿フォーム------->
-      <div class="post_show_bottom_right"><!--ここから！！！！！！！！！-->
-        <div class="post_show_comment_new">
+      <div class="post_show_bottom_right">
+        <div>
           <!--未入力の時のエラー文表示-->
           <% if @comment.errors.any? %>
             <div class="error_box post_show_error_box">
@@ -177,13 +177,9 @@
           <% end %>
           <!------------------------------------------------------------------------------------------------------------------------->
           <%= form_with model: [@post, @comment], url: design_contributor_post_comments_path(post_id: @post.id), local: true do |f| %>
-            <div class="post_show_comment_new1">
-              <div class="post_show_comment_label">
-                <%= f.label :comment, "コメントする" %>
-              </div>
-              <div class="post_show_comment_area1">
-                <%= f.text_area :comment, class: "post_show_comment_area2" %>
-              </div>
+            <div class="post_show_comment_new">
+                <%= f.label :comment, "コメントする", class: "post_show_comment_new_label" %>
+                <%= f.text_area :comment, class: "post_show_comment_new_input" %>
               <div class="post_show_comment_btn_form">
                 <%= f.submit "投稿", class: "post_show_comment_btn" %>
               </div>
