@@ -16,23 +16,17 @@
 }
 .company_post_show_offer_announce{
   width: 260px;
-  padding: 55px 0;
+  padding: 55px 20px;
+  display: inline-block;
+  font-size: 18px;
   color: rgb(221, 212, 205);
   background-color: rgb(50, 26, 10);
 }
 .company_post_show_offer_announce span{
   margin: 0 5px;
 }
-.company_offer_new_link{
-  display: inline-block;
-  font-size: 18px;
-}
 .company_offer_new_link:hover{
   opacity: 0.8;
-}
-.company_post_show_call{
-  margin-top: 10px;
-  font-size: 15px;
 }
 /*--------------------------------------*/
 
@@ -45,13 +39,8 @@
   }
   .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 200px;
-    padding: 45px 0;
-  }
-  .company_offer_new_link{
+    padding: 45px 15px;
     font-size: 15px;
-  }
-  .company_post_show_call{
-    font-size: 12px;
   }
 }
 /*--------------------------------------*/
@@ -65,13 +54,8 @@
   }
   .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 260px;
-    padding: 55px 0;
-  }
-  .company_offer_new_link{
+    padding: 55px 20px;
     font-size: 18px;
-  }
-  .company_post_show_call{
-    font-size: 15px;
   }
 }
 /*--------------------------------------*/
@@ -80,16 +64,12 @@
 @media(max-width: 600px){
   .company_post_show_bottom_right_main .company_post_show_reaction{
     width: 240px;
+    margin-bottom: 30px;
     font-size: 14px;
   }
   .company_post_show_bottom_right_main .company_post_show_offer_announce{
     width: 200px;
-    padding: 45px 0;
-  }
-  .company_offer_new_link{
+    padding: 45px 15px;
     font-size: 15px;
-  }
-  .company_post_show_call{
-    font-size: 12px;
   }
 }

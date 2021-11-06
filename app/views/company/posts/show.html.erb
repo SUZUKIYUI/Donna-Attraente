@@ -136,29 +136,29 @@
           <% if @post.offered_by? %>
             <% if @post.offered_negotiation_by?(@post.id) %>
               <% if @offer.company == current_company %>
-                <p class="company_post_show_offer_announce">現在交渉しております。<br /><%= @post.design_contributor.pen_name %>様の返信をお待ちください。</p>
+                <p class="company_post_show_offer_announce">現在交渉しております。<br /><%= @post.design_contributor.pen_name %>様の返信を<br />お待ち下さい。</p>
               <% else %>
-                <p class="company_post_show_offer_announce">現在<span><%= @offer.company.company_name %></span>様が<br />商品化の交渉を行なっております。</p>
-                <p class="company_post_show_call">※交渉不成立となった場合、<br />再度こちらのページからオファーが可能です</p>
+                <p class="company_post_show_offer_announce">現在<span><%= @offer.company.company_name %></span>様が<br />商品化の交渉を<br />行なっております。</p>
+                <p class="post_show_call">※交渉不成立となった場合、<br />再度こちらからオファーが可能です</p>
               <% end %>
             <% elsif @post.offered_established_by?(@post.id) %>
               <% if @offer.company == current_company %>
                 <p class="company_post_show_offer_announce"><%= @post.design_contributor.pen_name %>様が<br />商品化を承諾しました</p>
               <% else %>
                 <p class="company_post_show_offer_announce"><%= @offer.company.company_name %>様と契約済</p>
-                <p class="company_post_show_call">商品化が決定した為、<br />こちらのデザインへはオファーができません<br />新たなデザインをお探しください</p>
+                <p class="post_show_call">商品化が決定した為、<br />このデザインへのオファーは<br />終了しました</p>
               <% end %>
             <% else %>
               <%= link_to new_company_post_offer_path(@post.id), class: "company_post_show_offer_announce company_offer_new_link" do %>
                 <p>商品化の<br />オファーを送る</p>
               <% end %>
-              <p class="company_post_show_call">ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
+              <p class="post_show_call">ステキなデザインを見つけたら<br />ぜひオファーを送ってください♪</p>
             <% end %>
           <% else %>
             <%= link_to new_company_post_offer_path(@post.id), class: "company_post_show_offer_announce company_offer_new_link" do %>
               <p>商品化の<br />オファーを送る</p>
             <% end %>
-            <p class="company_post_show_call">ステキなデザインを見つけたら<br />ぜひ商品化のオファーを送ってください♪</p>
+            <p class="post_show_call">ステキなデザインを見つけたら<br />ぜひオファーを送ってください♪</p>
           <% end %>
         </div>
         <div class="post_index_link1">
