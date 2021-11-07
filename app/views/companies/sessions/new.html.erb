@@ -1,38 +1,40 @@
 <!--企業ログイン画面-->
 
-<div class="content_width login_content">
+<div class="content_width login_content1">
   <div class="login_decorate_back1"></div>
-  <div class="login_lead">
-    <h2>アパレル関係者様用</h2>
-  </div>
-  <!----------------------------メールアドレス・パスワード入力フォーム----------------------------->
-  <div class="login_form_content">
-    <div class="login_form">
-      <%= form_with model: @company, url: company_session_path, local: true do |f| %>
-        <div class="field login_input_form">
-          <%= f.label :email, "メールアドレス" %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
-        </div>
-        <div class="field login_input_form">
-          <%= f.label :password, "パスワード" %>
-          <%= f.password_field :password, autocomplete: "current-password", class: "password_form" %>
-        </div>
-        <div class="actions login_btn_form">
-          <%= f.submit "ログイン", class: "login_btn" %>
-        </div>
+  <div class="login_content2">
+    <div class="login_lead">
+      <h2>アパレル関係者様用</h2>
+    </div>
+    <!----------------------------メールアドレス・パスワード入力フォーム----------------------------->
+    <div class="login_form_content">
+      <div class="login_form">
+        <%= form_with model: @company, url: company_session_path, local: true do |f| %>
+          <div class="field login_input_form">
+            <%= f.label :email, "メールアドレス" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "email_form" %>
+          </div>
+          <div class="field login_input_form">
+            <%= f.label :password, "パスワード" %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "password_form" %>
+          </div>
+          <div class="actions login_btn_form">
+            <%= f.submit "ログイン", class: "login_btn" %>
+          </div>
+        <% end %>
+        <div class="login_decorate_back2"></div>
+      </div>
+    </div>
+    <div class="under_login_form">
+      <!-----------------見出し------------------>
+      <div class="login_heading">
+        <h1>Log in</h1>
+      </div>
+      <!---------------------デザイン投稿者用ログイン画面リンク--------------------->
+      <%= link_to new_design_contributor_session_path,class: "another_user_link" do %>
+        <i class="fas fa-arrow-circle-right another_link_font"></i>
+        <span class="another_link_font">個人の方はこちらへ</span>
       <% end %>
-      <div class="login_decorate_back2"></div>
     </div>
-  </div>
-  <div class="under_login_form">
-    <!-----------------見出し------------------>
-    <div class="login_heading">
-      <h1>Log in</h1>
-    </div>
-    <!---------------------デザイン投稿者用ログイン画面リンク--------------------->
-    <%= link_to new_design_contributor_session_path,class: "another_user_link" do %>
-      <i class="fas fa-arrow-circle-right another_link_font"></i>
-      <span class="another_link_font">個人の方はこちらへ</span>
-    <% end %>
   </div>
 </div>
