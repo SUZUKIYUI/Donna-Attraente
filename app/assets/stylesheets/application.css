@@ -694,13 +694,11 @@ footer{
 
 .signup_heading2_content{
   display: flex;
+  align-items: flex-end;
+  width: 495px;
   position: absolute;
-  top: 34%;
-  right: 20%;
-}
-
-.signup_heading2{
-  position: relative;
+  top: 36%;
+  left: 50%;
 }
 
 .signup_heading2 span{
@@ -714,9 +712,7 @@ footer{
   height: 100px;
   background-image: url("decorate_back2.png");
   background-size: cover;
-  position: absolute;
-  bottom: 0;
-  left: 100%;
+  margin-left: auto;
 }
 
 .signup_bottom{
@@ -724,6 +720,7 @@ footer{
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10%;
+  color: rgb(70, 40, 20);
 }
 
 .signup_flex{
@@ -733,18 +730,14 @@ footer{
 }
 
 .signup_heading3{
-  color: rgb(59, 34, 33);
-  font-family: serif;
   font-size: 30px;
-  border: double 10px rgb(59, 34, 33);
-  text-align: center;
+  border: double 10px rgb(70, 40, 20);
   padding: 10px 20px;
 }
 
-.signup_form{
-  margin: 0 auto;
+.design_contributor_form{
+  margin: 5% auto;
   width: 540px;
-  margin-top: 5%;
 }
 
 .company_signup_form{
@@ -753,30 +746,26 @@ footer{
   margin-top: 5%;
 }
 
-.signup_input_form{
+.user_input_form{
   display: flex;
   margin-bottom: 20px;
-  color: rgb(59, 34, 33);
-  font-family: serif;
-  font-weight: bold;
 }
 
-.signup_label{
+.design_contributor_label{
   width: 200px;
   font-size: 20px;
 }
 
-.company_signup_label{
+.company_label{
   width: 250px;
   font-size: 20px;
 }
 
-.signup_input{
+.user_input{
   width: 340px;
   padding: 5px 10px;
   font-size: 15px;
   font-family: "HiraMinProN-W6";
-  font-weight: bold;
   color: rgb(59, 34, 33);
   background-color: rgb(249, 242, 237);
 }
@@ -808,37 +797,35 @@ footer{
   background-color: rgb(65, 33, 11);
   text-align: center;
   margin: 20px auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .input_profile_image1:hover{
-  background-color: rgba(65, 33, 11, 0.7);
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .input_profile_image2{
   display: none;
 }
 
-.signup_btn_form{
+.user_input_btn_form{
   text-align: center;
   margin-top: 50px;
 }
 
-.signup_btn{
+.user_input_btn{
   padding: 8px 30px;
   font-size: 18px;
-  font-family: serif;
-  font-weight: bold;
+  font-family: "HiraMinProN-W6";
   color: rgb(249, 242, 237);
   background-color: rgb(61, 36, 34);
   letter-spacing: 20px;
   text-indent: 20px;
 }
 
-.signup_btn:hover{
+.user_input_btn:hover{
   opacity: 0.7;
   cursor: pointer;
 }
@@ -846,6 +833,11 @@ footer{
 
 /*-----------1200px以下に適用------------*/
 @media(max-width: 1200px){
+  .signup_heading2_content{
+    width: 430px;
+    top: 33%;
+    left: 46%;
+  }
   .signup_heading2 span{
     font-size: 20px;
     margin-left: 15px;
@@ -856,33 +848,38 @@ footer{
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
+  .signup_heading2_content{
+    width: 365px;
+    top: 30%;
+    left: 42%;
+  }
+  .signup_heading2_content_company{
+    width: 365px;
+  }
   .signup_heading2 span{
     font-size: 18px;
     margin-left: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
   .signup_heading3{
     font-size: 25px;
-    border: double 7px rgb(59, 34, 33);
+    border: double 7px rgb(70, 40, 20);
   }
-  .signup_form{
-    width: 450px;
+  .design_contributor_form{
+    width: 480px;
   }
   .company_signup_form{
     width: 570px;
   }
-  .signup_input_form{
-    margin-bottom: 15px;
-  }
-  .signup_label{
+  .design_contributor_label{
     width: 150px;
     font-size: 18px;
   }
-  .company_signup_label{
+  .company_label{
     width: 170px;
     font-size: 18px;
   }
-  .signup_input{
+  .user_input{
     width: 300px;
     font-size: 13px;
   }
@@ -905,39 +902,47 @@ footer{
     width: 270px;
     font-size: 13px;
   }
+  .user_input_btn{
+    font-size: 16px;
+  }
 }
 /*--------------------------------------*/
 
 /*-----------800px以下に適用------------*/
 @media(max-width: 800px){
+  .signup_heading2_content{
+    width: 315px;
+    top: 40%;
+    left: auto;
+    right: 10%;
+  }
+  .signup_heading2_content_company{
+    width: 350px;
+  }
   .signup_decorate_back{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
   }
   .signup_heading3{
-    font-size: 16px;
-    border: double 6px rgb(59, 34, 33);
+    font-size: 18px;
   }
-  .signup_form{
-    width: 380px;
+  .design_contributor_form{
+    width: 400px;
   }
   .company_signup_form{
     width: 430px;
   }
-  .signup_input_form{
-    margin-bottom: 12px;
-  }
-  .signup_label{
+  .design_contributor_label{
     width: 130px;
     font-size: 16px;
   }
-  .company_signup_label{
+  .company_label{
     width: 150px;
     font-size: 16px;
   }
-  .signup_input{
+  .user_input{
     width: 250px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .pen_name_input{
     width: 188px;
@@ -956,11 +961,14 @@ footer{
   }
   .input_profile_image1{
     width: 220px;
-    font-size: 11px;
+    font-size: 12px;
   }
-  .signup_btn{
-    padding: 6px 20px;
-    font-size: 15px;
+  .user_input_btn_form {
+    margin-top: 40px;
+  }
+  .user_input_btn{
+    padding: 8px 20px;
+    font-size: 14px;
     letter-spacing: 18px;
     text-indent: 18px;
   }
@@ -970,6 +978,7 @@ footer{
 /*-----------600px以下に適用------------*/
 @media(max-width: 600px){
   .signup_heading2_content{
+    width: auto;
     top: 0;
     right: 0;
     bottom: 0;
@@ -988,10 +997,7 @@ footer{
     font-size: 15px;
   }
   .signup_decorate_back{
-    width: 50px;
-    height: 50px;
-    top: -15%;
-    left: 85%;
+    display: none;
   }
   .signup_flex{
     flex-direction: column;
@@ -999,31 +1005,23 @@ footer{
   }
   .signup_heading3{
     font-size: 15px;
-    padding: 8px 18px;
-    border: double 4px rgb(59, 34, 33);
   }
-  .signup_form{
+  .design_contributor_form{
     width: 240px;
   }
   .company_signup_form{
     width: 240px;
   }
-  .signup_input_form{
+  .user_input_form{
     flex-direction: column;
   }
-  .input_profile_image1{
-    width: 180px;
-    font-size: 10px;
-  }
-  .signup_label{
+  .design_contributor_label{
     width: auto;
-    font-size: 15px;
   }
-  .company_signup_label{
+  .company_label{
     width: auto;
-    font-size: 15px;
   }
-  .signup_input{
+  .user_input{
     width: 100%;
   }
   .pen_name_input{
@@ -1038,14 +1036,8 @@ footer{
   .phone_number_input{
     width: 80%;
   }
-  .signup_btn_form{
+  .user_input_btn_form{
     margin-top: 30px;
-  }
-  .signup_btn{
-    padding: 6px 18px;
-    font-size: 13px;
-    letter-spacing: 16px;
-    text-indent: 16px;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

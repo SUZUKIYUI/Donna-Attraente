@@ -341,103 +341,12 @@
   font-size: 50px;
   text-align: center;
 }
-.design_contributor_edit_form{
-  width: 600px;
-  margin: 5% auto;
-}
-.design_contributor_edit_input_form{
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.design_contributor_edit_input_form_introduction{
-  align-items: flex-start;
-}
-.input_edit_profile_image1{
-  width: 300px;
-  font-size: 16px;
-  color: rgb(249, 242, 237);
-  background-color: rgb(65, 33, 11);
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px 0;
-  border-radius: 5px;
-}
-.input_edit_profile_image1:hover{
-  opacity: 0.8;
-  cursor: pointer;
-}
-.input_edit_profile_image2{
-  display: none;
-}
-.user_edit_label{
-  width: 200px;
-  font-size: 20px;
-}
-.user_edit_input{
-  width: 300px;
-  padding: 5px 10px;
-  font-size: 15px;
-  color: rgb(59, 34, 33);
-  font-family: "HiraMinProN-W6";
-  background-color: rgb(249, 242, 237);
-}
-.pen_name_edit_input{
-  width: 200px;
-}
-.introduction_edit_input{
-  width: 400px;
-  height: 200px;
-}
-.user_edit_btn_form{
-  text-align: center;
-  margin-top: 50px;
-}
-.user_edit_btn{
-  padding: 10px 30px;
-  font-size: 18px;
-  font-family: "HiraMinProN-W6";
-  color: rgb(249, 242, 237);
-  background-color: rgb(61, 36, 34);
-  letter-spacing: 6px;
-  text-indent: 6px;
-}
-.user_edit_btn:hover{
-  opacity: 0.7;
-  cursor: pointer;
-}
 /*--------------------------------------*/
 
 /*-----------1000px以下に適用------------*/
 @media(max-width: 1000px){
   .user_edit_heading1{
     font-size: 40px;
-  }
-  .design_contributor_edit_form{
-    width: 480px;
-  }
-  .input_edit_profile_image1{
-    width: 270px;
-    font-size: 14px;
-  }
-  .user_edit_label{
-    width: 160px;
-    font-size: 18px;
-  }
-  .user_edit_input{
-    width: 240px;
-    font-size: 13px;
-  }
-  .pen_name_edit_input{
-    width: 170px;
-    }
-  .introduction_edit_input{
-    width: 320px;
-    height: 150px;
-  }
-  .user_edit_btn{
-    font-size: 16px;
-    padding: 10px 25px;
   }
 }
 /*--------------------------------------*/
@@ -447,29 +356,6 @@
   .user_edit_heading1{
     font-size: 30px;
   }
-  .design_contributor_edit_form{
-    width: 350px;
-  }
-  .design_contributor_edit_input_form{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .user_edit_label{
-    width: auto;
-  }
-  .user_edit_input{
-    width: 250px;
-    font-size: 15px;
-  }
-  .pen_name_edit_input{
-    width: 200px;
-  }
-  .introduction_edit_input{
-    width: 100%;
-  }
-  .user_edit_btn_form{
-    margin-top: 40px;
-  }
 }
 /*--------------------------------------*/
 
@@ -477,35 +363,6 @@
 @media(max-width: 600px){
   .user_edit_heading1{
     font-size: 22px;
-  }
-  .design_contributor_edit_form{
-    width: 100%;
-  }
-  .input_edit_profile_image1{
-    width: 230px;
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-  .user_edit_label{
-    margin-bottom: 2px;
-    font-size: 16px;
-  }
-  .user_edit_input{
-    width: 240px;
-    font-size: 13px;
-  }
-  .pen_name_edit_input{
-    width: 170px;
-  }
-  .introduction_edit_input{
-    width: 100%;
-  }
-  .user_edit_btn_form{
-    margin-top: 30px;
-  }
-  .user_edit_btn{
-    font-size: 14px;
-    padding: 8px 20px;
   }
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/

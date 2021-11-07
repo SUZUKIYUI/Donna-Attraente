@@ -4,7 +4,7 @@
 
   <h1 class="user_edit_heading1">プロフィール編集</h1>
 
-  <div class="design_contributor_edit_form">
+  <div class="design_contributor_form">
     <!-------未入力の時のエラー文表示------->
     <% if @design_contributor.errors.any? %>
       <div class="error_box">
@@ -19,25 +19,25 @@
     <% end %>
     <!------------------------------------------------------------------------------------------------------------------------------------->
     <%= form_with model: @design_contributor, url: design_contributor_design_contributor_path(@design_contributor.id), local: true do |f| %>
-      <div class="design_contributor_edit_input_form">
-        <label class="input_edit_profile_image1">プロフィール画像を選択してください
-          <%= f.attachment_field :profile_image, class: "user_edit_input input_edit_profile_image2" %>
+      <div class="user_input_form">
+        <label class="input_profile_image1">プロフィール画像を選択してください
+          <%= f.attachment_field :profile_image, class: "user_input input_profile_image2" %>
         </label>
       </div>
-      <div class="design_contributor_edit_input_form">
-        <%= f.label :pen_name, class: "user_edit_label" %>
-        <%= f.text_field :pen_name, class: "user_edit_input pen_name_edit_input" %>
+      <div class="user_input_form">
+        <%= f.label :pen_name, class: "design_contributor_label" %>
+        <%= f.text_field :pen_name, class: "user_input pen_name_input" %>
       </div>
-      <div class="design_contributor_edit_input_form">
-        <%= f.label :email, class: "user_edit_label" %>
-        <%= f.text_field :email, class: "user_edit_input" %>
+      <div class="user_input_form">
+        <%= f.label :email, class: "design_contributor_label" %>
+        <%= f.text_field :email, class: "user_input" %>
       </div>
-      <div class="design_contributor_edit_input_form design_contributor_edit_input_form_introduction">
-        <%= f.label :self_introduction, class: "user_edit_label" %>
-        <%= f.text_area :self_introduction, class: "user_edit_input introduction_edit_input" %>
+      <div class="user_input_form">
+        <%= f.label :self_introduction, class: "design_contributor_label" %>
+        <%= f.text_area :self_introduction, class: "user_input introduction_input" %>
       </div>
-      <div class="user_edit_btn_form">
-        <%= f.submit "編集する", class: "user_edit_btn" %>
+      <div class="user_input_btn_form">
+        <%= f.submit "編集", class: "user_input_btn" %>
       </div>
     <% end %>
   </div>
