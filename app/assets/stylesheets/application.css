@@ -740,10 +740,9 @@ footer{
   width: 540px;
 }
 
-.company_signup_form{
-  margin: 0 auto;
+.company_form{
+  margin: 5% auto;
   width: 700px;
-  margin-top: 5%;
 }
 
 .user_input_form{
@@ -868,7 +867,7 @@ footer{
   .design_contributor_form{
     width: 480px;
   }
-  .company_signup_form{
+  .company_form{
     width: 570px;
   }
   .design_contributor_label{
@@ -929,7 +928,7 @@ footer{
   .design_contributor_form{
     width: 400px;
   }
-  .company_signup_form{
+  .company_form{
     width: 430px;
   }
   .design_contributor_label{
@@ -948,7 +947,7 @@ footer{
     width: 188px;
   }
   .introduction_input{
-    height: 105px;
+    height: 110px;
   }
   .postal_code_input{
     width: 125px;
@@ -1009,7 +1008,7 @@ footer{
   .design_contributor_form{
     width: 240px;
   }
-  .company_signup_form{
+  .company_form{
     width: 240px;
   }
   .user_input_form{
@@ -1031,10 +1030,10 @@ footer{
     height: 100px;
   }
   .postal_code_input{
-    width: 55%;
+    width: 50%;
   }
   .phone_number_input{
-    width: 80%;
+    width: 75%;
   }
   .user_input_btn_form{
     margin-top: 30px;
