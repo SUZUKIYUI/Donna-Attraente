@@ -429,7 +429,6 @@
   background-image: url("about_top.png");
 }
 .about_heading2{
-  position: absolute;
   top: 33%;
   left: 48%;
 }
@@ -629,7 +628,6 @@
   }
   .about_heading2 p{
     line-height: 18px;
-    letter-spacing: 2px;
   }
   .about_bottom_heading{
     font-size: 20px;
@@ -677,7 +675,7 @@
 // -----------800px以下に適用------------
 @media(max-width: 800px){
   .about_heading2{
-    top: 35%;
+    top: 37%;
     left: 45%;
   }
   .about_heading2 p{
@@ -749,18 +747,11 @@
     background-image: url("about_top_max_600.png");
   }
   .about_heading2{
-    width: 90%;
-    height: 56px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
+    height: 51px;
   }
   .about_heading2 span{
     font-size: 12px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
   }
   .about_bottom{
     padding-top: calc(1500 / 2000 * 100%);
