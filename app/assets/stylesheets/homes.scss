@@ -482,18 +482,18 @@
   background-image: url("about_bottom_back3.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  padding: 10% 0;
-  color: #3d2422;
+  color: rgb(70, 40, 20);
   background-color: rgb(197, 180, 169);
 }
 .about_bottom3_content{
   width: 800px;
+  padding: 10% 0;
   margin: 0 auto;
 }
 .offer_structure_heading{
   font-size: 25px;
   text-align: center;
-  margin: 5% 0;
+  margin: 3% 0;
 }
 .offer_structure_heading span{
   margin-left: 10px;
@@ -541,7 +541,6 @@
 .registered_person_detail span{
   display: block;
   font-size: 15px;
-  font-weight: bold;
 }
 
 .offer_structure2{
@@ -647,7 +646,7 @@
   }
   .offer_flow_detail{
     width: 300px;
-    margin: 20px 5px;
+    margin: 20px 10px;
   }
   .offer_flow {
     width: 100%;
@@ -706,11 +705,14 @@
   }
   .registered_person_frame{
     width: 200px;
-    height: 150px;
+    height: 165px;
+  }
+  .offer_structure2 {
+    margin-top: 10%;
   }
   .registered_person{
     width: 200px;
-    height: 150px;
+    height: 165px;
   }
   .registered_person_detail p{
     font-size: 18px;
@@ -723,7 +725,7 @@
   }
   .offer_flow_detail{
     width: 230px;
-    margin: 20px 5px;
+    margin: 10px 5px;
   }
   .offer_flow_detail_text2_frame{
     height: 85px;
@@ -769,9 +771,6 @@
   .about_bottom2{
     background-image: url("about_bottom_back2_max_600.png");
   }
-  .about_bottom3_content{
-    width: 90%;
-  }
   .offer_structure_heading{
     font-size: 15px;
   }
@@ -782,17 +781,22 @@
   .offer_structure_detail{
     text-align: left;
   }
+  .offer_structure_detail br{
+    display: none;
+  }
   .offer_structure1{
     flex-direction: column;
     align-items: center;
   }
   .registered_person_detail{
-    margin-top: 25px;
+    margin: 15px 0;
   }
-  .offer_structure2 {
+  .offer_structure2{
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
+  }
+  .offer_flow_detail{
+    margin: 20px 0;
   }
 }
 // --------------------------------------
