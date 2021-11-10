@@ -11,6 +11,7 @@
   background-image: url("top_back1.png");
 }
 .top_top_heading{
+  color: rgb(70, 40, 20);
   letter-spacing: 5px;
   position: absolute;
   top: 40%;
@@ -18,12 +19,13 @@
 .top_bottom{
   background-image: url("top_back2.png");
   background-size: 100%;
-  padding: 3% 10% 10%;
+  padding: 5% 10% 10% 10%;
+  color: rgb(70, 40, 20);
 }
 .top_bottom_heading1{
   display: inline-block;
-  margin-top: 20px;
   padding: 10px;
+  margin-bottom: 30px;
   border-radius: 8px;
   background-color: rgb(70, 40, 20);
 }
@@ -31,14 +33,13 @@
   color: rgb(249, 242, 237);
   padding: 15px 30px;
   border: dashed 2px rgb(249, 242, 237);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 .top_bottom_heading2{
   display: inline-block;
-  color: rgb(70, 40, 20);
   font-size: 20px;
   padding: 5px 25px;
-  margin: 50px 25px 20px 25px;
+  margin: 25px;
   border-top: double 5px rgb(70, 40, 20);
   border-bottom: double 5px rgb(70, 40, 20);
 }
@@ -46,6 +47,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 35px;
 }
 .top_bottom_content2{
   margin: 15px;
@@ -57,6 +59,7 @@
 }
 .top_bottom_post_image1{
   position: relative;
+  display: flex;
 }
 .top_bottom_post_image1:hover{
   opacity: 0.8;
@@ -233,16 +236,9 @@
   }
   .top_bottom_heading1 h2{
     font-size: 22px;
-    padding: 10px 20px;
-    border: dashed 1px rgb(249, 242, 237);
   }
   .top_bottom_heading2{
     font-size: 18px;
-    padding: 5px 20px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    border-top: double 4px rgb(70, 40, 20);
-    border-bottom: double 4px rgb(70, 40, 20);
   }
   .top_bottom_heading2_inquiry{
     margin-left: 0;
@@ -250,14 +246,12 @@
   .top_bottom_post_image2_rank{
     width: 250px;
   }
-  .top_bottom_content1_rank{
-    margin: 35px 0;
-  }
   .top_bottom_content1_rank >:first-child{
-    margin: 0 50%;
+    margin: 0 25%;
+    margin-top: 20px;
   }
   .top_bottom_content2_rank{
-    margin-top: 25px;
+    margin-top: 20px;
   }
   .top_bottom_item_image2{
     width: 268px;
@@ -300,10 +294,6 @@
   .top_bottom_heading1 h2{
     font-size: 20px;
   }
-  .top_bottom_heading2{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
   .top_bottom_post_image2_rank{
     width: 190px;
   }
@@ -339,9 +329,7 @@
     background-image: url(top_back1_max_600.png);
   }
   .top_top_heading{
-    display: inline-block;
     text-align: center;
-    width: 90%;
     height: 23px;
     top: 0;
     right: 0;
@@ -352,22 +340,22 @@
   .top_top_heading h1{
     display: none;
   }
-  .top_bottom_heading1{
-    margin-top: 40px;
+  .top_bottom {
+    padding: 10%;
   }
   .top_bottom_heading1 h2{
     font-size: 16px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     border: dashed 1px #f9f2ed;
   }
   .top_bottom_heading2{
     font-size: 16px;
-    padding: 4px 15px;
+    padding: 4px 20px;
     border-top: double 3px #462814;
     border-bottom: double 3px #462814;
   }
-  .top_bottom_content1_rank{
-    margin-top: 15px;
+  .top_bottom_content1_rank >:first-child{
+    margin: 10px;
   }
   .top_bottom_want_rank{
     font-size: 20px;
@@ -403,10 +391,15 @@
   .top_top_heading span{
     display: block;
   }
+  .top_bottom_heading1{
+    margin: auto;
+  }
   .top_bottom_heading1 h2{
     font-size: 14px;
     padding: 8px 15px;
-    border: dashed 1px #f9f2ed;
+  }
+  .top_bottom_heading2 {
+    margin: 25px 0;
   }
   .top_bottom_item_image2{
     width: 230px;
