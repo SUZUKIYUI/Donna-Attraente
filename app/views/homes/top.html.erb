@@ -83,6 +83,11 @@
           <div class="top_bottom_content2">
             <%= link_to design_contributor_post_path(new_post.id), class: "top_bottom_post_image1" do %>
               <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2 top_bottom_post_image2_new" %>
+              <% new_post.offers.each do |offer| %>
+                <% if offer.established? %>
+                  <div class="established_posts_text">商品化決定</div>
+                <% end %>
+              <% end %>
             <% end %>
             <%= link_to design_contributor_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor1" do %>
               <div class="top_bottom_design_contributor2">
