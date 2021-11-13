@@ -69,8 +69,8 @@
           <p class="post_show_no_comment">コメントはまだありません</p>
         <% end %>
       </div>
-      <!----------------------------------------->
-      <div class="post_show_bottom_right"><!--ここから！！！！！！！！！-->
+      <!--------------------------------->
+      <div class="post_show_bottom_right">
         <div class="company_post_show_bottom_right_main">
           <!---------------------作品への反応----------------------->
           <div class="post_show_reaction company_post_show_reaction">
@@ -93,33 +93,37 @@
               <% if @post.offered_negotiation_by?(@post.id) %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p>現在交渉中</p>
+                  <div>現在交渉中</div>
                 </div>
               <!----------交渉成立オファーあれば表示------------>
               <% elsif @post.offered_established_by?(@post.id) %>
                 <% if @offer.company == current_company %>
                   <div class="post_show_reaction_content">
                     <p>オファー</p>
-                    <p>交渉成立</p>
+                    <div>交渉成立</div>
                   </div>
                 <% else %>
                   <div class="post_show_reaction_content">
                     <p>オファー</p>
-                    <p>他社と交渉成立済</p>
+                    <div>他社と交渉成立済</div>
                   </div>
                 <% end %>
               <!---------交渉不成立オファーあれば表示-------->
               <% elsif @post.offered_failure_by?(@post.id) %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p>交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件</p>
+                  <div>
+                    交渉不成立<span><%= Offer.where(post_id: @post.id, offer_status: :failure).count %></span>件
+                  </div>
                 </div>
                 <p class="post_show_reaction_offer_announce">現在オファー受付中です</p>
               <!--オファーモデルは存在するがこのデザインにオファーが来ていない-->
               <% else %>
                 <div class="post_show_reaction_content">
                   <p>オファー</p>
-                  <p><span>0</span>件</p>
+                  <div>
+                    <span>0</span>件
+                  </div>
                 </div>
                 <p class="post_show_reaction_offer_announce">現在オファー受付中です</p>
               <% end %>
@@ -127,7 +131,9 @@
             <% else %>
               <div class="post_show_reaction_content">
                 <p>オファー</p>
-                <p><span>0</span>件</p>
+                <div>
+                  <span>0</span>件
+                </div>
               </div>
               <p class="post_show_reaction_offer_announce">現在オファー受付中です</p>
             <% end %>
