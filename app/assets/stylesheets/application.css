@@ -140,7 +140,6 @@ header{
 
 .header_logo{
   font-family: serif;
-  text-align: center;
   font-size: 30px;
 }
 
@@ -260,18 +259,12 @@ header{
     padding-bottom: 150px;
     width: auto;
   }
-  .menu-content ul li {
+  .header_list{
     border-bottom: solid 1px #ffffff;
-    list-style: none;
   }
-  .menu-content ul li a {
+  .header_link{
     display: block;
-    width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
-    text-decoration: none;
     margin: 10px 0;
-    position: relative;
   }
   #menu-btn-check:checked ~ .menu-content{
     left: 50%;
