@@ -844,9 +844,6 @@ footer{
     top: 30%;
     left: 42%;
   }
-  .signup_heading2_content_company{
-    width: 365px;
-  }
   .signup_heading2 span{
     font-size: 18px;
     margin-left: 10px;
@@ -908,7 +905,7 @@ footer{
     right: 10%;
   }
   .signup_heading2_content_company{
-    width: 350px;
+    width: 330px;
   }
   .signup_decorate_back{
     width: 50px;
