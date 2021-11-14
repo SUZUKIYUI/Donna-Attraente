@@ -269,9 +269,8 @@ header{
     width: 100%;
     font-size: 15px;
     box-sizing: border-box;
-    color:#ffffff;
     text-decoration: none;
-    padding: 10px 0;
+    margin: 10px 0;
     position: relative;
   }
   #menu-btn-check:checked ~ .menu-content{
