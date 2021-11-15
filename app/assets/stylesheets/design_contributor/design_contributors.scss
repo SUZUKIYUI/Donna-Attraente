@@ -35,7 +35,6 @@
   margin-top: 30px;
 }
 .user_show_introduction1{
-  width: 40%;
 }
 .user_show_user_image_frame{
   position: relative;
@@ -61,7 +60,7 @@
   text-align: center;
 }
 .user_show_introduction2{
-  width: 60%;
+  margin-left: 30px;
   margin-bottom: 35px;
 }
 .user_show_introduction2 p{
@@ -304,6 +303,7 @@
   }
   .user_show_introduction2{
     width: 100%;
+    margin-left: 0;
     margin-bottom: 0;
   }
   .user_show_introduction2 p{
