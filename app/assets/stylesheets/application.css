@@ -658,6 +658,8 @@ footer{
   .login_btn{
     font-size: 14px;
     letter-spacing: 3px;
+    position: relative;
+    z-index: 50;
   }
   .login_decorate_back2{
     top: 170px;
