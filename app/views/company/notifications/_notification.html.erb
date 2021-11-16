@@ -1,10 +1,8 @@
 <div class="notification_content_box">
   <div class="notification_content_flex">
-    <div>
-      <%= link_to company_design_contributor_path(notification.visitor), class: "notification_content1" do %>
-        <%= attachment_image_tag notification.visitor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "notification_content_img" %>
-      <% end %>
-    </div>
+    <%= link_to company_design_contributor_path(notification.visitor), class: "notification_content1" do %>
+      <%= attachment_image_tag notification.visitor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "notification_content_img" %>
+    <% end %>
     <div class="notification_content2">
       <%= notification_company_offer_form(notification) %>
       <span><%= "(#{time_ago_in_words(notification.created_at)}前)" %></span>
