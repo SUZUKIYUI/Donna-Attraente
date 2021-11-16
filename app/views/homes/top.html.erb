@@ -17,30 +17,12 @@
     </div>
     <br />
     <h3 class="top_bottom_heading2">商品化希望の多いデザイン</h3>
-    <!-----------------デザイン投稿者がログイン中の時------------>
-    <% if design_contributor_signed_in? %>
-      <div class="top_bottom_content1 top_bottom_content1_rank">
-        <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2 top_bottom_content2_rank">
-            <p class="top_bottom_want_rank">第<%= i %>位</p>
-            <%= link_to design_contributor_post_path(want_post.id), class: "top_bottom_post_image1" do %>
-              <%= attachment_image_tag want_post, :post_image, :fill, 300, 400, class: "top_bottom_post_image2 top_bottom_post_image2_rank" %>
-            <% end %>
-            <%= link_to design_contributor_design_contributor_path(want_post.design_contributor.id), class: "top_bottom_design_contributor1" do %>
-              <div class="top_bottom_design_contributor2">
-                <%= attachment_image_tag want_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
-                <%= want_post.design_contributor.pen_name %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    <!----企業がログイン中の時--->
-    <% elsif company_signed_in? %>
-      <div class="top_bottom_content1 top_bottom_content1_rank">
-        <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2 top_bottom_content2_rank">
-            <p class="top_bottom_want_rank">第<%= i %>位</p>
+    <div class="top_bottom_content1 top_bottom_content1_rank">
+      <% @want_posts.each.with_index(1) do |want_post, i| %>
+        <div class="top_bottom_content2 top_bottom_content2_rank">
+          <p class="top_bottom_want_rank">第<%= i %>位</p>
+          <!--企業がログイン中の時--->
+          <% if company_signed_in? %>
             <%= link_to company_post_path(want_post.id), class: "top_bottom_post_image1" do %>
               <%= attachment_image_tag want_post, :post_image, :fill, 300, 400, class: "top_bottom_post_image2 top_bottom_post_image2_rank" %>
             <% end %>
@@ -50,15 +32,8 @@
                 <%= want_post.design_contributor.pen_name %>
               </div>
             <% end %>
-          </div>
-        <% end %>
-      </div>
-    <!--ログアウト時-->
-    <% else %>
-      <div class="top_bottom_content1 top_bottom_content1_rank">
-        <% @want_posts.each.with_index(1) do |want_post, i| %>
-          <div class="top_bottom_content2 top_bottom_content2_rank">
-            <p class="top_bottom_want_rank">第<%= i %>位</p>
+          <!--デザイン投稿者がログイン中の時・ログアウト時-->
+          <% else %>
             <%= link_to design_contributor_post_path(want_post.id), class: "top_bottom_post_image1" do %>
               <%= attachment_image_tag want_post, :post_image, :fill, 300, 400, class: "top_bottom_post_image2 top_bottom_post_image2_rank" %>
             <% end %>
@@ -68,19 +43,33 @@
                 <%= want_post.design_contributor.pen_name %>
               </div>
             <% end %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
     <h3 class="top_bottom_heading2">新着のデザイン</h3>
-    <!---デザイン投稿者がログイン中の時--->
-    <% if design_contributor_signed_in? %>
-      <div class="top_bottom_content1">
-        <% @new_posts.each do |new_post| %>
-          <div class="top_bottom_content2">
+    <div class="top_bottom_content1">
+      <% @new_posts.each do |new_post| %>
+        <div class="top_bottom_content2">
+          <!--企業がログイン中の時--->
+          <% if company_signed_in? %>
+            <%= link_to company_post_path(new_post.id), class: "top_bottom_post_image1" do %>
+              <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2 top_bottom_post_image2_new" %>
+              <% new_post.offers.each do |offer| %>
+                <% if offer.established? %>
+                  <div class="established_posts_text">商品化決定</div>
+                <% end %>
+              <% end %>
+            <% end %>
+            <%= link_to company_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor1" do %>
+              <div class="top_bottom_design_contributor2">
+                <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
+                <%= new_post.design_contributor.pen_name %>
+              </div>
+            <% end %>
+          <!--デザイン投稿者ログイン中の時・ログアウト時-->
+          <% else %>
             <%= link_to design_contributor_post_path(new_post.id), class: "top_bottom_post_image1" do %>
               <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2 top_bottom_post_image2_new" %>
               <% new_post.offers.each do |offer| %>
@@ -95,56 +84,22 @@
                 <%= new_post.design_contributor.pen_name %>
               </div>
             <% end %>
-          </div>
-        <% end %>
-      </div>
-      <div class="top_bottom_link1">
-        <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_link2" %>
-      </div>
-    <!----企業がログイン中の時---->
-    <% elsif company_signed_in? %>
-      <div class="top_bottom_content1">
-        <% @new_posts.each do |new_post| %>
-          <div class="top_bottom_content2">
-            <%= link_to company_post_path(new_post.id), class: "top_bottom_post_image1" do %>
-              <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2 top_bottom_post_image2_new" %>
-            <% end %>
-            <%= link_to company_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor1" do %>
-              <div class="top_bottom_design_contributor2">
-                <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
-                <%= new_post.design_contributor.pen_name %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <!--企業がログイン中の時--->
+    <% if company_signed_in? %>
       <div class="top_bottom_link1">
         <%= link_to "すべてのデザインを見にいく", company_posts_path, class: "top_bottom_link2" %>
       </div>
-    <!--ログアウト時-->
+    <!--デザイン投稿者ログイン中の時・ログアウト時-->
     <% else %>
-      <div class="top_bottom_content1">
-        <% @new_posts.each do |new_post| %>
-          <div class="top_bottom_content2">
-            <%= link_to design_contributor_post_path(new_post.id), class: "top_bottom_post_image1" do %>
-              <%= attachment_image_tag new_post, :post_image, :fill, 250, 350, class: "top_bottom_post_image2 top_bottom_post_image2_new" %>
-            <% end %>
-            <%= link_to design_contributor_design_contributor_path(new_post.design_contributor.id), class: "top_bottom_design_contributor1" do %>
-              <div class="top_bottom_design_contributor2">
-                <%= attachment_image_tag new_post.design_contributor, :profile_image, :fill, 50, 50, fallback: "no_image.png", size: "50x50", class: "top_bottom_profile_image" %>
-                <%= new_post.design_contributor.pen_name %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
       <div class="top_bottom_link1">
         <%= link_to "すべてのデザインを見にいく", design_contributor_posts_path, class: "top_bottom_link2" %>
       </div>
     <% end %>
     <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
     <h3 class="top_bottom_heading2">実際に商品化したデザイン</h3>
     <div>
       <div class="top_bottom_content1">
@@ -161,17 +116,12 @@
           <p class="top_bottom_item_lead top_bottom_item_lead2">株式会社クラウンルージュ<br />プロデュース<br />（まにまにさんデザイン）</p>
         </div>
       </div>
-      <!---デザイン投稿者がログイン中の時--->
-      <% if design_contributor_signed_in? %>
-        <div class="top_bottom_link1">
-          <%= link_to "登録ブランド一覧", design_contributor_companies_path, class: "top_bottom_link2" %>
-        </div>
-      <!----企業がログイン中の時---->
-      <% elsif company_signed_in? %>
+      <!--企業がログイン中の時--->
+      <% if company_signed_in? %>
         <div class="top_bottom_link1">
           <%= link_to "登録ブランド一覧", company_companies_path, class: "top_bottom_link2" %>
         </div>
-      <!--ログアウト時-->
+      <!--デザイン投稿者がログイン中の時・ログアウト時-->
       <% else %>
         <div class="top_bottom_link1">
           <%= link_to "登録ブランド一覧", design_contributor_companies_path, class: "top_bottom_link2" %>
@@ -179,8 +129,6 @@
       <% end %>
     </div>
     <!--------------------------------------------------------------------------------------------------------------------------------->
-
-
     <div class="top_bottom_inquiry_content_back">
       <h3 class="top_bottom_heading2 top_bottom_heading2_inquiry">お問い合わせ</h3>
       <div class="top_bottom_inquiry_content1">
@@ -189,7 +137,7 @@
           <p class="top_bottom_inquiry1">E-mail</p>
           <p class="top_bottom_inquiry2">info@donnaattraente.jp</p>
         </div>
-        <div class="top_bottom_inquiry"><!--ここから！！！！！！！！！！！！-->
+        <div class="top_bottom_inquiry">
           <p class="top_bottom_inquiry1">TEL</p>
           <p class="top_bottom_inquiry2">0120-xxx-xxx</p>
         </div>
