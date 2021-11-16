@@ -32,6 +32,10 @@
   display: flex;
   margin: 20px 0;
 }
+.notification_content1{
+  display: inline-block;
+  height: 50px;
+}
 .notification_content1:hover{
   opacity: 0.8;
 }
@@ -105,6 +109,9 @@
   }
   .notification_no_content{
     font-size: 14px;
+  }
+  .notification_content1{
+    height: 40px;
   }
   .notification_content_img{
     width: 40px;
