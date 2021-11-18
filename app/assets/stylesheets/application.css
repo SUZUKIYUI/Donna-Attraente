@@ -28,9 +28,7 @@
 /*-----③1000px-----*/
 /*-----④800px------*/
 /*-----⑤600px------*/
-
-/*600pxまで完了*/
-/*新規登録画面/デザイン投稿者詳細画面/デザイン投稿者編集画面/デザイン新規投稿画面*/
+/*-----⑥400px------*/
 
 /*------------------------------------*/
 
@@ -430,7 +428,7 @@ footer{
 }
 
 .login_decorate_back1{
-  background-image: url("decorate_back3.png");
+  background-image: image-url("decorate_back3.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -505,7 +503,7 @@ footer{
 .login_decorate_back2{
   width: 200px;
   height: 200px;
-  background-image: url("decorate_back2.png");
+  background-image: image-url("decorate_back2.png");
   background-size: cover;
   position: absolute;
   top: 0;
@@ -683,7 +681,7 @@ footer{
 
 /*----------------------------------------------新規登録画面----------------------------------------------*/
 .signup_top1{
-  background-image: url("signup_back1.png");
+  background-image: image-url("signup_back1.png");
 }
 
 .signup_heading2_content{
@@ -704,13 +702,13 @@ footer{
 .signup_decorate_back{
   width: 100px;
   height: 100px;
-  background-image: url("decorate_back2.png");
+  background-image: image-url("decorate_back2.png");
   background-size: cover;
   margin-left: auto;
 }
 
 .signup_bottom{
-  background-image: url("base_back1.png");
+  background-image: image-url("base_back1.png");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10%;
