@@ -12,6 +12,8 @@ class Post < ApplicationRecord
   # ---------------------------------------
   attachment :post_image
   # --------------------
+  # ページネーションでの表示個数
+  POST_COUNT = 12.freeze
 
   # オファーモデルが存在するか
   def offered_by?

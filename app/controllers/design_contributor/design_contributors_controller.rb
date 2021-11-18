@@ -4,8 +4,8 @@ class DesignContributor::DesignContributorsController < ApplicationController
 
   def show
     @design_contributor = DesignContributor.find(params[:id])
-    if Post.count > 12
-      @posts = Post.where(design_contributor_id: @design_contributor.id).all.order(created_at: :desc).page(params[:page]).per(12)
+    if Post.count > Post::POST_COUNT
+      @posts = Post.where(design_contributor_id: @design_contributor.id).all.order(created_at: :desc).page(params[:page]).per(Post::POST_COUNT)
     else
       @posts = Post.where(design_contributor_id: @design_contributor.id).all.order(created_at: :desc)
     end

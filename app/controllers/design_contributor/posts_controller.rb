@@ -3,8 +3,8 @@ class DesignContributor::PostsController < ApplicationController
   before_action :authenticate_design_contributor!, except: [:index]
 
   def index
-    if Post.count > 12
-      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(12)
+    if Post.count > Post::POST_COUNT
+      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(Post::POST_COUNT)
     else
       @posts = Post.all.order(created_at: :desc)
     end

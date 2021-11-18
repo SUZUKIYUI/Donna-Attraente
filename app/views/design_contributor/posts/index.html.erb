@@ -43,7 +43,7 @@
         </div>
       <% end %>
     </div>
-    <% if Post.count > 12 %>
+    <% if Post.count > Post::POST_COUNT %>
       <div class="index_paginate"><%= paginate @posts %></div>
     <% end %>
   </div>
