@@ -8,7 +8,7 @@
 
 // いいね・コメント・オファー通知画面
 .notification_back{
-  background-image: url("../base_back3.png");
+  background-image: image-url("../base_back3.png");
   background-size: 100%;
   padding: 10% 0;
   color: rgb(70, 40, 20);
@@ -40,7 +40,7 @@
   opacity: 0.8;
 }
 .notification_content_img{
-    border-radius: 100%;
+  border-radius: 100%;
 }
 .notification_content2{
   font-size: 17px;
