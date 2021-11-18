@@ -8,7 +8,7 @@
 
 // トップ画面
 .top_top{
-  background-image: url("top_back1.png");
+  background-image: image-url("top_back1.png");
 }
 .top_top_heading{
   color: rgb(70, 40, 20);
@@ -17,7 +17,7 @@
   top: 40%;
 }
 .top_bottom{
-  background-image: url("top_back2.png");
+  background-image: image-url("top_back2.png");
   background-size: 100%;
   padding: 5% 10% 10% 10%;
   color: rgb(70, 40, 20);
@@ -301,7 +301,7 @@
 // -----------600px以下に適用------------
 @media (max-width: 600px){
   .top_top{
-    background-image: url(top_back1_max_600.png);
+    background-image: image-url("top_back1_max_600.png");
   }
   .top_top_heading{
     text-align: center;
@@ -402,7 +402,7 @@
 
 // About画面
 .about_top{
-  background-image: url("about_top.png");
+  background-image: image-url("about_top.png");
 }
 .about_heading2{
   top: 33%;
@@ -427,7 +427,7 @@
   color: rgb(70, 40, 20);
 }
 .about_bottom1{
-  background-image: url("about_bottom_back1.png");
+  background-image: image-url("about_bottom_back1.png");
 }
 .about_bottom_content{
   position: absolute;
@@ -448,14 +448,14 @@
   line-height: 25px;
 }
 .about_bottom2{
-  background-image: url("about_bottom_back2.png");
+  background-image: image-url("about_bottom_back2.png");
 }
 .about_bottom2_content{
   height: 370px;
   right: 20%;
 }
 .about_bottom3{
-  background-image: url("about_bottom_back3.png");
+  background-image: image-url("about_bottom_back3.png");
   background-size: 100%;
   background-repeat: no-repeat;
   color: rgb(70, 40, 20);
@@ -518,7 +518,6 @@
   display: block;
   font-size: 15px;
 }
-
 .offer_structure2{
   display: flex;
   justify-content: center;
@@ -657,8 +656,8 @@
   .offer_structure_heading{
     font-size: 20px;
   }
-  .offer_structure_detail {
-      font-size: 12px;
+  .offer_structure_detail{
+    font-size: 12px;
   }
   .registered_person_detail{
     width: 210px;
@@ -697,7 +696,7 @@
 // -----------600px以下に適用------------
 @media(max-width: 600px){
   .about_top{
-    background-image: url("about_top_max_600.png");
+    background-image: image-url("about_top_max_600.png");
   }
   .about_heading2{
     height: 51px;
@@ -720,13 +719,13 @@
     margin: 10px 0;
   }
   .about_bottom1{
-    background-image: url("about_bottom_back1_max_600.png");
+    background-image: image-url("about_bottom_back1_max_600.png");
   }
   .about_bottom2_content{
     height: 235px;
   }
   .about_bottom2{
-    background-image: url("about_bottom_back2_max_600.png");
+    background-image: image-url("about_bottom_back2_max_600.png");
   }
   .offer_structure_heading{
     font-size: 15px;
