@@ -35,14 +35,12 @@
           </div>
         </div>
       </div>
-      <% if @company.company_introduction.present? %>
-        <div class="user_show_introduction2 company_show_introduction2">
-          <p>企業紹介</p>
-          <div class="user_show_self_introduction">
-            <%= @company.company_introduction %>
-          </div>
+      <div class="user_show_introduction2 company_show_introduction2">
+        <p>企業紹介</p>
+        <div class="user_show_self_introduction">
+          <%= @company.company_introduction %>
         </div>
-      <% end %>
+      </div>
     </div>
     <% if @company == current_company %>
       <div class="user_edit_link1">

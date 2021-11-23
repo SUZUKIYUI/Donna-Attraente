@@ -11,15 +11,13 @@
         <%= @design_contributor.pen_name %>
       </div>
     </div>
-    <% if @design_contributor.self_introduction.present? %>
-      <div class="the_other_user_show1_introduction">
-        <p class="the_other_user_show1_introduction_title">紹介文</p>
-        <div class="the_other_user_show_decoration"></div>
-        <div class="the_other_user_show1_introduction_text">
-          <%= @design_contributor.self_introduction %>
-        </div>
+    <div class="the_other_user_show1_introduction">
+      <p class="the_other_user_show1_introduction_title">紹介文</p>
+      <div class="the_other_user_show_decoration"></div>
+      <div class="the_other_user_show1_introduction_text">
+        <%= @design_contributor.self_introduction %>
       </div>
-    <% end %>
+    </div>
   </div>
   <!------------------もし投稿作品があれば全て公開-------------------->
   <% if Post.where(design_contributor_id: @design_contributor.id).exists? %>

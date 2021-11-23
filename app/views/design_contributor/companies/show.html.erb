@@ -14,15 +14,13 @@
                 </div>
             </div>
         </div>
-        <% if @company.company_introduction.present? %>
-            <div class="the_other_user_show1_introduction">
-                <p class="the_other_user_show1_introduction_title">紹介文</p>
-                <div class="the_other_user_show_decoration"></div>
-                <div class="the_other_user_show1_introduction_text">
-                    <%= @company.company_introduction %>
-                </div>
+        <div class="the_other_user_show1_introduction">
+            <p class="the_other_user_show1_introduction_title">紹介文</p>
+            <div class="the_other_user_show_decoration"></div>
+            <div class="the_other_user_show1_introduction_text">
+                <%= @company.company_introduction %>
             </div>
-        <% end %>
+        </div>
     </div>
     <!------------------もし商品化決定デザインがあれば全て公開-------------------->
     <% if @company.offered_by? && @company.offered_established_by?(@company.id) %>

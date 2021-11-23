@@ -16,7 +16,7 @@ class Company < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true
   validates :profile_image, presence: false
-  validates :company_introduction, presence: false
+  validates :company_introduction, presence: true
   # ----------------------------------------------
   attachment :profile_image
   # -----------------------
