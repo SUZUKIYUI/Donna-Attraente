@@ -34,7 +34,7 @@ class DeviseCreateDesignContributors < ActiveRecord::Migration[5.2]
 
       t.string :pen_name, null: false, default: ""
       t.string :image_name
-      t.text :self_introduction, null: false, default: ""
+      t.text :self_introduction
 
 
       t.timestamps null: false
