@@ -8,14 +8,14 @@
 
 // デザイン投稿者・企業詳細画面
 .user_show_top{
-  background-image: image-url("../user_show_back1.png");
+  background-image: image-url("user_show_back1.png");
 }
 .user_show_heading2{
   top: 40%;
   right: 18%;
 }
 .user_show_decoration{
-  background-image: image-url("../decorate_back4.png");
+  background-image: image-url("decorate_back4.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 28%;
@@ -25,7 +25,7 @@
   right: 2%;
 }
 .user_show_bottom{
-  background-image: image-url("../base_back2.png");
+  background-image: image-url("base_back2.png");
   color: rgb(59, 34, 33);
 }
 .user_show_introduction{
@@ -325,7 +325,7 @@
 
 // デザイン投稿者・企業編集画面
 .user_edit_back{
-  background-image: image-url("../base_back3.png");
+  background-image: image-url("base_back3.png");
   background-size: 100%;
   padding: 10%;
   color: rgb(70, 40, 20);

@@ -8,10 +8,10 @@
 
 // posts一覧画面
 .posts_index_top{
-  background-image: image-url("../posts_index_back1.png");
+  background-image: image-url("posts_index_back1.png");
 }
 .posts_index_heading_back{
-  background-image: image-url("../decorate_back1.png");
+  background-image: image-url("decorate_back1.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 540px;
@@ -25,7 +25,7 @@
   left: 25%;
 }
 .posts_index_bottom{
-  background-image: image-url("../base_back2.png");
+  background-image: image-url("base_back2.png");
   color: rgb(59, 34, 33);
 }
 .posts_index_heading3{
@@ -226,14 +226,14 @@
 
 // posts新規登録画面
 .post_new_top{
-  background-image: image-url("../post_new_back1.png");
+  background-image: image-url("post_new_back1.png");
 }
 .post_new_heading2{
   top: 40%;
   left: 48%;
 }
 .post_new_decoration{
-  background-image: image-url("../decorate_back4.png");
+  background-image: image-url("decorate_back4.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 25%;
@@ -243,7 +243,7 @@
   right: 5%;
 }
 .post_new_bottom{
-  background-image: image-url("../base_back3");
+  background-image: image-url("base_back3");
 }
 .post_new_form{
   margin: 0 auto;
@@ -376,7 +376,7 @@
 
 // posts詳細画面
 .post_show_back{
-  background-image: image-url("../post_show_back1");
+  background-image: image-url("post_show_back1");
   background-size: 100%;
   padding: 5% 10%;
   color: rgb(70, 40, 20);
@@ -672,7 +672,7 @@
   color: rgba(70, 40, 20, 0.7);
 }
 .post_index_link_decoration{
-  background-image: image-url("../post_show_back2");
+  background-image: image-url("post_show_back2");
   background-size: contain;
   background-repeat: no-repeat;
   width: 120px;
@@ -1003,7 +1003,7 @@
 
 // posts編集画面
 .post_edit_back{
-  background-image: image-url("../base_back3.png");
+  background-image: image-url("base_back3.png");
   background-size: 100%;
   padding: 10%;
   color: rgb(70, 40, 20);
