@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   has_many :notification2s, dependent: :destroy
   # -------------------------------------
   validates :post_image, presence: true
-  validates :author_comment, presence: true
+  validates :author_comment, presence: true, length: {maximum: 90}
   # ---------------------------------------
   attachment :post_image
   # --------------------
