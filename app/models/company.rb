@@ -11,7 +11,7 @@ class Company < ApplicationRecord
   has_many :notification2s, dependent: :destroy
   # ----------------------------------------------
   validates :company_name, presence: true, length: {maximum: 25}
-  validates :company_name_kana, presence: true, lenth: {maximum: 35}
+  validates :company_name_kana, presence: true, length: {maximum: 35}
   validates :postal_code, presence: true
   validates :address, presence: true
   validates :phone_number, presence: true
