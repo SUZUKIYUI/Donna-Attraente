@@ -13,7 +13,7 @@ class DesignContributor < ApplicationRecord
   # オファーの通知（申請受信専用）
   has_many :notification2s, dependent: :destroy
   # -------------------------------------
-  validates :pen_name, presence: true
+  validates :pen_name, presence: true, length: {maximum: 10}
   validates :profile_image, presence: false
   validates :self_introduction, presence: true, length: {maximum: 160}
   # -------------------------------------------
