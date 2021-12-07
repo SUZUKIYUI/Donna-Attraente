@@ -15,7 +15,7 @@ class DesignContributor < ApplicationRecord
   # -------------------------------------
   validates :pen_name, presence: true
   validates :profile_image, presence: false
-  validates :self_introduction, presence: true
+  validates :self_introduction, presence: true, length: {maximum: 160}
   # -------------------------------------------
   attachment :profile_image
   # -----------------------
